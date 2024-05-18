@@ -75,8 +75,8 @@ int token_index = 0;
 int main(int argc, char* argv[]) {
     
     // Read in the file
-    if(argc != 3){
-        cout << "Usage: ./lower <filename> <filename>" << endl;
+    if(argc != 4){
+        cout << "Usage: ./codegen <file_lir> <file_toks> <file_ast>" << endl;
         return 1;
     }
     string filename = argv[2];
