@@ -6,3 +6,870 @@ invalid_alloc_msg: .string "invalid allocation amount"
 .text
 
 .globl main
+main:
+  pushq %rbp
+  movq %rsp, %rbp
+  subq $1616, %rsp
+  movq $0, -8(%rsp)
+  movq $0, -16(%rsp)
+  movq $0, -24(%rsp)
+  movq $0, -32(%rsp)
+  movq $0, -40(%rsp)
+  movq $0, -48(%rsp)
+  movq $0, -56(%rsp)
+  movq $0, -64(%rsp)
+  movq $0, -72(%rsp)
+  movq $0, -80(%rsp)
+  movq $0, -88(%rsp)
+  movq $0, -96(%rsp)
+  movq $0, -104(%rsp)
+  movq $0, -112(%rsp)
+  movq $0, -120(%rsp)
+  movq $0, -128(%rsp)
+  movq $0, -136(%rsp)
+  movq $0, -144(%rsp)
+  movq $0, -152(%rsp)
+  movq $0, -160(%rsp)
+  movq $0, -168(%rsp)
+  movq $0, -176(%rsp)
+  movq $0, -184(%rsp)
+  movq $0, -192(%rsp)
+  movq $0, -200(%rsp)
+  movq $0, -208(%rsp)
+  movq $0, -216(%rsp)
+  movq $0, -224(%rsp)
+  movq $0, -232(%rsp)
+  movq $0, -240(%rsp)
+  movq $0, -248(%rsp)
+  movq $0, -256(%rsp)
+  movq $0, -264(%rsp)
+  movq $0, -272(%rsp)
+  movq $0, -280(%rsp)
+  movq $0, -288(%rsp)
+  movq $0, -296(%rsp)
+  movq $0, -304(%rsp)
+  movq $0, -312(%rsp)
+  movq $0, -320(%rsp)
+  movq $0, -328(%rsp)
+  movq $0, -336(%rsp)
+  movq $0, -344(%rsp)
+  movq $0, -352(%rsp)
+  movq $0, -360(%rsp)
+  movq $0, -368(%rsp)
+  movq $0, -376(%rsp)
+  movq $0, -384(%rsp)
+  movq $0, -392(%rsp)
+  movq $0, -400(%rsp)
+  movq $0, -408(%rsp)
+  movq $0, -416(%rsp)
+  movq $0, -424(%rsp)
+  movq $0, -432(%rsp)
+  movq $0, -440(%rsp)
+  movq $0, -448(%rsp)
+  movq $0, -456(%rsp)
+  movq $0, -464(%rsp)
+  movq $0, -472(%rsp)
+  movq $0, -480(%rsp)
+  movq $0, -488(%rsp)
+  movq $0, -496(%rsp)
+  movq $0, -504(%rsp)
+  movq $0, -512(%rsp)
+  movq $0, -520(%rsp)
+  movq $0, -528(%rsp)
+  movq $0, -536(%rsp)
+  movq $0, -544(%rsp)
+  movq $0, -552(%rsp)
+  movq $0, -560(%rsp)
+  movq $0, -568(%rsp)
+  movq $0, -576(%rsp)
+  movq $0, -584(%rsp)
+  movq $0, -592(%rsp)
+  movq $0, -600(%rsp)
+  movq $0, -608(%rsp)
+  movq $0, -616(%rsp)
+  movq $0, -624(%rsp)
+  movq $0, -632(%rsp)
+  movq $0, -640(%rsp)
+  movq $0, -648(%rsp)
+  movq $0, -656(%rsp)
+  movq $0, -664(%rsp)
+  movq $0, -672(%rsp)
+  movq $0, -680(%rsp)
+  movq $0, -688(%rsp)
+  movq $0, -696(%rsp)
+  movq $0, -704(%rsp)
+  movq $0, -712(%rsp)
+  movq $0, -720(%rsp)
+  movq $0, -728(%rsp)
+  movq $0, -736(%rsp)
+  movq $0, -744(%rsp)
+  movq $0, -752(%rsp)
+  movq $0, -760(%rsp)
+  movq $0, -768(%rsp)
+  movq $0, -776(%rsp)
+  movq $0, -784(%rsp)
+  movq $0, -792(%rsp)
+  movq $0, -800(%rsp)
+  movq $0, -808(%rsp)
+  movq $0, -816(%rsp)
+  movq $0, -824(%rsp)
+  movq $0, -832(%rsp)
+  movq $0, -840(%rsp)
+  movq $0, -848(%rsp)
+  movq $0, -856(%rsp)
+  movq $0, -864(%rsp)
+  movq $0, -872(%rsp)
+  movq $0, -880(%rsp)
+  movq $0, -888(%rsp)
+  movq $0, -896(%rsp)
+  movq $0, -904(%rsp)
+  movq $0, -912(%rsp)
+  movq $0, -920(%rsp)
+  movq $0, -928(%rsp)
+  movq $0, -936(%rsp)
+  movq $0, -944(%rsp)
+  movq $0, -952(%rsp)
+  movq $0, -960(%rsp)
+  movq $0, -968(%rsp)
+  movq $0, -976(%rsp)
+  movq $0, -984(%rsp)
+  movq $0, -992(%rsp)
+  movq $0, -1000(%rsp)
+  movq $0, -1008(%rsp)
+  movq $0, -1016(%rsp)
+  movq $0, -1024(%rsp)
+  movq $0, -1032(%rsp)
+  movq $0, -1040(%rsp)
+  movq $0, -1048(%rsp)
+  movq $0, -1056(%rsp)
+  movq $0, -1064(%rsp)
+  movq $0, -1072(%rsp)
+  movq $0, -1080(%rsp)
+  movq $0, -1088(%rsp)
+  movq $0, -1096(%rsp)
+  movq $0, -1104(%rsp)
+  movq $0, -1112(%rsp)
+  movq $0, -1120(%rsp)
+  movq $0, -1128(%rsp)
+  movq $0, -1136(%rsp)
+  movq $0, -1144(%rsp)
+  movq $0, -1152(%rsp)
+  movq $0, -1160(%rsp)
+  movq $0, -1168(%rsp)
+  movq $0, -1176(%rsp)
+  movq $0, -1184(%rsp)
+  movq $0, -1192(%rsp)
+  movq $0, -1200(%rsp)
+  movq $0, -1208(%rsp)
+  movq $0, -1216(%rsp)
+  movq $0, -1224(%rsp)
+  movq $0, -1232(%rsp)
+  movq $0, -1240(%rsp)
+  movq $0, -1248(%rsp)
+  movq $0, -1256(%rsp)
+  movq $0, -1264(%rsp)
+  movq $0, -1272(%rsp)
+  movq $0, -1280(%rsp)
+  movq $0, -1288(%rsp)
+  movq $0, -1296(%rsp)
+  movq $0, -1304(%rsp)
+  movq $0, -1312(%rsp)
+  movq $0, -1320(%rsp)
+  movq $0, -1328(%rsp)
+  movq $0, -1336(%rsp)
+  movq $0, -1344(%rsp)
+  movq $0, -1352(%rsp)
+  movq $0, -1360(%rsp)
+  movq $0, -1368(%rsp)
+  movq $0, -1376(%rsp)
+  movq $0, -1384(%rsp)
+  movq $0, -1392(%rsp)
+  movq $0, -1400(%rsp)
+  movq $0, -1408(%rsp)
+  movq $0, -1416(%rsp)
+  movq $0, -1424(%rsp)
+  movq $0, -1432(%rsp)
+  movq $0, -1440(%rsp)
+  movq $0, -1448(%rsp)
+  movq $0, -1456(%rsp)
+  movq $0, -1464(%rsp)
+  movq $0, -1472(%rsp)
+  movq $0, -1480(%rsp)
+  movq $0, -1488(%rsp)
+  movq $0, -1496(%rsp)
+  movq $0, -1504(%rsp)
+  movq $0, -1512(%rsp)
+  movq $0, -1520(%rsp)
+  movq $0, -1528(%rsp)
+  movq $0, -1536(%rsp)
+  movq $0, -1544(%rsp)
+  movq $0, -1552(%rsp)
+  movq $0, -1560(%rsp)
+  movq $0, -1568(%rsp)
+  movq $0, -1576(%rsp)
+  movq $0, -1584(%rsp)
+  movq $0, -1592(%rsp)
+  movq $0, -1600(%rsp)
+  movq $0, -1608(%rsp)
+  movq $0, -1616(%rsp)
+  jmp main_entry
+
+main_entry:
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl1:
+terminal
+
+main_lbl10:
+terminal
+
+main_lbl11:
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl12:
+terminal
+
+main_lbl13:
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl14:
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl15:
+terminal
+
+main_lbl16:
+terminal
+
+main_lbl17:
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl18:
+terminal
+
+main_lbl19:
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl2:
+terminal
+
+main_lbl20:
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl21:
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl22:
+terminal
+
+main_lbl23:
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl24:
+LIR_INST
+terminal
+
+main_lbl25:
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl26:
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl27:
+terminal
+
+main_lbl28:
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl29:
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl3:
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl30:
+LIR_INST
+terminal
+
+main_lbl31:
+terminal
+
+main_lbl32:
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl33:
+terminal
+
+main_lbl34:
+LIR_INST
+terminal
+
+main_lbl35:
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl36:
+terminal
+
+main_lbl37:
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl38:
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl39:
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl4:
+LIR_INST
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl40:
+terminal
+
+main_lbl41:
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl42:
+LIR_INST
+terminal
+
+main_lbl43:
+terminal
+
+main_lbl44:
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl45:
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl46:
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl47:
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl48:
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl49:
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl5:
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl50:
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl51:
+terminal
+
+main_lbl52:
+terminal
+
+main_lbl53:
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl54:
+terminal
+
+main_lbl55:
+LIR_INST
+terminal
+
+main_lbl56:
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl57:
+terminal
+
+main_lbl58:
+terminal
+
+main_lbl59:
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl6:
+terminal
+
+main_lbl60:
+LIR_INST
+terminal
+
+main_lbl61:
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl62:
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl63:
+LIR_INST
+terminal
+
+main_lbl64:
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl65:
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl66:
+LIR_INST
+terminal
+
+main_lbl67:
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl68:
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl69:
+LIR_INST
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl7:
+terminal
+
+main_lbl70:
+terminal
+
+main_lbl8:
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+LIR_INST
+terminal
+
+main_lbl9:
+terminal
+

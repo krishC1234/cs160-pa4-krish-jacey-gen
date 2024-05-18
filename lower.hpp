@@ -155,6 +155,7 @@ typedef struct LirInst : LIR{
 	void toString();
 	LirInst(){};
 	LirInst(enum type t):type(t){};
+	void codeGenString();
 } LirInst;
 
 // Terminal
@@ -203,6 +204,7 @@ typedef struct Terminal: LIR{
 	void toString();
 	Terminal(){};
 	Terminal(enum type t):type(t){};
+	void codeGenString();
 } Terminal;
 
 // BasicBlock
@@ -217,6 +219,7 @@ typedef struct BasicBlock : LIR{
 	void toString();
 	bool reachable = false;
 	void set_reachable(map<string, BasicBlock*>& body);
+	void codeGenString();
 } BasicBlock;
 
 // Function
@@ -233,6 +236,7 @@ typedef struct LIR_Function : LIR{
 	map<string, Type*> locals; 
 	map<string, BasicBlock*> body;
 	void toString();
+	void codeGenString();
 } LIR_Function;
 
 
@@ -243,11 +247,12 @@ typedef struct LIR_Function : LIR{
 // - functions: FuncId -> Function
 
 typedef struct LIR_Program : LIR{
-  map<string, Type*> globals;
-  map<string, map<string, Type*>> structs;
-  map<string, Type*> externs;
-  map<string, LIR_Function*> functions;
-  void toString();
+	map<string, Type*> globals;
+	map<string, map<string, Type*>> structs;
+	map<string, Type*> externs;
+	map<string, LIR_Function*> functions;
+	void toString();
+	void codeGenString();
 } LIR_Program;
 
 LIR_Program* lower(Program* prog);

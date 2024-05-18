@@ -64,7 +64,6 @@ CloseBrace
 #include "parse.hpp"
 #include "ast.hpp"
 #include "lower.hpp"
-#include "codegen.hpp"
 
 using namespace std;
 
@@ -120,8 +119,7 @@ int main(int argc, char* argv[]) {
         LIR_Program* lir = lower(prog);
         // validate(prog);
         // lir->toString();
-        CodeGen* gen = codegen(lir);
-        gen->toString();
+        lir->codeGenString();
     }
     catch(const runtime_error& e){
         token_index--;
