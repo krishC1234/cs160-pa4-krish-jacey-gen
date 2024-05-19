@@ -1,321 +1,114 @@
-
 fn main() -> int {
-  let id0: int = 7, id1: int, id2: int, id3: int = 3, id4: int = 4, id5: int, id6: int, id7: int = 6 * id1;
-  id0 = -(1 == id0);
-  if 7 {
-    while ((id1 == id1) + 7) / 1 {
+  let id1: int = 0, id0: int = 6 == (id1 * -7), id2: int, id3: int, id4: int = 5, id5: int, id6: int, id7: int;
+  while 3 {
+    id0 = id2;
+    id1 = -id2;
+    while id3 {
+      id4 = 10;
       id2 = id2;
-      id2 = id3 + id1;
-      id4 = 6;
-      id1 = (id0 >= id5) / id1;
-      id1 = 6 / 1;
-      id3 = id4;
-      id6 = -4;
-      id4 = id7;
-    }
-    while id5 {
-      id4 = id2;
-      id6 = 6 != id2;
-      id5 = -9;
-      id1 = 0;
-      id7 = id6;
-      id4 = id0 == id1;
-      id7 = 6;
-      id0 = (6 + 3) * 3;
-    }
-    while id4 {
-      id3 = 7;
-      id3 = 3;
-      id0 = id1 + id0;
-      id5 = 7;
-      id7 = id6 < 7;
-      id5 = 5;
-      id1 = id7;
-      id1 = id6;
-    }
-    if id3 {
-      id3 = id0 + 3;
-      id4 = id1;
-      id3 = ((id3 * id3) != -id2) / 9;
-      id6 = id1;
-      id0 = id1;
-      id3 = id5;
-      id6 = 2;
-      id7 = id1;
-      id1 = id2;
-    }
-    else {
-      id6 = id5 * 8;
-      id1 = id1;
-      id7 = 4;
-      id2 = id7;
-      id5 = 0;
-      id6 = (id3 < id7) < (id7 < 0);
-      id0 = id3 <= (1 < id0);
-    }
-    while 3 {
-      id2 = id7;
-      id7 = id3;
-      id7 = (id1 != id6) == id4;
-      id2 = 9;
-      id5 = id1;
-      id6 = id5;
-      id2 = id2;
-      id1 = 2;
-      id2 = 3;
-      return id0;
-    }
-  }
-  else {
-    if id0 {
-      id6 = id5;
-      id1 = id5 > id5;
-      id2 = id5;
-      id6 = id3 / -7;
-      id2 = -(7 / id6);
-      id4 = id2;
-      id6 = 7;
-      return -id6 < 10;
-    }
-    else {
-      id3 = id2;
-      id5 = 2;
-      id1 = 2;
-      id7 = -1 / id2;
-      id6 = 6;
-      id2 = -(id1 != id4);
-      id7 = 4;
-      id5 = 6;
-    }
-    id2 = 10 + id6;
-    id4 = id6 - id6;
-    id4 = -5 >= -id0;
-    id3 = -id4;
-    id3 = -3;
-    while 0 {
-      id0 = 0 <= 9;
-      id7 = 5;
-      id2 = -id4;
-      id0 = (id0 <= id0) >= 2;
-      id7 = id3;
-      id1 = 2;
-      id3 = 10;
-      id6 = 6 < 9;
-    }
-    id6 = 5;
-    if 5 {
-      id2 = 2;
-      id0 = 2;
-      id2 = 9;
-      id6 = id7;
-      id7 = 1 == id3;
-      id6 = 9;
-      id1 = 7;
-      id3 = id0;
-    }
-    else {
-      id1 = ((id2 / id6) <= -id1) / ((5 > id7) / (id6 > id3));
-      id2 = id1;
-      id6 = 4;
-      id0 = 7;
-    }
-  }
-  if (id6 * id4) / 3 {
-    id5 = (6 != 1) > (-id4 == id6);
-    while id1 {
-      id5 = id5;
-      id4 = -(id6 == 3);
-      id6 = 6 != id2;
-      id5 = -9;
-      id1 = 0;
-      id7 = id6;
-      id4 = id0 == id1;
-      id7 = 6;
-    }
-    while -0 {
-      id7 = 4 * 7;
-      id7 = ((7 >= id3) >= id3) - 5;
-      id2 = id0 <= id0;
-      id4 = ((9 * id4) < 7) >= -7;
-    }
-    while id3 - (0 != id7) {
-      id7 = -10;
-      id4 = id0;
-      id4 = id2;
-      id1 = -id3;
-      id6 = id3;
-      id2 = -9 != id5;
-      id1 = (id6 / id3) != -7;
-      id5 = id6 == 2;
-    }
-    id1 = id6;
-    id2 = id0;
-    id3 = 0;
-    id6 = -(5 > (8 >= id6));
-    id7 = id2;
-  }
-  else {
-    id5 = 0;
-    id6 = (id3 < id7) < (id7 < 0);
-    id0 = id3 <= (1 < id0);
-    id1 = id5;
-    id3 = (4 <= 3) + -(3 > 2);
-    id0 = -id3;
-    while id2 {
-      id5 = 10;
-      id1 = --id5;
-      id2 = id2;
-      id1 = 2;
-      id2 = 3;
-      id0 = 10;
-      id2 = 7;
-    }
-    id1 = 2;
-  }
-  if 6 <= id0 {
-    if id7 {
-      id6 = id3 / -7;
-      id2 = -(7 / id6);
-      id4 = id2;
-      id6 = 7;
-      id6 = 10;
-      id3 = 10 > (id6 / (id1 - 1));
-      id0 = id0 / 1;
-      id1 = 6;
-      id4 = 8;
-      id1 = -(-7 - id6);
-      id2 = 9;
-    }
-    else {
-      id7 = 3;
-      id2 = -(id7 < 5) <= id6;
-      id2 = id4;
-      id7 = id0;
-      id3 = id6;
-      id4 = (-3 != 7) / id4;
-      id0 = 6;
-      id5 = 1;
-      id0 = 0 <= 9;
-      id7 = 5;
-    }
-    id3 = id4;
-    id0 = (id0 <= id0) >= 2;
-    id7 = id3;
-    if 7 {
-      id6 = 6;
-      id7 = id1 < id6;
-      id0 = 5;
-      id7 = id3;
-      id3 = 2 / id4;
-      id2 = 9;
-      id7 = -id0;
-      id2 = 7;
-      id4 = --id5;
-    }
-    else {
-      id6 = 0;
-      id0 = -(1 * id6);
-      id1 = ((id2 / id6) <= -id1) / ((5 > id7) / (id6 > id3));
-      id2 = id1;
-      id6 = 4;
-    }
-  }
-  else {
-    id3 = id6;
-    id5 = 1 / id2;
-    id5 = (6 != 1) > (-id4 == id6);
-    while id1 {
-      id5 = id5;
-      id4 = -(id6 == 3);
-      id6 = 6 != id2;
-      id5 = -9;
-      id1 = 0;
-      id7 = id6;
-      id4 = id0 == id1;
-      id7 = 6;
-    }
-    while -0 {
-      id7 = 4 * 7;
-      id7 = ((7 >= id3) >= id3) - 5;
-      id2 = id0 <= id0;
-      id4 = ((9 * id4) < 7) >= -7;
-    }
-  }
-  id1 = -id7;
-  id1 = id6;
-  id6 = 8;
-  id7 = 10;
-  while 1 {
-    id1 = -id3;
-    if id6 {
-      id7 = id6 / id3;
-      id3 = id5;
-      id6 = 2;
-      id7 = id1;
-      id1 = id2;
-      id2 = id3;
-      id0 = id6;
-      id1 = 8;
-      id5 = 8;
-    }
-    else {
-      id6 = 4;
-      id2 = id1;
-      id1 = 9;
-      id7 = 0;
-      id5 = id0;
-      id2 = id7;
-      id1 = 3;
-      id2 = id7;
-      id0 = 3;
-      id2 = 2;
-    }
-    if -1 {
-      id4 = 0;
-      id6 = 10 == id1;
-      id6 = 8 != ((id3 <= 4) != id7);
-      id3 = 2;
-      id0 = 10 != (id7 >= id2);
-      id6 = 2 * id7;
-      id7 = 8;
-      id0 = 4;
-    }
-    else {
-      id1 = id7;
-      id4 = -id6;
-      id5 = id5;
-      id2 = -(7 / id6);
-      id4 = id2;
-      id6 = 7;
-      id6 = 10;
-      id3 = 10 > (id6 / (id1 - 1));
-      return 3;
-    }
-    if id0 / 1 {
-      id5 = id3;
-      id6 = -(id2 / -id4);
-      id5 = 1;
-      id7 = 9;
-      id1 = 8;
-      id4 = id6;
-      id4 = -(id6 - id6);
-      id4 = -5 >= -id0;
+      id5 = id6 != id7;
+      id1 = -id7 - id4;
       id3 = -id4;
-      id3 = -3;
+      id5 = 1;
+      id1 = id2;
+    }
+    if id4 {
+      id4 = 9;
+      id2 = -id7;
+      id0 = id7;
+      id1 = id1;
+      id2 = id1 < id2;
+      id5 = 4;
     }
     else {
-      id5 = 7;
-      id1 = id7;
-      id1 = 5 > 0;
-      id6 = 0;
-      id0 = id0;
-      id1 = 10 >= id1;
-      id1 = 2;
-      id3 = 10;
+      id0 = id4;
+      id2 = id7;
+      id6 = (id6 / id1) <= 0;
+      id3 = -9;
+      id6 = -id7;
+      id2 = id5;
+      id6 = id5;
+      id1 = 7;
+      id0 = 10;
     }
-    id5 = 6;
-    id2 = id2;
-    id0 = 5;
+    id6 = ((1 == id2) >= id2) + id0;
+    id2 = (0 + id0) / 4;
+    while (1 > (2 - 6)) / id3 {
+      id0 = id2;
+      id2 = (id5 >= id1) + id2;
+      id6 = 2;
+      id7 = --id7;
+      id6 = ((id5 == id1) / (id0 + 0)) + (id5 < -id6);
+      id1 = 0;
+      id6 = 2;
+      id4 = -(0 - id0) < 9;
+    }
   }
-  return 2;
+  while 10 {
+    id2 = id6;
+    if id6 {
+      id2 = 7;
+      id3 = 4;
+      id4 = -(3 + id7);
+      id2 = id0;
+    }
+    else {
+      id0 = -(id3 + 6);
+      id7 = id1;
+      id0 = 7 + 9;
+      id0 = id2;
+      id5 = 6;
+      id0 = -((1 > id3) / (1 >= id4));
+      id1 = id4 == -(id5 != id2);
+      id2 = id5;
+    }
+    id1 = (-id4 > 1) - id0;
+    id4 = (id1 + id4) < id3;
+    if -id0 {
+      id4 = 9;
+      id3 = id0 + (-id0 / id1);
+      id6 = id3 <= -0;
+      id4 = id7;
+      id1 = id4 != 2;
+    }
+    else {
+      id6 = id5 > id6;
+      id0 = 5;
+      id7 = id1;
+      id7 = 5;
+      id5 = 10;
+      id7 = id3;
+    }
+    id2 = id3;
+    if 7 {
+      id3 = 10;
+      id1 = 3;
+      id4 = 8;
+      id7 = id5 <= -7;
+      id3 = id1;
+      id2 = 4;
+      id5 = id6;
+      id3 = -8;
+      id3 = -id6;
+      break;
+    }
+    else {
+      id0 = id5;
+      id0 = id1;
+      id5 = 7;
+      id5 = 2;
+      id4 = 2;
+      id6 = 7;
+      id1 = 4;
+    }
+    id7 = -7 / id4;
+    id1 = id3;
+    id4 = 8;
+    id4 = 4;
+  }
+  id2 = 3;
+  id0 = id0;
+  id6 = 9;
+  id0 = 2;
+  return 6 == (id4 * (id7 <= id1));
 }

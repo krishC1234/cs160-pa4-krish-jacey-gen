@@ -25,7 +25,10 @@ void LIR_Function::codeGenString(){
     
     // prologue
     cout << "  pushq %rbp\n  movq %rsp, %rbp" << endl;
-    cout << "  subq $" << locals.size()*8 << ", %rsp" << endl;
+    int stack_size = locals.size() * 8;
+    if(stack_size % 16 != 0)
+        stack_size += 8;
+    cout << "  subq $" << stack_size << ", %rsp" << endl;
     auto it = locals.begin();
     // zero out all local variables
     for(int i = -8; i >= -locals.size()*8; i-=8){
