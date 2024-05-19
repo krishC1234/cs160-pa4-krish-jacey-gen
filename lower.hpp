@@ -30,10 +30,11 @@ typedef struct Label: LIR{
 // | Div
 
 typedef struct ArithmeticOp: LIR{
-  enum type {Add, Sub, Mul, Div} type;
-  void toString();
-  ArithmeticOp(){};
-  ArithmeticOp(enum type t):type(t){};
+	enum type {Add, Sub, Mul, Div} type;
+	void toString();
+	ArithmeticOp(){};
+	ArithmeticOp(enum type t):type(t){};
+	string codeGenString();
 } ArithmeticOp;
 
 // ComparisonOp
@@ -49,6 +50,7 @@ typedef struct ComparisonOp: LIR{
     void toString();
 	ComparisonOp(){};
 	ComparisonOp(enum type t):type(t){};
+	string codeGenString();
 } ComparisonOp;
 
 
@@ -77,6 +79,7 @@ typedef struct Operand: LIR{
 	
 	Operand(){};
 	Operand(enum type t):type(t){};
+	string codeGenString(string funcName);
 } Operand;
 
 
@@ -155,7 +158,7 @@ typedef struct LirInst : LIR{
 	void toString();
 	LirInst(){};
 	LirInst(enum type t):type(t){};
-	void codeGenString();
+	void codeGenString(string funcName);
 } LirInst;
 
 // Terminal
@@ -204,7 +207,7 @@ typedef struct Terminal: LIR{
 	void toString();
 	Terminal(){};
 	Terminal(enum type t):type(t){};
-	void codeGenString();
+	void codeGenString(string funcName);
 } Terminal;
 
 // BasicBlock
@@ -219,7 +222,7 @@ typedef struct BasicBlock : LIR{
 	void toString();
 	bool reachable = false;
 	void set_reachable(map<string, BasicBlock*>& body);
-	void codeGenString();
+	void codeGenString(string funcName);
 } BasicBlock;
 
 // Function

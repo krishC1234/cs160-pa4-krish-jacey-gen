@@ -2,7 +2,7 @@
 
 out_of_bounds_msg: .string "out-of-bounds array access"
 invalid_alloc_msg: .string "invalid allocation amount"
-        
+
 .text
 
 .globl main
@@ -1674,4 +1674,4 @@ main_epilogue:
 .invalid_alloc_length:
   lea invalid_alloc_msg(%rip), %rdi
   call _cflat_panic
-        
+
