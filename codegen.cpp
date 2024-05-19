@@ -12,7 +12,7 @@ using namespace std;
 unordered_map<string, unordered_map<string, int>> varOffsets;
 
 void LIR_Program::codeGenString(){
-    cout << ".data\n\nout_of_bounds_msg: .string \"out-of-bounds array access\"\ninvalid_alloc_msg: .string \"invalid allocation amount\"\n\n.text\n\n.globl main" << endl;
+    cout << ".data\n\nout_of_bounds_msg: .string \"out-of-bounds array access\"\ninvalid_alloc_msg: .string \"invalid allocation amount\"\n        \n.text\n\n.globl main" << endl;
         
     for(auto it = functions.begin(); it != functions.end(); it++){
         it->second->codeGenString();
@@ -58,7 +58,7 @@ void LIR_Function::codeGenString(){
     cout << ".invalid_alloc_length:" << endl;
     cout << "  lea invalid_alloc_msg(%rip), %rdi" << endl;
     cout << "  call _cflat_panic" << endl;
-    cout << endl;
+    cout << "        " << endl;
 }
 
 void BasicBlock::codeGenString(string funcName){
