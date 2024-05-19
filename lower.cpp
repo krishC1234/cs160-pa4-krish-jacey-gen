@@ -23,7 +23,7 @@ stack<string> while_end_labels;
 
 int num_ret = 0;
 
-bool DEBUG_LOWER = true;
+bool DEBUG_LOWER = false;
 
 /* 
  * 2.3 Lowering Expressions
@@ -226,7 +226,6 @@ LIR_Program* lower(Program* prog){
 */
 void stmt_lower(LIR_Function* lir_func, Stmt* stmt, vector<LIR*>& translation_vector){
 	if (DEBUG_LOWER) cout << "entered stmt_lower" << endl;
-	cout << stmt->type << " = " << endl;
 	if(stmt->type == Stmt::If){
 		if_lower(lir_func, stmt, translation_vector);
 	}

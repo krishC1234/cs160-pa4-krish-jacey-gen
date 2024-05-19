@@ -13,6 +13,7 @@ unordered_map<string, unordered_map<string, int>> varOffsets;
 
 unordered_map<string, int> globals;
 
+// get the correct variable stack offset, or return the variable name if it is a global variable
 string get_var_stack(string var, string funcName){
     if(varOffsets[funcName].find(var) != varOffsets[funcName].end()){
         return to_string(varOffsets[funcName][var]) + "(%rbp)";
@@ -114,7 +115,47 @@ void LirInst::codeGenString(string funcName){
             cout << "  movq %r8, " << get_var_stack(value.Arith.lhs, funcName) << endl;
         }
     } else if(type == LirInst::CallExt){
-        cout << "  callextern" << endl;
+        int stack_size = 0;
+
+        // first 6 arguments are passed in registers
+        if(value.CallExt.args.size() >= 1){
+            cout << "  movq " << value.CallExt.args[0]->codeGenString(funcName) << ", %rdi" << endl;
+        }
+        if(value.CallExt.args.size() >= 2){
+            cout << "  movq " << value.CallExt.args[1]->codeGenString(funcName) << ", %rsi" << endl;
+        }
+        if(value.CallExt.args.size() >= 3){
+            cout << "  movq " << value.CallExt.args[2]->codeGenString(funcName) << ", %rdx" << endl;
+        }
+        if(value.CallExt.args.size() >= 4){
+            cout << "  movq " << value.CallExt.args[3]->codeGenString(funcName) << ", %rcx" << endl;
+        }
+        if(value.CallExt.args.size() >= 5){
+            cout << "  movq " << value.CallExt.args[4]->codeGenString(funcName) << ", %r8" << endl;
+        }
+        if(value.CallExt.args.size() >= 6){
+            cout << "  movq " << value.CallExt.args[5]->codeGenString(funcName) << ", %r9" << endl;
+        }
+        // if there are more than 6 arguments, push them onto the stack
+        if(value.CallExt.args.size() > 6){
+            for(int i = 6; i < value.CallExt.args.size(); i++){
+                cout << "  pushq " << value.CallExt.args[i]->codeGenString(funcName) << endl;
+                stack_size += 8;
+            }
+            // align the stack
+            if(stack_size % 16 != 0){
+                stack_size += 8;
+                cout << "  subq $" << stack_size << ", %rsp" << endl;
+            }
+        }
+        cout << "  call " << value.CallExt.callee << endl;
+        // only return if it is an assignment
+        if(value.CallExt.lhs != ""){
+            cout << "  movq %rax, " << get_var_stack(value.CallExt.lhs, funcName) << endl;
+        }
+        if(stack_size > 0){
+            cout << "  addq $" << stack_size << ", %rsp" << endl;
+        }
     } else if(type == LirInst::Cmp){
         if(value.Cmp.right->type != Operand::Const || (value.Cmp.right->type == Operand::Const && value.Cmp.left->type == Operand::Const)){
             cout << "  movq " << value.Cmp.left->codeGenString(funcName) << ", %r8" << endl;
