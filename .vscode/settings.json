@@ -12,6 +12,7 @@
         "limits": "cpp",
         "ratio": "cpp",
         "tuple": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "unordered_map": "cpp"
     }
 }

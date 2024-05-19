@@ -302,4 +302,6 @@ string create_fresh_var(LIR_Function* lir_func, Type* type);
 
 string create_fresh_label(LIR_Function* lir_func);
 
+string get_var_stack(string var, string funcName);
+
 #endif

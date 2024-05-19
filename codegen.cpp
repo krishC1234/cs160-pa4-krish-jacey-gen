@@ -11,8 +11,24 @@ using namespace std;
 
 unordered_map<string, unordered_map<string, int>> varOffsets;
 
+unordered_map<string, int> globals;
+
+string get_var_stack(string var, string funcName){
+    if(varOffsets[funcName].find(var) != varOffsets[funcName].end()){
+        return to_string(varOffsets[funcName][var]) + "(%rbp)";
+    }
+    return var + "(%rip)";
+}
+
 void LIR_Program::codeGenString(){
-    cout << ".data\n\nout_of_bounds_msg: .string \"out-of-bounds array access\"\ninvalid_alloc_msg: .string \"invalid allocation amount\"\n        \n.text\n\n.globl main" << endl;
+    cout << ".data\n" << endl;
+    // generate global variables
+    for(auto it = globals.begin(); it != globals.end(); it++){
+        cout << ".globl " << it->first << endl;
+        cout << it->first << ": .zero 8" << endl << endl << endl;
+    }
+
+    cout << "out_of_bounds_msg: .string \"out-of-bounds array access\"\ninvalid_alloc_msg: .string \"invalid allocation amount\"\n        \n.text\n\n.globl main" << endl;
         
     for(auto it = functions.begin(); it != functions.end(); it++){
         it->second->codeGenString();
@@ -90,12 +106,15 @@ void LirInst::codeGenString(string funcName){
             else {
                 cout << "  idivq " << value.Arith.right->codeGenString(funcName) << endl;
             }
-            cout << "  movq %rax, " << varOffsets[funcName][value.Arith.lhs] << "(%rbp)" << endl;
+            // cout << "  movq %rax, " << varOffsets[funcName][value.Arith.lhs] << "(%rbp)" << endl;
+            // get_var_stack(value.Arith.lhs, funcName);
+            cout << "  movq %rax, " << get_var_stack(value.Arith.lhs, funcName) << endl;
         }
         else{
             cout << "  movq " << value.Arith.left->codeGenString(funcName) << ", %r8" << endl;
             cout << "  " << value.Arith.aop->codeGenString() << " " << value.Arith.right->codeGenString(funcName) << ", %r8" << endl;
-            cout << "  movq %r8, " << varOffsets[funcName][value.Arith.lhs] << "(%rbp)" << endl;
+            // cout << "  movq %r8, " << varOffsets[funcName][value.Arith.lhs] << "(%rbp)" << endl;
+            cout << "  movq %r8, " << get_var_stack(value.Arith.lhs, funcName) << endl;
         }
     } else if(type == LirInst::CallExt){
         cout << "  callextern" << endl;
@@ -109,13 +128,16 @@ void LirInst::codeGenString(string funcName){
         }
         cout << "  movq $0, %r8" << endl;
         cout << "  " << value.Cmp.aop->codeGenString() << " %r8b" << endl;
-        cout << "  movq %r8, " << varOffsets[funcName][value.Cmp.lhs] << "(%rbp)" << endl;
+        // cout << "  movq %r8, " << varOffsets[funcName][value.Cmp.lhs] << "(%rbp)" << endl;
+        cout << "  movq %r8, " << get_var_stack(value.Cmp.lhs, funcName) << endl;
     } else if(type == LirInst::Copy){
         if(value.Copy.op->type == Operand::Const){
-            cout << "  movq " << value.Copy.op->codeGenString(funcName) << ", " << varOffsets[funcName][value.Copy.lhs] << "(%rbp)" << endl;
+            // cout << "  movq " << value.Copy.op->codeGenString(funcName) << ", " << varOffsets[funcName][value.Copy.lhs] << "(%rbp)" << endl;
+            cout << "  movq " << value.Copy.op->codeGenString(funcName) << ", " << get_var_stack(value.Copy.lhs, funcName) << endl;
         } else if(value.Copy.op->type == Operand::Var){
             cout << "  movq " << value.Copy.op->codeGenString(funcName) << ", %r8" << endl;
-            cout << "  movq %r8, " << varOffsets[funcName][value.Copy.lhs] << "(%rbp)" << endl;
+            // cout << "  movq %r8, " << varOffsets[funcName][value.Copy.lhs] << "(%rbp)" << endl;
+            cout << "  movq %r8, " << get_var_stack(value.Copy.lhs, funcName) << endl;
         }
     } else if(type == LirInst::Gep){
         cout << "  gep" << endl;
@@ -166,7 +188,8 @@ void Terminal::codeGenString(string funcName){
 
 string Operand::codeGenString(string funcName){
     if(type == Operand::Var){
-        return to_string(varOffsets[funcName][value.Var.id]) + "(%rbp)";
+        // return to_string(varOffsets[funcName][value.Var.id]) + "(%rbp)";
+        return get_var_stack(value.Var.id, funcName);
     } else if(type == Operand::Const){
         return "$" + to_string(value.Const.num);
     }
