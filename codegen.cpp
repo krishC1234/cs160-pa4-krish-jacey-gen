@@ -42,6 +42,8 @@ void LIR_Function::codeGenString(){
 
     // generate code for each basic block
     for(auto it = body.begin(); it != body.end(); it++){
+        if(it->second->reachable == false)
+            continue;
         cout << name << "_" << it->second->label << ":" << endl;
         it->second->codeGenString(name);
     }

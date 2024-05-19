@@ -1,235 +1,777 @@
+bar:int
+baz:int
+fez:int
+foo:int
+
 fn main() -> int {
-let _t1:int, _t10:int, _t11:int, _t12:int, _t13:int, _t14:int, _t15:int, _t16:int, _t17:int, _t18:int, _t19:int, _t2:int, _t20:int, _t21:int, _t22:int, _t23:int, _t24:int, _t25:int, _t26:int, _t27:int, _t28:int, _t29:int, _t3:int, _t30:int, _t31:int, _t32:int, _t33:int, _t34:int, _t35:int, _t36:int, _t37:int, _t38:int, _t39:int, _t4:int, _t40:int, _t41:int, _t42:int, _t43:int, _t44:int, _t45:int, _t46:int, _t47:int, _t48:int, _t49:int, _t5:int, _t50:int, _t51:int, _t52:int, _t53:int, _t54:int, _t55:int, _t56:int, _t57:int, _t58:int, _t59:int, _t6:int, _t60:int, _t61:int, _t62:int, _t63:int, _t64:int, _t65:int, _t66:int, _t67:int, _t68:int, _t69:int, _t7:int, _t8:int, _t9:int, id0:int, id1:int, id2:int, id3:int, id4:int, id5:int, id6:int, id7:int
+let _t1:int, _t10:int, _t100:int, _t101:int, _t102:int, _t103:int, _t104:int, _t105:int, _t106:int, _t107:int, _t108:int, _t109:int, _t11:int, _t110:int, _t111:int, _t112:int, _t113:int, _t114:int, _t115:int, _t116:int, _t117:int, _t118:int, _t119:int, _t12:int, _t120:int, _t121:int, _t122:int, _t123:int, _t124:int, _t125:int, _t126:int, _t127:int, _t128:int, _t129:int, _t13:int, _t130:int, _t131:int, _t132:int, _t133:int, _t134:int, _t135:int, _t136:int, _t137:int, _t138:int, _t139:int, _t14:int, _t140:int, _t141:int, _t142:int, _t143:int, _t144:int, _t145:int, _t146:int, _t147:int, _t148:int, _t149:int, _t15:int, _t150:int, _t151:int, _t152:int, _t153:int, _t154:int, _t155:int, _t156:int, _t157:int, _t158:int, _t159:int, _t16:int, _t160:int, _t161:int, _t162:int, _t163:int, _t164:int, _t165:int, _t166:int, _t167:int, _t168:int, _t169:int, _t17:int, _t170:int, _t171:int, _t172:int, _t173:int, _t174:int, _t175:int, _t176:int, _t177:int, _t178:int, _t179:int, _t18:int, _t180:int, _t181:int, _t182:int, _t183:int, _t184:int, _t185:int, _t186:int, _t187:int, _t188:int, _t189:int, _t19:int, _t190:int, _t191:int, _t192:int, _t193:int, _t194:int, _t195:int, _t196:int, _t197:int, _t198:int, _t199:int, _t2:int, _t20:int, _t200:int, _t201:int, _t202:int, _t203:int, _t204:int, _t205:int, _t206:int, _t21:int, _t22:int, _t23:int, _t24:int, _t25:int, _t26:int, _t27:int, _t28:int, _t29:int, _t3:int, _t30:int, _t31:int, _t32:int, _t33:int, _t34:int, _t35:int, _t36:int, _t37:int, _t38:int, _t39:int, _t4:int, _t40:int, _t41:int, _t42:int, _t43:int, _t44:int, _t45:int, _t46:int, _t47:int, _t48:int, _t49:int, _t5:int, _t50:int, _t51:int, _t52:int, _t53:int, _t54:int, _t55:int, _t56:int, _t57:int, _t58:int, _t59:int, _t6:int, _t60:int, _t61:int, _t62:int, _t63:int, _t64:int, _t65:int, _t66:int, _t67:int, _t68:int, _t69:int, _t7:int, _t70:int, _t71:int, _t72:int, _t73:int, _t74:int, _t75:int, _t76:int, _t77:int, _t78:int, _t79:int, _t8:int, _t80:int, _t81:int, _t82:int, _t83:int, _t84:int, _t85:int, _t86:int, _t87:int, _t88:int, _t89:int, _t9:int, _t90:int, _t91:int, _t92:int, _t93:int, _t94:int, _t95:int, _t96:int, _t97:int, _t98:int, _t99:int, id0:int, id1:int, id2:int, id3:int
 entry:
-  id1 = $copy 0
-  _t1 = $arith sub 0 7
-  _t2 = $arith mul id1 _t1
-  _t3 = $cmp eq 6 _t2
-  id0 = $copy _t3
-  id4 = $copy 5
+  id2 = $copy 3
+  _t1 = $arith sub 0 id0
+  id3 = $copy _t1
   $jump lbl1
 
 lbl1:
-  $branch 3 lbl2 lbl3
+  _t2 = $arith mul id0 bar
+  $branch _t2 lbl2 lbl3
 
 lbl10:
-  _t20 = $arith sub 2 6
-  _t21 = $cmp gt 1 _t20
-  _t22 = $arith div _t21 id3
-  $branch _t22 lbl11 lbl12
+  $branch fez lbl11 lbl12
 
 lbl11:
-  id0 = $copy id2
-  _t23 = $cmp gte id5 id1
-  _t24 = $arith add _t23 id2
-  id2 = $copy _t24
-  id6 = $copy 2
-  _t26 = $arith sub 0 id7
-  _t25 = $arith sub 0 _t26
-  id7 = $copy _t25
-  _t27 = $cmp eq id5 id1
-  _t28 = $arith add id0 0
-  _t29 = $arith div _t27 _t28
-  _t30 = $arith sub 0 id6
-  _t31 = $cmp lt id5 _t30
-  _t32 = $arith add _t29 _t31
-  id6 = $copy _t32
-  id1 = $copy 0
-  id6 = $copy 2
-  _t34 = $arith sub 0 id0
-  _t33 = $arith sub 0 _t34
-  _t35 = $cmp lt _t33 9
-  id4 = $copy _t35
+  _t21 = $cmp gte fez fez
+  baz = $copy _t21
+  id2 = $copy id1
+  _t22 = $cmp eq 9 foo
+  foo = $copy _t22
+  _t23 = $cmp eq baz id1
+  foo = $copy _t23
+  _t24 = $cmp gt id2 9
+  foo = $copy _t24
+  id0 = $copy fez
+  id2 = $copy 9
+  fez = $copy id3
+  id0 = $copy 0
+  _t25 = $arith sub 0 bar
+  bar = $copy _t25
+  id0 = $copy 1
+  id1 = $copy baz
   $jump lbl10
 
 lbl12:
+  _t26 = $cmp gte 10 8
+  id1 = $copy _t26
+  fez = $copy 5
+  id3 = $copy 0
+  id3 = $copy id3
+  id1 = $copy baz
   $jump lbl1
 
 lbl13:
-  $branch 10 lbl14 lbl15
+  _t27 = $arith div 8 id3
+  _t28 = $cmp eq 0 _t27
+  _t29 = $cmp eq 2 _t28
+  $branch _t29 lbl14 lbl15
 
 lbl14:
-  id2 = $copy id6
-  $branch id6 lbl16 lbl17
+  $jump lbl16
 
 lbl15:
-  id2 = $copy 3
-  id0 = $copy id0
-  id6 = $copy 9
-  id0 = $copy 2
-  _t67 = $cmp lte id7 id1
-  _t68 = $arith mul id4 _t67
-  _t69 = $cmp eq 6 _t68
-  $ret _t69
+  id2 = $copy 2
+  $branch 9 lbl37 lbl38
 
 lbl16:
-  id2 = $copy 7
-  id3 = $copy 4
-  _t37 = $arith add 3 id7
-  _t36 = $arith sub 0 _t37
-  id4 = $copy _t36
-  id2 = $copy id0
-  $jump lbl18
+  _t30 = $arith sub 0 5
+  _t31 = $arith div _t30 1
+  _t32 = $arith mul _t31 id1
+  $branch _t32 lbl17 lbl18
 
 lbl17:
-  _t39 = $arith add id3 6
-  _t38 = $arith sub 0 _t39
-  id0 = $copy _t38
-  id7 = $copy id1
-  _t40 = $arith add 7 9
-  id0 = $copy _t40
-  id0 = $copy id2
-  id5 = $copy 6
-  _t42 = $cmp gt 1 id3
-  _t43 = $cmp gte 1 id4
-  _t44 = $arith div _t42 _t43
-  _t41 = $arith sub 0 _t44
-  id0 = $copy _t41
-  _t46 = $cmp neq id5 id2
-  _t45 = $arith sub 0 _t46
-  _t47 = $cmp eq id4 _t45
-  id1 = $copy _t47
-  id2 = $copy id5
-  $jump lbl18
+  id0 = $copy 6
+  id0 = $copy id0
+  _t33 = $arith sub 0 foo
+  id1 = $copy _t33
+  baz = $copy 3
+  baz = $copy foo
+  id1 = $copy id2
+  id2 = $copy id2
+  id0 = $copy 4
+  _t35 = $arith sub id1 2
+  _t36 = $cmp lte _t35 1
+  _t34 = $arith sub 0 _t36
+  id2 = $copy _t34
+  foo = $copy fez
+  _t37 = $cmp gte 2 10
+  foo = $copy _t37
+  _t38 = $cmp eq 7 foo
+  id3 = $copy _t38
+  $jump lbl16
 
 lbl18:
-  _t48 = $arith sub 0 id4
-  _t49 = $cmp gt _t48 1
-  _t50 = $arith sub _t49 id0
-  id1 = $copy _t50
-  _t51 = $arith add id1 id4
-  _t52 = $cmp lt _t51 id3
-  id4 = $copy _t52
-  _t53 = $arith sub 0 id0
-  $branch _t53 lbl19 lbl20
+  $branch fez lbl19 lbl20
 
 lbl19:
-  id4 = $copy 9
-  _t54 = $arith sub 0 id0
-  _t55 = $arith div _t54 id1
-  _t56 = $arith add id0 _t55
-  id3 = $copy _t56
-  _t57 = $arith sub 0 0
-  _t58 = $cmp lte id3 _t57
-  id6 = $copy _t58
-  id4 = $copy id7
-  _t59 = $cmp neq id4 2
-  id1 = $copy _t59
-  $jump lbl21
+  id2 = $copy 6
+  id3 = $copy 10
+  id2 = $copy 9
+  bar = $copy id2
+  id1 = $copy foo
+  _t39 = $arith sub 0 foo
+  bar = $copy _t39
+  _t40 = $arith sub 0 1
+  id0 = $copy _t40
+  baz = $copy foo
+  $jump lbl13
 
 lbl2:
-  id0 = $copy id2
-  _t4 = $arith sub 0 id2
+  _t3 = $arith sub 0 10
+  _t4 = $cmp lte _t3 baz
   id1 = $copy _t4
-  $jump lbl4
+  _t7 = $arith div 0 id0
+  _t6 = $arith sub 0 _t7
+  _t5 = $arith sub 0 _t6
+  $branch _t5 lbl4 lbl5
 
 lbl20:
-  _t60 = $cmp gt id5 id6
-  id6 = $copy _t60
-  id0 = $copy 5
-  id7 = $copy id1
-  id7 = $copy 5
-  id5 = $copy 10
-  id7 = $copy id3
+  bar = $copy 8
+  id3 = $copy id0
+  id2 = $copy 6
+  id0 = $copy bar
+  id0 = $copy id1
+  id1 = $copy 2
+  fez = $copy 8
   $jump lbl21
 
 lbl21:
-  id2 = $copy id3
-  $branch 7 lbl22 lbl23
+  $jump lbl22
 
 lbl22:
-  id3 = $copy 10
-  id1 = $copy 3
-  id4 = $copy 8
-  _t61 = $arith sub 0 7
-  _t62 = $cmp lte id5 _t61
-  id7 = $copy _t62
-  id3 = $copy id1
-  id2 = $copy 4
-  id5 = $copy id6
-  _t63 = $arith sub 0 8
-  id3 = $copy _t63
-  _t64 = $arith sub 0 id6
-  id3 = $copy _t64
-  $jump lbl15
+  $branch id3 lbl23 lbl24
 
 lbl23:
-  id0 = $copy id5
-  id0 = $copy id1
-  id5 = $copy 7
-  id5 = $copy 2
-  id4 = $copy 2
-  id6 = $copy 7
-  id1 = $copy 4
-  $jump lbl24
+  id2 = $copy 7
+  bar = $copy 0
+  id3 = $copy fez
+  id3 = $copy 1
+  fez = $copy bar
+  _t42 = $cmp eq 5 6
+  _t41 = $arith sub 0 _t42
+  foo = $copy _t41
+  id1 = $copy 8
+  $jump lbl22
 
 lbl24:
-  _t65 = $arith sub 0 7
-  _t66 = $arith div _t65 id4
-  id7 = $copy _t66
-  id1 = $copy id3
-  id4 = $copy 8
-  id4 = $copy 4
-  $jump lbl13
+  _t43 = $arith sub 0 3
+  $branch _t43 lbl25 lbl26
+
+lbl25:
+  id3 = $copy fez
+  fez = $copy id0
+  id3 = $copy id2
+  id2 = $copy foo
+  foo = $copy 10
+  _t44 = $cmp lt fez id1
+  id2 = $copy _t44
+  _t45 = $arith sub 0 5
+  _t46 = $arith mul 8 _t45
+  _t47 = $arith sub 6 0
+  _t48 = $cmp eq _t46 _t47
+  baz = $copy _t48
+  $jump lbl27
+
+lbl26:
+  id2 = $copy fez
+  fez = $copy 2
+  baz = $copy id2
+  id0 = $copy baz
+  _t50 = $cmp lte foo 2
+  _t49 = $arith sub 0 _t50
+  _t51 = $cmp lte foo _t49
+  bar = $copy _t51
+  _t52 = $arith mul id1 2
+  id0 = $copy _t52
+  _t53 = $cmp neq 10 bar
+  id0 = $copy _t53
+  $jump lbl27
+
+lbl27:
+  $branch 2 lbl28 lbl29
+
+lbl28:
+  foo = $copy id0
+  _t54 = $cmp eq 5 5
+  fez = $copy _t54
+  bar = $copy 1
+  _t55 = $arith mul 3 2
+  fez = $copy _t55
+  _t56 = $arith sub 0 id0
+  id1 = $copy _t56
+  _t57 = $cmp gte 10 bar
+  _t58 = $cmp lte id0 _t57
+  baz = $copy _t58
+  _t59 = $cmp lt 4 0
+  _t60 = $arith div 10 id2
+  _t61 = $cmp gt _t59 _t60
+  _t62 = $cmp gte 4 _t61
+  id1 = $copy _t62
+  $jump lbl30
+
+lbl29:
+  id0 = $copy 9
+  id2 = $copy 3
+  bar = $copy 0
+  bar = $copy id0
+  _t64 = $arith sub 0 6
+  _t65 = $cmp gte _t64 bar
+  _t63 = $arith sub 0 _t65
+  id2 = $copy _t63
+  _t66 = $arith add 3 2
+  _t67 = $arith sub 0 id1
+  _t68 = $arith mul _t66 _t67
+  fez = $copy _t68
+  fez = $copy id0
+  fez = $copy 9
+  $jump lbl30
 
 lbl3:
   $jump lbl13
 
+lbl30:
+  id3 = $copy 10
+  $jump lbl31
+
+lbl31:
+  $branch 7 lbl32 lbl33
+
+lbl32:
+  id1 = $copy 10
+  _t69 = $arith sub 0 fez
+  _t70 = $cmp eq bar _t69
+  id3 = $copy _t70
+  id2 = $copy id0
+  foo = $copy 7
+  _t71 = $arith div 9 foo
+  id3 = $copy _t71
+  _t72 = $cmp neq 0 7
+  _t73 = $cmp lte _t72 1
+  bar = $copy _t73
+  _t74 = $cmp lt 10 foo
+  foo = $copy _t74
+  id0 = $copy bar
+  $jump lbl31
+
+lbl33:
+  id2 = $copy 6
+  $jump lbl34
+
+lbl34:
+  $branch fez lbl35 lbl36
+
+lbl35:
+  _t75 = $cmp gte fez fez
+  baz = $copy _t75
+  id2 = $copy id1
+  _t76 = $cmp eq 9 foo
+  foo = $copy _t76
+  _t77 = $cmp eq baz id1
+  foo = $copy _t77
+  _t78 = $cmp gt id2 9
+  foo = $copy _t78
+  id0 = $copy fez
+  id2 = $copy 9
+  fez = $copy id3
+  id0 = $copy 0
+  _t79 = $arith sub 0 bar
+  bar = $copy _t79
+  id0 = $copy 1
+  id1 = $copy baz
+  $jump lbl34
+
+lbl36:
+  _t80 = $cmp gte 10 8
+  id1 = $copy _t80
+  fez = $copy 5
+  id3 = $copy 0
+  $jump lbl13
+
+lbl37:
+  _t83 = $arith sub id0 3
+  _t82 = $arith sub 0 _t83
+  _t81 = $arith sub 0 _t82
+  bar = $copy _t81
+  $jump lbl40
+
+lbl38:
+  foo = $copy 8
+  _t124 = $arith sub 0 id0
+  _t125 = $cmp lte _t124 4
+  $branch _t125 lbl52 lbl53
+
+lbl39:
+  _t140 = $arith sub 0 3
+  id3 = $copy _t140
+  $jump lbl55
+
 lbl4:
-  $branch id3 lbl5 lbl6
+  id2 = $copy 2
+  id3 = $copy 7
+  id0 = $copy foo
+  bar = $copy id2
+  bar = $copy 4
+  _t8 = $arith sub 0 foo
+  bar = $copy _t8
+  id3 = $copy 7
+  baz = $copy baz
+  baz = $copy foo
+  $jump lbl6
+
+lbl40:
+  $branch 10 lbl41 lbl42
+
+lbl41:
+  bar = $copy 1
+  baz = $copy 4
+  id2 = $copy 1
+  id1 = $copy 5
+  _t84 = $arith sub 0 foo
+  _t85 = $cmp lt _t84 9
+  id0 = $copy _t85
+  fez = $copy 0
+  baz = $copy baz
+  id2 = $copy 0
+  bar = $copy id2
+  _t86 = $arith div id0 8
+  id0 = $copy _t86
+  bar = $copy id1
+  $jump lbl40
+
+lbl42:
+  $jump lbl43
+
+lbl43:
+  $branch 6 lbl44 lbl45
+
+lbl44:
+  id3 = $copy 7
+  foo = $copy fez
+  bar = $copy 10
+  _t87 = $arith mul 4 2
+  id1 = $copy _t87
+  fez = $copy id3
+  id3 = $copy fez
+  fez = $copy id0
+  foo = $copy id0
+  id3 = $copy foo
+  $jump lbl43
+
+lbl45:
+  _t88 = $arith sub 0 foo
+  _t89 = $cmp lte 7 _t88
+  _t90 = $cmp eq id1 _t89
+  baz = $copy _t90
+  $branch baz lbl46 lbl47
+
+lbl46:
+  _t91 = $arith div 10 8
+  _t92 = $cmp lte 5 9
+  _t93 = $cmp gt _t92 id1
+  _t94 = $cmp lt _t91 _t93
+  id0 = $copy _t94
+  id0 = $copy 5
+  id2 = $copy id0
+  baz = $copy id1
+  _t95 = $arith add 9 id3
+  _t96 = $arith sub fez _t95
+  baz = $copy _t96
+  _t97 = $arith sub 0 0
+  fez = $copy _t97
+  _t98 = $cmp neq 7 5
+  id3 = $copy _t98
+  $jump lbl48
+
+lbl47:
+  _t99 = $cmp lte 6 9
+  id3 = $copy _t99
+  id2 = $copy foo
+  id3 = $copy 3
+  id1 = $copy 8
+  id3 = $copy foo
+  _t100 = $arith add 4 bar
+  fez = $copy _t100
+  _t101 = $cmp neq fez 2
+  _t102 = $cmp lte id3 _t101
+  bar = $copy _t102
+  _t103 = $arith add 9 5
+  _t104 = $cmp lt 1 _t103
+  _t105 = $cmp gt 6 3
+  _t106 = $arith div _t104 _t105
+  id1 = $copy _t106
+  id0 = $copy 6
+  $jump lbl48
+
+lbl48:
+  id0 = $copy id3
+  _t107 = $cmp lt 8 5
+  _t108 = $cmp eq _t107 5
+  _t109 = $arith add _t108 7
+  $branch _t109 lbl49 lbl50
+
+lbl49:
+  id0 = $copy 10
+  baz = $copy id2
+  _t110 = $arith sub 3 id2
+  foo = $copy _t110
+  bar = $copy 6
+  baz = $copy foo
+  fez = $copy 0
+  _t111 = $arith mul id1 2
+  _t112 = $arith div _t111 10
+  baz = $copy _t112
+  $jump lbl51
 
 lbl5:
-  id4 = $copy 10
-  id2 = $copy id2
-  _t5 = $cmp neq id6 id7
-  id5 = $copy _t5
-  _t6 = $arith sub 0 id7
-  _t7 = $arith sub _t6 id4
-  id1 = $copy _t7
-  _t8 = $arith sub 0 id4
-  id3 = $copy _t8
-  id5 = $copy 1
-  id1 = $copy id2
-  $jump lbl4
+  bar = $copy 0
+  bar = $copy id0
+  _t10 = $arith sub 0 6
+  _t11 = $cmp gte _t10 bar
+  _t9 = $arith sub 0 _t11
+  id2 = $copy _t9
+  _t12 = $arith add 3 2
+  _t13 = $arith sub 0 id1
+  _t14 = $arith mul _t12 _t13
+  fez = $copy _t14
+  fez = $copy id0
+  fez = $copy 9
+  id3 = $copy 3
+  $jump lbl6
+
+lbl50:
+  id0 = $copy id1
+  _t113 = $cmp lt id0 1
+  foo = $copy _t113
+  _t114 = $cmp eq 5 5
+  fez = $copy _t114
+  bar = $copy 1
+  _t115 = $arith mul 3 2
+  fez = $copy _t115
+  _t116 = $arith sub 0 id0
+  id1 = $copy _t116
+  _t117 = $cmp gte 10 bar
+  _t118 = $cmp lte id0 _t117
+  baz = $copy _t118
+  _t119 = $cmp lt 4 0
+  _t120 = $arith div 10 id2
+  _t121 = $cmp gt _t119 _t120
+  _t122 = $cmp gte 4 _t121
+  id1 = $copy _t122
+  $jump lbl51
+
+lbl51:
+  bar = $copy 10
+  _t123 = $arith sub 0 id1
+  fez = $copy _t123
+  $jump lbl39
+
+lbl52:
+  _t126 = $arith sub 0 id1
+  baz = $copy _t126
+  id3 = $copy baz
+  id3 = $copy 2
+  _t127 = $arith div 3 foo
+  baz = $copy _t127
+  _t128 = $arith add 0 fez
+  id3 = $copy _t128
+  _t129 = $arith sub 0 8
+  id3 = $copy _t129
+  id3 = $copy id1
+  id3 = $copy bar
+  $jump lbl54
+
+lbl53:
+  _t130 = $arith div 9 foo
+  id3 = $copy _t130
+  _t131 = $cmp neq 0 7
+  _t132 = $cmp lte _t131 1
+  bar = $copy _t132
+  _t133 = $cmp lt 10 foo
+  foo = $copy _t133
+  id0 = $copy bar
+  id0 = $copy foo
+  _t134 = $arith div 1 7
+  bar = $copy _t134
+  fez = $copy fez
+  id3 = $copy 0
+  $jump lbl54
+
+lbl54:
+  fez = $copy bar
+  id1 = $copy bar
+  id2 = $copy 9
+  _t135 = $cmp neq id2 6
+  _t136 = $cmp neq _t135 7
+  _t137 = $cmp lt _t136 0
+  baz = $copy _t137
+  fez = $copy 10
+  _t138 = $arith sub 0 3
+  _t139 = $cmp lt id3 _t138
+  id2 = $copy _t139
+  _t206 = $copy 9
+  $jump lbl82
+
+lbl55:
+  _t141 = $arith sub 0 0
+  $branch _t141 lbl56 lbl57
+
+lbl56:
+  $branch 10 lbl58 lbl59
+
+lbl57:
+  $jump lbl64
+
+lbl58:
+  _t142 = $arith sub 0 0
+  _t143 = $arith div 10 _t142
+  id1 = $copy _t143
+  id2 = $copy 2
+  id0 = $copy 6
+  fez = $copy 0
+  id3 = $copy baz
+  _t145 = $arith sub 1 id1
+  _t144 = $arith sub 0 _t145
+  id1 = $copy _t144
+  fez = $copy 9
+  id3 = $copy 1
+  _t146 = $cmp lte 6 1
+  fez = $copy _t146
+  _t147 = $arith sub 0 9
+  fez = $copy _t147
+  id1 = $copy 4
+  _t148 = $cmp gt id1 7
+  _t149 = $cmp gte 2 _t148
+  _t150 = $arith div 5 _t149
+  id2 = $copy _t150
+  $jump lbl60
+
+lbl59:
+  _t151 = $cmp gt id2 baz
+  fez = $copy _t151
+  _t152 = $arith div id0 8
+  id0 = $copy _t152
+  bar = $copy id1
+  baz = $copy 9
+  $jump lbl60
 
 lbl6:
-  $branch id4 lbl7 lbl8
+  $jump lbl7
+
+lbl60:
+  _t153 = $cmp gte 2 10
+  _t154 = $cmp lte _t153 2
+  id3 = $copy _t154
+  $branch 5 lbl61 lbl62
+
+lbl61:
+  baz = $copy 4
+  id2 = $copy id2
+  id2 = $copy 3
+  _t155 = $cmp neq fez id0
+  id1 = $copy _t155
+  id2 = $copy 2
+  _t156 = $arith sub 0 0
+  foo = $copy _t156
+  foo = $copy id1
+  $jump lbl63
+
+lbl62:
+  _t158 = $arith sub 0 bar
+  _t159 = $arith add _t158 fez
+  _t157 = $arith sub 0 _t159
+  baz = $copy _t157
+  id2 = $copy id0
+  id1 = $copy 10
+  id2 = $copy 8
+  id2 = $copy foo
+  baz = $copy id1
+  id2 = $copy baz
+  id3 = $copy fez
+  _t206 = $copy 3
+  $jump lbl82
+
+lbl63:
+  _t160 = $cmp neq id1 0
+  _t161 = $cmp gt _t160 7
+  foo = $copy _t161
+  id0 = $copy id1
+  _t162 = $cmp lt bar 0
+  id3 = $copy _t162
+  _t163 = $arith sub 0 7
+  _t164 = $cmp gte _t163 id3
+  bar = $copy _t164
+  _t165 = $cmp gt bar 9
+  baz = $copy _t165
+  $jump lbl55
+
+lbl64:
+  _t167 = $cmp eq 5 6
+  _t166 = $arith sub 0 _t167
+  $branch _t166 lbl65 lbl66
+
+lbl65:
+  bar = $copy bar
+  id1 = $copy id3
+  $branch id3 lbl67 lbl68
+
+lbl66:
+  _t193 = $cmp gte fez fez
+  _t194 = $arith div id0 id2
+  _t195 = $cmp neq _t193 _t194
+  id1 = $copy _t195
+  $jump lbl76
+
+lbl67:
+  _t168 = $cmp gt 6 3
+  id0 = $copy _t168
+  _t169 = $cmp neq 6 fez
+  foo = $copy _t169
+  id3 = $copy baz
+  _t170 = $arith sub 6 0
+  _t171 = $cmp eq foo _t170
+  id3 = $copy _t171
+  id0 = $copy 10
+  _t172 = $arith add 4 id1
+  id1 = $copy _t172
+  id2 = $copy fez
+  fez = $copy 2
+  baz = $copy id2
+  $jump lbl64
+
+lbl68:
+  baz = $copy 1
+  id1 = $copy 2
+  foo = $copy 8
+  fez = $copy fez
+  foo = $copy id2
+  foo = $copy 0
+  _t174 = $cmp lt id0 1
+  _t173 = $arith sub 0 _t174
+  id3 = $copy _t173
+  _t175 = $cmp eq 5 5
+  fez = $copy _t175
+  $jump lbl69
+
+lbl69:
+  id0 = $copy 2
+  $jump lbl70
 
 lbl7:
-  id4 = $copy 9
-  _t9 = $arith sub 0 id7
-  id2 = $copy _t9
-  id0 = $copy id7
-  id1 = $copy id1
-  _t10 = $cmp lt id1 id2
-  id2 = $copy _t10
-  id5 = $copy 4
-  $jump lbl9
+  $branch 7 lbl8 lbl9
+
+lbl70:
+  _t177 = $cmp neq 2 3
+  _t176 = $arith sub 0 _t177
+  $branch _t176 lbl71 lbl72
+
+lbl71:
+  _t178 = $arith sub 3 0
+  id0 = $copy _t178
+  _t179 = $cmp gte baz id3
+  _t180 = $cmp lte id3 _t179
+  _t181 = $cmp gt _t180 0
+  fez = $copy _t181
+  bar = $copy 10
+  bar = $copy 7
+  id3 = $copy baz
+  id0 = $copy id3
+  $jump lbl70
+
+lbl72:
+  $branch 10 lbl73 lbl74
+
+lbl73:
+  _t182 = $arith sub 0 fez
+  id3 = $copy _t182
+  baz = $copy 10
+  id2 = $copy 2
+  baz = $copy foo
+  _t183 = $arith sub 0 6
+  id0 = $copy _t183
+  _t185 = $arith sub 0 id3
+  _t184 = $arith sub 0 _t185
+  bar = $copy _t184
+  id3 = $copy id2
+  bar = $copy id2
+  _t186 = $arith add foo 8
+  baz = $copy _t186
+  $jump lbl64
+
+lbl74:
+  id0 = $copy id2
+  _t187 = $arith sub 0 id3
+  foo = $copy _t187
+  id1 = $copy foo
+  id1 = $copy 1
+  baz = $copy bar
+  bar = $copy foo
+  _t189 = $cmp lte 4 7
+  _t188 = $arith sub 0 _t189
+  _t190 = $cmp lte 3 _t188
+  foo = $copy _t190
+  baz = $copy 9
+  fez = $copy 7
+  _t192 = $cmp neq 9 fez
+  _t191 = $arith sub 0 _t192
+  _t206 = $copy _t191
+  $jump lbl82
+
+lbl76:
+  _t197 = $cmp lte 7 9
+  _t196 = $arith sub 0 _t197
+  _t198 = $arith div _t196 0
+  $branch _t198 lbl77 lbl78
+
+lbl77:
+  $jump lbl79
+
+lbl78:
+  _t204 = $arith sub 0 id1
+  _t205 = $cmp gt _t204 5
+  _t206 = $copy _t205
+  $jump lbl82
+
+lbl79:
+  $branch 9 lbl80 lbl81
 
 lbl8:
-  id0 = $copy id4
-  id2 = $copy id7
-  _t11 = $arith div id6 id1
-  _t12 = $cmp lte _t11 0
-  id6 = $copy _t12
-  _t13 = $arith sub 0 9
-  id3 = $copy _t13
-  _t14 = $arith sub 0 id7
-  id6 = $copy _t14
-  id2 = $copy id5
-  id6 = $copy id5
-  id1 = $copy 7
-  id0 = $copy 10
-  $jump lbl9
+  id1 = $copy 10
+  _t15 = $arith sub 0 fez
+  _t16 = $cmp eq bar _t15
+  id3 = $copy _t16
+  id2 = $copy id0
+  foo = $copy 7
+  _t17 = $arith div 9 foo
+  id3 = $copy _t17
+  _t18 = $cmp neq 0 7
+  _t19 = $cmp lte _t18 1
+  bar = $copy _t19
+  _t20 = $cmp lt 10 foo
+  foo = $copy _t20
+  id0 = $copy bar
+  $jump lbl7
+
+lbl80:
+  _t199 = $arith sub 0 3
+  id3 = $copy _t199
+  baz = $copy foo
+  bar = $copy id2
+  id3 = $copy 4
+  baz = $copy baz
+  id1 = $copy 10
+  _t200 = $cmp neq fez 5
+  fez = $copy _t200
+  id1 = $copy id1
+  id2 = $copy 2
+  id0 = $copy 6
+  $jump lbl79
+
+lbl81:
+  _t202 = $cmp eq 4 9
+  _t203 = $cmp neq _t202 id0
+  _t201 = $arith sub 0 _t203
+  id1 = $copy _t201
+  bar = $copy id1
+  id1 = $copy 4
+  baz = $copy 5
+  id1 = $copy fez
+  id1 = $copy id3
+  id3 = $copy 9
+  id1 = $copy 4
+  $jump lbl76
+
+lbl82:
+  $ret _t206
 
 lbl9:
-  _t15 = $cmp eq 1 id2
-  _t16 = $cmp gte _t15 id2
-  _t17 = $arith add _t16 id0
-  id6 = $copy _t17
-  _t18 = $arith add 0 id0
-  _t19 = $arith div _t18 4
-  id2 = $copy _t19
+  id2 = $copy 6
   $jump lbl10
 }
 

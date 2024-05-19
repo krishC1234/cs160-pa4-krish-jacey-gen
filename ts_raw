@@ -1,114 +1,405 @@
+let foo: int;
+let bar: int;
+let baz: int;
+let fez: int;
+
 fn main() -> int {
-  let id1: int = 0, id0: int = 6 == (id1 * -7), id2: int, id3: int, id4: int = 5, id5: int, id6: int, id7: int;
-  while 3 {
-    id0 = id2;
-    id1 = -id2;
-    while id3 {
-      id4 = 10;
-      id2 = id2;
-      id5 = id6 != id7;
-      id1 = -id7 - id4;
-      id3 = -id4;
-      id5 = 1;
-      id1 = id2;
-    }
-    if id4 {
-      id4 = 9;
-      id2 = -id7;
-      id0 = id7;
-      id1 = id1;
-      id2 = id1 < id2;
-      id5 = 4;
+  let id0: int, id1: int, id2: int = 3, id3: int = -id0;
+  while id0 * bar {
+    id1 = -10 <= baz;
+    if --(0 / id0) {
+      id2 = 2;
+      id3 = 7;
+      id0 = foo;
+      bar = id2;
+      bar = 4;
+      bar = -foo;
+      id3 = 7;
+      baz = baz;
+      baz = foo;
     }
     else {
-      id0 = id4;
-      id2 = id7;
-      id6 = (id6 / id1) <= 0;
-      id3 = -9;
-      id6 = -id7;
-      id2 = id5;
-      id6 = id5;
-      id1 = 7;
-      id0 = 10;
+      bar = 0;
+      bar = id0;
+      id2 = -(-6 >= bar);
+      fez = (3 + 2) * -id1;
+      fez = id0;
+      fez = 9;
+      id3 = 3;
     }
-    id6 = ((1 == id2) >= id2) + id0;
-    id2 = (0 + id0) / 4;
-    while (1 > (2 - 6)) / id3 {
-      id0 = id2;
-      id2 = (id5 >= id1) + id2;
-      id6 = 2;
-      id7 = --id7;
-      id6 = ((id5 == id1) / (id0 + 0)) + (id5 < -id6);
-      id1 = 0;
-      id6 = 2;
-      id4 = -(0 - id0) < 9;
-    }
-  }
-  while 10 {
-    id2 = id6;
-    if id6 {
-      id2 = 7;
-      id3 = 4;
-      id4 = -(3 + id7);
+    while 7 {
+      id1 = 10;
+      id3 = bar == -fez;
       id2 = id0;
+      foo = 7;
+      id3 = 9 / foo;
+      bar = (0 != 7) <= 1;
+      foo = 10 < foo;
+      id0 = bar;
     }
-    else {
-      id0 = -(id3 + 6);
-      id7 = id1;
-      id0 = 7 + 9;
-      id0 = id2;
-      id5 = 6;
-      id0 = -((1 > id3) / (1 >= id4));
-      id1 = id4 == -(id5 != id2);
-      id2 = id5;
+    id2 = 6;
+    while fez {
+      baz = fez >= fez;
+      id2 = id1;
+      foo = 9 == foo;
+      foo = baz == id1;
+      foo = id2 > 9;
+      id0 = fez;
+      id2 = 9;
+      fez = id3;
+      id0 = 0;
+      bar = -bar;
+      id0 = 1;
+      id1 = baz;
     }
-    id1 = (-id4 > 1) - id0;
-    id4 = (id1 + id4) < id3;
-    if -id0 {
-      id4 = 9;
-      id3 = id0 + (-id0 / id1);
-      id6 = id3 <= -0;
-      id4 = id7;
-      id1 = id4 != 2;
-    }
-    else {
-      id6 = id5 > id6;
-      id0 = 5;
-      id7 = id1;
-      id7 = 5;
-      id5 = 10;
-      id7 = id3;
-    }
-    id2 = id3;
-    if 7 {
-      id3 = 10;
-      id1 = 3;
-      id4 = 8;
-      id7 = id5 <= -7;
-      id3 = id1;
-      id2 = 4;
-      id5 = id6;
-      id3 = -8;
-      id3 = -id6;
-      break;
-    }
-    else {
-      id0 = id5;
-      id0 = id1;
-      id5 = 7;
-      id5 = 2;
-      id4 = 2;
-      id6 = 7;
-      id1 = 4;
-    }
-    id7 = -7 / id4;
-    id1 = id3;
-    id4 = 8;
-    id4 = 4;
+    id1 = 10 >= 8;
+    fez = 5;
+    id3 = 0;
+    id3 = id3;
+    id1 = baz;
   }
-  id2 = 3;
-  id0 = id0;
-  id6 = 9;
-  id0 = 2;
-  return 6 == (id4 * (id7 <= id1));
+  while 2 == (0 == (8 / id3)) {
+    while (-5 / 1) * id1 {
+      id0 = 6;
+      id0 = id0;
+      id1 = -foo;
+      baz = 3;
+      baz = foo;
+      id1 = id2;
+      id2 = id2;
+      id0 = 4;
+      id2 = -((id1 - 2) <= 1);
+      foo = fez;
+      foo = 2 >= 10;
+      id3 = 7 == foo;
+    }
+    if fez {
+      id2 = 6;
+      id3 = 10;
+      id2 = 9;
+      bar = id2;
+      id1 = foo;
+      bar = -foo;
+      id0 = -1;
+      baz = foo;
+      continue;
+    }
+    else {
+      bar = 8;
+      id3 = id0;
+      id2 = 6;
+      id0 = bar;
+      id0 = id1;
+      id1 = 2;
+      fez = 8;
+    }
+    while id3 {
+      id2 = 7;
+      bar = 0;
+      id3 = fez;
+      id3 = 1;
+      fez = bar;
+      foo = -(5 == 6);
+      id1 = 8;
+    }
+    if -3 {
+      id3 = fez;
+      fez = id0;
+      id3 = id2;
+      id2 = foo;
+      foo = 10;
+      id2 = fez < id1;
+      baz = (8 * -5) == (6 - 0);
+    }
+    else {
+      id2 = fez;
+      fez = 2;
+      baz = id2;
+      id0 = baz;
+      bar = foo <= -(foo <= 2);
+      id0 = id1 * 2;
+      id0 = 10 != bar;
+    }
+    if 2 {
+      foo = id0;
+      fez = 5 == 5;
+      bar = 1;
+      fez = 3 * 2;
+      id1 = -id0;
+      baz = id0 <= (10 >= bar);
+      id1 = 4 >= ((4 < 0) > (10 / id2));
+    }
+    else {
+      id0 = 9;
+      id2 = 3;
+      bar = 0;
+      bar = id0;
+      id2 = -(-6 >= bar);
+      fez = (3 + 2) * -id1;
+      fez = id0;
+      fez = 9;
+    }
+    id3 = 10;
+    while 7 {
+      id1 = 10;
+      id3 = bar == -fez;
+      id2 = id0;
+      foo = 7;
+      id3 = 9 / foo;
+      bar = (0 != 7) <= 1;
+      foo = 10 < foo;
+      id0 = bar;
+    }
+    id2 = 6;
+    while fez {
+      baz = fez >= fez;
+      id2 = id1;
+      foo = 9 == foo;
+      foo = baz == id1;
+      foo = id2 > 9;
+      id0 = fez;
+      id2 = 9;
+      fez = id3;
+      id0 = 0;
+      bar = -bar;
+      id0 = 1;
+      id1 = baz;
+    }
+    id1 = 10 >= 8;
+    fez = 5;
+    id3 = 0;
+  }
+  id2 = 2;
+  if 9 {
+    bar = --(id0 - 3);
+    while 10 {
+      bar = 1;
+      baz = 4;
+      id2 = 1;
+      id1 = 5;
+      id0 = -foo < 9;
+      fez = 0;
+      baz = baz;
+      id2 = 0;
+      bar = id2;
+      id0 = id0 / 8;
+      bar = id1;
+    }
+    while 6 {
+      id3 = 7;
+      foo = fez;
+      bar = 10;
+      id1 = 4 * 2;
+      fez = id3;
+      id3 = fez;
+      fez = id0;
+      foo = id0;
+      id3 = foo;
+    }
+    baz = id1 == (7 <= -foo);
+    if baz {
+      id0 = (10 / 8) < ((5 <= 9) > id1);
+      id0 = 5;
+      id2 = id0;
+      baz = id1;
+      baz = fez - (9 + id3);
+      fez = -0;
+      id3 = 7 != 5;
+    }
+    else {
+      id3 = 6 <= 9;
+      id2 = foo;
+      id3 = 3;
+      id1 = 8;
+      id3 = foo;
+      fez = 4 + bar;
+      bar = id3 <= (fez != 2);
+      id1 = (1 < (9 + 5)) / (6 > 3);
+      id0 = 6;
+    }
+    id0 = id3;
+    if ((8 < 5) == 5) + 7 {
+      id0 = 10;
+      baz = id2;
+      foo = 3 - id2;
+      bar = 6;
+      baz = foo;
+      fez = 0;
+      baz = (id1 * 2) / 10;
+    }
+    else {
+      id0 = id1;
+      foo = id0 < 1;
+      fez = 5 == 5;
+      bar = 1;
+      fez = 3 * 2;
+      id1 = -id0;
+      baz = id0 <= (10 >= bar);
+      id1 = 4 >= ((4 < 0) > (10 / id2));
+    }
+    bar = 10;
+    fez = -id1;
+  }
+  else {
+    foo = 8;
+    if -id0 <= 4 {
+      baz = -id1;
+      id3 = baz;
+      id3 = 2;
+      baz = 3 / foo;
+      id3 = 0 + fez;
+      id3 = -8;
+      id3 = id1;
+      id3 = bar;
+    }
+    else {
+      id3 = 9 / foo;
+      bar = (0 != 7) <= 1;
+      foo = 10 < foo;
+      id0 = bar;
+      id0 = foo;
+      bar = 1 / 7;
+      fez = fez;
+      id3 = 0;
+    }
+    fez = bar;
+    id1 = bar;
+    id2 = 9;
+    baz = ((id2 != 6) != 7) < 0;
+    fez = 10;
+    id2 = id3 < -3;
+    return 9;
+  }
+  id3 = -3;
+  while -0 {
+    if 10 {
+      id1 = 10 / -0;
+      id2 = 2;
+      id0 = 6;
+      fez = 0;
+      id3 = baz;
+      id1 = -(1 - id1);
+      fez = 9;
+      id3 = 1;
+      fez = 6 <= 1;
+      fez = -9;
+      id1 = 4;
+      id2 = 5 / (2 >= (id1 > 7));
+    }
+    else {
+      fez = id2 > baz;
+      id0 = id0 / 8;
+      bar = id1;
+      baz = 9;
+    }
+    id3 = (2 >= 10) <= 2;
+    if 5 {
+      baz = 4;
+      id2 = id2;
+      id2 = 3;
+      id1 = fez != id0;
+      id2 = 2;
+      foo = -0;
+      foo = id1;
+    }
+    else {
+      baz = -(-bar + fez);
+      id2 = id0;
+      id1 = 10;
+      id2 = 8;
+      id2 = foo;
+      baz = id1;
+      id2 = baz;
+      id3 = fez;
+      return 3;
+    }
+    foo = (id1 != 0) > 7;
+    id0 = id1;
+    id3 = bar < 0;
+    bar = -7 >= id3;
+    baz = bar > 9;
+  }
+  while -(5 == 6) {
+    bar = bar;
+    id1 = id3;
+    if id3 {
+      id0 = 6 > 3;
+      foo = 6 != fez;
+      id3 = baz;
+      id3 = foo == (6 - 0);
+      id0 = 10;
+      id1 = 4 + id1;
+      id2 = fez;
+      fez = 2;
+      baz = id2;
+      continue;
+    }
+    else {
+      baz = 1;
+      id1 = 2;
+      foo = 8;
+      fez = fez;
+      foo = id2;
+      foo = 0;
+      id3 = -(id0 < 1);
+      fez = 5 == 5;
+    }
+    id0 = 2;
+    while -(2 != 3) {
+      id0 = 3 - 0;
+      fez = (id3 <= (baz >= id3)) > 0;
+      bar = 10;
+      bar = 7;
+      id3 = baz;
+      id0 = id3;
+    }
+    if 10 {
+      id3 = -fez;
+      baz = 10;
+      id2 = 2;
+      baz = foo;
+      id0 = -6;
+      bar = --id3;
+      id3 = id2;
+      bar = id2;
+      baz = foo + 8;
+      continue;
+    }
+    else {
+      id0 = id2;
+      foo = -id3;
+      id1 = foo;
+      id1 = 1;
+      baz = bar;
+      bar = foo;
+      foo = 3 <= -(4 <= 7);
+      baz = 9;
+      fez = 7;
+      return -(9 != fez);
+    }
+  }
+  id1 = (fez >= fez) != (id0 / id2);
+  while -(7 <= 9) / 0 {
+    while 9 {
+      id3 = -3;
+      baz = foo;
+      bar = id2;
+      id3 = 4;
+      baz = baz;
+      id1 = 10;
+      fez = fez != 5;
+      id1 = id1;
+      id2 = 2;
+      id0 = 6;
+    }
+    id1 = -((4 == 9) != id0);
+    bar = id1;
+    id1 = 4;
+    baz = 5;
+    id1 = fez;
+    id1 = id3;
+    id3 = 9;
+    id1 = 4;
+  }
+  return -id1 > 5;
 }

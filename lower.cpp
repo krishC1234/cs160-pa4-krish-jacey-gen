@@ -169,19 +169,7 @@ LIR_Program* lower(Program* prog){
 		if(DEBUG_LOWER){cout << "Before reachable" << endl;}
 		// set reachable
 		lir_func->body["entry"]->set_reachable(lir_func->body);
-
-		// let EXIT = if vector ends in Label (lbl) then lbl
-					// else
-						// let NEW_LBL be a fresh label
-						// emit Label(NEW LBL)
-						// NEW_LBL
-		// if func returns a value then
-			// let x be a fresh var with type τ s.t. func . rettyp = τ
-			// emit Return(x)
-			// replace all other Return(op) instructions with Assign(x, op); Jump(EXIT)
-		// else
-			// emit Return(None)
-			// replace all previous Return(None) instructions with Jump(EXIT)
+		
 		// check return stuff
 		if(num_ret > 1){
 			string exit_label = create_fresh_label(lir_func);
