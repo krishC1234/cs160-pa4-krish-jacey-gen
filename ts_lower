@@ -1,1472 +1,985 @@
-extern e1:(int, int, int, int, int, int, int) -> int
-extern e2:(int, int, int, int, int, int, int, int) -> int
+f1:&() -> int
+f2:&(int) -> int
+f3:&(int, int) -> int
+f4:&(int, int, int) -> int
+f5:&(int, int, int, int) -> int
+
+fn f1() -> int {
+entry:
+  $ret 42
+}
+
+fn f2(p:int) -> int {
+entry:
+  $ret p
+}
+
+fn f3(p:int, q:int) -> int {
+let _t1:int
+entry:
+  _t1 = $arith add p q
+  $ret _t1
+}
+
+fn f4(p:int, q:int, r:int) -> int {
+let _t1:int, _t2:int
+entry:
+  _t1 = $arith add p q
+  _t2 = $arith add _t1 r
+  $ret _t2
+}
+
+fn f5(p:int, q:int, r:int, s:int) -> int {
+let _t1:int, _t2:int, _t3:int
+entry:
+  _t1 = $arith add p q
+  _t2 = $arith add _t1 r
+  _t3 = $arith add _t2 s
+  $ret _t3
+}
 
 fn main() -> int {
-let _t1:int, _t10:int, _t100:int, _t1000:int, _t1001:int, _t1002:int, _t1003:int, _t1004:int, _t1005:int, _t1006:int, _t1007:int, _t1008:int, _t1009:int, _t101:int, _t1010:int, _t1011:int, _t1012:int, _t1013:int, _t1014:int, _t1015:int, _t1016:int, _t1017:int, _t1018:int, _t1019:int, _t102:int, _t1020:int, _t1021:int, _t1022:int, _t1023:int, _t1024:int, _t1025:int, _t1026:int, _t1027:int, _t1028:int, _t1029:int, _t103:int, _t1030:int, _t1031:int, _t1032:int, _t1033:int, _t1034:int, _t1035:int, _t1036:int, _t1037:int, _t1038:int, _t1039:int, _t104:int, _t1040:int, _t1041:int, _t1042:int, _t1043:int, _t1044:int, _t1045:int, _t1046:int, _t1047:int, _t1048:int, _t1049:int, _t105:int, _t1050:int, _t1051:int, _t1052:int, _t1053:int, _t1054:int, _t1055:int, _t1056:int, _t1057:int, _t1058:int, _t1059:int, _t106:int, _t1060:int, _t1061:int, _t1062:int, _t1063:int, _t1064:int, _t1065:int, _t1066:int, _t1067:int, _t1068:int, _t1069:int, _t107:int, _t1070:int, _t1071:int, _t1072:int, _t1073:int, _t1074:int, _t1075:int, _t1076:int, _t1077:int, _t1078:int, _t1079:int, _t108:int, _t1080:int, _t1081:int, _t1082:int, _t1083:int, _t1084:int, _t1085:int, _t1086:int, _t1087:int, _t1088:int, _t1089:int, _t109:int, _t1090:int, _t1091:int, _t1092:int, _t1093:int, _t1094:int, _t1095:int, _t1096:int, _t1097:int, _t1098:int, _t1099:int, _t11:int, _t110:int, _t1100:int, _t1101:int, _t1102:int, _t1103:int, _t1104:int, _t1105:int, _t1106:int, _t1107:int, _t1108:int, _t1109:int, _t111:int, _t1110:int, _t1111:int, _t1112:int, _t1113:int, _t1114:int, _t1115:int, _t1116:int, _t1117:int, _t1118:int, _t1119:int, _t112:int, _t1120:int, _t1121:int, _t1122:int, _t1123:int, _t1124:int, _t1125:int, _t1126:int, _t1127:int, _t1128:int, _t1129:int, _t113:int, _t1130:int, _t1131:int, _t1132:int, _t1133:int, _t1134:int, _t1135:int, _t1136:int, _t1137:int, _t1138:int, _t1139:int, _t114:int, _t1140:int, _t1141:int, _t1142:int, _t1143:int, _t1144:int, _t1145:int, _t1146:int, _t1147:int, _t1148:int, _t1149:int, _t115:int, _t1150:int, _t1151:int, _t1152:int, _t1153:int, _t1154:int, _t1155:int, _t1156:int, _t1157:int, _t1158:int, _t1159:int, _t116:int, _t1160:int, _t1161:int, _t1162:int, _t1163:int, _t1164:int, _t1165:int, _t1166:int, _t1167:int, _t1168:int, _t1169:int, _t117:int, _t1170:int, _t1171:int, _t1172:int, _t118:int, _t119:int, _t12:int, _t120:int, _t121:int, _t122:int, _t123:int, _t124:int, _t125:int, _t126:int, _t127:int, _t128:int, _t129:int, _t13:int, _t130:int, _t131:int, _t132:int, _t133:int, _t134:int, _t135:int, _t136:int, _t137:int, _t138:int, _t139:int, _t14:int, _t140:int, _t141:int, _t142:int, _t143:int, _t144:int, _t145:int, _t146:int, _t147:int, _t148:int, _t149:int, _t15:int, _t150:int, _t151:int, _t152:int, _t153:int, _t154:int, _t155:int, _t156:int, _t157:int, _t158:int, _t159:int, _t16:int, _t160:int, _t161:int, _t162:int, _t163:int, _t164:int, _t165:int, _t166:int, _t167:int, _t168:int, _t169:int, _t17:int, _t170:int, _t171:int, _t172:int, _t173:int, _t174:int, _t175:int, _t176:int, _t177:int, _t178:int, _t179:int, _t18:int, _t180:int, _t181:int, _t182:int, _t183:int, _t184:int, _t185:int, _t186:int, _t187:int, _t188:int, _t189:int, _t19:int, _t190:int, _t191:int, _t192:int, _t193:int, _t194:int, _t195:int, _t196:int, _t197:int, _t198:int, _t199:int, _t2:int, _t20:int, _t200:int, _t201:int, _t202:int, _t203:int, _t204:int, _t205:int, _t206:int, _t207:int, _t208:int, _t209:int, _t21:int, _t210:int, _t211:int, _t212:int, _t213:int, _t214:int, _t215:int, _t216:int, _t217:int, _t218:int, _t219:int, _t22:int, _t220:int, _t221:int, _t222:int, _t223:int, _t224:int, _t225:int, _t226:int, _t227:int, _t228:int, _t229:int, _t23:int, _t230:int, _t231:int, _t232:int, _t233:int, _t234:int, _t235:int, _t236:int, _t237:int, _t238:int, _t239:int, _t24:int, _t240:int, _t241:int, _t242:int, _t243:int, _t244:int, _t245:int, _t246:int, _t247:int, _t248:int, _t249:int, _t25:int, _t250:int, _t251:int, _t252:int, _t253:int, _t254:int, _t255:int, _t256:int, _t257:int, _t258:int, _t259:int, _t26:int, _t260:int, _t261:int, _t262:int, _t263:int, _t264:int, _t265:int, _t266:int, _t267:int, _t268:int, _t269:int, _t27:int, _t270:int, _t271:int, _t272:int, _t273:int, _t274:int, _t275:int, _t276:int, _t277:int, _t278:int, _t279:int, _t28:int, _t280:int, _t281:int, _t282:int, _t283:int, _t284:int, _t285:int, _t286:int, _t287:int, _t288:int, _t289:int, _t29:int, _t290:int, _t291:int, _t292:int, _t293:int, _t294:int, _t295:int, _t296:int, _t297:int, _t298:int, _t299:int, _t3:int, _t30:int, _t300:int, _t301:int, _t302:int, _t303:int, _t304:int, _t305:int, _t306:int, _t307:int, _t308:int, _t309:int, _t31:int, _t310:int, _t311:int, _t312:int, _t313:int, _t314:int, _t315:int, _t316:int, _t317:int, _t318:int, _t319:int, _t32:int, _t320:int, _t321:int, _t322:int, _t323:int, _t324:int, _t325:int, _t326:int, _t327:int, _t328:int, _t329:int, _t33:int, _t330:int, _t331:int, _t332:int, _t333:int, _t334:int, _t335:int, _t336:int, _t337:int, _t338:int, _t339:int, _t34:int, _t340:int, _t341:int, _t342:int, _t343:int, _t344:int, _t345:int, _t346:int, _t347:int, _t348:int, _t349:int, _t35:int, _t350:int, _t351:int, _t352:int, _t353:int, _t354:int, _t355:int, _t356:int, _t357:int, _t358:int, _t359:int, _t36:int, _t360:int, _t361:int, _t362:int, _t363:int, _t364:int, _t365:int, _t366:int, _t367:int, _t368:int, _t369:int, _t37:int, _t370:int, _t371:int, _t372:int, _t373:int, _t374:int, _t375:int, _t376:int, _t377:int, _t378:int, _t379:int, _t38:int, _t380:int, _t381:int, _t382:int, _t383:int, _t384:int, _t385:int, _t386:int, _t387:int, _t388:int, _t389:int, _t39:int, _t390:int, _t391:int, _t392:int, _t393:int, _t394:int, _t395:int, _t396:int, _t397:int, _t398:int, _t399:int, _t4:int, _t40:int, _t400:int, _t401:int, _t402:int, _t403:int, _t404:int, _t405:int, _t406:int, _t407:int, _t408:int, _t409:int, _t41:int, _t410:int, _t411:int, _t412:int, _t413:int, _t414:int, _t415:int, _t416:int, _t417:int, _t418:int, _t419:int, _t42:int, _t420:int, _t421:int, _t422:int, _t423:int, _t424:int, _t425:int, _t426:int, _t427:int, _t428:int, _t429:int, _t43:int, _t430:int, _t431:int, _t432:int, _t433:int, _t434:int, _t435:int, _t436:int, _t437:int, _t438:int, _t439:int, _t44:int, _t440:int, _t441:int, _t442:int, _t443:int, _t444:int, _t445:int, _t446:int, _t447:int, _t448:int, _t449:int, _t45:int, _t450:int, _t451:int, _t452:int, _t453:int, _t454:int, _t455:int, _t456:int, _t457:int, _t458:int, _t459:int, _t46:int, _t460:int, _t461:int, _t462:int, _t463:int, _t464:int, _t465:int, _t466:int, _t467:int, _t468:int, _t469:int, _t47:int, _t470:int, _t471:int, _t472:int, _t473:int, _t474:int, _t475:int, _t476:int, _t477:int, _t478:int, _t479:int, _t48:int, _t480:int, _t481:int, _t482:int, _t483:int, _t484:int, _t485:int, _t486:int, _t487:int, _t488:int, _t489:int, _t49:int, _t490:int, _t491:int, _t492:int, _t493:int, _t494:int, _t495:int, _t496:int, _t497:int, _t498:int, _t499:int, _t5:int, _t50:int, _t500:int, _t501:int, _t502:int, _t503:int, _t504:int, _t505:int, _t506:int, _t507:int, _t508:int, _t509:int, _t51:int, _t510:int, _t511:int, _t512:int, _t513:int, _t514:int, _t515:int, _t516:int, _t517:int, _t518:int, _t519:int, _t52:int, _t520:int, _t521:int, _t522:int, _t523:int, _t524:int, _t525:int, _t526:int, _t527:int, _t528:int, _t529:int, _t53:int, _t530:int, _t531:int, _t532:int, _t533:int, _t534:int, _t535:int, _t536:int, _t537:int, _t538:int, _t539:int, _t54:int, _t540:int, _t541:int, _t542:int, _t543:int, _t544:int, _t545:int, _t546:int, _t547:int, _t548:int, _t549:int, _t55:int, _t550:int, _t551:int, _t552:int, _t553:int, _t554:int, _t555:int, _t556:int, _t557:int, _t558:int, _t559:int, _t56:int, _t560:int, _t561:int, _t562:int, _t563:int, _t564:int, _t565:int, _t566:int, _t567:int, _t568:int, _t569:int, _t57:int, _t570:int, _t571:int, _t572:int, _t573:int, _t574:int, _t575:int, _t576:int, _t577:int, _t578:int, _t579:int, _t58:int, _t580:int, _t581:int, _t582:int, _t583:int, _t584:int, _t585:int, _t586:int, _t587:int, _t588:int, _t589:int, _t59:int, _t590:int, _t591:int, _t592:int, _t593:int, _t594:int, _t595:int, _t596:int, _t597:int, _t598:int, _t599:int, _t6:int, _t60:int, _t600:int, _t601:int, _t602:int, _t603:int, _t604:int, _t605:int, _t606:int, _t607:int, _t608:int, _t609:int, _t61:int, _t610:int, _t611:int, _t612:int, _t613:int, _t614:int, _t615:int, _t616:int, _t617:int, _t618:int, _t619:int, _t62:int, _t620:int, _t621:int, _t622:int, _t623:int, _t624:int, _t625:int, _t626:int, _t627:int, _t628:int, _t629:int, _t63:int, _t630:int, _t631:int, _t632:int, _t633:int, _t634:int, _t635:int, _t636:int, _t637:int, _t638:int, _t639:int, _t64:int, _t640:int, _t641:int, _t642:int, _t643:int, _t644:int, _t645:int, _t646:int, _t647:int, _t648:int, _t649:int, _t65:int, _t650:int, _t651:int, _t652:int, _t653:int, _t654:int, _t655:int, _t656:int, _t657:int, _t658:int, _t659:int, _t66:int, _t660:int, _t661:int, _t662:int, _t663:int, _t664:int, _t665:int, _t666:int, _t667:int, _t668:int, _t669:int, _t67:int, _t670:int, _t671:int, _t672:int, _t673:int, _t674:int, _t675:int, _t676:int, _t677:int, _t678:int, _t679:int, _t68:int, _t680:int, _t681:int, _t682:int, _t683:int, _t684:int, _t685:int, _t686:int, _t687:int, _t688:int, _t689:int, _t69:int, _t690:int, _t691:int, _t692:int, _t693:int, _t694:int, _t695:int, _t696:int, _t697:int, _t698:int, _t699:int, _t7:int, _t70:int, _t700:int, _t701:int, _t702:int, _t703:int, _t704:int, _t705:int, _t706:int, _t707:int, _t708:int, _t709:int, _t71:int, _t710:int, _t711:int, _t712:int, _t713:int, _t714:int, _t715:int, _t716:int, _t717:int, _t718:int, _t719:int, _t72:int, _t720:int, _t721:int, _t722:int, _t723:int, _t724:int, _t725:int, _t726:int, _t727:int, _t728:int, _t729:int, _t73:int, _t730:int, _t731:int, _t732:int, _t733:int, _t734:int, _t735:int, _t736:int, _t737:int, _t738:int, _t739:int, _t74:int, _t740:int, _t741:int, _t742:int, _t743:int, _t744:int, _t745:int, _t746:int, _t747:int, _t748:int, _t749:int, _t75:int, _t750:int, _t751:int, _t752:int, _t753:int, _t754:int, _t755:int, _t756:int, _t757:int, _t758:int, _t759:int, _t76:int, _t760:int, _t761:int, _t762:int, _t763:int, _t764:int, _t765:int, _t766:int, _t767:int, _t768:int, _t769:int, _t77:int, _t770:int, _t771:int, _t772:int, _t773:int, _t774:int, _t775:int, _t776:int, _t777:int, _t778:int, _t779:int, _t78:int, _t780:int, _t781:int, _t782:int, _t783:int, _t784:int, _t785:int, _t786:int, _t787:int, _t788:int, _t789:int, _t79:int, _t790:int, _t791:int, _t792:int, _t793:int, _t794:int, _t795:int, _t796:int, _t797:int, _t798:int, _t799:int, _t8:int, _t80:int, _t800:int, _t801:int, _t802:int, _t803:int, _t804:int, _t805:int, _t806:int, _t807:int, _t808:int, _t809:int, _t81:int, _t810:int, _t811:int, _t812:int, _t813:int, _t814:int, _t815:int, _t816:int, _t817:int, _t818:int, _t819:int, _t82:int, _t820:int, _t821:int, _t822:int, _t823:int, _t824:int, _t825:int, _t826:int, _t827:int, _t828:int, _t829:int, _t83:int, _t830:int, _t831:int, _t832:int, _t833:int, _t834:int, _t835:int, _t836:int, _t837:int, _t838:int, _t839:int, _t84:int, _t840:int, _t841:int, _t842:int, _t843:int, _t844:int, _t845:int, _t846:int, _t847:int, _t848:int, _t849:int, _t85:int, _t850:int, _t851:int, _t852:int, _t853:int, _t854:int, _t855:int, _t856:int, _t857:int, _t858:int, _t859:int, _t86:int, _t860:int, _t861:int, _t862:int, _t863:int, _t864:int, _t865:int, _t866:int, _t867:int, _t868:int, _t869:int, _t87:int, _t870:int, _t871:int, _t872:int, _t873:int, _t874:int, _t875:int, _t876:int, _t877:int, _t878:int, _t879:int, _t88:int, _t880:int, _t881:int, _t882:int, _t883:int, _t884:int, _t885:int, _t886:int, _t887:int, _t888:int, _t889:int, _t89:int, _t890:int, _t891:int, _t892:int, _t893:int, _t894:int, _t895:int, _t896:int, _t897:int, _t898:int, _t899:int, _t9:int, _t90:int, _t900:int, _t901:int, _t902:int, _t903:int, _t904:int, _t905:int, _t906:int, _t907:int, _t908:int, _t909:int, _t91:int, _t910:int, _t911:int, _t912:int, _t913:int, _t914:int, _t915:int, _t916:int, _t917:int, _t918:int, _t919:int, _t92:int, _t920:int, _t921:int, _t922:int, _t923:int, _t924:int, _t925:int, _t926:int, _t927:int, _t928:int, _t929:int, _t93:int, _t930:int, _t931:int, _t932:int, _t933:int, _t934:int, _t935:int, _t936:int, _t937:int, _t938:int, _t939:int, _t94:int, _t940:int, _t941:int, _t942:int, _t943:int, _t944:int, _t945:int, _t946:int, _t947:int, _t948:int, _t949:int, _t95:int, _t950:int, _t951:int, _t952:int, _t953:int, _t954:int, _t955:int, _t956:int, _t957:int, _t958:int, _t959:int, _t96:int, _t960:int, _t961:int, _t962:int, _t963:int, _t964:int, _t965:int, _t966:int, _t967:int, _t968:int, _t969:int, _t97:int, _t970:int, _t971:int, _t972:int, _t973:int, _t974:int, _t975:int, _t976:int, _t977:int, _t978:int, _t979:int, _t98:int, _t980:int, _t981:int, _t982:int, _t983:int, _t984:int, _t985:int, _t986:int, _t987:int, _t988:int, _t989:int, _t99:int, _t990:int, _t991:int, _t992:int, _t993:int, _t994:int, _t995:int, _t996:int, _t997:int, _t998:int, _t999:int, id0:int, id1:int, id2:int, id3:int, id4:int, id5:int, id6:int, id7:int
+let _t1:int, _t10:int, _t100:int, _t101:int, _t102:int, _t103:int, _t104:int, _t105:int, _t106:int, _t107:int, _t108:int, _t109:int, _t11:int, _t110:int, _t111:int, _t112:int, _t113:int, _t114:int, _t115:int, _t116:int, _t117:int, _t118:int, _t119:int, _t12:int, _t120:int, _t121:int, _t122:int, _t123:int, _t124:int, _t125:int, _t126:int, _t127:int, _t128:int, _t129:int, _t13:int, _t130:int, _t131:int, _t132:int, _t133:int, _t134:int, _t135:int, _t136:int, _t137:int, _t138:int, _t139:int, _t14:int, _t140:int, _t141:int, _t142:int, _t143:int, _t144:int, _t145:int, _t146:int, _t147:int, _t148:int, _t149:int, _t15:int, _t150:int, _t151:int, _t152:int, _t153:int, _t154:int, _t155:int, _t156:int, _t157:int, _t158:int, _t159:int, _t16:int, _t160:int, _t161:int, _t162:int, _t163:int, _t164:int, _t165:int, _t166:int, _t167:int, _t168:int, _t169:int, _t17:int, _t170:int, _t171:int, _t172:int, _t173:int, _t174:int, _t175:int, _t176:int, _t177:int, _t178:int, _t179:int, _t18:int, _t180:int, _t181:int, _t182:int, _t183:int, _t184:int, _t185:int, _t186:int, _t187:int, _t188:int, _t189:int, _t19:int, _t190:int, _t191:int, _t192:int, _t193:int, _t194:int, _t195:int, _t196:int, _t197:int, _t198:int, _t199:int, _t2:int, _t20:int, _t200:int, _t201:int, _t202:int, _t203:int, _t204:int, _t205:int, _t206:int, _t207:int, _t208:int, _t209:int, _t21:int, _t210:int, _t211:int, _t212:int, _t213:int, _t214:int, _t215:int, _t216:int, _t217:int, _t218:int, _t219:int, _t22:int, _t220:int, _t221:int, _t222:int, _t223:int, _t224:int, _t225:int, _t226:int, _t227:int, _t228:int, _t229:int, _t23:int, _t230:int, _t231:int, _t232:int, _t233:int, _t234:int, _t235:int, _t236:int, _t237:int, _t238:int, _t239:int, _t24:int, _t240:int, _t241:int, _t242:int, _t243:int, _t244:int, _t245:int, _t246:int, _t247:int, _t248:int, _t249:int, _t25:int, _t250:int, _t251:int, _t252:int, _t253:int, _t254:int, _t255:int, _t256:int, _t257:int, _t258:int, _t259:int, _t26:int, _t260:int, _t261:int, _t262:int, _t263:int, _t264:int, _t265:int, _t266:int, _t267:int, _t268:int, _t269:int, _t27:int, _t270:int, _t271:int, _t272:int, _t273:int, _t274:int, _t275:int, _t276:int, _t277:int, _t278:int, _t279:int, _t28:int, _t280:int, _t281:int, _t282:int, _t283:int, _t284:int, _t285:int, _t286:int, _t287:int, _t288:int, _t289:int, _t29:int, _t290:int, _t291:int, _t292:int, _t293:int, _t294:int, _t295:int, _t296:int, _t297:int, _t298:int, _t299:int, _t3:int, _t30:int, _t300:int, _t31:int, _t32:int, _t33:int, _t34:int, _t35:int, _t36:int, _t37:int, _t38:int, _t39:int, _t4:int, _t40:int, _t41:int, _t42:int, _t43:int, _t44:int, _t45:int, _t46:int, _t47:int, _t48:int, _t49:int, _t5:int, _t50:int, _t51:int, _t52:int, _t53:int, _t54:int, _t55:int, _t56:int, _t57:int, _t58:int, _t59:int, _t6:int, _t60:int, _t61:int, _t62:int, _t63:int, _t64:int, _t65:int, _t66:int, _t67:int, _t68:int, _t69:int, _t7:int, _t70:int, _t71:int, _t72:int, _t73:int, _t74:int, _t75:int, _t76:int, _t77:int, _t78:int, _t79:int, _t8:int, _t80:int, _t81:int, _t82:int, _t83:int, _t84:int, _t85:int, _t86:int, _t87:int, _t88:int, _t89:int, _t9:int, _t90:int, _t91:int, _t92:int, _t93:int, _t94:int, _t95:int, _t96:int, _t97:int, _t98:int, _t99:int, id0:int, id1:int, id10:&() -> int, id11:&(int, int, int) -> int, id12:&() -> int, id13:&() -> int, id14:&(int, int, int, int) -> int, id15:&() -> int, id16:&() -> int, id17:&() -> int, id18:&(int, int, int, int) -> int, id19:&(int) -> int, id2:int, id20:&(int) -> int, id21:&(int, int, int, int) -> int, id22:&(int) -> int, id23:&(int) -> int, id24:&(int, int) -> int, id25:&(int, int) -> int, id26:&(int, int) -> int, id27:&(int, int) -> int, id28:&(int, int, int, int) -> int, id29:&(int, int, int, int) -> int, id3:int, id30:&(int, int, int, int) -> int, id31:&(int, int, int, int) -> int, id32:&() -> int, id33:&(int, int, int) -> int, id34:&(int) -> int, id35:&(int, int) -> int, id36:&(int) -> int, id37:&(int) -> int, id38:&(int, int) -> int, id39:&(int, int) -> int, id4:int, id40:&(int, int, int) -> int, id5:int, id6:&(int, int, int) -> int, id7:int, id8:int, id9:&(int, int, int) -> int
 entry:
-  id3 = $copy id4
-  _t3 = $call_ext e2(10, id6, 1, id7, id5, 0, id2, 8)
-  _t2 = $arith sub 0 _t3
-  _t1 = $arith sub 0 _t2
-  id5 = $copy _t1
-  _t5 = $call_ext e2(id2, 7, id1, id3, id1, 4, 7, 1)
-  _t6 = $call_ext e2(id1, id5, id0, id2, id6, id2, 9, id6)
-  _t7 = $arith sub id3 id0
-  _t8 = $call_ext e2(6, _t5, 8, _t6, 5, 2, _t7, id5)
-  _t4 = $arith sub 0 _t8
-  id1 = $copy _t4
-  id0 = $copy 3
-  _t9 = $arith sub 0 3
-  _t10 = $arith sub 1 0
-  _t11 = $call_ext e2(id0, _t9, 8, id0, id1, _t10, id1, id3)
-  _t12 = $call_ext e1(id4, id1, 5, id6, id7, id2, id7)
-  _t13 = $arith sub id5 1
-  _t14 = $call_ext e2(4, id5, id4, id7, id1, 8, 1, id7)
-  _t15 = $call_ext e2(id2, 0, _t12, 5, _t13, _t14, id7, id2)
-  _t16 = $call_ext e2(id2, 3, id6, id6, id2, id6, 1, 3)
-  _t17 = $call_ext e1(9, 3, 1, 8, id1, 8, id0)
-  _t18 = $arith add _t16 _t17
-  _t19 = $cmp gte id1 10
-  _t20 = $cmp eq 3 id2
-  _t21 = $call_ext e2(2, 9, id0, 0, id5, 10, 7, 8)
-  _t22 = $call_ext e1(0, id3, _t19, 6, _t20, 0, _t21)
-  _t23 = $call_ext e2(_t11, _t15, id4, _t18, _t22, id6, id6, 7)
-  id0 = $copy _t23
-  _t24 = $cmp neq 2 7
-  _t25 = $cmp gt _t24 id5
-  _t26 = $cmp lt id7 _t25
-  id5 = $copy _t26
-  _t27 = $arith add id1 id1
-  _t28 = $call_ext e1(6, id6, id3, id5, id4, 6, id2)
-  _t29 = $cmp lt _t27 _t28
-  _t30 = $cmp gt 9 id2
-  _t31 = $call_ext e2(id0, 8, 7, 0, id2, id4, 7, 5)
-  _t32 = $cmp lt id5 id1
-  _t33 = $call_ext e2(6, id7, id5, 7, 3, id6, id7, id0)
-  _t34 = $call_ext e1(8, id6, id4, id5, 6, id3, 7)
-  _t35 = $cmp lte 9 id7
-  _t36 = $call_ext e2(_t31, _t32, _t33, _t34, id2, 4, _t35, 0)
-  _t37 = $call_ext e1(id1, _t29, _t30, _t36, id4, 9, id4)
-  id5 = $copy _t37
-  $jump lbl1
+  id3 = $copy 0
+  _t1 = $cmp neq id3 id4
+  id2 = $copy _t1
+  _t2 = $arith add id1 8
+  _t3 = $arith sub 0 id2
+  _t4 = $call_dir f3(_t2, _t3) then lbl1
 
 lbl1:
-  $branch id6 lbl2 lbl3
+  _t5 = $cmp eq 1 _t4
+  id1 = $copy _t5
+  id6 = $copy id6
+  _t6 = $call_dir f1() then lbl2
 
 lbl10:
-  id1 = $copy id1
-  id6 = $copy id6
-  _t232 = $arith sub 0 5
-  _t233 = $arith sub id5 id3
-  _t234 = $call_ext e1(id5, id4, id7, id1, 8, 1, id7)
-  _t235 = $arith div id3 id2
-  _t236 = $cmp gte id2 id6
-  _t237 = $call_ext e2(_t234, id7, id2, id4, _t235, 9, 1, _t236)
-  _t238 = $cmp gt id1 8
-  _t239 = $call_ext e1(id4, id3, id6, 4, id3, 6, 8)
-  _t240 = $call_ext e1(10, id1, _t238, 9, _t239, 7, 7)
-  _t241 = $call_ext e2(id4, _t232, _t233, _t237, id5, 9, 9, _t240)
-  _t242 = $call_ext e1(id2, 0, 7, id0, id3, 1, id7)
-  _t243 = $cmp lt id2 _t242
-  _t245 = $call_ext e2(id3, 7, 6, id4, id3, 3, 3, id0)
-  _t244 = $arith sub 0 _t245
-  _t247 = $call_ext e1(id1, 7, id1, id1, 10, 8, id6)
-  _t246 = $arith sub 0 _t247
-  _t248 = $call_ext e2(_t243, 7, 9, _t244, id0, _t246, id4, id3)
-  $call_ext e2(3, id0, 9, 9, 6, _t241, 0, _t248)
-  _t249 = $arith add id0 0
-  _t250 = $arith div _t249 9
-  _t251 = $arith sub id1 7
-  _t252 = $call_ext e1(id4, 7, 5, 1, 8, 5, 1)
-  _t253 = $call_ext e2(id5, 7, 3, id6, id7, id0, 1, 8)
-  _t254 = $arith sub 0 id0
-  _t255 = $arith sub 0 6
-  _t256 = $call_ext e2(5, _t251, _t252, 6, _t253, _t254, id1, _t255)
-  _t257 = $arith div _t250 _t256
-  id7 = $copy _t257
-  _t258 = $cmp lt id2 4
-  _t259 = $cmp neq id3 0
-  _t260 = $arith sub 0 0
-  _t261 = $call_ext e2(id2, 10, 5, _t260, id1, id3, id2, id6)
-  _t262 = $cmp lte 7 8
-  _t263 = $call_ext e2(id7, 4, id4, 2, id7, id6, 8, id2)
-  _t264 = $cmp gt 8 id3
-  _t265 = $call_ext e2(6, 2, 5, 0, id6, id5, 1, id5)
-  _t266 = $call_ext e1(1, _t262, _t263, id6, _t264, _t265, 3)
-  _t267 = $call_ext e1(id2, id6, _t261, 5, id0, _t266, id1)
-  $call_ext e1(_t258, id3, _t259, id3, _t267, id3, 1)
-  _t268 = $cmp eq id0 1
-  _t269 = $arith div 5 id4
-  _t270 = $call_ext e1(id4, 10, 8, id1, 1, 9, id6)
-  _t271 = $call_ext e1(id5, _t268, 2, _t269, id4, 3, _t270)
-  _t272 = $arith mul 1 id4
-  _t273 = $arith sub 0 id0
-  _t274 = $arith mul id4 6
-  _t275 = $call_ext e1(id3, _t272, id5, _t273, _t274, 4, id0)
-  _t276 = $arith sub id5 id2
-  _t277 = $call_ext e1(_t271, 0, id2, id0, 10, _t275, _t276)
-  _t278 = $arith div 5 id5
-  _t279 = $cmp eq 0 _t278
-  _t280 = $arith sub 0 9
-  _t281 = $cmp lt 3 _t280
-  _t282 = $call_ext e2(id3, 8, 0, 7, id0, id7, 10, id3)
-  _t283 = $call_ext e1(id7, id4, 8, id1, id6, id4, id3)
-  _t284 = $call_ext e1(_t282, 4, 9, _t283, 2, 9, id5)
-  _t285 = $arith sub 0 id4
-  _t286 = $arith sub 0 9
-  _t287 = $call_ext e2(id7, id4, 1, id1, 6, id6, id4, id3)
-  _t288 = $cmp lte id4 4
-  _t289 = $arith sub 0 id4
-  _t290 = $call_ext e1(0, _t285, _t286, id2, _t287, _t288, _t289)
-  _t291 = $arith sub 0 2
-  _t292 = $cmp gt 6 id7
-  _t293 = $cmp lte _t291 _t292
-  _t294 = $call_ext e2(_t279, _t281, id4, _t284, _t290, id4, _t293, id7)
-  _t296 = $arith sub 0 id4
-  _t297 = $arith add id3 id1
-  _t298 = $arith sub 0 id4
-  _t299 = $cmp gte 7 6
-  _t300 = $call_ext e2(id4, 0, _t296, _t297, _t298, 0, id1, _t299)
-  _t295 = $arith sub 0 _t300
-  _t301 = $arith sub 0 1
-  _t303 = $call_ext e2(5, 8, id3, 6, 6, 8, 6, 4)
-  _t302 = $arith sub 0 _t303
-  _t304 = $arith add _t301 _t302
-  _t305 = $arith sub 0 id7
-  _t306 = $arith add _t305 8
-  _t307 = $call_ext e1(3, 9, 1, 10, 6, id7, 5)
-  _t308 = $call_ext e1(3, 10, 2, 5, id1, 7, id1)
-  _t309 = $call_ext e1(_t307, id5, id0, _t308, id4, id0, 5)
-  _t311 = $arith sub 0 id2
-  _t310 = $arith sub 0 _t311
-  _t312 = $call_ext e1(_t306, _t309, 6, 4, id5, _t310, id1)
-  _t314 = $arith sub 0 8
-  _t313 = $arith sub 0 _t314
-  $call_ext e2(_t277, _t294, id3, _t295, _t304, _t312, _t313, 5)
-  id7 = $copy 4
-  _t315 = $arith sub 0 id2
-  _t316 = $call_ext e2(id7, 4, id2, id5, 1, id6, id6, 6)
-  _t317 = $call_ext e1(1, id7, id0, 7, 1, 2, id7)
-  _t318 = $call_ext e1(10, 3, 9, 8, id4, id3, id5)
-  _t319 = $arith add 6 id1
-  _t320 = $arith sub 0 id5
-  _t321 = $arith sub 0 id1
-  _t322 = $call_ext e2(_t315, _t316, _t317, _t318, _t319, _t320, id7, _t321)
-  _t323 = $cmp eq 8 10
-  _t324 = $cmp lt _t323 id0
-  _t325 = $arith sub 0 8
-  _t326 = $call_ext e1(_t322, _t324, 1, _t325, id1, 0, id0)
-  id0 = $copy _t326
-  $jump lbl12
+  _t13 = $arith sub 0 _t16
+  id0 = $copy _t13
+  _t17 = $call_dir f1() then lbl11
+
+lbl100:
+  _t119 = $call_idr id25(0, 7) then lbl101
+
+lbl101:
+  _t120 = $arith sub 0 id5
+  _t121 = $call_dir f3(_t119, _t120) then lbl102
+
+lbl102:
+  _t122 = $call_idr id26(2, 0) then lbl103
+
+lbl103:
+  _t123 = $cmp gte _t122 id4
+  _t124 = $call_dir f1() then lbl104
+
+lbl104:
+  _t125 = $cmp gt id2 _t124
+  _t126 = $cmp lte id8 9
+  _t127 = $call_dir f4(_t125, _t126, 0) then lbl105
+
+lbl105:
+  _t128 = $arith sub 0 7
+  _t129 = $call_dir f5(_t128, id2, id7, id5) then lbl106
+
+lbl106:
+  _t130 = $call_dir f5(_t121, _t123, _t127, _t129) then lbl107
+
+lbl107:
+  id7 = $copy _t130
+  $jump lbl80
+
+lbl108:
+  $branch id3 lbl109 lbl110
+
+lbl109:
+  _t131 = $arith mul 8 9
+  _t132 = $call_dir f1() then lbl111
 
 lbl11:
-  _t327 = $call_ext e1(5, id0, id7, 6, id5, 2, id6)
-  _t328 = $cmp neq id1 0
-  _t329 = $cmp gte _t327 _t328
-  _t330 = $arith add id5 id6
-  _t331 = $call_ext e2(2, id5, 0, id3, 4, id1, id6, id6)
-  _t332 = $call_ext e1(id5, _t330, 2, 10, id0, id0, _t331)
-  _t333 = $cmp gte 5 id7
-  _t334 = $call_ext e2(id5, 4, _t329, _t332, id0, 4, 3, _t333)
-  _t335 = $arith sub 0 id5
-  _t336 = $cmp gt id3 5
-  _t337 = $cmp gte 9 10
-  _t338 = $arith sub 0 3
-  _t339 = $cmp gte 10 id0
-  _t340 = $call_ext e2(_t336, _t337, id7, _t338, 8, id5, id0, _t339)
-  _t341 = $call_ext e2(id2, id0, id3, id4, id3, id0, id2, id6)
-  _t342 = $cmp gt 1 id4
-  _t343 = $cmp gte id0 10
-  _t344 = $arith sub 0 id7
-  _t345 = $cmp neq id4 4
-  _t346 = $call_ext e2(_t341, 0, _t342, 7, _t343, _t344, _t345, id2)
-  _t347 = $arith mul id0 id2
-  _t348 = $arith mul _t347 10
-  _t349 = $call_ext e1(_t340, _t346, 1, 8, id4, 4, _t348)
-  _t350 = $arith add 4 3
-  _t351 = $arith sub 0 6
-  _t352 = $cmp gt 5 _t351
-  _t353 = $arith sub 0 id3
-  _t354 = $call_ext e1(id4, id1, 5, id6, id7, id2, id7)
-  _t355 = $arith sub id5 1
-  _t356 = $call_ext e2(4, id5, id4, id7, id1, 8, 1, id7)
-  _t357 = $call_ext e2(id2, 0, _t354, 5, _t355, _t356, id7, id2)
-  _t358 = $call_ext e2(_t350, _t352, id0, id6, 0, id7, _t353, _t357)
-  $call_ext e1(_t334, _t335, 2, 10, _t349, _t358, id4)
-  _t359 = $arith add id5 9
-  _t360 = $call_ext e2(3, 1, 8, id1, 8, id0, id3, id0)
-  _t361 = $call_ext e1(id6, id2, 2, _t359, _t360, id3, id2)
-  _t362 = $call_ext e2(6, 8, 7, 7, 0, id7, 2, 9)
-  _t363 = $cmp gt id7 _t362
-  _t364 = $arith sub id0 id3
-  _t365 = $arith div _t364 id6
-  _t366 = $arith sub 0 id5
-  _t367 = $arith add 9 _t366
-  _t368 = $call_ext e1(_t361, _t363, id2, id0, _t365, id4, _t367)
-  id2 = $copy _t368
-  id1 = $copy id4
-  id6 = $copy 8
-  _t369 = $arith add id1 id1
-  _t370 = $call_ext e1(6, id6, id3, id5, id4, 6, id2)
-  _t371 = $cmp lt _t369 _t370
-  _t372 = $cmp gt 9 id2
-  _t373 = $call_ext e2(id0, 8, 7, 0, id2, id4, 7, 5)
-  _t374 = $cmp lt id5 id1
-  _t375 = $call_ext e2(6, id7, id5, 7, 3, id6, id7, id0)
-  _t376 = $call_ext e1(8, id6, id4, id5, 6, id3, 7)
-  _t377 = $cmp lte 9 id7
-  _t378 = $call_ext e2(_t373, _t374, _t375, _t376, id2, 4, _t377, 0)
-  _t379 = $call_ext e1(id1, _t371, _t372, _t378, id4, 9, id4)
-  _t380 = $cmp eq 10 5
-  _t381 = $cmp neq id7 2
-  $call_ext e1(id5, _t379, 1, id4, id3, _t380, _t381)
-  $jump lbl12
+  _t18 = $call_dir f4(id4, id5, _t17) then lbl12
+
+lbl110:
+  $jump lbl17
+
+lbl111:
+  _t133 = $call_dir f4(id8, id8, _t132) then lbl112
+
+lbl112:
+  _t134 = $cmp lt _t131 _t133
+  _t135 = $call_idr id6(id7, id7, 5) then lbl113
+
+lbl113:
+  _t136 = $call_dir f2(_t135) then lbl114
+
+lbl114:
+  _t137 = $call_idr id30(0, _t134, _t136, id2) then lbl115
+
+lbl115:
+  _t138 = $call_dir f4(id5, 6, id2) then lbl116
+
+lbl116:
+  _t139 = $call_dir f2(0) then lbl117
+
+lbl117:
+  _t140 = $call_dir f1() then lbl118
+
+lbl118:
+  _t141 = $cmp neq _t140 7
+  _t142 = $call_idr id32() then lbl119
+
+lbl119:
+  _t143 = $cmp gt _t141 _t142
+  _t144 = $call_idr id23(id1) then lbl120
 
 lbl12:
-  $jump lbl13
+  _t19 = $call_idr id6(id2, id7, 5) then lbl13
+
+lbl120:
+  _t145 = $call_dir f5(_t139, _t143, _t144, id2) then lbl121
+
+lbl121:
+  $call_idr id28(_t137, _t138, id3, _t145) then lbl122
+
+lbl122:
+  _t146 = $call_dir f1() then lbl123
+
+lbl123:
+  _t147 = $arith mul 10 _t146
+  _t148 = $call_dir f1() then lbl124
+
+lbl124:
+  _t149 = $cmp gte _t148 1
+  _t150 = $call_idr id24(id2, 3) then lbl125
+
+lbl125:
+  _t151 = $call_dir f5(_t149, _t150, id7, 0) then lbl126
+
+lbl126:
+  _t152 = $call_dir f1() then lbl127
+
+lbl127:
+  _t153 = $call_idr id27(id7, _t152) then lbl128
+
+lbl128:
+  _t154 = $call_idr id33(10, id5, _t153) then lbl129
+
+lbl129:
+  _t155 = $call_dir f5(_t147, _t151, id5, _t154) then lbl130
 
 lbl13:
-  $branch id6 lbl14 lbl15
+  _t20 = $call_dir f1() then lbl14
+
+lbl130:
+  id0 = $copy _t155
+  _t156 = $call_idr id12() then lbl131
+
+lbl131:
+  _t157 = $call_dir f1() then lbl132
+
+lbl132:
+  _t158 = $call_dir f1() then lbl133
+
+lbl133:
+  _t159 = $cmp gt _t157 _t158
+  _t160 = $arith sub 0 10
+  _t161 = $arith add id1 10
+  _t162 = $call_dir f5(_t159, 3, _t160, _t161) then lbl134
+
+lbl134:
+  _t163 = $call_idr id21(id0, _t156, 4, _t162) then lbl135
+
+lbl135:
+  _t164 = $call_dir f1() then lbl136
+
+lbl136:
+  _t165 = $call_dir f4(_t164, id3, 9) then lbl137
+
+lbl137:
+  _t166 = $call_idr id34(_t165) then lbl138
+
+lbl138:
+  _t167 = $call_dir f1() then lbl139
+
+lbl139:
+  _t168 = $call_dir f4(_t166, _t167, 4) then lbl140
 
 lbl14:
-  id4 = $copy 2
-  _t382 = $arith sub 0 9
-  _t383 = $cmp lte id2 id6
-  _t384 = $call_ext e2(id4, id7, id0, 6, id6, 7, 10, 5)
-  _t385 = $arith sub 0 id3
-  _t386 = $arith sub 0 10
-  _t387 = $call_ext e1(_t384, 1, _t385, 1, _t386, id4, 1)
-  _t388 = $arith sub 0 8
-  _t389 = $call_ext e1(id4, 0, 5, 10, id0, 5, 3)
-  _t390 = $cmp neq id1 1
-  _t391 = $cmp lte _t389 _t390
-  _t392 = $call_ext e1(3, 2, 2, id6, 8, 2, id3)
-  _t393 = $arith sub 0 7
-  _t394 = $arith sub 0 id0
-  _t395 = $call_ext e1(0, id2, id0, 10, _t392, _t393, _t394)
-  _t396 = $call_ext e2(_t387, 7, _t388, id4, 2, _t391, _t395, 0)
-  _t397 = $arith sub id5 id2
-  _t398 = $cmp neq id5 5
-  _t399 = $cmp gt id5 id1
-  _t400 = $arith sub 0 id4
-  _t401 = $call_ext e1(id5, id3, 8, 0, 7, id0, id7)
-  _t402 = $call_ext e2(_t398, 2, 8, _t399, _t400, _t401, id7, id3)
-  _t403 = $arith mul _t397 _t402
-  _t405 = $cmp gte 10 8
-  _t404 = $arith sub 0 _t405
-  _t406 = $arith mul id1 4
-  _t407 = $call_ext e1(0, 9, id1, 9, 10, id5, id7)
-  _t408 = $cmp lte id5 2
-  _t409 = $call_ext e1(_t406, 9, id5, _t407, _t408, 6, id6)
-  _t410 = $call_ext e2(id2, id4, id4, 6, 2, 10, 10, 4)
-  _t411 = $cmp lte id4 _t410
-  _t412 = $call_ext e1(_t404, id1, _t409, 8, id3, _t411, id7)
-  $call_ext e2(_t382, _t383, 8, _t396, _t403, 5, _t412, id3)
-  id4 = $copy 0
-  _t413 = $arith sub 0 id4
-  _t414 = $arith add 9 _t413
-  _t416 = $call_ext e2(6, 8, id3, 6, 2, 5, 8, id3)
-  _t417 = $cmp eq _t416 6
-  _t415 = $arith sub 0 _t417
-  _t419 = $arith add 6 4
-  _t420 = $call_ext e1(id6, id7, id3, id3, id4, 5, 10)
-  _t421 = $cmp lte _t419 _t420
-  _t418 = $arith sub 0 _t421
-  _t422 = $call_ext e2(id2, 4, 0, 1, id3, id1, id3, id7)
-  _t423 = $cmp lte _t422 id3
-  _t424 = $arith sub id1 id4
-  _t425 = $cmp neq _t424 id3
-  _t427 = $arith sub 0 id2
-  _t426 = $arith sub 0 _t427
-  _t428 = $call_ext e2(_t423, id1, _t425, 6, 4, id5, _t426, id1)
-  $call_ext e1(id2, 8, _t414, id5, _t415, _t418, _t428)
-  id0 = $copy 5
-  _t429 = $arith sub 0 id6
-  _t430 = $arith sub 0 id2
-  _t431 = $call_ext e2(id7, 4, id2, id5, 1, id6, id6, 6)
-  _t432 = $call_ext e1(1, id7, id0, 7, 1, 2, id7)
-  _t433 = $call_ext e1(10, 3, 9, 8, id4, id3, id5)
-  _t434 = $arith add 6 id1
-  _t435 = $arith sub 0 id5
-  _t436 = $arith sub 0 id1
-  _t437 = $call_ext e2(_t430, _t431, _t432, _t433, _t434, _t435, id7, _t436)
-  _t438 = $cmp eq 8 10
-  _t439 = $cmp lt _t438 id0
-  _t440 = $arith sub 0 8
-  _t441 = $call_ext e1(_t437, _t439, 1, _t440, id1, 0, id0)
-  _t442 = $call_ext e2(2, 4, 9, id7, 4, 9, 0, 0)
-  _t443 = $call_ext e1(id2, id5, 3, _t442, 7, id7, id6)
-  _t444 = $call_ext e1(1, id5, id4, id1, _t443, id1, 0)
-  $call_ext e1(3, 4, _t429, 2, _t441, 1, _t444)
-  _t445 = $arith mul 0 2
-  _t446 = $cmp gte id3 2
-  _t447 = $call_ext e2(0, id3, 8, id6, id3, 5, id5, id4)
-  _t448 = $arith sub 0 id2
-  _t449 = $call_ext e1(id5, _t446, 4, id4, _t447, id7, _t448)
-  _t450 = $call_ext e2(id3, 7, id3, 5, id5, 9, 10, 0)
-  _t451 = $cmp gte 10 id0
-  _t452 = $call_ext e2(id2, _t450, id7, 3, 8, id5, id0, _t451)
-  _t453 = $call_ext e2(id2, id0, id3, id4, id3, id0, id2, id6)
-  _t454 = $cmp gt 1 id4
-  _t455 = $cmp gte id0 10
-  _t456 = $arith sub 0 id7
-  _t457 = $cmp neq id4 4
-  _t458 = $call_ext e2(_t453, 0, _t454, 7, _t455, _t456, _t457, id2)
-  _t459 = $call_ext e1(6, _t445, _t449, _t452, _t458, 1, 8)
-  id3 = $copy _t459
-  _t460 = $arith mul id0 id2
-  id7 = $copy _t460
-  $jump lbl13
+  _t21 = $arith sub 10 _t20
+  _t22 = $call_dir f5(_t18, _t19, _t21, 0) then lbl15
+
+lbl140:
+  $call_dir f3(_t163, _t168) then lbl141
+
+lbl141:
+  _t169 = $call_dir f1() then lbl142
+
+lbl142:
+  id7 = $copy _t169
+  _t171 = $call_dir f1() then lbl143
+
+lbl143:
+  _t172 = $call_dir f3(_t171, id1) then lbl144
+
+lbl144:
+  _t170 = $arith sub 0 _t172
+  _t173 = $call_dir f1() then lbl145
+
+lbl145:
+  _t174 = $arith div _t173 id2
+  _t175 = $call_dir f2(_t174) then lbl146
+
+lbl146:
+  _t176 = $cmp lt id4 8
+  _t177 = $arith sub _t176 id2
+  _t178 = $call_dir f1() then lbl147
+
+lbl147:
+  _t179 = $call_dir f5(_t170, _t175, _t177, _t178) then lbl148
+
+lbl148:
+  _t181 = $call_dir f1() then lbl149
+
+lbl149:
+  _t182 = $call_idr id35(_t181, id3) then lbl150
 
 lbl15:
-  id6 = $copy 4
-  $jump lbl16
+  _t23 = $call_dir f2(_t22) then lbl16
+
+lbl150:
+  _t180 = $arith sub 0 _t182
+  _t183 = $cmp neq _t180 1
+  $call_dir f3(_t179, _t183) then lbl151
+
+lbl151:
+  $call_idr id17() then lbl152
+
+lbl152:
+  _t184 = $call_idr id36(id2) then lbl153
+
+lbl153:
+  _t185 = $arith mul id8 _t184
+  _t186 = $call_dir f2(_t185) then lbl154
+
+lbl154:
+  id0 = $copy _t186
+  _t187 = $call_dir f1() then lbl155
+
+lbl155:
+  id0 = $copy _t187
+  _t188 = $call_dir f1() then lbl156
+
+lbl156:
+  _t189 = $call_idr id27(id4, id3) then lbl157
+
+lbl157:
+  _t190 = $call_dir f1() then lbl158
+
+lbl158:
+  _t191 = $call_dir f4(_t190, 5, 5) then lbl159
+
+lbl159:
+  _t192 = $cmp lte _t189 _t191
+  _t193 = $arith sub _t188 _t192
+  id4 = $copy _t193
+  $jump lbl108
 
 lbl16:
-  $branch 2 lbl17 lbl18
+  id1 = $copy _t23
+  id0 = $copy 4
+  $jump lbl17
+
+lbl160:
+  $branch 9 lbl161 lbl162
+
+lbl161:
+  _t194 = $cmp eq id3 id3
+  id7 = $copy _t194
+  $jump lbl163
+
+lbl162:
+  _t296 = $arith div id2 id7
+  id1 = $copy _t296
+  _t298 = $call_dir f1() then lbl253
+
+lbl163:
+  $branch id2 lbl164 lbl165
+
+lbl164:
+  id1 = $copy id0
+  id2 = $copy id4
+  _t196 = $call_dir f5(id2, id3, 8, id8) then lbl166
+
+lbl165:
+  $jump lbl187
+
+lbl166:
+  _t197 = $arith add 6 _t196
+  _t195 = $arith sub 0 _t197
+  _t198 = $call_dir f2(0) then lbl167
+
+lbl167:
+  $call_dir f4(_t195, _t198, id3) then lbl168
+
+lbl168:
+  _t199 = $call_dir f1() then lbl169
+
+lbl169:
+  _t200 = $call_dir f3(_t199, id0) then lbl170
 
 lbl17:
-  id2 = $copy 0
-  id0 = $copy 9
-  _t461 = $arith sub 0 id4
-  id7 = $copy _t461
-  _t462 = $arith sub 0 id3
-  id4 = $copy _t462
-  _t463 = $arith mul 2 1
-  _t464 = $call_ext e2(id2, 3, id6, id6, id2, id6, 1, 3)
-  _t465 = $call_ext e1(9, 3, 1, 8, id1, 8, id0)
-  _t466 = $arith add _t464 _t465
-  _t467 = $call_ext e2(4, 10, id1, 8, 1, _t463, id4, _t466)
-  id4 = $copy _t467
-  id3 = $copy id2
-  id3 = $copy 6
-  _t468 = $cmp lt 0 id0
-  _t469 = $arith mul 0 7
-  _t470 = $call_ext e2(8, id6, 2, id5, 9, id4, 8, 8)
-  _t471 = $cmp eq 6 id4
-  _t472 = $call_ext e2(_t468, _t469, _t470, _t471, id7, 8, 8, 1)
-  _t473 = $cmp lt 0 _t472
-  id2 = $copy _t473
-  _t474 = $arith add id1 id1
-  _t475 = $call_ext e1(6, id6, id3, id5, id4, 6, id2)
-  _t476 = $cmp lt _t474 _t475
-  _t477 = $cmp gt 9 id2
-  _t478 = $arith div _t476 _t477
-  _t479 = $arith sub 0 5
-  _t480 = $cmp eq 10 8
-  _t481 = $cmp gte id5 _t480
-  _t482 = $cmp lt id5 id1
-  _t483 = $cmp lte 5 _t482
-  _t484 = $cmp neq _t481 _t483
-  _t485 = $cmp lt id0 1
-  _t486 = $arith sub 0 _t485
-  _t488 = $arith sub 0 id4
-  _t487 = $arith sub 0 _t488
-  _t489 = $call_ext e2(id3, 7, id2, id2, id1, 7, 8, id6)
-  _t490 = $cmp eq 10 5
-  _t491 = $call_ext e2(_t489, id4, 9, id4, 1, id4, id3, _t490)
-  _t492 = $cmp neq id7 2
-  _t493 = $call_ext e2(1, id6, id3, _t486, _t487, _t491, _t492, id2)
-  $call_ext e2(2, _t478, 9, _t479, _t484, 6, _t493, id6)
-  $jump lbl16
+  _t25 = $arith sub 0 id0
+  _t26 = $call_idr id10() then lbl20
+
+lbl170:
+  _t201 = $call_dir f1() then lbl171
+
+lbl171:
+  _t202 = $call_dir f1() then lbl172
+
+lbl172:
+  _t203 = $cmp gte _t201 _t202
+  _t204 = $call_dir f4(_t200, id8, _t203) then lbl173
+
+lbl173:
+  _t205 = $call_dir f1() then lbl174
+
+lbl174:
+  _t206 = $cmp gt _t204 _t205
+  _t207 = $arith sub 0 id5
+  _t208 = $call_idr id34(id3) then lbl175
+
+lbl175:
+  _t209 = $call_dir f4(4, _t207, _t208) then lbl176
+
+lbl176:
+  $call_idr id21(3, 1, _t206, _t209) then lbl177
+
+lbl177:
+  _t210 = $call_dir f1() then lbl178
+
+lbl178:
+  _t211 = $call_dir f1() then lbl179
+
+lbl179:
+  _t212 = $call_idr id36(_t211) then lbl180
 
 lbl18:
-  $branch id0 lbl19 lbl20
+  _t28 = $call_dir f2(id0) then lbl22
+
+lbl180:
+  _t213 = $call_dir f2(_t212) then lbl181
+
+lbl181:
+  _t214 = $call_dir f5(10, id3, _t210, _t213) then lbl182
+
+lbl182:
+  id5 = $copy _t214
+  $call_dir f1() then lbl183
+
+lbl183:
+  id2 = $copy 1
+  _t215 = $call_idr id22(6) then lbl184
+
+lbl184:
+  $call_idr id33(8, _t215, id7) then lbl185
+
+lbl185:
+  $call_idr id19(6) then lbl186
+
+lbl186:
+  id4 = $copy 3
+  $jump lbl163
+
+lbl187:
+  _t216 = $cmp gte id8 3
+  $branch _t216 lbl188 lbl189
+
+lbl188:
+  _t217 = $call_dir f3(7, id0) then lbl190
+
+lbl189:
+  _t229 = $cmp lt id7 9
+  _t230 = $call_dir f2(_t229) then lbl201
 
 lbl19:
-  _t494 = $arith sub 0 9
-  id7 = $copy _t494
-  _t495 = $call_ext e1(0, id4, id7, id0, 6, id6, 7)
-  _t496 = $arith sub 0 id3
-  _t497 = $arith sub 0 10
-  _t498 = $call_ext e2(_t495, id6, id3, 1, _t496, 1, _t497, id4)
-  _t499 = $arith add 8 _t498
-  id6 = $copy _t499
-  _t500 = $cmp lte id4 2
-  id0 = $copy _t500
-  id3 = $copy id4
-  id0 = $copy 5
-  id1 = $copy 1
-  id2 = $copy id4
-  _t501 = $arith mul id2 id4
-  _t502 = $arith sub 0 id0
-  _t503 = $arith sub 0 7
-  _t504 = $arith sub 0 id0
-  _t505 = $cmp eq _t503 _t504
-  _t506 = $arith sub id5 id2
-  _t507 = $call_ext e1(id3, _t501, id5, _t502, _t505, id0, _t506)
-  id1 = $copy _t507
-  $jump lbl21
+  $jump lbl160
+
+lbl190:
+  _t218 = $call_dir f1() then lbl191
+
+lbl191:
+  _t219 = $call_idr id12() then lbl192
+
+lbl192:
+  _t220 = $call_dir f4(_t218, 2, _t219) then lbl193
+
+lbl193:
+  _t221 = $call_idr id16() then lbl194
+
+lbl194:
+  _t222 = $call_dir f3(_t221, id2) then lbl195
+
+lbl195:
+  _t223 = $call_dir f1() then lbl196
+
+lbl196:
+  _t224 = $call_dir f2(_t223) then lbl197
+
+lbl197:
+  _t225 = $call_idr id6(_t222, 0, _t224) then lbl198
+
+lbl198:
+  $call_dir f5(_t217, _t220, _t225, 1) then lbl199
+
+lbl199:
+  _t226 = $call_dir f1() then lbl200
 
 lbl2:
-  id5 = $copy id0
-  _t38 = $cmp lte 5 id7
-  _t39 = $arith sub 0 id6
-  _t40 = $call_ext e1(id2, 0, id4, 10, id0, 9, 6)
-  _t41 = $call_ext e1(_t38, 4, 5, id6, _t39, _t40, 2)
-  _t42 = $arith sub 0 8
-  _t43 = $cmp lte 10 5
-  _t44 = $arith mul _t43 id1
-  _t45 = $arith sub 0 10
-  _t46 = $cmp gt 1 _t45
-  _t47 = $cmp eq id0 1
-  _t48 = $arith div 5 id4
-  _t49 = $call_ext e1(id4, 10, 8, id1, 1, 9, id6)
-  _t50 = $call_ext e1(id5, _t47, 2, _t48, id4, 3, _t49)
-  _t51 = $call_ext e2(_t41, _t42, id2, 1, _t44, _t46, _t50, 0)
-  _t52 = $arith mul id2 id4
-  _t53 = $arith sub 0 id0
-  _t54 = $arith sub 0 7
-  _t55 = $arith sub 0 id0
-  _t56 = $cmp eq _t54 _t55
-  _t57 = $arith sub id5 id2
-  _t58 = $call_ext e1(id3, _t52, id5, _t53, _t56, id0, _t57)
-  _t59 = $arith div 5 id5
-  _t60 = $cmp eq 0 _t59
-  _t61 = $arith sub 0 9
-  _t62 = $cmp lt 3 _t61
-  _t63 = $call_ext e2(id3, 8, 0, 7, id0, id7, 10, id3)
-  _t64 = $call_ext e1(id7, id4, 8, id1, id6, id4, id3)
-  _t65 = $call_ext e1(_t63, 4, 9, _t64, 2, 9, id5)
-  _t66 = $arith sub 0 id4
-  _t67 = $arith sub 0 9
-  _t68 = $call_ext e2(id7, id4, 1, id1, 6, id6, id4, id3)
-  _t69 = $cmp lte id4 4
-  _t70 = $arith sub 0 id4
-  _t71 = $call_ext e1(0, _t66, _t67, id2, _t68, _t69, _t70)
-  _t72 = $arith sub 0 2
-  _t73 = $cmp gt 6 id7
-  _t74 = $cmp lte _t72 _t73
-  _t75 = $call_ext e2(_t60, _t62, id4, _t65, _t71, id4, _t74, id7)
-  $call_ext e2(id0, _t51, id2, id0, 10, _t58, _t75, id3)
-  id4 = $copy 0
-  $jump lbl4
+  _t7 = $cmp eq 9 _t6
+  id8 = $copy _t7
+  _t8 = $call_dir f1() then lbl3
 
 lbl20:
-  _t508 = $arith add 0 7
-  _t509 = $cmp lte _t508 id1
-  _t510 = $cmp gte 10 8
-  _t511 = $call_ext e1(id4, id3, 2, id1, id5, id0, 0)
-  _t512 = $arith sub 0 id4
-  _t513 = $arith sub 0 9
-  _t514 = $call_ext e2(id7, id4, 1, id1, 6, id6, id4, id3)
-  _t515 = $call_ext e1(_t510, id1, _t511, _t512, _t513, id2, _t514)
-  _t516 = $call_ext e2(id2, id4, id4, 6, 2, 10, 10, 4)
-  _t517 = $cmp lte id4 _t516
-  _t518 = $call_ext e2(id3, _t509, id7, id3, 4, 9, _t515, _t517)
-  id2 = $copy _t518
-  _t520 = $arith sub 0 id4
-  _t521 = $arith add id3 id1
-  _t522 = $arith sub 0 id4
-  _t523 = $cmp gte 7 6
-  _t524 = $call_ext e2(id4, 0, _t520, _t521, _t522, 0, id1, _t523)
-  _t519 = $arith sub 0 _t524
-  _t525 = $arith sub 0 1
-  _t527 = $call_ext e2(5, 8, id3, 6, 6, 8, 6, 4)
-  _t526 = $arith sub 0 _t527
-  _t528 = $arith add _t525 _t526
-  _t529 = $arith sub 0 id7
-  _t530 = $arith add _t529 8
-  _t531 = $call_ext e1(3, 9, 1, 10, 6, id7, 5)
-  _t532 = $call_ext e1(3, 10, 2, 5, id1, 7, id1)
-  _t533 = $call_ext e1(_t531, id5, id0, _t532, id4, id0, 5)
-  _t535 = $arith sub 0 id2
-  _t534 = $arith sub 0 _t535
-  _t536 = $call_ext e1(_t530, _t533, 6, 4, id5, _t534, id1)
-  _t538 = $arith sub 0 8
-  _t537 = $arith sub 0 _t538
-  _t539 = $cmp neq 3 4
-  $call_ext e2(id3, _t519, _t528, _t536, _t537, 5, 7, _t539)
-  _t540 = $arith sub 0 3
-  _t541 = $call_ext e2(id2, id5, 1, id6, id6, 6, id4, 1)
-  _t542 = $arith sub 0 id4
-  _t543 = $arith div 1 2
-  _t544 = $call_ext e2(id2, _t540, 1, _t541, _t542, 5, _t543, id0)
-  _t545 = $arith sub 0 id6
-  _t546 = $call_ext e2(id5, id0, 10, 6, 7, id1, 6, id1)
-  _t547 = $cmp gte id7 id7
-  _t548 = $cmp gt id1 6
-  _t549 = $arith sub id1 id3
-  _t550 = $cmp gt id6 id4
-  _t551 = $call_ext e1(_t546, _t547, 2, _t548, _t549, _t550, id6)
-  _t552 = $call_ext e1(7, _t544, _t545, 3, 9, 8, _t551)
-  id7 = $copy _t552
-  _t553 = $cmp lte id2 5
-  _t554 = $arith sub 0 6
-  _t555 = $arith div id7 id6
-  _t556 = $call_ext e2(id5, 4, _t553, id4, _t554, id5, _t555, id6)
-  _t557 = $call_ext e1(9, id7, 7, 0, id2, id2, 0)
-  _t558 = $arith add _t557 id0
-  _t560 = $call_ext e2(id5, 0, id3, 4, id1, id6, id6, id0)
-  _t559 = $arith sub 0 _t560
-  _t561 = $call_ext e1(id2, id5, 3, _t556, id1, _t558, _t559)
-  id1 = $copy _t561
-  id5 = $copy 5
-  _t562 = $arith sub 3 9
-  _t563 = $arith add 6 10
-  _t564 = $cmp gte id7 5
-  _t565 = $cmp gte 10 id0
-  _t566 = $call_ext e2(id3, _t562, _t563, _t564, 8, id5, id0, _t565)
-  _t567 = $call_ext e2(id2, id0, id3, id4, id3, id0, id2, id6)
-  _t568 = $cmp gt 1 id4
-  _t569 = $cmp gte id0 10
-  _t570 = $arith sub 0 id7
-  _t571 = $cmp neq id4 4
-  _t572 = $call_ext e2(_t567, 0, _t568, 7, _t569, _t570, _t571, id2)
-  _t573 = $arith mul id0 id2
-  _t574 = $arith mul _t573 10
-  _t575 = $call_ext e2(id2, _t566, _t572, 1, 8, id4, 4, _t574)
-  id2 = $copy _t575
-  id4 = $copy 3
-  id7 = $copy id5
-  id6 = $copy 0
-  _t576 = $call_ext e2(id6, id7, id2, id7, id0, 2, id7, 8)
-  _t577 = $call_ext e2(4, id5, id4, id7, id1, 8, 1, id7)
-  _t578 = $call_ext e1(1, 5, _t576, _t577, id7, id2, id4)
-  _t579 = $call_ext e2(id2, 3, id6, id6, id2, id6, 1, 3)
-  _t580 = $call_ext e1(9, 3, 1, 8, id1, 8, id0)
-  _t581 = $arith add _t579 _t580
-  _t582 = $cmp gte id1 10
-  _t583 = $cmp eq 3 id2
-  _t584 = $call_ext e2(2, 9, id0, 0, id5, 10, 7, 8)
-  _t585 = $call_ext e1(0, id3, _t582, 6, _t583, 0, _t584)
-  _t586 = $call_ext e2(id2, 0, _t578, _t581, _t585, id6, id6, 7)
-  id3 = $copy _t586
-  _t587 = $cmp neq 2 7
-  _t588 = $cmp gt _t587 id5
-  _t589 = $cmp lt id7 _t588
-  id5 = $copy _t589
-  _t1172 = $copy id0
-  $jump lbl43
+  _t27 = $call_idr id9(_t25, id3, _t26) then lbl21
+
+lbl200:
+  _t227 = $cmp gt _t226 id3
+  id7 = $copy _t227
+  id8 = $copy id7
+  id0 = $copy id1
+  id2 = $copy id1
+  $jump lbl187
+
+lbl201:
+  _t228 = $arith sub 0 _t230
+  id7 = $copy _t228
+  id1 = $copy id5
+  _t231 = $call_idr id20(2) then lbl205
+
+lbl202:
+  _t233 = $call_dir f1() then lbl206
+
+lbl203:
+  _t260 = $arith div 1 id7
+  _t261 = $call_idr id27(id3, _t260) then lbl223
+
+lbl204:
+  _t293 = $call_dir f1() then lbl251
+
+lbl205:
+  _t232 = $cmp gte id0 _t231
+  $branch _t232 lbl202 lbl203
+
+lbl206:
+  _t234 = $call_idr id35(_t233, id7) then lbl207
+
+lbl207:
+  _t235 = $cmp eq id8 _t234
+  _t236 = $arith sub 0 id0
+  _t237 = $cmp eq 0 _t236
+  _t238 = $call_idr id12() then lbl208
+
+lbl208:
+  _t239 = $cmp neq id3 _t238
+  _t240 = $call_dir f1() then lbl209
+
+lbl209:
+  _t241 = $arith add _t240 9
+  _t242 = $cmp gt id5 _t241
+  _t243 = $call_dir f5(_t235, _t237, _t239, _t242) then lbl210
 
 lbl21:
-  $jump lbl1
+  _t24 = $arith sub 0 _t27
+  $branch _t24 lbl18 lbl19
+
+lbl210:
+  id4 = $copy _t243
+  id0 = $copy 1
+  _t246 = $call_dir f1() then lbl211
+
+lbl211:
+  _t245 = $arith sub 0 _t246
+  _t247 = $call_dir f2(id1) then lbl212
+
+lbl212:
+  _t248 = $call_dir f1() then lbl213
+
+lbl213:
+  _t249 = $arith sub 5 _t248
+  _t250 = $call_idr id21(_t245, id0, _t247, _t249) then lbl214
+
+lbl214:
+  _t244 = $arith sub 0 _t250
+  id4 = $copy _t244
+  _t251 = $call_dir f1() then lbl215
+
+lbl215:
+  id4 = $copy _t251
+  _t252 = $call_dir f2(6) then lbl216
+
+lbl216:
+  _t253 = $call_dir f1() then lbl217
+
+lbl217:
+  _t254 = $arith div _t252 _t253
+  $call_idr id11(_t254, id4, id3) then lbl218
+
+lbl218:
+  _t255 = $arith sub 5 8
+  _t256 = $call_idr id22(id4) then lbl219
+
+lbl219:
+  _t257 = $call_idr id37(id1) then lbl220
 
 lbl22:
-  id3 = $copy 4
-  $jump lbl25
+  _t29 = $call_dir f2(_t28) then lbl23
+
+lbl220:
+  _t258 = $call_dir f4(id3, _t256, _t257) then lbl221
+
+lbl221:
+  _t259 = $cmp eq _t255 _t258
+  $call_idr id27(_t259, 10) then lbl222
+
+lbl222:
+  $jump lbl204
+
+lbl223:
+  _t262 = $cmp lte id3 id1
+  _t263 = $call_dir f1() then lbl224
+
+lbl224:
+  _t264 = $call_dir f4(0, _t263, id5) then lbl225
+
+lbl225:
+  _t265 = $call_dir f1() then lbl226
+
+lbl226:
+  _t266 = $call_dir f4(_t265, id5, id5) then lbl227
+
+lbl227:
+  _t267 = $call_dir f5(7, _t262, _t264, _t266) then lbl228
+
+lbl228:
+  _t268 = $cmp gt _t261 _t267
+  $call_dir f2(_t268) then lbl229
+
+lbl229:
+  _t269 = $call_dir f2(7) then lbl230
 
 lbl23:
-  $jump lbl31
+  id2 = $copy _t29
+  _t31 = $call_dir f1() then lbl24
+
+lbl230:
+  _t270 = $call_dir f3(_t269, id4) then lbl231
+
+lbl231:
+  id4 = $copy _t270
+  _t271 = $arith sub id1 id1
+  id5 = $copy _t271
+  _t273 = $call_dir f2(id0) then lbl232
+
+lbl232:
+  _t272 = $arith sub 0 _t273
+  _t274 = $call_idr id20(id1) then lbl233
+
+lbl233:
+  $call_idr id26(_t272, _t274) then lbl234
+
+lbl234:
+  _t276 = $call_dir f1() then lbl235
+
+lbl235:
+  _t275 = $arith sub 0 _t276
+  _t277 = $call_dir f1() then lbl236
+
+lbl236:
+  _t278 = $call_dir f1() then lbl237
+
+lbl237:
+  _t279 = $call_idr id33(_t277, _t278, id5) then lbl238
+
+lbl238:
+  _t280 = $call_dir f1() then lbl239
+
+lbl239:
+  _t281 = $call_idr id22(_t280) then lbl240
 
 lbl24:
-  id5 = $copy 3
-  _t1171 = $arith sub 0 id3
-  _t1172 = $copy _t1171
-  $jump lbl43
+  _t32 = $cmp eq _t31 4
+  _t30 = $arith sub 0 _t32
+  _t33 = $call_dir f4(_t30, 10, id3) then lbl25
+
+lbl240:
+  _t282 = $call_idr id38(_t279, _t281) then lbl241
+
+lbl241:
+  _t283 = $arith sub 0 id8
+  _t284 = $call_idr id31(_t282, 9, 0, _t283) then lbl242
+
+lbl242:
+  $call_dir f4(0, _t275, _t284) then lbl243
+
+lbl243:
+  _t286 = $call_idr id26(2, id4) then lbl244
+
+lbl244:
+  _t287 = $call_dir f4(id5, _t286, id2) then lbl245
+
+lbl245:
+  _t285 = $arith sub 0 _t287
+  $call_dir f3(_t285, id7) then lbl246
+
+lbl246:
+  $call_idr id10() then lbl247
+
+lbl247:
+  id1 = $copy id2
+  _t288 = $call_idr id16() then lbl248
+
+lbl248:
+  _t289 = $cmp neq id1 id3
+  _t290 = $arith add _t288 _t289
+  _t291 = $call_idr id39(0, _t290) then lbl249
+
+lbl249:
+  id1 = $copy _t291
+  $call_dir f2(2) then lbl250
 
 lbl25:
-  _t625 = $cmp gte 10 8
-  _t624 = $arith sub 0 _t625
-  _t626 = $arith mul id1 4
-  _t627 = $call_ext e1(0, 9, id1, 9, 10, id5, id7)
-  _t628 = $cmp lte id5 2
-  _t629 = $call_ext e1(_t626, 9, id5, _t627, _t628, 6, id6)
-  _t630 = $call_ext e2(id2, id4, id4, 6, 2, 10, 10, 4)
-  _t631 = $cmp lte id4 _t630
-  _t632 = $call_ext e1(_t624, id1, _t629, 8, id3, _t631, id7)
-  $branch _t632 lbl26 lbl27
+  _t34 = $call_dir f2(id7) then lbl26
+
+lbl250:
+  $jump lbl204
+
+lbl251:
+  _t294 = $call_idr id40(id8, 9, _t293) then lbl252
+
+lbl252:
+  _t295 = $arith sub _t294 0
+  _t292 = $arith sub 0 _t295
+  id2 = $copy _t292
+  id0 = $copy 3
+  $jump lbl160
+
+lbl253:
+  _t299 = $call_idr id21(id8, _t298, 7, 4) then lbl254
+
+lbl254:
+  _t300 = $arith mul id7 _t299
+  _t297 = $arith sub 0 _t300
+  id2 = $copy _t297
+  $ret id7
 
 lbl26:
-  id2 = $copy id5
-  _t634 = $cmp lte id3 6
-  _t633 = $arith sub 0 _t634
-  _t635 = $arith sub 0 5
-  _t636 = $arith sub 0 6
-  _t637 = $cmp lte _t635 _t636
-  _t638 = $arith sub 0 id2
-  _t639 = $arith add 6 _t638
-  _t640 = $arith sub 0 id7
-  _t641 = $call_ext e2(6, _t633, id0, 4, _t637, _t639, id2, _t640)
-  _t642 = $call_ext e1(3, 9, 1, 10, 6, id7, 5)
-  _t643 = $call_ext e1(3, 10, 2, 5, id1, 7, id1)
-  _t644 = $call_ext e1(_t642, id5, id0, _t643, id4, id0, 5)
-  _t645 = $cmp lte _t644 6
-  _t647 = $arith sub 0 id2
-  _t646 = $arith sub 0 _t647
-  _t648 = $cmp lte _t646 id1
-  _t649 = $arith sub 0 8
-  $call_ext e2(_t641, 8, _t645, 1, _t648, _t649, 5, 7)
-  _t650 = $arith sub 0 id2
-  _t651 = $call_ext e2(id7, 4, id2, id5, 1, id6, id6, 6)
-  _t652 = $call_ext e1(1, id7, id0, 7, 1, 2, id7)
-  _t653 = $call_ext e1(10, 3, 9, 8, id4, id3, id5)
-  _t654 = $arith add 6 id1
-  _t655 = $arith sub 0 id5
-  _t656 = $arith sub 0 id1
-  _t657 = $call_ext e2(_t650, _t651, _t652, _t653, _t654, _t655, id7, _t656)
-  _t658 = $cmp eq 8 10
-  _t659 = $cmp lt _t658 id0
-  _t660 = $arith sub 0 8
-  _t661 = $call_ext e1(_t657, _t659, 1, _t660, id1, 0, id0)
-  _t662 = $call_ext e2(2, 4, 9, id7, 4, 9, 0, 0)
-  _t663 = $call_ext e1(id2, id5, 3, _t662, 7, id7, id6)
-  _t664 = $call_ext e1(1, id5, id4, id1, _t663, id1, 0)
-  $call_ext e2(4, 6, id6, 2, _t661, 1, _t664, id3)
-  id6 = $copy 6
-  id2 = $copy 10
-  _t666 = $call_ext e1(id1, id6, id6, id0, id7, id2, 4)
-  _t667 = $arith sub 0 id5
-  _t668 = $call_ext e2(3, 0, 9, _t666, 1, id5, _t667, 2)
-  _t665 = $arith sub 0 _t668
-  id0 = $copy _t665
-  _t669 = $cmp gt id3 5
-  _t670 = $cmp gte 9 10
-  _t671 = $arith sub 0 3
-  _t672 = $cmp gte 10 id0
-  _t673 = $call_ext e2(_t669, _t670, id7, _t671, 8, id5, id0, _t672)
-  _t674 = $call_ext e2(id2, id0, id3, id4, id3, id0, id2, id6)
-  _t675 = $cmp gt 1 id4
-  _t676 = $cmp gte id0 10
-  _t677 = $arith sub 0 id7
-  _t678 = $cmp neq id4 4
-  _t679 = $call_ext e2(_t674, 0, _t675, 7, _t676, _t677, _t678, id2)
-  _t680 = $arith mul id0 id2
-  _t681 = $arith mul _t680 10
-  _t682 = $call_ext e1(_t673, _t679, 1, 8, id4, 4, _t681)
-  _t683 = $arith add 4 3
-  _t684 = $arith sub 0 6
-  _t685 = $cmp gt 5 _t684
-  _t686 = $arith sub 0 id3
-  _t687 = $call_ext e1(id4, id1, 5, id6, id7, id2, id7)
-  _t688 = $arith sub id5 1
-  _t689 = $call_ext e2(4, id5, id4, id7, id1, 8, 1, id7)
-  _t690 = $call_ext e2(id2, 0, _t687, 5, _t688, _t689, id7, id2)
-  _t691 = $call_ext e2(_t683, _t685, id0, id6, 0, id7, _t686, _t690)
-  _t692 = $cmp lt 9 id0
-  _t693 = $arith add id5 9
-  _t694 = $call_ext e2(3, 1, 8, id1, 8, id0, id3, id0)
-  _t695 = $call_ext e2(_t692, id6, id2, 2, _t693, _t694, id3, id2)
-  _t696 = $call_ext e2(6, 8, 7, 7, 0, id7, 2, 9)
-  _t697 = $cmp gt id7 _t696
-  _t698 = $cmp lt _t695 _t697
-  _t699 = $arith sub id0 id3
-  _t700 = $arith div _t699 id6
-  _t701 = $cmp lt id0 _t700
-  _t703 = $cmp neq 8 7
-  _t704 = $cmp lt 0 8
-  _t705 = $cmp gte id4 id5
-  _t706 = $arith mul 7 id1
-  _t707 = $call_ext e1(6, id6, id3, id5, id4, 6, id2)
-  _t708 = $call_ext e2(_t703, id4, _t704, _t705, 2, _t706, 1, _t707)
-  _t702 = $arith sub 0 _t708
-  $call_ext e2(_t682, _t691, id4, _t698, _t701, 7, 9, _t702)
-  _t709 = $call_ext e2(id0, 8, 7, 0, id2, id4, 7, 5)
-  _t710 = $cmp lt id5 id1
-  _t711 = $call_ext e2(6, id7, id5, 7, 3, id6, id7, id0)
-  _t712 = $call_ext e1(8, id6, id4, id5, 6, id3, 7)
-  _t713 = $cmp lte 9 id7
-  _t714 = $call_ext e2(_t709, _t710, _t711, _t712, id2, 4, _t713, 0)
-  _t715 = $call_ext e1(_t714, id4, 9, id4, 1, id4, id3)
-  id6 = $copy _t715
-  _t717 = $cmp neq id7 2
-  _t716 = $arith sub 0 _t717
-  id4 = $copy _t716
-  id2 = $copy 0
-  $jump lbl27
+  $call_idr id6(id4, _t33, _t34) then lbl27
 
 lbl27:
-  _t718 = $cmp lte 5 id7
-  _t719 = $arith sub 0 id6
-  _t720 = $call_ext e1(id2, 0, id4, 10, id0, 9, 6)
-  _t721 = $call_ext e1(_t718, 4, 5, id6, _t719, _t720, 2)
-  _t722 = $arith sub 0 8
-  _t723 = $cmp lte 10 5
-  _t724 = $arith mul _t723 id1
-  _t725 = $arith sub 0 10
-  _t726 = $cmp gt 1 _t725
-  _t727 = $cmp eq id0 1
-  _t728 = $arith div 5 id4
-  _t729 = $call_ext e1(id4, 10, 8, id1, 1, 9, id6)
-  _t730 = $call_ext e1(id5, _t727, 2, _t728, id4, 3, _t729)
-  _t731 = $call_ext e2(_t721, _t722, id2, 1, _t724, _t726, _t730, 0)
-  _t732 = $arith mul id2 id4
-  _t733 = $arith sub 0 id0
-  _t734 = $arith sub 0 7
-  _t735 = $arith sub 0 id0
-  _t736 = $cmp eq _t734 _t735
-  _t737 = $arith sub id5 id2
-  _t738 = $call_ext e1(id3, _t732, id5, _t733, _t736, id0, _t737)
-  _t739 = $arith div 5 id5
-  _t740 = $cmp eq 0 _t739
-  _t741 = $arith sub 0 9
-  _t742 = $cmp lt 3 _t741
-  _t743 = $call_ext e2(id3, 8, 0, 7, id0, id7, 10, id3)
-  _t744 = $call_ext e1(id7, id4, 8, id1, id6, id4, id3)
-  _t745 = $call_ext e1(_t743, 4, 9, _t744, 2, 9, id5)
-  _t746 = $arith sub 0 id4
-  _t747 = $arith sub 0 9
-  _t748 = $call_ext e2(id7, id4, 1, id1, 6, id6, id4, id3)
-  _t749 = $cmp lte id4 4
-  _t750 = $arith sub 0 id4
-  _t751 = $call_ext e1(0, _t746, _t747, id2, _t748, _t749, _t750)
-  _t752 = $arith sub 0 2
-  _t753 = $cmp gt 6 id7
-  _t754 = $cmp lte _t752 _t753
-  _t755 = $call_ext e2(_t740, _t742, id4, _t745, _t751, id4, _t754, id7)
-  $call_ext e2(id0, _t731, id2, id0, 10, _t738, _t755, id3)
-  id4 = $copy 0
-  $jump lbl28
+  _t35 = $arith sub 0 id7
+  id3 = $copy _t35
+  _t36 = $call_dir f1() then lbl28
 
 lbl28:
-  $branch 2 lbl29 lbl30
+  _t37 = $call_dir f3(_t36, id0) then lbl29
 
 lbl29:
-  _t756 = $arith sub 0 1
-  _t758 = $call_ext e2(5, 8, id3, 6, 6, 8, 6, 4)
-  _t757 = $arith sub 0 _t758
-  _t759 = $arith add _t756 _t757
-  _t760 = $arith sub 0 id7
-  _t761 = $arith add _t760 8
-  _t762 = $call_ext e1(3, 9, 1, 10, 6, id7, 5)
-  _t763 = $call_ext e1(3, 10, 2, 5, id1, 7, id1)
-  _t764 = $call_ext e1(_t762, id5, id0, _t763, id4, id0, 5)
-  _t766 = $arith sub 0 id2
-  _t765 = $arith sub 0 _t766
-  _t767 = $call_ext e1(_t761, _t764, 6, 4, id5, _t765, id1)
-  _t769 = $arith sub 0 8
-  _t768 = $arith sub 0 _t769
-  _t770 = $cmp neq 3 4
-  $call_ext e2(_t759, _t767, _t768, 5, 7, _t770, id6, 2)
-  _t772 = $call_ext e2(id7, 4, id2, id5, 1, id6, id6, 6)
-  _t771 = $arith sub 0 _t772
-  _t773 = $call_ext e1(id7, id0, 7, 1, 2, id7, id6)
-  _t774 = $call_ext e1(id3, id5, id0, 10, 6, 7, id1)
-  _t775 = $call_ext e2(id1, id0, 8, 10, id0, id4, 1, 3)
-  _t776 = $call_ext e1(_t773, id6, 3, 9, 8, _t774, _t775)
-  _t777 = $arith sub id1 0
-  _t778 = $call_ext e1(1, id5, 0, 10, id6, 2, 9)
-  _t779 = $cmp eq 1 _t778
-  _t780 = $call_ext e2(id2, _t771, _t776, _t777, _t779, 9, 2, id3)
-  id6 = $copy _t780
-  id7 = $copy 4
-  id5 = $copy id5
-  id6 = $copy id1
-  id7 = $copy 1
-  id4 = $copy 0
-  id6 = $copy id5
-  id1 = $copy 3
-  _t781 = $cmp neq id6 id3
-  _t782 = $cmp gte id4 1
-  _t783 = $arith sub 0 id5
-  _t784 = $call_ext e1(8, 3, 9, 8, 6, 10, id5)
-  _t785 = $call_ext e1(_t781, 3, _t782, _t783, 2, 10, _t784)
-  _t786 = $arith sub 0 3
-  _t787 = $call_ext e1(id1, _t785, id7, _t786, 8, id5, id0)
-  _t789 = $call_ext e2(id5, 9, id1, id2, id0, id3, id4, id3)
-  _t788 = $arith sub 0 _t789
-  _t790 = $cmp lt _t788 4
-  _t791 = $cmp gt 1 8
-  _t792 = $cmp neq 0 _t791
-  _t793 = $arith div id5 id0
-  _t794 = $cmp gte id0 _t793
-  _t795 = $arith div id1 id2
-  _t796 = $arith div 0 id2
-  _t797 = $arith mul id0 id2
-  _t798 = $call_ext e1(4, id5, id0, id3, id0, id6, 7)
-  _t799 = $call_ext e1(_t795, id2, _t796, _t797, 10, id5, _t798)
-  _t800 = $arith mul _t794 _t799
-  $call_ext e1(9, _t787, _t790, id2, _t792, _t800, id2)
-  $jump lbl28
+  _t38 = $call_dir f1() then lbl30
 
 lbl3:
-  _t590 = $arith sub 0 1
-  _t591 = $call_ext e1(6, id6, id3, id5, id4, 6, id2)
-  _t592 = $arith add id0 0
-  _t593 = $arith sub 0 id0
-  _t594 = $arith sub id1 7
-  _t595 = $call_ext e1(id4, 7, 5, 1, 8, 5, 1)
-  _t596 = $call_ext e2(_t590, _t591, _t592, 9, 9, _t593, _t594, _t595)
-  _t597 = $arith mul _t596 6
-  id3 = $copy _t597
-  id6 = $copy id3
-  _t599 = $arith sub 0 id4
-  _t598 = $arith sub 0 _t599
-  _t600 = $call_ext e2(id3, 7, id2, id2, id1, 7, 8, id6)
-  _t601 = $cmp eq 10 5
-  _t602 = $call_ext e2(_t600, id4, 9, id4, 1, id4, id3, _t601)
-  _t603 = $cmp neq id7 2
-  _t604 = $call_ext e1(id7, _t598, _t602, _t603, id2, id6, 5)
-  _t605 = $call_ext e2(8, id6, 1, 10, id0, id1, id6, 6)
-  _t606 = $cmp lt _t605 9
-  _t607 = $call_ext e2(9, 0, id4, id7, id0, 6, id6, 7)
-  _t608 = $arith div 8 _t607
-  _t609 = $arith sub 0 10
-  _t610 = $call_ext e2(3, id1, id3, 1, _t609, id4, 1, 7)
-  _t611 = $arith sub 0 8
-  _t612 = $call_ext e1(1, _t606, id2, id6, _t608, _t610, _t611)
-  $call_ext e1(id7, id0, _t604, id0, _t612, id4, 2)
-  _t613 = $cmp neq id3 id4
-  _t614 = $cmp neq id1 1
-  _t615 = $call_ext e1(4, 1, 2, id7, id4, 1, id3)
-  _t616 = $cmp gt 2 id3
-  _t617 = $call_ext e1(1, id2, id0, 0, 0, id3, 5)
-  _t618 = $call_ext e1(_t614, _t615, id2, id4, 0, _t616, _t617)
-  _t619 = $arith div 5 id5
-  _t620 = $cmp eq 0 _t619
-  _t621 = $arith sub 0 9
-  _t622 = $cmp lt 3 _t621
-  _t623 = $call_ext e1(_t613, 10, 2, 5, _t618, _t620, _t622)
-  $branch _t623 lbl22 lbl23
+  _t9 = $call_dir f3(id1, 6) then lbl4
 
 lbl30:
-  $jump lbl24
+  _t39 = $call_dir f1() then lbl31
 
 lbl31:
-  $branch 6 lbl32 lbl33
+  _t40 = $cmp gte _t38 _t39
+  _t41 = $call_dir f4(_t37, id8, _t40) then lbl32
 
 lbl32:
-  _t801 = $cmp neq 1 id7
-  _t802 = $call_ext e2(id2, 3, id6, id6, id2, id6, 1, 3)
-  _t803 = $call_ext e1(9, 3, 1, 8, id1, 8, id0)
-  _t804 = $call_ext e2(id0, id3, id2, id1, 10, 4, 7, 3)
-  _t805 = $call_ext e1(_t801, 1, id5, id1, _t802, _t803, _t804)
-  _t806 = $arith div 7 0
-  _t807 = $cmp lte 10 7
-  _t808 = $arith mul id6 2
-  _t809 = $arith sub 9 id4
-  _t810 = $cmp neq 8 7
-  _t811 = $call_ext e1(id2, id0, _t807, _t808, _t809, _t810, id4)
-  _t812 = $cmp lt id7 8
-  _t813 = $cmp gte 1 id5
-  _t814 = $call_ext e1(_t805, _t806, 7, id2, _t811, _t812, _t813)
-  id6 = $copy _t814
-  _t815 = $arith sub 0 1
-  _t816 = $arith sub id6 id4
-  _t817 = $arith add id0 id0
-  _t818 = $call_ext e1(_t816, 3, id4, id7, _t817, id2, 9)
-  _t819 = $arith sub 0 5
-  _t820 = $arith div 7 0
-  _t821 = $cmp eq _t820 8
-  _t822 = $cmp lt id5 id1
-  _t823 = $call_ext e2(6, id7, id5, 7, 3, id6, id7, id0)
-  _t824 = $call_ext e1(8, id6, id4, id5, 6, id3, 7)
-  _t825 = $cmp lte 9 id7
-  _t826 = $call_ext e1(5, _t822, _t823, _t824, id2, 4, _t825)
-  _t827 = $call_ext e2(_t815, _t818, 9, _t819, _t821, _t826, 0, id4)
-  id4 = $copy _t827
-  id2 = $copy id6
-  _t828 = $cmp neq id7 2
-  _t829 = $cmp lte 7 8
-  _t830 = $call_ext e2(id7, 4, id4, 2, id7, id6, 8, id2)
-  _t831 = $cmp gt 8 id3
-  _t832 = $call_ext e2(6, 2, 5, 0, id6, id5, 1, id5)
-  _t833 = $call_ext e1(1, _t829, _t830, id6, _t831, _t832, 3)
-  _t834 = $call_ext e2(6, _t828, id2, id6, 5, id0, _t833, id1)
-  id5 = $copy _t834
-  id5 = $copy id4
-  _t835 = $arith sub 0 8
-  _t836 = $cmp neq 5 id4
-  _t837 = $call_ext e1(id3, 5, 4, id2, 4, 1, 2)
-  _t838 = $call_ext e1(1, id3, 1, id4, id4, id5, id0)
-  _t839 = $call_ext e1(_t836, 10, 2, 5, _t837, id7, _t838)
-  _t840 = $arith sub 0 7
-  _t841 = $arith sub 0 id0
-  _t842 = $cmp eq _t840 _t841
-  _t843 = $cmp gt _t839 _t842
-  _t844 = $arith sub id5 id2
-  _t845 = $cmp neq id5 5
-  _t846 = $cmp gt id5 id1
-  _t847 = $arith sub 0 id4
-  _t848 = $call_ext e1(id5, id3, 8, 0, 7, id0, id7)
-  _t849 = $call_ext e2(_t845, 2, 8, _t846, _t847, _t848, id7, id3)
-  _t850 = $arith mul _t844 _t849
-  $call_ext e1(1, 7, _t835, id4, 2, _t843, _t850)
-  _t851 = $cmp gt id1 id6
-  _t852 = $call_ext e1(4, 0, id2, id0, 6, id4, 3)
-  _t853 = $call_ext e2(id2, 6, 8, id5, 2, 4, id5, 3)
-  _t854 = $arith mul id3 id1
-  _t855 = $call_ext e2(id2, id4, id4, 6, 2, 10, 10, 4)
-  _t856 = $arith sub 0 id7
-  _t857 = $call_ext e2(_t851, id1, _t852, _t853, _t854, _t855, _t856, id3)
-  _t858 = $cmp lte 10 _t857
-  id6 = $copy _t858
-  _t859 = $arith sub 0 2
-  _t860 = $arith sub 0 id4
-  _t861 = $arith add 9 _t860
-  _t862 = $arith sub 8 _t861
-  _t863 = $arith sub 0 id6
-  _t864 = $arith sub 0 2
-  _t865 = $arith sub 0 5
-  _t866 = $arith sub 0 6
-  _t867 = $call_ext e2(6, _t863, 1, _t864, 5, 8, _t865, _t866)
-  _t868 = $arith add 6 4
-  _t869 = $call_ext e1(id6, id7, id3, id3, id4, 5, 10)
-  _t870 = $cmp lte _t868 _t869
-  _t871 = $cmp gte _t867 _t870
-  _t872 = $arith sub 0 3
-  _t873 = $call_ext e1(2, 5, id1, 7, id1, id4, id0)
-  _t874 = $arith sub 0 10
-  _t875 = $call_ext e1(id7, _t873, 5, 6, 4, id5, _t874)
-  _t876 = $arith sub 0 5
-  _t877 = $cmp gte id1 _t876
-  _t878 = $call_ext e2(_t872, 5, id5, id0, _t875, _t877, 5, 7)
-  $call_ext e2(id4, 0, _t859, _t862, id1, _t871, id2, _t878)
-  _t879 = $arith sub 0 id2
-  _t880 = $call_ext e2(id7, 4, id2, id5, 1, id6, id6, 6)
-  _t881 = $call_ext e1(1, id7, id0, 7, 1, 2, id7)
-  _t882 = $call_ext e1(10, 3, 9, 8, id4, id3, id5)
-  _t883 = $arith add 6 id1
-  _t884 = $arith sub 0 id5
-  _t885 = $arith sub 0 id1
-  _t886 = $call_ext e2(_t879, _t880, _t881, _t882, _t883, _t884, id7, _t885)
-  _t887 = $cmp eq 8 10
-  _t888 = $cmp lt _t887 id0
-  _t889 = $arith sub 0 8
-  _t890 = $call_ext e1(_t886, _t888, 1, _t889, id1, 0, id0)
-  _t891 = $call_ext e2(2, 4, 9, id7, 4, 9, 0, 0)
-  _t892 = $call_ext e1(id2, id5, 3, _t891, 7, id7, id6)
-  _t893 = $call_ext e1(1, id5, id4, id1, _t892, id1, 0)
-  $call_ext e2(4, 6, id6, 2, _t890, 1, _t893, id3)
-  id6 = $copy 6
-  $jump lbl31
+  _t42 = $call_dir f1() then lbl33
 
 lbl33:
-  _t894 = $call_ext e2(2, id5, 0, id3, 4, id1, id6, id6)
-  _t895 = $cmp neq _t894 id0
-  _t897 = $arith sub 0 id5
-  _t896 = $arith sub 0 _t897
-  _t898 = $call_ext e1(id5, _t895, 5, 7, 5, id7, _t896)
-  id0 = $copy _t898
-  id1 = $copy id3
+  _t43 = $cmp gt _t41 _t42
+  id1 = $copy _t43
+  id5 = $copy id5
   $jump lbl34
 
 lbl34:
-  _t899 = $arith add 6 10
-  _t900 = $cmp gte id7 5
-  _t901 = $cmp gte 10 id0
-  _t902 = $call_ext e2(id1, id2, id0, id3, id4, id3, id0, id2)
-  _t903 = $call_ext e2(_t899, _t900, 8, id5, id0, _t901, _t902, id6)
-  _t904 = $arith div 3 _t903
-  $branch _t904 lbl35 lbl36
+  $branch 9 lbl35 lbl36
 
 lbl35:
-  id2 = $copy 6
-  _t905 = $arith div id4 4
-  id2 = $copy _t905
-  _t906 = $call_ext e2(id6, id0, 2, id1, 6, 6, id5, id6)
-  _t907 = $call_ext e2(id2, 0, 5, id4, id1, 5, id6, id7)
-  _t908 = $arith sub 0 id4
-  _t909 = $call_ext e1(_t906, id2, id1, id1, id3, _t907, _t908)
-  _t910 = $arith sub 0 5
-  _t911 = $arith sub id5 id3
-  _t912 = $call_ext e1(id5, id4, id7, id1, 8, 1, id7)
-  _t913 = $arith div id3 id2
-  _t914 = $cmp gte id2 id6
-  _t915 = $call_ext e2(_t912, id7, id2, id4, _t913, 9, 1, _t914)
-  _t916 = $call_ext e1(_t909, _t910, _t911, _t915, id5, 9, 9)
-  id2 = $copy _t916
-  id1 = $copy 8
-  id4 = $copy 9
-  id3 = $copy id2
-  id3 = $copy 6
-  _t917 = $cmp lt 0 id0
-  _t918 = $arith mul 0 7
-  _t919 = $call_ext e2(8, id6, 2, id5, 9, id4, 8, 8)
-  _t920 = $cmp eq 6 id4
-  _t921 = $call_ext e2(_t917, _t918, _t919, _t920, id7, 8, 8, 1)
-  _t922 = $cmp lt 0 _t921
-  id2 = $copy _t922
-  $jump lbl34
+  id7 = $copy 2
+  id3 = $copy 8
+  _t44 = $arith sub 0 8
+  id1 = $copy _t44
+  id5 = $copy id7
+  _t45 = $arith sub 0 8
+  $call_dir f3(_t45, 6) then lbl37
 
 lbl36:
-  _t923 = $arith sub 0 1
-  _t924 = $call_ext e1(6, id6, id3, id5, id4, 6, id2)
-  _t925 = $arith add id0 0
-  _t926 = $arith sub 0 id0
-  _t927 = $arith sub id1 7
-  _t928 = $call_ext e1(id4, 7, 5, 1, 8, 5, 1)
-  _t929 = $call_ext e2(_t923, _t924, _t925, 9, 9, _t926, _t927, _t928)
-  _t930 = $arith mul _t929 6
-  id3 = $copy _t930
-  id6 = $copy id3
-  _t932 = $arith sub 0 id4
-  _t931 = $arith sub 0 _t932
-  _t933 = $call_ext e2(id3, 7, id2, id2, id1, 7, 8, id6)
-  _t934 = $cmp eq 10 5
-  _t935 = $call_ext e2(_t933, id4, 9, id4, 1, id4, id3, _t934)
-  _t936 = $cmp neq id7 2
-  _t937 = $call_ext e1(id7, _t931, _t935, _t936, id2, id6, 5)
-  _t938 = $call_ext e2(8, id6, 1, 10, id0, id1, id6, 6)
-  _t939 = $cmp lt _t938 9
-  _t940 = $call_ext e2(9, 0, id4, id7, id0, 6, id6, 7)
-  _t941 = $arith div 8 _t940
-  _t942 = $arith sub 0 10
-  _t943 = $call_ext e2(3, id1, id3, 1, _t942, id4, 1, 7)
-  _t944 = $arith sub 0 8
-  _t945 = $call_ext e1(1, _t939, id2, id6, _t941, _t943, _t944)
-  $call_ext e1(id7, id0, _t937, id0, _t945, id4, 2)
-  _t946 = $cmp neq id3 id4
-  _t947 = $cmp neq id1 1
-  _t948 = $call_ext e1(4, 1, 2, id7, id4, 1, id3)
-  _t949 = $cmp gt 2 id3
-  _t950 = $call_ext e1(1, id2, id0, 0, 0, id3, 5)
-  _t951 = $call_ext e1(_t947, _t948, id2, id4, 0, _t949, _t950)
-  _t952 = $arith div 5 id5
-  _t953 = $cmp eq 0 _t952
-  _t954 = $arith sub 0 9
-  _t955 = $cmp lt 3 _t954
-  _t956 = $call_ext e1(_t946, 10, 2, 5, _t951, _t953, _t955)
-  $branch _t956 lbl37 lbl38
+  $jump lbl51
 
 lbl37:
-  id3 = $copy 4
-  _t957 = $call_ext e2(2, 9, 8, id1, 4, 4, 0, id2)
-  _t958 = $cmp gt 10 _t957
-  _t960 = $call_ext e1(3, id3, id2, 6, 8, id5, 2)
-  _t959 = $arith sub 0 _t960
-  _t961 = $arith sub 0 id6
-  _t962 = $call_ext e1(_t958, 0, _t959, id1, _t961, 8, id3)
-  _t963 = $arith add id1 8
-  _t964 = $arith sub 0 id7
-  _t965 = $call_ext e2(6, id4, id4, _t963, _t964, 6, id7, id3)
-  _t966 = $cmp lte id4 _t965
-  _t967 = $arith sub 0 2
-  _t968 = $arith add 9 id2
-  _t969 = $arith add 8 _t968
-  _t971 = $cmp gte 7 6
-  _t970 = $arith sub 0 _t971
-  _t972 = $arith sub 0 1
-  _t973 = $arith sub 0 2
-  _t974 = $cmp lt _t972 _t973
-  _t975 = $call_ext e2(id4, 0, _t967, _t969, id5, _t970, _t974, 4)
-  _t976 = $arith sub 0 5
-  _t977 = $arith sub 0 id4
-  _t978 = $cmp lte _t976 _t977
-  _t979 = $arith sub 0 1
-  _t980 = $arith add 6 _t979
-  _t981 = $arith sub 0 id7
-  $call_ext e2(_t962, _t966, _t975, _t978, _t980, id2, _t981, 8)
-  id6 = $copy 3
-  _t982 = $arith sub 0 3
-  _t983 = $call_ext e1(2, 5, id1, 7, id1, id4, id0)
-  _t984 = $arith sub 0 10
-  _t985 = $call_ext e1(id7, _t983, 5, 6, 4, id5, _t984)
-  _t986 = $arith sub 0 5
-  _t987 = $cmp gte id1 _t986
-  _t988 = $call_ext e2(_t982, 5, id5, id0, _t985, _t987, 5, 7)
-  id2 = $copy _t988
-  _t989 = $arith sub 0 id2
-  _t990 = $call_ext e2(id7, 4, id2, id5, 1, id6, id6, 6)
-  _t991 = $call_ext e1(1, id7, id0, 7, 1, 2, id7)
-  _t992 = $call_ext e1(10, 3, 9, 8, id4, id3, id5)
-  _t993 = $arith add 6 id1
-  _t994 = $arith sub 0 id5
-  _t995 = $arith sub 0 id1
-  _t996 = $call_ext e2(_t989, _t990, _t991, _t992, _t993, _t994, id7, _t995)
-  _t997 = $cmp eq 8 10
-  _t998 = $cmp lt _t997 id0
-  _t999 = $arith sub 0 8
-  _t1000 = $call_ext e1(_t996, _t998, 1, _t999, id1, 0, id0)
-  _t1001 = $call_ext e2(2, 4, 9, id7, 4, 9, 0, 0)
-  _t1002 = $call_ext e1(id2, id5, 3, _t1001, 7, id7, id6)
-  _t1003 = $call_ext e1(1, id5, id4, id1, _t1002, id1, 0)
-  $call_ext e2(4, 6, id6, 2, _t1000, 1, _t1003, id3)
-  $jump lbl39
+  id4 = $copy 3
+  _t47 = $call_dir f1() then lbl38
 
 lbl38:
-  id1 = $copy 4
-  id2 = $copy id1
-  _t1004 = $arith sub 0 id2
-  _t1005 = $call_ext e2(id2, 10, id3, 7, id3, 5, id5, 9)
-  _t1006 = $call_ext e1(0, 6, 3, 8, 9, 1, id6)
-  _t1007 = $call_ext e2(id5, 9, id1, id2, id0, id3, id4, id3)
-  _t1008 = $call_ext e2(5, 7, 5, id7, _t1004, _t1005, _t1006, _t1007)
-  _t1009 = $cmp eq 1 _t1008
-  _t1010 = $cmp gt 1 8
-  _t1011 = $cmp neq 0 _t1010
-  _t1012 = $arith div id5 id0
-  _t1013 = $cmp gte id0 _t1012
-  _t1014 = $arith div id1 id2
-  _t1015 = $arith div 0 id2
-  _t1016 = $arith mul id0 id2
-  _t1017 = $call_ext e1(4, id5, id0, id3, id0, id6, 7)
-  _t1018 = $call_ext e1(_t1014, id2, _t1015, _t1016, 10, id5, _t1017)
-  _t1019 = $arith mul _t1013 _t1018
-  $call_ext e1(_t1009, 0, id2, _t1011, _t1019, id2, id1)
-  _t1020 = $call_ext e1(id6, id1, 3, id0, 9, 9, 6)
-  id0 = $copy _t1020
-  id7 = $copy 5
-  _t1021 = $call_ext e1(id5, id4, id7, id1, 8, 1, id7)
-  _t1022 = $arith div id3 id2
-  _t1023 = $cmp gte id2 id6
-  _t1024 = $call_ext e2(_t1021, id7, id2, id4, _t1022, 9, 1, _t1023)
-  _t1025 = $arith div _t1024 id5
-  id3 = $copy _t1025
-  $jump lbl39
+  _t48 = $call_dir f1() then lbl39
 
 lbl39:
-  _t1026 = $cmp lt 6 id4
-  _t1027 = $call_ext e2(id0, id3, id2, id1, 10, 4, 7, 3)
-  _t1028 = $arith div 7 0
-  _t1029 = $call_ext e1(id2, 0, 7, id0, id3, 1, id7)
-  _t1030 = $call_ext e2(8, _t1026, _t1027, _t1028, 7, id2, _t1029, id4)
-  _t1031 = $arith sub 0 id5
-  _t1032 = $arith add 9 _t1031
-  _t1033 = $cmp neq 2 7
-  _t1034 = $cmp gt _t1033 id5
-  _t1035 = $call_ext e2(id4, _t1030, _t1032, id7, _t1034, 8, 1, id5)
-  $branch _t1035 lbl40 lbl41
+  _t49 = $call_idr id11(8, _t47, _t48) then lbl40
 
 lbl4:
-  $branch 2 lbl5 lbl6
+  _t10 = $call_dir f2(id8) then lbl5
 
 lbl40:
-  _t1036 = $arith sub 0 id7
-  id4 = $copy _t1036
-  _t1037 = $call_ext e2(6, id0, 8, 7, 0, id2, id4, 7)
-  _t1038 = $cmp lt id5 id1
-  _t1039 = $call_ext e2(6, id7, id5, 7, 3, id6, id7, id0)
-  _t1040 = $call_ext e1(8, id6, id4, id5, 6, id3, 7)
-  _t1041 = $call_ext e1(_t1037, 5, _t1038, _t1039, _t1040, id2, 4)
-  _t1042 = $cmp neq 8 id6
-  _t1043 = $cmp eq id3 _t1042
-  _t1044 = $call_ext e1(_t1041, _t1043, 9, id4, 1, id4, id3)
-  id0 = $copy _t1044
-  _t1046 = $cmp neq id7 2
-  _t1045 = $arith sub 0 _t1046
-  id4 = $copy _t1045
-  id2 = $copy 0
-  _t1047 = $call_ext e1(id6, 1, 10, id0, id1, id6, 6)
-  _t1048 = $cmp lte id2 0
-  _t1049 = $call_ext e2(9, 0, id4, id7, id0, 6, id6, 7)
-  _t1050 = $call_ext e2(_t1047, 9, _t1048, 8, _t1049, id6, id3, 1)
-  _t1051 = $arith sub 0 id3
-  _t1052 = $arith sub _t1050 _t1051
-  id5 = $copy _t1052
-  _t1053 = $arith sub 0 id1
-  _t1054 = $cmp eq _t1053 id4
-  _t1055 = $cmp neq 5 id4
-  _t1056 = $call_ext e1(id3, 5, 4, id2, 4, 1, 2)
-  _t1057 = $call_ext e1(1, id3, 1, id4, id4, id5, id0)
-  _t1058 = $call_ext e1(_t1055, 10, 2, 5, _t1056, id7, _t1057)
-  _t1059 = $arith sub 0 7
-  _t1060 = $arith sub 0 id0
-  _t1061 = $cmp eq _t1059 _t1060
-  _t1062 = $arith sub id5 id2
-  _t1063 = $call_ext e1(id5, _t1054, id3, _t1058, _t1061, id0, _t1062)
-  id0 = $copy _t1063
-  _t1064 = $arith div 5 2
-  _t1065 = $cmp eq 0 _t1064
-  _t1066 = $arith sub 0 id4
-  _t1067 = $cmp lt 3 _t1066
-  _t1068 = $arith add id6 id0
-  _t1069 = $call_ext e2(id3, _t1068, id0, 7, id7, id3, 4, 9)
-  _t1070 = $cmp gte 10 8
-  _t1071 = $call_ext e1(id4, id3, 2, id1, id5, id0, 0)
-  _t1072 = $arith sub 0 id4
-  _t1073 = $arith sub 0 9
-  _t1074 = $call_ext e2(id7, id4, 1, id1, 6, id6, id4, id3)
-  _t1075 = $call_ext e1(_t1070, id1, _t1071, _t1072, _t1073, id2, _t1074)
-  _t1076 = $call_ext e2(id2, id4, id4, 6, 2, 10, 10, 4)
-  _t1077 = $cmp lte id4 _t1076
-  _t1079 = $call_ext e2(id4, id3, id2, id2, id3, id1, id2, id4)
-  _t1078 = $arith sub 0 _t1079
-  _t1080 = $call_ext e1(_t1069, _t1075, _t1077, id7, id3, _t1078, 0)
-  _t1081 = $arith sub 0 id6
-  _t1082 = $arith sub 0 2
-  _t1083 = $arith sub 0 5
-  _t1084 = $arith sub 0 6
-  _t1085 = $call_ext e2(6, _t1081, 1, _t1082, 5, 8, _t1083, _t1084)
-  _t1086 = $arith add 6 4
-  _t1087 = $call_ext e1(id6, id7, id3, id3, id4, 5, 10)
-  _t1088 = $cmp lte _t1086 _t1087
-  _t1089 = $cmp gte _t1085 _t1088
-  _t1090 = $arith sub 0 3
-  _t1091 = $call_ext e1(2, 5, id1, 7, id1, id4, id0)
-  _t1092 = $arith sub 0 10
-  _t1093 = $call_ext e1(id7, _t1091, 5, 6, 4, id5, _t1092)
-  _t1094 = $arith sub 0 5
-  _t1095 = $cmp gte id1 _t1094
-  _t1096 = $call_ext e2(_t1090, 5, id5, id0, _t1093, _t1095, 5, 7)
-  $call_ext e2(_t1065, _t1067, id4, _t1080, id1, _t1089, id2, _t1096)
-  $jump lbl42
+  _t46 = $arith sub 0 _t49
+  _t50 = $call_dir f2(_t46) then lbl41
 
 lbl41:
-  id0 = $copy id0
-  _t1097 = $arith sub 0 1
-  _t1099 = $arith sub 0 id4
-  _t1100 = $call_ext e1(id7, id0, 7, 1, 2, id7, id6)
-  _t1101 = $call_ext e1(0, _t1099, _t1100, id6, 3, 9, 8)
-  _t1098 = $arith sub 0 _t1101
-  _t1102 = $arith add 6 id1
-  _t1103 = $arith sub 0 id5
-  _t1104 = $arith sub 0 id1
-  _t1105 = $cmp gte id7 id7
-  _t1106 = $cmp gt id1 6
-  _t1107 = $call_ext e2(id5, _t1102, _t1103, id7, _t1104, _t1105, 2, _t1106)
-  _t1108 = $arith sub id1 0
-  _t1109 = $call_ext e1(1, id5, 0, 10, id6, 2, 9)
-  _t1110 = $cmp eq 1 _t1109
-  _t1111 = $call_ext e1(_t1107, _t1108, _t1110, 9, 2, id3, 8)
-  _t1112 = $arith div id7 id6
-  _t1113 = $cmp lt id2 9
-  _t1114 = $arith mul 0 id2
-  _t1115 = $call_ext e2(id5, id5, _t1112, id6, id1, _t1113, 6, _t1114)
-  _t1116 = $cmp gte id3 2
-  _t1117 = $call_ext e2(0, id3, 8, id6, id3, 5, id5, id4)
-  _t1118 = $arith sub 0 id2
-  _t1119 = $call_ext e1(id5, _t1116, 4, id4, _t1117, id7, _t1118)
-  _t1120 = $call_ext e2(id3, 7, id3, 5, id5, 9, 10, 0)
-  _t1121 = $cmp gte 10 id0
-  _t1122 = $call_ext e2(id2, _t1120, id7, 3, 8, id5, id0, _t1121)
-  _t1123 = $call_ext e2(id2, id0, id3, id4, id3, id0, id2, id6)
-  _t1124 = $cmp gt 1 id4
-  _t1125 = $cmp gte id0 10
-  _t1126 = $arith sub 0 id7
-  _t1127 = $cmp neq id4 4
-  _t1128 = $call_ext e2(_t1123, 0, _t1124, 7, _t1125, _t1126, _t1127, id2)
-  _t1129 = $call_ext e1(id0, 2, _t1115, _t1119, _t1122, _t1128, 1)
-  $call_ext e2(id0, _t1097, _t1098, _t1111, _t1129, 8, id4, 4)
-  id6 = $copy id2
-  _t1130 = $arith add 4 3
-  id7 = $copy _t1130
-  _t1131 = $arith sub 0 id5
-  id0 = $copy _t1131
-  id1 = $copy id7
-  _t1132 = $call_ext e1(id4, id1, 5, id6, id7, id2, id7)
-  _t1133 = $arith sub id5 1
-  _t1134 = $call_ext e2(4, id5, id4, id7, id1, 8, 1, id7)
-  _t1135 = $call_ext e2(id2, 0, _t1132, 5, _t1133, _t1134, id7, id2)
-  _t1136 = $arith sub _t1135 id4
-  _t1137 = $cmp gte 3 id6
-  _t1138 = $cmp gte id2 id6
-  _t1139 = $arith mul _t1137 _t1138
-  _t1140 = $call_ext e1(9, 3, 1, 8, id1, 8, id0)
-  _t1141 = $call_ext e2(id0, id3, id2, id1, 10, 4, 7, 3)
-  _t1142 = $arith div 7 0
-  _t1143 = $call_ext e1(id2, 0, 7, id0, id3, 1, id7)
-  _t1144 = $arith sub 9 id4
-  _t1145 = $call_ext e2(_t1140, _t1141, _t1142, 7, id2, _t1143, id4, _t1144)
-  _t1146 = $cmp eq 6 id4
-  _t1147 = $cmp neq id7 _t1146
-  _t1148 = $cmp lt 8 1
-  _t1150 = $call_ext e1(id1, 7, id1, id1, 10, 8, id6)
-  _t1149 = $arith sub 0 _t1150
-  _t1151 = $call_ext e2(_t1139, _t1145, _t1147, id5, _t1148, _t1149, id4, id3)
-  _t1152 = $arith sub 0 id7
-  _t1153 = $arith add id0 0
-  _t1154 = $arith div _t1153 9
-  _t1155 = $arith sub id1 7
-  _t1156 = $call_ext e1(id4, 7, 5, 1, 8, 5, 1)
-  _t1157 = $call_ext e2(id5, 7, 3, id6, id7, id0, 1, 8)
-  _t1158 = $arith sub 0 id0
-  _t1159 = $arith sub 0 6
-  _t1160 = $call_ext e2(5, _t1155, _t1156, 6, _t1157, _t1158, id1, _t1159)
-  _t1161 = $arith div _t1154 _t1160
-  _t1162 = $cmp lt id2 4
-  _t1163 = $cmp neq id3 0
-  _t1164 = $call_ext e2(id2, 10, 5, id4, 0, id7, id7, id4)
-  _t1165 = $call_ext e2(7, 7, 8, id6, 1, 10, id0, id1)
-  _t1166 = $call_ext e1(id2, id6, _t1164, id2, 0, id0, _t1165)
-  _t1168 = $arith sub 0 id3
-  _t1167 = $arith sub 0 _t1168
-  _t1169 = $call_ext e1(_t1162, id3, _t1163, id3, _t1166, id6, _t1167)
-  _t1170 = $cmp lte id2 id6
-  $call_ext e2(_t1136, _t1151, 2, _t1152, _t1161, _t1169, _t1170, 8)
-  id1 = $copy id0
-  id0 = $copy id2
-  $jump lbl42
+  id1 = $copy _t50
+  _t51 = $call_dir f1() then lbl42
 
 lbl42:
-  $jump lbl24
+  _t52 = $arith sub id8 _t51
+  _t53 = $cmp lt _t52 id0
+  _t54 = $call_dir f3(id7, _t53) then lbl43
 
 lbl43:
-  $ret _t1172
+  id7 = $copy _t54
+  _t55 = $call_idr id10() then lbl44
+
+lbl44:
+  _t56 = $arith div 2 _t55
+  _t57 = $call_dir f1() then lbl45
+
+lbl45:
+  _t58 = $arith div _t57 7
+  _t59 = $cmp neq _t58 id7
+  _t60 = $call_idr id10() then lbl46
+
+lbl46:
+  _t61 = $arith add 7 _t60
+  _t62 = $arith add _t59 _t61
+  _t63 = $cmp eq 4 id3
+  _t64 = $call_idr id12() then lbl47
+
+lbl47:
+  _t65 = $call_idr id9(_t64, 7, id8) then lbl48
+
+lbl48:
+  _t66 = $arith div _t63 _t65
+  $call_dir f5(_t56, _t62, 1, _t66) then lbl49
+
+lbl49:
+  $call_idr id13() then lbl50
 
 lbl5:
-  _t76 = $arith sub 0 1
-  _t78 = $call_ext e2(5, 8, id3, 6, 6, 8, 6, 4)
-  _t77 = $arith sub 0 _t78
-  _t79 = $arith add _t76 _t77
-  _t80 = $arith sub 0 id7
-  _t81 = $arith add _t80 8
-  _t82 = $call_ext e1(3, 9, 1, 10, 6, id7, 5)
-  _t83 = $call_ext e1(3, 10, 2, 5, id1, 7, id1)
-  _t84 = $call_ext e1(_t82, id5, id0, _t83, id4, id0, 5)
-  _t86 = $arith sub 0 id2
-  _t85 = $arith sub 0 _t86
-  _t87 = $call_ext e1(_t81, _t84, 6, 4, id5, _t85, id1)
-  _t89 = $arith sub 0 8
-  _t88 = $arith sub 0 _t89
-  _t90 = $cmp neq 3 4
-  $call_ext e2(_t79, _t87, _t88, 5, 7, _t90, id6, 2)
-  _t92 = $call_ext e2(id7, 4, id2, id5, 1, id6, id6, 6)
-  _t91 = $arith sub 0 _t92
-  _t93 = $call_ext e1(id7, id0, 7, 1, 2, id7, id6)
-  _t94 = $call_ext e1(id3, id5, id0, 10, 6, 7, id1)
-  _t95 = $call_ext e2(id1, id0, 8, 10, id0, id4, 1, 3)
-  _t96 = $call_ext e1(_t93, id6, 3, 9, 8, _t94, _t95)
-  _t97 = $arith sub id1 0
-  _t98 = $call_ext e1(1, id5, 0, 10, id6, 2, 9)
-  _t99 = $cmp eq 1 _t98
-  _t100 = $call_ext e2(id2, _t91, _t96, _t97, _t99, 9, 2, id3)
-  id6 = $copy _t100
-  id7 = $copy 4
-  id5 = $copy id5
-  id6 = $copy id1
-  id7 = $copy 1
-  id4 = $copy 0
-  id6 = $copy id5
-  id1 = $copy 3
-  _t101 = $cmp neq id6 id3
-  _t102 = $cmp gte id4 1
-  _t103 = $arith sub 0 id5
-  _t104 = $call_ext e1(8, 3, 9, 8, 6, 10, id5)
-  _t105 = $call_ext e1(_t101, 3, _t102, _t103, 2, 10, _t104)
-  _t106 = $arith sub 0 3
-  _t107 = $call_ext e1(id1, _t105, id7, _t106, 8, id5, id0)
-  _t109 = $call_ext e2(id5, 9, id1, id2, id0, id3, id4, id3)
-  _t108 = $arith sub 0 _t109
-  _t110 = $cmp lt _t108 4
-  _t111 = $cmp gt 1 8
-  _t112 = $cmp neq 0 _t111
-  _t113 = $arith div id5 id0
-  _t114 = $cmp gte id0 _t113
-  _t115 = $arith div id1 id2
-  _t116 = $arith div 0 id2
-  _t117 = $arith mul id0 id2
-  _t118 = $call_ext e1(4, id5, id0, id3, id0, id6, 7)
-  _t119 = $call_ext e1(_t115, id2, _t116, _t117, 10, id5, _t118)
-  _t120 = $arith mul _t114 _t119
-  $call_ext e1(9, _t107, _t110, id2, _t112, _t120, id2)
-  $jump lbl4
+  _t11 = $call_dir f5(_t8, id8, _t9, _t10) then lbl6
+
+lbl50:
+  id2 = $copy id3
+  $jump lbl34
+
+lbl51:
+  _t67 = $call_dir f2(9) then lbl54
+
+lbl52:
+  _t70 = $call_dir f1() then lbl56
+
+lbl53:
+  id0 = $copy 7
+  id1 = $copy 0
+  $jump lbl80
+
+lbl54:
+  _t68 = $cmp eq _t67 id8
+  _t69 = $call_dir f2(_t68) then lbl55
+
+lbl55:
+  $branch _t69 lbl52 lbl53
+
+lbl56:
+  _t71 = $call_dir f5(id7, id2, _t70, id0) then lbl57
+
+lbl57:
+  _t72 = $call_dir f2(_t71) then lbl58
+
+lbl58:
+  _t73 = $cmp gt 5 _t72
+  id1 = $copy _t73
+  id7 = $copy 2
+  _t74 = $call_dir f1() then lbl59
+
+lbl59:
+  _t75 = $call_dir f4(_t74, id5, 2) then lbl60
 
 lbl6:
-  _t121 = $arith sub 0 id3
-  $branch _t121 lbl7 lbl8
+  id7 = $copy _t11
+  id9 = $copy id9
+  id13 = $copy id12
+  id15 = $copy id16
+  id17 = $copy id17
+  id21 = $copy id14
+  id23 = $copy f2
+  id26 = $copy id27
+  id28 = $copy id29
+  id31 = $copy id28
+  id30 = $copy id31
+  id34 = $copy id22
+  id37 = $copy id37
+  id36 = $copy id37
+  _t12 = $call_dir f2(id0) then lbl7
+
+lbl60:
+  _t76 = $call_dir f1() then lbl61
+
+lbl61:
+  _t77 = $call_idr id15() then lbl62
+
+lbl62:
+  _t78 = $call_idr id17() then lbl63
+
+lbl63:
+  _t79 = $call_idr id14(_t75, _t76, _t77, _t78) then lbl64
+
+lbl64:
+  _t80 = $call_dir f3(_t79, 1) then lbl65
+
+lbl65:
+  id8 = $copy _t80
+  _t82 = $cmp lte id0 4
+  _t83 = $call_dir f1() then lbl66
+
+lbl66:
+  _t84 = $call_dir f4(5, _t83, id2) then lbl67
+
+lbl67:
+  _t85 = $call_dir f3(9, id3) then lbl68
+
+lbl68:
+  _t86 = $call_idr id18(_t82, 6, _t84, _t85) then lbl69
+
+lbl69:
+  _t81 = $arith sub 0 _t86
+  id4 = $copy _t81
+  _t87 = $call_dir f2(6) then lbl70
 
 lbl7:
-  id7 = $copy 5
-  _t122 = $call_ext e1(id5, id4, id7, id1, 8, 1, id7)
-  _t123 = $arith div id3 id2
-  _t124 = $cmp gte id2 id6
-  _t125 = $call_ext e2(_t122, id7, id2, id4, _t123, 9, 1, _t124)
-  _t126 = $arith div _t125 id5
-  id3 = $copy _t126
-  id0 = $copy 10
-  _t128 = $call_ext e2(id0, id3, id2, id1, 10, 4, 7, 3)
-  _t129 = $cmp neq id0 _t128
-  _t127 = $arith sub 0 _t129
-  id1 = $copy _t127
-  _t130 = $call_ext e1(id2, 0, 7, id0, id3, 1, id7)
-  _t131 = $cmp lt id2 _t130
-  _t133 = $call_ext e2(id3, 7, 6, id4, id3, 3, 3, id0)
-  _t132 = $arith sub 0 _t133
-  _t135 = $call_ext e1(id1, 7, id1, id1, 10, 8, id6)
-  _t134 = $arith sub 0 _t135
-  _t136 = $call_ext e2(_t131, 7, 9, _t132, id0, _t134, id4, id3)
-  _t137 = $arith sub 0 id7
-  _t138 = $arith add id0 0
-  _t139 = $arith div _t138 9
-  _t140 = $arith sub id1 7
-  _t141 = $call_ext e1(id4, 7, 5, 1, 8, 5, 1)
-  _t142 = $call_ext e2(id5, 7, 3, id6, id7, id0, 1, 8)
-  _t143 = $arith sub 0 id0
-  _t144 = $arith sub 0 6
-  _t145 = $call_ext e2(5, _t140, _t141, 6, _t142, _t143, id1, _t144)
-  _t146 = $arith div _t139 _t145
-  _t147 = $cmp lt id2 4
-  _t148 = $cmp neq id3 0
-  _t149 = $call_ext e2(id2, 10, 5, id4, 0, id7, id7, id4)
-  _t150 = $call_ext e2(7, 7, 8, id6, 1, 10, id0, id1)
-  _t151 = $call_ext e1(id2, id6, _t149, id2, 0, id0, _t150)
-  _t153 = $arith sub 0 id3
-  _t152 = $arith sub 0 _t153
-  _t154 = $call_ext e1(_t147, id3, _t148, id3, _t151, id6, _t152)
-  _t155 = $cmp lte id2 id6
-  $call_ext e1(0, _t136, 2, _t137, _t146, _t154, _t155)
-  _t156 = $arith sub 0 8
-  _t157 = $cmp lte 10 5
-  _t158 = $arith mul _t157 id1
-  _t159 = $arith sub 0 10
-  _t160 = $cmp gt 1 _t159
-  _t161 = $cmp eq id0 1
-  _t162 = $arith div 5 id4
-  _t163 = $call_ext e1(id4, 10, 8, id1, 1, 9, id6)
-  _t164 = $call_ext e1(id5, _t161, 2, _t162, id4, 3, _t163)
-  _t165 = $call_ext e2(id0, 2, _t156, id2, 1, _t158, _t160, _t164)
-  id0 = $copy _t165
-  id6 = $copy id7
-  $jump lbl9
+  id0 = $copy _t12
+  _t14 = $call_dir f1() then lbl8
+
+lbl70:
+  $call_dir f3(id3, _t87) then lbl71
+
+lbl71:
+  id4 = $copy id3
+  _t88 = $arith sub 5 8
+  $call_dir f3(2, _t88) then lbl72
+
+lbl72:
+  _t89 = $arith mul id1 id7
+  _t90 = $call_idr id19(_t89) then lbl73
+
+lbl73:
+  _t91 = $call_dir f2(_t90) then lbl74
+
+lbl74:
+  $call_dir f4(id3, _t91, 2) then lbl75
+
+lbl75:
+  _t92 = $call_idr id20(7) then lbl76
+
+lbl76:
+  _t93 = $call_dir f1() then lbl77
+
+lbl77:
+  _t94 = $cmp lt _t93 0
+  _t95 = $call_dir f2(_t94) then lbl78
+
+lbl78:
+  _t96 = $call_dir f4(_t92, id0, _t95) then lbl79
+
+lbl79:
+  id8 = $copy _t96
+  id3 = $copy 2
+  $jump lbl51
 
 lbl8:
-  id0 = $copy 0
-  id6 = $copy 10
-  _t166 = $arith div 5 2
-  _t167 = $cmp eq 0 _t166
-  _t168 = $arith sub 0 id4
-  _t169 = $cmp lt 3 _t168
-  _t170 = $arith add id6 id0
-  _t171 = $call_ext e2(id3, _t170, id0, 7, id7, id3, 4, 9)
-  _t172 = $cmp gte 10 8
-  _t173 = $call_ext e1(id4, id3, 2, id1, id5, id0, 0)
-  _t174 = $arith sub 0 id4
-  _t175 = $arith sub 0 9
-  _t176 = $call_ext e2(id7, id4, 1, id1, 6, id6, id4, id3)
-  _t177 = $call_ext e1(_t172, id1, _t173, _t174, _t175, id2, _t176)
-  _t178 = $call_ext e2(id2, id4, id4, 6, 2, 10, 10, 4)
-  _t179 = $cmp lte id4 _t178
-  _t181 = $call_ext e2(id4, id3, id2, id2, id3, id1, id2, id4)
-  _t180 = $arith sub 0 _t181
-  _t182 = $call_ext e1(_t171, _t177, _t179, id7, id3, _t180, 0)
-  _t183 = $arith sub 0 id6
-  _t184 = $arith sub 0 2
-  _t185 = $arith sub 0 5
-  _t186 = $arith sub 0 6
-  _t187 = $call_ext e2(6, _t183, 1, _t184, 5, 8, _t185, _t186)
-  _t188 = $arith add 6 4
-  _t189 = $call_ext e1(id6, id7, id3, id3, id4, 5, 10)
-  _t190 = $cmp lte _t188 _t189
-  _t191 = $cmp gte _t187 _t190
-  _t192 = $arith sub 0 3
-  _t193 = $call_ext e1(2, 5, id1, 7, id1, id4, id0)
-  _t194 = $arith sub 0 10
-  _t195 = $call_ext e1(id7, _t193, 5, 6, 4, id5, _t194)
-  _t196 = $arith sub 0 5
-  _t197 = $cmp gte id1 _t196
-  _t198 = $call_ext e2(_t192, 5, id5, id0, _t195, _t197, 5, 7)
-  $call_ext e2(_t167, _t169, id4, _t182, id1, _t191, id2, _t198)
-  _t199 = $arith sub 0 id2
-  _t200 = $call_ext e2(id7, 4, id2, id5, 1, id6, id6, 6)
-  _t201 = $call_ext e1(1, id7, id0, 7, 1, 2, id7)
-  _t202 = $call_ext e1(10, 3, 9, 8, id4, id3, id5)
-  _t203 = $arith add 6 id1
-  _t204 = $arith sub 0 id5
-  _t205 = $arith sub 0 id1
-  _t206 = $call_ext e2(_t199, _t200, _t201, _t202, _t203, _t204, id7, _t205)
-  _t207 = $cmp eq 8 10
-  _t208 = $cmp lt _t207 id0
-  _t209 = $arith sub 0 8
-  _t210 = $call_ext e1(_t206, _t208, 1, _t209, id1, 0, id0)
-  _t211 = $call_ext e2(2, 4, 9, id7, 4, 9, 0, 0)
-  _t212 = $call_ext e1(id2, id5, 3, _t211, 7, id7, id6)
-  _t213 = $call_ext e1(1, id5, id4, id1, _t212, id1, 0)
-  $call_ext e2(4, 6, id6, 2, _t210, 1, _t213, id3)
-  id6 = $copy 6
-  id2 = $copy 10
-  _t215 = $call_ext e1(id1, id6, id6, id0, id7, id2, 4)
-  _t216 = $arith sub 0 id5
-  _t217 = $call_ext e2(3, 0, 9, _t215, 1, id5, _t216, 2)
-  _t214 = $arith sub 0 _t217
-  id0 = $copy _t214
-  $jump lbl9
+  _t15 = $call_dir f2(_t14) then lbl9
+
+lbl80:
+  _t97 = $cmp gte 10 id8
+  _t98 = $call_dir f2(_t97) then lbl83
+
+lbl81:
+  _t102 = $call_dir f1() then lbl85
+
+lbl82:
+  $jump lbl108
+
+lbl83:
+  _t99 = $call_idr id16() then lbl84
+
+lbl84:
+  _t100 = $arith add _t98 _t99
+  $branch _t100 lbl81 lbl82
+
+lbl85:
+  _t103 = $call_dir f2(_t102) then lbl86
+
+lbl86:
+  _t101 = $arith sub 0 _t103
+  _t105 = $call_idr id22(id7) then lbl87
+
+lbl87:
+  _t104 = $arith sub 0 _t105
+  _t106 = $call_dir f3(_t101, _t104) then lbl88
+
+lbl88:
+  _t107 = $call_dir f1() then lbl89
+
+lbl89:
+  $call_idr id21(_t106, 8, 2, _t107) then lbl90
 
 lbl9:
-  _t218 = $cmp gt id3 5
-  _t219 = $cmp gte 9 10
-  _t220 = $arith sub 0 3
-  _t221 = $cmp gte 10 id0
-  _t222 = $call_ext e2(_t218, _t219, id7, _t220, 8, id5, id0, _t221)
-  _t223 = $call_ext e2(id2, id0, id3, id4, id3, id0, id2, id6)
-  _t224 = $cmp gt 1 id4
-  _t225 = $cmp gte id0 10
-  _t226 = $arith sub 0 id7
-  _t227 = $cmp neq id4 4
-  _t228 = $call_ext e2(_t223, 0, _t224, 7, _t225, _t226, _t227, id2)
-  _t229 = $arith mul id0 id2
-  _t230 = $arith mul _t229 10
-  _t231 = $call_ext e1(_t222, _t228, 1, 8, id4, 4, _t230)
-  $branch _t231 lbl10 lbl11
+  _t16 = $call_dir f3(1, _t15) then lbl10
+
+lbl90:
+  _t110 = $call_dir f1() then lbl91
+
+lbl91:
+  _t109 = $arith sub 0 _t110
+  _t108 = $arith sub 0 _t109
+  id0 = $copy _t108
+  id2 = $copy id8
+  _t111 = $call_idr id23(id5) then lbl92
+
+lbl92:
+  $call_dir f4(_t111, id8, id8) then lbl93
+
+lbl93:
+  _t112 = $call_dir f1() then lbl94
+
+lbl94:
+  _t113 = $call_dir f1() then lbl95
+
+lbl95:
+  _t114 = $call_dir f4(10, _t112, _t113) then lbl96
+
+lbl96:
+  _t115 = $call_dir f1() then lbl97
+
+lbl97:
+  _t116 = $cmp eq _t114 _t115
+  _t117 = $call_dir f1() then lbl98
+
+lbl98:
+  _t118 = $call_dir f5(id2, _t116, id4, _t117) then lbl99
+
+lbl99:
+  $call_idr id24(id8, _t118) then lbl100
 }
 
