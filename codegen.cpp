@@ -106,14 +106,11 @@ void LirInst::codeGenString(string funcName){
             else {
                 cout << "  idivq " << value.Arith.right->codeGenString(funcName) << endl;
             }
-            // cout << "  movq %rax, " << varOffsets[funcName][value.Arith.lhs] << "(%rbp)" << endl;
-            // get_var_stack(value.Arith.lhs, funcName);
             cout << "  movq %rax, " << get_var_stack(value.Arith.lhs, funcName) << endl;
         }
         else{
             cout << "  movq " << value.Arith.left->codeGenString(funcName) << ", %r8" << endl;
             cout << "  " << value.Arith.aop->codeGenString() << " " << value.Arith.right->codeGenString(funcName) << ", %r8" << endl;
-            // cout << "  movq %r8, " << varOffsets[funcName][value.Arith.lhs] << "(%rbp)" << endl;
             cout << "  movq %r8, " << get_var_stack(value.Arith.lhs, funcName) << endl;
         }
     } else if(type == LirInst::CallExt){
@@ -128,15 +125,12 @@ void LirInst::codeGenString(string funcName){
         }
         cout << "  movq $0, %r8" << endl;
         cout << "  " << value.Cmp.aop->codeGenString() << " %r8b" << endl;
-        // cout << "  movq %r8, " << varOffsets[funcName][value.Cmp.lhs] << "(%rbp)" << endl;
         cout << "  movq %r8, " << get_var_stack(value.Cmp.lhs, funcName) << endl;
     } else if(type == LirInst::Copy){
         if(value.Copy.op->type == Operand::Const){
-            // cout << "  movq " << value.Copy.op->codeGenString(funcName) << ", " << varOffsets[funcName][value.Copy.lhs] << "(%rbp)" << endl;
             cout << "  movq " << value.Copy.op->codeGenString(funcName) << ", " << get_var_stack(value.Copy.lhs, funcName) << endl;
         } else if(value.Copy.op->type == Operand::Var){
             cout << "  movq " << value.Copy.op->codeGenString(funcName) << ", %r8" << endl;
-            // cout << "  movq %r8, " << varOffsets[funcName][value.Copy.lhs] << "(%rbp)" << endl;
             cout << "  movq %r8, " << get_var_stack(value.Copy.lhs, funcName) << endl;
         }
     } else if(type == LirInst::Gep){
@@ -188,7 +182,6 @@ void Terminal::codeGenString(string funcName){
 
 string Operand::codeGenString(string funcName){
     if(type == Operand::Var){
-        // return to_string(varOffsets[funcName][value.Var.id]) + "(%rbp)";
         return get_var_stack(value.Var.id, funcName);
     } else if(type == Operand::Const){
         return "$" + to_string(value.Const.num);

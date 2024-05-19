@@ -23,7 +23,7 @@ stack<string> while_end_labels;
 
 int num_ret = 0;
 
-bool DEBUG_LOWER = false;
+bool DEBUG_LOWER = true;
 
 /* 
  * 2.3 Lowering Expressions
@@ -226,6 +226,7 @@ LIR_Program* lower(Program* prog){
 */
 void stmt_lower(LIR_Function* lir_func, Stmt* stmt, vector<LIR*>& translation_vector){
 	if (DEBUG_LOWER) cout << "entered stmt_lower" << endl;
+	cout << stmt->type << " = " << endl;
 	if(stmt->type == Stmt::If){
 		if_lower(lir_func, stmt, translation_vector);
 	}
@@ -733,7 +734,11 @@ Operand* call_lower(LIR_Function* lir_func, Exp* exp, vector<LIR*>& translation_
 	// let fun = callee
 	Operand* fun = exp_lower(lir_func, exp->value.Call.callee, translation_vector);
 	// let lhs be a fresh var of type τ s . t . fun :&( _ )→ τ
-	string lhs = create_fresh_var(lir_func, lir->functions[fun->value.Var.id]->rettyp);
+	string lhs;
+	if(lir->functions.find(fun->value.Var.id) != lir->functions.end())
+		lhs = create_fresh_var(lir_func, lir->functions[fun->value.Var.id]->rettyp);
+	else
+		lhs = create_fresh_var(lir_func, lir->externs[fun->value.Var.id]);
 	// if direct and name is an extern then emit CallExt(lhs, name, aops)
 	if(direct && lir->externs.find(exp->value.Call.callee->value.Id.name) != lir->externs.end()){
 		LirInst* call_ext = new LirInst(LirInst::CallExt);
