@@ -18,7 +18,6 @@ string get_var_stack(string var, string funcName){
     if(varOffsets[funcName].find(var) != varOffsets[funcName].end()){
         return to_string(varOffsets[funcName][var]) + "(%rbp)";
     }
-    //cout << "Function name is " << funcName << " and it can find it: " << varOffsets[funcName].find(var) << endl;
     return var + "(%rip)";
 }
 
