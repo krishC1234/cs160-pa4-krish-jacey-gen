@@ -13,6 +13,8 @@
         "ratio": "cpp",
         "tuple": "cpp",
         "vector": "cpp",
-        "unordered_map": "cpp"
+        "unordered_map": "cpp",
+        "utility": "cpp",
+        "iosfwd": "cpp"
     }
 }

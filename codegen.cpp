@@ -18,22 +18,42 @@ string get_var_stack(string var, string funcName){
     if(varOffsets[funcName].find(var) != varOffsets[funcName].end()){
         return to_string(varOffsets[funcName][var]) + "(%rbp)";
     }
+    //cout << "Function name is " << funcName << " and it can find it: " << varOffsets[funcName].find(var) << endl;
     return var + "(%rip)";
 }
 
 void LIR_Program::codeGenString(){
     cout << ".data\n" << endl;
     // generate global variables
+    //We need to initialize globals differently if its a function vs a variable
     for(auto it = globals.begin(); it != globals.end(); it++){
-        cout << ".globl " << it->first << endl;
-        cout << it->first << ": .zero 8" << endl << endl << endl;
+        if(it->second->type == Type::Ptr && it->second->value.Ptr.ref->type == Type::Fn){
+            cout << ".globl " << it->first << "_" << endl;
+            cout << it->first << "_: .quad \"" << it->first << "\"" << endl << endl << endl;
+        }
+        else{
+            cout << ".globl " << it->first << endl;
+            cout << it->first << ": .zero 8" << endl << endl << endl;
+        }
     }
 
-    cout << "out_of_bounds_msg: .string \"out-of-bounds array access\"\ninvalid_alloc_msg: .string \"invalid allocation amount\"\n        \n.text\n\n.globl main" << endl;
+    cout << "out_of_bounds_msg: .string \"out-of-bounds array access\"\ninvalid_alloc_msg: .string \"invalid allocation amount\"\n        \n.text\n\n";
+
         
     for(auto it = functions.begin(); it != functions.end(); it++){
+        cout << ".globl " << it->first << endl;
         it->second->codeGenString();
     }
+    //.out_of_bounds:
+    cout << ".out_of_bounds:" << endl;
+    cout << "  lea out_of_bounds_msg(%rip), %rdi" << endl;
+    cout << "  call _cflat_panic\n" << endl;
+
+    //.invalid_alloc_length:
+    cout << ".invalid_alloc_length:" << endl;
+    cout << "  lea invalid_alloc_msg(%rip), %rdi" << endl;
+    cout << "  call _cflat_panic" << endl;
+    cout << "        " << endl;
 }
 
 void LIR_Function::codeGenString(){
@@ -45,15 +65,20 @@ void LIR_Function::codeGenString(){
     int stack_size = locals.size() * 8;
     if(stack_size % 16 != 0)
         stack_size += 8;
-    cout << "  subq $" << stack_size << ", %rsp" << endl;
-    auto it = locals.begin();
-    // zero out all local variables
-    for(int i = -8; i >= -locals.size()*8; i-=8){
-        cout << "  movq $0, " << i << "(%rbp)" << endl;
-        varOffsets[name][it->first] = i;
-        it++;
-    }
 
+    // this is how much space we need for locals
+    cout << "  subq $" << stack_size << ", %rsp" << endl;
+
+    // ensure that size > 0
+    if (stack_size > 0){
+        // zero out all local variables
+        auto it = locals.begin();
+        for(int i = -8; i >= -locals.size()*8; i-=8){
+            cout << "  movq $0, " << i << "(%rbp)" << endl;
+            varOffsets[name][it->first] = i;
+            it++;
+        }
+    }
     cout << "  jmp " << name << "_entry" << endl;
     cout << endl;
 
@@ -71,16 +96,6 @@ void LIR_Function::codeGenString(){
     cout << "  popq %rbp" << endl;
     cout << "  ret\n" << endl;
 
-    //.out_of_bounds:
-    cout << ".out_of_bounds:" << endl;
-    cout << "  lea out_of_bounds_msg(%rip), %rdi" << endl;
-    cout << "  call _cflat_panic\n" << endl;
-
-    //.invalid_alloc_length:
-    cout << ".invalid_alloc_length:" << endl;
-    cout << "  lea invalid_alloc_msg(%rip), %rdi" << endl;
-    cout << "  call _cflat_panic" << endl;
-    cout << "        " << endl;
 }
 
 void BasicBlock::codeGenString(string funcName){
@@ -205,11 +220,60 @@ void Terminal::codeGenString(string funcName){
         } else {
             cout << "uh ohh gen" << endl;
         }
-        //Step 2: If ne, jump to 
     } else if(type == Terminal::CallDirect){
-        cout << "  calldirect" << endl;
+        // push op1...opn in reverse order to the stack
+        int stack_count = 0;
+        for (auto it = value.CallDirect.args.rbegin(); it != value.CallDirect.args.rend(); ++it) {
+            stack_count+=8;
+            Operand* op = *it;  
+            if(op->type == Operand::Var){
+                cout << "  pushq " << varOffsets[funcName][op->value.Var.id] << "(%rbp)" << endl;
+            }
+            else{
+                cout << "  pushq $" << op->value.Const.num << endl;
+            }  
+        } 
+        // TODO: fix stack alignment - make it divisible by 16 for edge case
+        if (stack_count % 16 != 0){
+            stack_count += 8;
+        }
+        // call foo
+        cout << "  call " << value.CallDirect.callee << endl;
+        // store %rax to x
+        if(value.CallDirect.lhs != ""){
+            cout << "  movq %rax, " << varOffsets[funcName][value.CallDirect.lhs] << "(%rbp)" << endl;
+        }
+        // restore stack pointer <-- this was first on ben's notes
+        cout << "  addq $" << stack_count << ", %rsp" << endl;
+        // jump to bb
+        cout << "  jmp " << funcName << "_" << value.CallDirect.next_bb << endl;
     } else if(type == Terminal::CallIndirect){
-        cout << "  callindirect" << endl;
+        // push op1...opn in reverse order to the stack
+        int stack_count = 0;
+        for (auto it = value.CallIndirect.args.rbegin(); it != value.CallIndirect.args.rend(); ++it) {
+            stack_count+=8;
+            Operand* op = *it;
+            if(op->type == Operand::Var){
+                cout << "  pushq " << varOffsets[funcName][op->value.Var.id] << "(%rbp)" << endl;
+            }
+            else{
+                cout << "  pushq $" << op->value.Const.num << endl;
+            }  
+        } 
+        // TODO: fix stack alignment - make it divisible by 16 for edge case
+        if (stack_count % 16 != 0){
+            stack_count += 8;
+        }
+        // call foo
+        cout << "  call *" << varOffsets[funcName][value.CallIndirect.callee] << "(%rbp)" <<endl;
+        // store %rax to x
+        if(value.CallIndirect.lhs != ""){
+            cout << "  movq %rax, " << varOffsets[funcName][value.CallIndirect.lhs] << "(%rbp)" << endl;
+        }
+        // restore stack pointer <-- this was first on ben's notes
+        cout << "  addq $" << stack_count << ", %rsp" << endl;
+        // jump to bb
+        cout << "  jmp " << funcName << "_" << value.CallDirect.next_bb << endl;
     } else if(type == Terminal::Jump){
         cout << "  jmp " << funcName << "_" << value.Jump.next_bb << endl;
     } else if(type == Terminal::Ret){

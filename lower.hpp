@@ -178,15 +178,16 @@ typedef struct Terminal: LIR{
 		string ff; // BbId
 	} Branch;
 
+	// CHANGED THIS
 	struct {
-		string lhs = NULL; //optional
+		string lhs = ""; //optional
 		string callee; //FuncId
 		vector<Operand*> args;
 		string next_bb;
 	} CallDirect;
         
 	struct {
-		string lhs = NULL; //optional
+		string lhs = ""; //optional
 		string callee; //VarId
 		vector<Operand*> args;
 		string next_bb;
