@@ -138,14 +138,14 @@ void LirInst::codeGenString(string funcName){
         }
         // if there are more than 6 arguments, push them onto the stack
         if(value.CallExt.args.size() > 6){
-            for(int i = 6; i < value.CallExt.args.size(); i++){
+            for(int i = value.CallExt.args.size() - 1; i >= 6; i--){
                 cout << "  pushq " << value.CallExt.args[i]->codeGenString(funcName) << endl;
                 stack_size += 8;
             }
             // align the stack
             if(stack_size % 16 != 0){
                 stack_size += 8;
-                cout << "  subq $" << stack_size << ", %rsp" << endl;
+                cout << "  subq $" << 8 << ", %rsp" << endl;
             }
         }
         cout << "  call " << value.CallExt.callee << endl;
