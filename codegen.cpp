@@ -96,7 +96,7 @@ void LIR_Function::codeGenString(){
 
     auto it = params.begin();
     for(int i = 16; i <= params.size() * 8 + 8; i += 8){
-        if(it->second->type == Type::Ptr && it->second->value.Ptr.ref->type == Type::Struct){
+        if(it->second && it->second->type == Type::Ptr && it->second->value.Ptr.ref->type == Type::Struct){
             varStructType[name][it->first] = it->second->value.Ptr.ref->value.Struct.name;
         }
         varOffsets[name][it->first] = i;
@@ -106,7 +106,7 @@ void LIR_Function::codeGenString(){
         // zero out all local variables
         auto it = locals.begin();
         for(int i = -8; i >= -locals.size() * 8; i -= 8){
-            if(it->second->type == Type::Ptr && it->second->value.Ptr.ref->type == Type::Struct){
+            if(it->second && it->second->type == Type::Ptr && it->second->value.Ptr.ref->type == Type::Struct){
                 varStructType[name][it->first] = it->second->value.Ptr.ref->value.Struct.name;
             }
             cout << "  movq $0, " << i << "(%rbp)" << endl;
