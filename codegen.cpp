@@ -126,7 +126,26 @@ void BasicBlock::codeGenString(string funcName){
 // enum type{Alloc, Arith, CallExt, Cmp, Copy, Gep, Gfp, Load, Store} type;
 void LirInst::codeGenString(string funcName){
     if(type == LirInst::Alloc){
-        cout << "  alloc" << endl;
+        bool num_is_const = value.Alloc.num->type == Operand::Const;
+        if(num_is_const){
+            cout << "  movq " << value.Alloc.num->codeGenString(funcName) << ", %r8" << endl;
+            cout << "  cmpq $0, %r8" << endl;
+        }
+        else{
+            cout << "  cmpq $0, " << value.Alloc.num->codeGenString(funcName) << endl;
+        }
+        cout << "  jle .invalid_alloc_length" << endl;
+        cout << "  movq $1, %rdi" << endl;
+        if(num_is_const)
+            cout << "  imulq %r8, %rdi" << endl;
+        else
+            cout << "  imulq " << value.Alloc.num->codeGenString(funcName) << ", %rdi" << endl;
+        cout << "  incq %rdi" << endl;
+        cout << "  call _cflat_alloc" << endl;
+        cout << "  movq " << value.Alloc.num->codeGenString(funcName) << ", %r8" << endl;
+        cout << "  movq %r8, 0(%rax)" << endl;
+        cout << "  addq $8, %rax" << endl;
+        cout << "  movq %rax, " << get_var_stack(value.Alloc.lhs, funcName) << endl;
     } else if(type == LirInst::Arith){
         if(value.Arith.aop->type == ArithmeticOp::Div){
             cout << "  movq " << value.Arith.left->codeGenString(funcName) << ", %rax" << endl;
@@ -206,13 +225,31 @@ void LirInst::codeGenString(string funcName){
             cout << "  movq %r8, " << get_var_stack(value.Copy.lhs, funcName) << endl;
         }
     } else if(type == LirInst::Gep){
-        cout << "  gep" << endl;
+        cout << "  movq " << value.Gep.idx->codeGenString(funcName) << ", %r8" << endl;
+        cout << "  cmpq $0, %r8" << endl;
+        cout << "  jl .out_of_bounds" << endl;
+        cout << "  movq " << get_var_stack(value.Gep.src, funcName) << ", %r9" << endl;
+        cout << "  movq -8(%r9), %r10" << endl;
+        cout << "  cmpq %r10, %r8" << endl;
+        cout << "  jge .out_of_bounds" << endl;
+        cout << "  imulq $8, %r8" << endl;
+        cout << "  addq %r9, %r8" << endl;
+        cout << "  movq %r8, " << get_var_stack(value.Gep.lhs, funcName) << endl;
     } else if(type == LirInst::Gfp){
         cout << "  gfp" << endl;
     } else if(type == LirInst::Load){
-        cout << "  load" << endl;
+        cout << "  movq " << get_var_stack(value.Load.src, funcName) << ", %r8" << endl;
+        cout << "  movq 0(%r8), %r9" << endl;
+        cout << "  movq %r9, " << get_var_stack(value.Load.lhs, funcName) << endl;
     } else if(type == LirInst::Store){
-        cout << "  store" << endl;
+        /*
+            movq -8208(%rbp), %r8
+            movq -8304(%rbp), %r9
+            movq %r8, 0(%r9)
+        */
+        cout << "  movq " << value.Store.op->codeGenString(funcName) << ", %r8" << endl;
+        cout << "  movq " << get_var_stack(value.Store.dst, funcName) << ", %r9" << endl;
+        cout << "  movq %r8, 0(%r9)" << endl;
     }
 }
 	// enum type{Branch, CallDirect, CallIndirect, Jump, Ret} type;
