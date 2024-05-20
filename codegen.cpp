@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include <unordered_map>
+#include <unordered_set>
 #include <stack>
 #include <string>
 
@@ -11,14 +12,22 @@ using namespace std;
 
 unordered_map<string, unordered_map<string, int>> varOffsets;
 
-unordered_map<string, int> globals;
+unordered_set<string> global_var;
+
+unordered_set<string> global_fn;
 
 // get the correct variable stack offset, or return the variable name if it is a global variable
 string get_var_stack(string var, string funcName){
     if(varOffsets[funcName].find(var) != varOffsets[funcName].end()){
         return to_string(varOffsets[funcName][var]) + "(%rbp)";
     }
-    return var + "(%rip)";
+    else if(global_var.find(var) != global_var.end()){
+        return var + "(%rip)";
+    }
+    else if(global_fn.find(var) != global_fn.end()){
+        return var + "_(%rip)";
+    }
+    return "ERROR";
 }
 
 void LIR_Program::codeGenString(){
@@ -29,10 +38,12 @@ void LIR_Program::codeGenString(){
         if(it->second->type == Type::Ptr && it->second->value.Ptr.ref->type == Type::Fn){
             cout << ".globl " << it->first << "_" << endl;
             cout << it->first << "_: .quad \"" << it->first << "\"" << endl << endl << endl;
+            global_fn.insert(it->first);
         }
         else{
             cout << ".globl " << it->first << endl;
             cout << it->first << ": .zero 8" << endl << endl << endl;
+            global_var.insert(it->first);
         }
     }
 
@@ -69,10 +80,16 @@ void LIR_Function::codeGenString(){
     cout << "  subq $" << stack_size << ", %rsp" << endl;
 
     // ensure that size > 0
+
+    auto it = params.begin();
+    for(int i = 16; i <= params.size() * 8 + 8; i += 8){
+        varOffsets[name][it->first] = i;
+        it++;
+    }
     if (stack_size > 0){
         // zero out all local variables
         auto it = locals.begin();
-        for(int i = -8; i >= -locals.size()*8; i-=8){
+        for(int i = -8; i >= -locals.size() * 8; i -= 8){
             cout << "  movq $0, " << i << "(%rbp)" << endl;
             varOffsets[name][it->first] = i;
             it++;
@@ -222,6 +239,8 @@ void Terminal::codeGenString(string funcName){
     } else if(type == Terminal::CallDirect){
         // push op1...opn in reverse order to the stack
         int stack_count = 0;
+        if(value.CallDirect.args.size() % 2 != 0)
+            cout << "  subq $8, %rsp" << endl;
         for (auto it = value.CallDirect.args.rbegin(); it != value.CallDirect.args.rend(); ++it) {
             stack_count+=8;
             Operand* op = *it;  
@@ -243,12 +262,16 @@ void Terminal::codeGenString(string funcName){
             cout << "  movq %rax, " << varOffsets[funcName][value.CallDirect.lhs] << "(%rbp)" << endl;
         }
         // restore stack pointer <-- this was first on ben's notes
-        cout << "  addq $" << stack_count << ", %rsp" << endl;
+        if(stack_count > 0){
+            cout << "  addq $" << stack_count << ", %rsp" << endl;
+        }
         // jump to bb
         cout << "  jmp " << funcName << "_" << value.CallDirect.next_bb << endl;
     } else if(type == Terminal::CallIndirect){
         // push op1...opn in reverse order to the stack
         int stack_count = 0;
+        if(value.CallIndirect.args.size() % 2 != 0)
+            cout << "  subq $8, %rsp" << endl;
         for (auto it = value.CallIndirect.args.rbegin(); it != value.CallIndirect.args.rend(); ++it) {
             stack_count+=8;
             Operand* op = *it;
@@ -270,7 +293,9 @@ void Terminal::codeGenString(string funcName){
             cout << "  movq %rax, " << varOffsets[funcName][value.CallIndirect.lhs] << "(%rbp)" << endl;
         }
         // restore stack pointer <-- this was first on ben's notes
-        cout << "  addq $" << stack_count << ", %rsp" << endl;
+        if(stack_count > 0){
+            cout << "  addq $" << stack_count << ", %rsp" << endl;
+        }
         // jump to bb
         cout << "  jmp " << funcName << "_" << value.CallDirect.next_bb << endl;
     } else if(type == Terminal::Jump){

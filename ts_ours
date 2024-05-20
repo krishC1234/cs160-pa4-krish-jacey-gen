@@ -49,7 +49,7 @@ f2:
   jmp f2_entry
 
 f2_entry:
-  movq p(%rip), %rax
+  movq 16(%rbp), %rax
   jmp f2_epilogue
 
 f2_epilogue:
@@ -66,8 +66,8 @@ f3:
   jmp f3_entry
 
 f3_entry:
-  movq p(%rip), %r8
-  addq q(%rip), %r8
+  movq 16(%rbp), %r8
+  addq 24(%rbp), %r8
   movq %r8, -8(%rbp)
   movq -8(%rbp), %rax
   jmp f3_epilogue
@@ -87,11 +87,11 @@ f4:
   jmp f4_entry
 
 f4_entry:
-  movq p(%rip), %r8
-  addq q(%rip), %r8
+  movq 16(%rbp), %r8
+  addq 24(%rbp), %r8
   movq %r8, -8(%rbp)
   movq -8(%rbp), %r8
-  addq r(%rip), %r8
+  addq 32(%rbp), %r8
   movq %r8, -16(%rbp)
   movq -16(%rbp), %rax
   jmp f4_epilogue
@@ -112,14 +112,14 @@ f5:
   jmp f5_entry
 
 f5_entry:
-  movq p(%rip), %r8
-  addq q(%rip), %r8
+  movq 16(%rbp), %r8
+  addq 24(%rbp), %r8
   movq %r8, -8(%rbp)
   movq -8(%rbp), %r8
-  addq r(%rip), %r8
+  addq 32(%rbp), %r8
   movq %r8, -16(%rbp)
   movq -16(%rbp), %r8
-  addq s(%rip), %r8
+  addq 40(%rbp), %r8
   movq %r8, -24(%rbp)
   movq -24(%rbp), %rax
   jmp f5_epilogue
@@ -511,7 +511,6 @@ main_lbl1:
   movq %r8, -2704(%rbp)
   call f1
   movq %rax, -2056(%rbp)
-  addq $0, %rsp
   jmp main_lbl2
 
 main_lbl10:
@@ -522,7 +521,6 @@ main_lbl10:
   movq %r8, -2408(%rbp)
   call f1
   movq %rax, -632(%rbp)
-  addq $0, %rsp
   jmp main_lbl11
 
 main_lbl100:
@@ -560,7 +558,6 @@ main_lbl103:
   movq %r8, -224(%rbp)
   call f1
   movq %rax, -232(%rbp)
-  addq $0, %rsp
   jmp main_lbl104
 
 main_lbl104:
@@ -573,6 +570,7 @@ main_lbl104:
   movq $0, %r8
   setle %r8b
   movq %r8, -248(%rbp)
+  subq $8, %rsp
   pushq $0
   pushq -248(%rbp)
   pushq -240(%rbp)
@@ -620,10 +618,10 @@ main_lbl109:
   movq %r8, -296(%rbp)
   call f1
   movq %rax, -304(%rbp)
-  addq $0, %rsp
   jmp main_lbl111
 
 main_lbl11:
+  subq $8, %rsp
   pushq -632(%rbp)
   pushq -2696(%rbp)
   pushq -2680(%rbp)
@@ -636,6 +634,7 @@ main_lbl110:
   jmp main_lbl17
 
 main_lbl111:
+  subq $8, %rsp
   pushq -304(%rbp)
   pushq -2720(%rbp)
   pushq -2720(%rbp)
@@ -650,6 +649,7 @@ main_lbl112:
   movq $0, %r8
   setl %r8b
   movq %r8, -320(%rbp)
+  subq $8, %rsp
   pushq $5
   pushq -2712(%rbp)
   pushq -2712(%rbp)
@@ -659,6 +659,7 @@ main_lbl112:
   jmp main_lbl113
 
 main_lbl113:
+  subq $8, %rsp
   pushq -328(%rbp)
   call f2
   movq %rax, -336(%rbp)
@@ -676,6 +677,7 @@ main_lbl114:
   jmp main_lbl115
 
 main_lbl115:
+  subq $8, %rsp
   pushq -2504(%rbp)
   pushq $6
   pushq -2696(%rbp)
@@ -685,6 +687,7 @@ main_lbl115:
   jmp main_lbl116
 
 main_lbl116:
+  subq $8, %rsp
   pushq $0
   call f2
   movq %rax, -360(%rbp)
@@ -694,7 +697,6 @@ main_lbl116:
 main_lbl117:
   call f1
   movq %rax, -376(%rbp)
-  addq $0, %rsp
   jmp main_lbl118
 
 main_lbl118:
@@ -704,7 +706,6 @@ main_lbl118:
   movq %r8, -384(%rbp)
   call *-2616(%rbp)
   movq %rax, -392(%rbp)
-  addq $0, %rsp
   jmp main_lbl119
 
 main_lbl119:
@@ -713,6 +714,7 @@ main_lbl119:
   movq $0, %r8
   setg %r8b
   movq %r8, -400(%rbp)
+  subq $8, %rsp
   pushq -2416(%rbp)
   call *-2536(%rbp)
   movq %rax, -408(%rbp)
@@ -720,6 +722,7 @@ main_lbl119:
   jmp main_lbl120
 
 main_lbl12:
+  subq $8, %rsp
   pushq $5
   pushq -2712(%rbp)
   pushq -2504(%rbp)
@@ -750,7 +753,6 @@ main_lbl121:
 main_lbl122:
   call f1
   movq %rax, -424(%rbp)
-  addq $0, %rsp
   jmp main_lbl123
 
 main_lbl123:
@@ -759,7 +761,6 @@ main_lbl123:
   movq %r8, -432(%rbp)
   call f1
   movq %rax, -440(%rbp)
-  addq $0, %rsp
   jmp main_lbl124
 
 main_lbl124:
@@ -787,7 +788,6 @@ main_lbl125:
 main_lbl126:
   call f1
   movq %rax, -480(%rbp)
-  addq $0, %rsp
   jmp main_lbl127
 
 main_lbl127:
@@ -799,6 +799,7 @@ main_lbl127:
   jmp main_lbl128
 
 main_lbl128:
+  subq $8, %rsp
   pushq -488(%rbp)
   pushq -2696(%rbp)
   pushq $10
@@ -820,7 +821,6 @@ main_lbl129:
 main_lbl13:
   call f1
   movq %rax, -904(%rbp)
-  addq $0, %rsp
   jmp main_lbl14
 
 main_lbl130:
@@ -828,19 +828,16 @@ main_lbl130:
   movq %r8, -2408(%rbp)
   call *-2440(%rbp)
   movq %rax, -512(%rbp)
-  addq $0, %rsp
   jmp main_lbl131
 
 main_lbl131:
   call f1
   movq %rax, -520(%rbp)
-  addq $0, %rsp
   jmp main_lbl132
 
 main_lbl132:
   call f1
   movq %rax, -528(%rbp)
-  addq $0, %rsp
   jmp main_lbl133
 
 main_lbl133:
@@ -877,10 +874,10 @@ main_lbl134:
 main_lbl135:
   call f1
   movq %rax, -584(%rbp)
-  addq $0, %rsp
   jmp main_lbl136
 
 main_lbl136:
+  subq $8, %rsp
   pushq $9
   pushq -2592(%rbp)
   pushq -584(%rbp)
@@ -890,6 +887,7 @@ main_lbl136:
   jmp main_lbl137
 
 main_lbl137:
+  subq $8, %rsp
   pushq -592(%rbp)
   call *-2632(%rbp)
   movq %rax, -600(%rbp)
@@ -899,10 +897,10 @@ main_lbl137:
 main_lbl138:
   call f1
   movq %rax, -608(%rbp)
-  addq $0, %rsp
   jmp main_lbl139
 
 main_lbl139:
+  subq $8, %rsp
   pushq $4
   pushq -608(%rbp)
   pushq -600(%rbp)
@@ -934,7 +932,6 @@ main_lbl140:
 main_lbl141:
   call f1
   movq %rax, -624(%rbp)
-  addq $0, %rsp
   jmp main_lbl142
 
 main_lbl142:
@@ -942,7 +939,6 @@ main_lbl142:
   movq %r8, -2712(%rbp)
   call f1
   movq %rax, -648(%rbp)
-  addq $0, %rsp
   jmp main_lbl143
 
 main_lbl143:
@@ -959,7 +955,6 @@ main_lbl144:
   movq %r8, -640(%rbp)
   call f1
   movq %rax, -664(%rbp)
-  addq $0, %rsp
   jmp main_lbl145
 
 main_lbl145:
@@ -967,6 +962,7 @@ main_lbl145:
   cqo
   idivq -2504(%rbp)
   movq %rax, -672(%rbp)
+  subq $8, %rsp
   pushq -672(%rbp)
   call f2
   movq %rax, -680(%rbp)
@@ -983,7 +979,6 @@ main_lbl146:
   movq %r8, -696(%rbp)
   call f1
   movq %rax, -704(%rbp)
-  addq $0, %rsp
   jmp main_lbl147
 
 main_lbl147:
@@ -999,7 +994,6 @@ main_lbl147:
 main_lbl148:
   call f1
   movq %rax, -736(%rbp)
-  addq $0, %rsp
   jmp main_lbl149
 
 main_lbl149:
@@ -1011,6 +1005,7 @@ main_lbl149:
   jmp main_lbl150
 
 main_lbl15:
+  subq $8, %rsp
   pushq -1080(%rbp)
   call f2
   movq %rax, -1168(%rbp)
@@ -1033,10 +1028,10 @@ main_lbl150:
 
 main_lbl151:
   call *-2480(%rbp)
-  addq $0, %rsp
   jmp main_lbl152
 
 main_lbl152:
+  subq $8, %rsp
   pushq -2504(%rbp)
   call *-2648(%rbp)
   movq %rax, -760(%rbp)
@@ -1047,6 +1042,7 @@ main_lbl153:
   movq -2720(%rbp), %r8
   imulq -760(%rbp), %r8
   movq %r8, -768(%rbp)
+  subq $8, %rsp
   pushq -768(%rbp)
   call f2
   movq %rax, -776(%rbp)
@@ -1058,7 +1054,6 @@ main_lbl154:
   movq %r8, -2408(%rbp)
   call f1
   movq %rax, -784(%rbp)
-  addq $0, %rsp
   jmp main_lbl155
 
 main_lbl155:
@@ -1066,7 +1061,6 @@ main_lbl155:
   movq %r8, -2408(%rbp)
   call f1
   movq %rax, -792(%rbp)
-  addq $0, %rsp
   jmp main_lbl156
 
 main_lbl156:
@@ -1080,10 +1074,10 @@ main_lbl156:
 main_lbl157:
   call f1
   movq %rax, -816(%rbp)
-  addq $0, %rsp
   jmp main_lbl158
 
 main_lbl158:
+  subq $8, %rsp
   pushq $5
   pushq $5
   pushq -816(%rbp)
@@ -1136,7 +1130,6 @@ main_lbl162:
   movq %r8, -2416(%rbp)
   call f1
   movq %rax, -1768(%rbp)
-  addq $0, %rsp
   jmp main_lbl253
 
 main_lbl163:
@@ -1168,6 +1161,7 @@ main_lbl166:
   movq $0, %r8
   subq -872(%rbp), %r8
   movq %r8, -856(%rbp)
+  subq $8, %rsp
   pushq $0
   call f2
   movq %rax, -880(%rbp)
@@ -1175,6 +1169,7 @@ main_lbl166:
   jmp main_lbl167
 
 main_lbl167:
+  subq $8, %rsp
   pushq -2592(%rbp)
   pushq -880(%rbp)
   pushq -856(%rbp)
@@ -1185,7 +1180,6 @@ main_lbl167:
 main_lbl168:
   call f1
   movq %rax, -888(%rbp)
-  addq $0, %rsp
   jmp main_lbl169
 
 main_lbl169:
@@ -1202,19 +1196,16 @@ main_lbl17:
   movq %r8, -1344(%rbp)
   call *-2424(%rbp)
   movq %rax, -1432(%rbp)
-  addq $0, %rsp
   jmp main_lbl20
 
 main_lbl170:
   call f1
   movq %rax, -920(%rbp)
-  addq $0, %rsp
   jmp main_lbl171
 
 main_lbl171:
   call f1
   movq %rax, -928(%rbp)
-  addq $0, %rsp
   jmp main_lbl172
 
 main_lbl172:
@@ -1223,6 +1214,7 @@ main_lbl172:
   movq $0, %r8
   setge %r8b
   movq %r8, -936(%rbp)
+  subq $8, %rsp
   pushq -936(%rbp)
   pushq -2720(%rbp)
   pushq -912(%rbp)
@@ -1234,7 +1226,6 @@ main_lbl172:
 main_lbl173:
   call f1
   movq %rax, -952(%rbp)
-  addq $0, %rsp
   jmp main_lbl174
 
 main_lbl174:
@@ -1246,6 +1237,7 @@ main_lbl174:
   movq $0, %r8
   subq -2696(%rbp), %r8
   movq %r8, -968(%rbp)
+  subq $8, %rsp
   pushq -2592(%rbp)
   call *-2632(%rbp)
   movq %rax, -976(%rbp)
@@ -1253,6 +1245,7 @@ main_lbl174:
   jmp main_lbl175
 
 main_lbl175:
+  subq $8, %rsp
   pushq -976(%rbp)
   pushq -968(%rbp)
   pushq $4
@@ -1273,16 +1266,15 @@ main_lbl176:
 main_lbl177:
   call f1
   movq %rax, -1000(%rbp)
-  addq $0, %rsp
   jmp main_lbl178
 
 main_lbl178:
   call f1
   movq %rax, -1008(%rbp)
-  addq $0, %rsp
   jmp main_lbl179
 
 main_lbl179:
+  subq $8, %rsp
   pushq -1008(%rbp)
   call *-2648(%rbp)
   movq %rax, -1016(%rbp)
@@ -1290,6 +1282,7 @@ main_lbl179:
   jmp main_lbl180
 
 main_lbl18:
+  subq $8, %rsp
   pushq -2408(%rbp)
   call f2
   movq %rax, -1608(%rbp)
@@ -1297,6 +1290,7 @@ main_lbl18:
   jmp main_lbl22
 
 main_lbl180:
+  subq $8, %rsp
   pushq -1016(%rbp)
   call f2
   movq %rax, -1024(%rbp)
@@ -1317,11 +1311,11 @@ main_lbl182:
   movq -1032(%rbp), %r8
   movq %r8, -2696(%rbp)
   call f1
-  addq $0, %rsp
   jmp main_lbl183
 
 main_lbl183:
   movq $1, -2504(%rbp)
+  subq $8, %rsp
   pushq $6
   call *-2528(%rbp)
   movq %rax, -1040(%rbp)
@@ -1329,6 +1323,7 @@ main_lbl183:
   jmp main_lbl184
 
 main_lbl184:
+  subq $8, %rsp
   pushq -2712(%rbp)
   pushq -1040(%rbp)
   pushq $8
@@ -1337,6 +1332,7 @@ main_lbl184:
   jmp main_lbl185
 
 main_lbl185:
+  subq $8, %rsp
   pushq $6
   call *-2496(%rbp)
   addq $16, %rsp
@@ -1368,6 +1364,7 @@ main_lbl189:
   movq $0, %r8
   setl %r8b
   movq %r8, -1160(%rbp)
+  subq $8, %rsp
   pushq -1160(%rbp)
   call f2
   movq %rax, -1176(%rbp)
@@ -1380,16 +1377,15 @@ main_lbl19:
 main_lbl190:
   call f1
   movq %rax, -1064(%rbp)
-  addq $0, %rsp
   jmp main_lbl191
 
 main_lbl191:
   call *-2440(%rbp)
   movq %rax, -1072(%rbp)
-  addq $0, %rsp
   jmp main_lbl192
 
 main_lbl192:
+  subq $8, %rsp
   pushq -1072(%rbp)
   pushq $2
   pushq -1064(%rbp)
@@ -1401,7 +1397,6 @@ main_lbl192:
 main_lbl193:
   call *-2472(%rbp)
   movq %rax, -1096(%rbp)
-  addq $0, %rsp
   jmp main_lbl194
 
 main_lbl194:
@@ -1415,10 +1410,10 @@ main_lbl194:
 main_lbl195:
   call f1
   movq %rax, -1112(%rbp)
-  addq $0, %rsp
   jmp main_lbl196
 
 main_lbl196:
+  subq $8, %rsp
   pushq -1112(%rbp)
   call f2
   movq %rax, -1120(%rbp)
@@ -1426,6 +1421,7 @@ main_lbl196:
   jmp main_lbl197
 
 main_lbl197:
+  subq $8, %rsp
   pushq -1120(%rbp)
   pushq $0
   pushq -1104(%rbp)
@@ -1446,7 +1442,6 @@ main_lbl198:
 main_lbl199:
   call f1
   movq %rax, -1136(%rbp)
-  addq $0, %rsp
   jmp main_lbl200
 
 main_lbl2:
@@ -1459,10 +1454,10 @@ main_lbl2:
   movq %r8, -2720(%rbp)
   call f1
   movq %rax, -2232(%rbp)
-  addq $0, %rsp
   jmp main_lbl3
 
 main_lbl20:
+  subq $8, %rsp
   pushq -1432(%rbp)
   pushq -2592(%rbp)
   pushq -1344(%rbp)
@@ -1495,6 +1490,7 @@ main_lbl201:
   movq %r8, -2712(%rbp)
   movq -2696(%rbp), %r8
   movq %r8, -2416(%rbp)
+  subq $8, %rsp
   pushq $2
   call *-2512(%rbp)
   movq %rax, -1184(%rbp)
@@ -1504,7 +1500,6 @@ main_lbl201:
 main_lbl202:
   call f1
   movq %rax, -1200(%rbp)
-  addq $0, %rsp
   jmp main_lbl206
 
 main_lbl203:
@@ -1522,7 +1517,6 @@ main_lbl203:
 main_lbl204:
   call f1
   movq %rax, -1728(%rbp)
-  addq $0, %rsp
   jmp main_lbl251
 
 main_lbl205:
@@ -1559,7 +1553,6 @@ main_lbl207:
   movq %r8, -1232(%rbp)
   call *-2440(%rbp)
   movq %rax, -1240(%rbp)
-  addq $0, %rsp
   jmp main_lbl208
 
 main_lbl208:
@@ -1570,7 +1563,6 @@ main_lbl208:
   movq %r8, -1248(%rbp)
   call f1
   movq %rax, -1264(%rbp)
-  addq $0, %rsp
   jmp main_lbl209
 
 main_lbl209:
@@ -1605,13 +1597,13 @@ main_lbl210:
   movq $1, -2408(%rbp)
   call f1
   movq %rax, -1312(%rbp)
-  addq $0, %rsp
   jmp main_lbl211
 
 main_lbl211:
   movq $0, %r8
   subq -1312(%rbp), %r8
   movq %r8, -1304(%rbp)
+  subq $8, %rsp
   pushq -2416(%rbp)
   call f2
   movq %rax, -1320(%rbp)
@@ -1621,7 +1613,6 @@ main_lbl211:
 main_lbl212:
   call f1
   movq %rax, -1328(%rbp)
-  addq $0, %rsp
   jmp main_lbl213
 
 main_lbl213:
@@ -1645,12 +1636,12 @@ main_lbl214:
   movq %r8, -2680(%rbp)
   call f1
   movq %rax, -1360(%rbp)
-  addq $0, %rsp
   jmp main_lbl215
 
 main_lbl215:
   movq -1360(%rbp), %r8
   movq %r8, -2680(%rbp)
+  subq $8, %rsp
   pushq $6
   call f2
   movq %rax, -1368(%rbp)
@@ -1660,7 +1651,6 @@ main_lbl215:
 main_lbl216:
   call f1
   movq %rax, -1376(%rbp)
-  addq $0, %rsp
   jmp main_lbl217
 
 main_lbl217:
@@ -1668,6 +1658,7 @@ main_lbl217:
   cqo
   idivq -1376(%rbp)
   movq %rax, -1384(%rbp)
+  subq $8, %rsp
   pushq -2592(%rbp)
   pushq -2680(%rbp)
   pushq -1384(%rbp)
@@ -1679,6 +1670,7 @@ main_lbl218:
   movq $5, %r8
   subq $8, %r8
   movq %r8, -1392(%rbp)
+  subq $8, %rsp
   pushq -2680(%rbp)
   call *-2528(%rbp)
   movq %rax, -1400(%rbp)
@@ -1686,6 +1678,7 @@ main_lbl218:
   jmp main_lbl219
 
 main_lbl219:
+  subq $8, %rsp
   pushq -2416(%rbp)
   call *-2656(%rbp)
   movq %rax, -1408(%rbp)
@@ -1693,6 +1686,7 @@ main_lbl219:
   jmp main_lbl220
 
 main_lbl22:
+  subq $8, %rsp
   pushq -1608(%rbp)
   call f2
   movq %rax, -1696(%rbp)
@@ -1700,6 +1694,7 @@ main_lbl22:
   jmp main_lbl23
 
 main_lbl220:
+  subq $8, %rsp
   pushq -1408(%rbp)
   pushq -1400(%rbp)
   pushq -2592(%rbp)
@@ -1731,10 +1726,10 @@ main_lbl223:
   movq %r8, -1456(%rbp)
   call f1
   movq %rax, -1464(%rbp)
-  addq $0, %rsp
   jmp main_lbl224
 
 main_lbl224:
+  subq $8, %rsp
   pushq -2696(%rbp)
   pushq -1464(%rbp)
   pushq $0
@@ -1746,10 +1741,10 @@ main_lbl224:
 main_lbl225:
   call f1
   movq %rax, -1480(%rbp)
-  addq $0, %rsp
   jmp main_lbl226
 
 main_lbl226:
+  subq $8, %rsp
   pushq -2696(%rbp)
   pushq -2696(%rbp)
   pushq -1480(%rbp)
@@ -1774,12 +1769,14 @@ main_lbl228:
   movq $0, %r8
   setg %r8b
   movq %r8, -1504(%rbp)
+  subq $8, %rsp
   pushq -1504(%rbp)
   call f2
   addq $16, %rsp
   jmp main_lbl229
 
 main_lbl229:
+  subq $8, %rsp
   pushq $7
   call f2
   movq %rax, -1512(%rbp)
@@ -1791,7 +1788,6 @@ main_lbl23:
   movq %r8, -2504(%rbp)
   call f1
   movq %rax, -1808(%rbp)
-  addq $0, %rsp
   jmp main_lbl24
 
 main_lbl230:
@@ -1810,6 +1806,7 @@ main_lbl231:
   movq %r8, -1536(%rbp)
   movq -1536(%rbp), %r8
   movq %r8, -2696(%rbp)
+  subq $8, %rsp
   pushq -2408(%rbp)
   call f2
   movq %rax, -1552(%rbp)
@@ -1820,6 +1817,7 @@ main_lbl232:
   movq $0, %r8
   subq -1552(%rbp), %r8
   movq %r8, -1544(%rbp)
+  subq $8, %rsp
   pushq -2416(%rbp)
   call *-2512(%rbp)
   movq %rax, -1560(%rbp)
@@ -1836,7 +1834,6 @@ main_lbl233:
 main_lbl234:
   call f1
   movq %rax, -1576(%rbp)
-  addq $0, %rsp
   jmp main_lbl235
 
 main_lbl235:
@@ -1845,16 +1842,15 @@ main_lbl235:
   movq %r8, -1568(%rbp)
   call f1
   movq %rax, -1584(%rbp)
-  addq $0, %rsp
   jmp main_lbl236
 
 main_lbl236:
   call f1
   movq %rax, -1592(%rbp)
-  addq $0, %rsp
   jmp main_lbl237
 
 main_lbl237:
+  subq $8, %rsp
   pushq -2696(%rbp)
   pushq -1592(%rbp)
   pushq -1584(%rbp)
@@ -1866,10 +1862,10 @@ main_lbl237:
 main_lbl238:
   call f1
   movq %rax, -1616(%rbp)
-  addq $0, %rsp
   jmp main_lbl239
 
 main_lbl239:
+  subq $8, %rsp
   pushq -1616(%rbp)
   call *-2528(%rbp)
   movq %rax, -1624(%rbp)
@@ -1884,6 +1880,7 @@ main_lbl24:
   movq $0, %r8
   subq -1816(%rbp), %r8
   movq %r8, -1792(%rbp)
+  subq $8, %rsp
   pushq -2592(%rbp)
   pushq $10
   pushq -1792(%rbp)
@@ -1914,6 +1911,7 @@ main_lbl241:
   jmp main_lbl242
 
 main_lbl242:
+  subq $8, %rsp
   pushq -1648(%rbp)
   pushq -1568(%rbp)
   pushq $0
@@ -1930,6 +1928,7 @@ main_lbl243:
   jmp main_lbl244
 
 main_lbl244:
+  subq $8, %rsp
   pushq -2504(%rbp)
   pushq -1664(%rbp)
   pushq -2696(%rbp)
@@ -1950,7 +1949,6 @@ main_lbl245:
 
 main_lbl246:
   call *-2424(%rbp)
-  addq $0, %rsp
   jmp main_lbl247
 
 main_lbl247:
@@ -1958,7 +1956,6 @@ main_lbl247:
   movq %r8, -2416(%rbp)
   call *-2472(%rbp)
   movq %rax, -1680(%rbp)
-  addq $0, %rsp
   jmp main_lbl248
 
 main_lbl248:
@@ -1980,12 +1977,14 @@ main_lbl248:
 main_lbl249:
   movq -1712(%rbp), %r8
   movq %r8, -2416(%rbp)
+  subq $8, %rsp
   pushq $2
   call f2
   addq $16, %rsp
   jmp main_lbl250
 
 main_lbl25:
+  subq $8, %rsp
   pushq -2712(%rbp)
   call f2
   movq %rax, -1832(%rbp)
@@ -1996,6 +1995,7 @@ main_lbl250:
   jmp main_lbl204
 
 main_lbl251:
+  subq $8, %rsp
   pushq -1728(%rbp)
   pushq $9
   pushq -2720(%rbp)
@@ -2039,6 +2039,7 @@ main_lbl254:
   jmp main_epilogue
 
 main_lbl26:
+  subq $8, %rsp
   pushq -1832(%rbp)
   pushq -1824(%rbp)
   pushq -2680(%rbp)
@@ -2054,7 +2055,6 @@ main_lbl27:
   movq %r8, -2592(%rbp)
   call f1
   movq %rax, -1848(%rbp)
-  addq $0, %rsp
   jmp main_lbl28
 
 main_lbl28:
@@ -2068,7 +2068,6 @@ main_lbl28:
 main_lbl29:
   call f1
   movq %rax, -1864(%rbp)
-  addq $0, %rsp
   jmp main_lbl30
 
 main_lbl3:
@@ -2082,7 +2081,6 @@ main_lbl3:
 main_lbl30:
   call f1
   movq %rax, -1872(%rbp)
-  addq $0, %rsp
   jmp main_lbl31
 
 main_lbl31:
@@ -2091,6 +2089,7 @@ main_lbl31:
   movq $0, %r8
   setge %r8b
   movq %r8, -1888(%rbp)
+  subq $8, %rsp
   pushq -1888(%rbp)
   pushq -2720(%rbp)
   pushq -1856(%rbp)
@@ -2102,7 +2101,6 @@ main_lbl31:
 main_lbl32:
   call f1
   movq %rax, -1904(%rbp)
-  addq $0, %rsp
   jmp main_lbl33
 
 main_lbl33:
@@ -2149,16 +2147,15 @@ main_lbl37:
   movq $3, -2680(%rbp)
   call f1
   movq %rax, -1944(%rbp)
-  addq $0, %rsp
   jmp main_lbl38
 
 main_lbl38:
   call f1
   movq %rax, -1952(%rbp)
-  addq $0, %rsp
   jmp main_lbl39
 
 main_lbl39:
+  subq $8, %rsp
   pushq -1952(%rbp)
   pushq -1944(%rbp)
   pushq $8
@@ -2168,6 +2165,7 @@ main_lbl39:
   jmp main_lbl40
 
 main_lbl4:
+  subq $8, %rsp
   pushq -2720(%rbp)
   call f2
   movq %rax, -16(%rbp)
@@ -2178,6 +2176,7 @@ main_lbl40:
   movq $0, %r8
   subq -1960(%rbp), %r8
   movq %r8, -1936(%rbp)
+  subq $8, %rsp
   pushq -1936(%rbp)
   call f2
   movq %rax, -1976(%rbp)
@@ -2189,7 +2188,6 @@ main_lbl41:
   movq %r8, -2416(%rbp)
   call f1
   movq %rax, -1984(%rbp)
-  addq $0, %rsp
   jmp main_lbl42
 
 main_lbl42:
@@ -2213,7 +2211,6 @@ main_lbl43:
   movq %r8, -2712(%rbp)
   call *-2424(%rbp)
   movq %rax, -2016(%rbp)
-  addq $0, %rsp
   jmp main_lbl44
 
 main_lbl44:
@@ -2223,7 +2220,6 @@ main_lbl44:
   movq %rax, -2024(%rbp)
   call f1
   movq %rax, -2032(%rbp)
-  addq $0, %rsp
   jmp main_lbl45
 
 main_lbl45:
@@ -2239,7 +2235,6 @@ main_lbl45:
   movq %r8, -2048(%rbp)
   call *-2424(%rbp)
   movq %rax, -2064(%rbp)
-  addq $0, %rsp
   jmp main_lbl46
 
 main_lbl46:
@@ -2256,10 +2251,10 @@ main_lbl46:
   movq %r8, -2088(%rbp)
   call *-2440(%rbp)
   movq %rax, -2096(%rbp)
-  addq $0, %rsp
   jmp main_lbl47
 
 main_lbl47:
+  subq $8, %rsp
   pushq -2720(%rbp)
   pushq $7
   pushq -2096(%rbp)
@@ -2283,7 +2278,6 @@ main_lbl48:
 
 main_lbl49:
   call *-2448(%rbp)
-  addq $0, %rsp
   jmp main_lbl50
 
 main_lbl5:
@@ -2302,6 +2296,7 @@ main_lbl50:
   jmp main_lbl34
 
 main_lbl51:
+  subq $8, %rsp
   pushq $9
   call f2
   movq %rax, -2120(%rbp)
@@ -2311,7 +2306,6 @@ main_lbl51:
 main_lbl52:
   call f1
   movq %rax, -2152(%rbp)
-  addq $0, %rsp
   jmp main_lbl56
 
 main_lbl53:
@@ -2325,6 +2319,7 @@ main_lbl54:
   movq $0, %r8
   sete %r8b
   movq %r8, -2128(%rbp)
+  subq $8, %rsp
   pushq -2128(%rbp)
   call f2
   movq %rax, -2136(%rbp)
@@ -2347,6 +2342,7 @@ main_lbl56:
   jmp main_lbl57
 
 main_lbl57:
+  subq $8, %rsp
   pushq -2160(%rbp)
   call f2
   movq %rax, -2168(%rbp)
@@ -2364,10 +2360,10 @@ main_lbl58:
   movq $2, -2712(%rbp)
   call f1
   movq %rax, -2184(%rbp)
-  addq $0, %rsp
   jmp main_lbl59
 
 main_lbl59:
+  subq $8, %rsp
   pushq $2
   pushq -2696(%rbp)
   pushq -2184(%rbp)
@@ -2389,7 +2385,7 @@ main_lbl6:
   movq %r8, -2480(%rbp)
   movq -2456(%rbp), %r8
   movq %r8, -2520(%rbp)
-  movq f2(%rip), %r8
+  movq f2_(%rip), %r8
   movq %r8, -2536(%rbp)
   movq -2568(%rbp), %r8
   movq %r8, -2560(%rbp)
@@ -2405,6 +2401,7 @@ main_lbl6:
   movq %r8, -2656(%rbp)
   movq -2656(%rbp), %r8
   movq %r8, -2648(%rbp)
+  subq $8, %rsp
   pushq -2408(%rbp)
   call f2
   movq %rax, -192(%rbp)
@@ -2414,19 +2411,16 @@ main_lbl6:
 main_lbl60:
   call f1
   movq %rax, -2200(%rbp)
-  addq $0, %rsp
   jmp main_lbl61
 
 main_lbl61:
   call *-2464(%rbp)
   movq %rax, -2208(%rbp)
-  addq $0, %rsp
   jmp main_lbl62
 
 main_lbl62:
   call *-2480(%rbp)
   movq %rax, -2216(%rbp)
-  addq $0, %rsp
   jmp main_lbl63
 
 main_lbl63:
@@ -2456,10 +2450,10 @@ main_lbl65:
   movq %r8, -2256(%rbp)
   call f1
   movq %rax, -2264(%rbp)
-  addq $0, %rsp
   jmp main_lbl66
 
 main_lbl66:
+  subq $8, %rsp
   pushq -2504(%rbp)
   pushq -2264(%rbp)
   pushq $5
@@ -2492,6 +2486,7 @@ main_lbl69:
   movq %r8, -2248(%rbp)
   movq -2248(%rbp), %r8
   movq %r8, -2680(%rbp)
+  subq $8, %rsp
   pushq $6
   call f2
   movq %rax, -2296(%rbp)
@@ -2503,7 +2498,6 @@ main_lbl7:
   movq %r8, -2408(%rbp)
   call f1
   movq %rax, -368(%rbp)
-  addq $0, %rsp
   jmp main_lbl8
 
 main_lbl70:
@@ -2529,6 +2523,7 @@ main_lbl72:
   movq -2416(%rbp), %r8
   imulq -2712(%rbp), %r8
   movq %r8, -2312(%rbp)
+  subq $8, %rsp
   pushq -2312(%rbp)
   call *-2496(%rbp)
   movq %rax, -2328(%rbp)
@@ -2536,6 +2531,7 @@ main_lbl72:
   jmp main_lbl73
 
 main_lbl73:
+  subq $8, %rsp
   pushq -2328(%rbp)
   call f2
   movq %rax, -2336(%rbp)
@@ -2543,6 +2539,7 @@ main_lbl73:
   jmp main_lbl74
 
 main_lbl74:
+  subq $8, %rsp
   pushq $2
   pushq -2336(%rbp)
   pushq -2592(%rbp)
@@ -2551,6 +2548,7 @@ main_lbl74:
   jmp main_lbl75
 
 main_lbl75:
+  subq $8, %rsp
   pushq $7
   call *-2512(%rbp)
   movq %rax, -2344(%rbp)
@@ -2560,7 +2558,6 @@ main_lbl75:
 main_lbl76:
   call f1
   movq %rax, -2352(%rbp)
-  addq $0, %rsp
   jmp main_lbl77
 
 main_lbl77:
@@ -2568,6 +2565,7 @@ main_lbl77:
   movq $0, %r8
   setl %r8b
   movq %r8, -2360(%rbp)
+  subq $8, %rsp
   pushq -2360(%rbp)
   call f2
   movq %rax, -2368(%rbp)
@@ -2575,6 +2573,7 @@ main_lbl77:
   jmp main_lbl78
 
 main_lbl78:
+  subq $8, %rsp
   pushq -2368(%rbp)
   pushq -2408(%rbp)
   pushq -2344(%rbp)
@@ -2590,6 +2589,7 @@ main_lbl79:
   jmp main_lbl51
 
 main_lbl8:
+  subq $8, %rsp
   pushq -368(%rbp)
   call f2
   movq %rax, -456(%rbp)
@@ -2602,6 +2602,7 @@ main_lbl80:
   movq $0, %r8
   setge %r8b
   movq %r8, -2384(%rbp)
+  subq $8, %rsp
   pushq -2384(%rbp)
   call f2
   movq %rax, -2392(%rbp)
@@ -2611,7 +2612,6 @@ main_lbl80:
 main_lbl81:
   call f1
   movq %rax, -40(%rbp)
-  addq $0, %rsp
   jmp main_lbl85
 
 main_lbl82:
@@ -2620,7 +2620,6 @@ main_lbl82:
 main_lbl83:
   call *-2472(%rbp)
   movq %rax, -2400(%rbp)
-  addq $0, %rsp
   jmp main_lbl84
 
 main_lbl84:
@@ -2632,6 +2631,7 @@ main_lbl84:
   jmp main_lbl82
 
 main_lbl85:
+  subq $8, %rsp
   pushq -40(%rbp)
   call f2
   movq %rax, -48(%rbp)
@@ -2642,6 +2642,7 @@ main_lbl86:
   movq $0, %r8
   subq -48(%rbp), %r8
   movq %r8, -32(%rbp)
+  subq $8, %rsp
   pushq -2712(%rbp)
   call *-2528(%rbp)
   movq %rax, -64(%rbp)
@@ -2662,7 +2663,6 @@ main_lbl87:
 main_lbl88:
   call f1
   movq %rax, -80(%rbp)
-  addq $0, %rsp
   jmp main_lbl89
 
 main_lbl89:
@@ -2685,7 +2685,6 @@ main_lbl9:
 main_lbl90:
   call f1
   movq %rax, -112(%rbp)
-  addq $0, %rsp
   jmp main_lbl91
 
 main_lbl91:
@@ -2699,6 +2698,7 @@ main_lbl91:
   movq %r8, -2408(%rbp)
   movq -2720(%rbp), %r8
   movq %r8, -2504(%rbp)
+  subq $8, %rsp
   pushq -2696(%rbp)
   call *-2536(%rbp)
   movq %rax, -120(%rbp)
@@ -2706,6 +2706,7 @@ main_lbl91:
   jmp main_lbl92
 
 main_lbl92:
+  subq $8, %rsp
   pushq -2720(%rbp)
   pushq -2720(%rbp)
   pushq -120(%rbp)
@@ -2716,16 +2717,15 @@ main_lbl92:
 main_lbl93:
   call f1
   movq %rax, -128(%rbp)
-  addq $0, %rsp
   jmp main_lbl94
 
 main_lbl94:
   call f1
   movq %rax, -136(%rbp)
-  addq $0, %rsp
   jmp main_lbl95
 
 main_lbl95:
+  subq $8, %rsp
   pushq -136(%rbp)
   pushq -128(%rbp)
   pushq $10
@@ -2737,7 +2737,6 @@ main_lbl95:
 main_lbl96:
   call f1
   movq %rax, -152(%rbp)
-  addq $0, %rsp
   jmp main_lbl97
 
 main_lbl97:
@@ -2748,7 +2747,6 @@ main_lbl97:
   movq %r8, -160(%rbp)
   call f1
   movq %rax, -168(%rbp)
-  addq $0, %rsp
   jmp main_lbl98
 
 main_lbl98:
