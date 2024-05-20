@@ -1,202 +1,130 @@
-struct foo {
-  f1: int,
-  f2: &int
-}
-
-struct bar {
-  f1: &foo
-}
-
 fn main() -> int {
-  let id1: int, id0: int = id1, id3: &&&int, id2: &&int = *id3, id6: &&&&&bar, id5: &&&&&bar = id6, id7: &int = nil, id4: int = id5[id4][id7 != id7] != *id5[6], id8: &int, id14: &&&&&&&&foo, id13: &&&&&&&foo = id14[id1], id12: &&&&&&foo = id13[id7[3] / id9.f1], id15: int, id11: &&&foo = id12[id15][id9.f1][**id2], id10: &&foo = id11[-id15], id9: &foo = *id10, id16: &int, id17: &&int, id19: int, id18: &int = id2[-id19], id20: &int, id22: &&int, id21: &&int = id22, id23: &&&&int, id25: &&int, id24: &int = *id25, id27: int, id26: &&&foo = *id12[id27][id1 / 3], id28: &&&int, id29: int, id30: int, id31: &&&int, id32: &&int, id33: &&&foo, id35: &&&&&int, id38: &&&&bar, id37: &&bar = *id38[id18[id4]], id36: &foo = id37[id27].f1, id34: &&&int = *id35[id36.f1], id40: &&&&&int, id41: &&int = nil, id39: &&int = id40[10][8 / id15][id41[id4][1]], id42: &int = id8, id43: &int, id44: &foo = *id10, id45: &&&bar, id47: &&&bar, id46: &bar = **id47, id48: &bar = *id37, id49: &&&int, id50: &foo, id51: &&&int, id55: &&&&&&&&&&int, id54: &&&&&&&&&int = id55[id17[10][3 * 4]], id53: &&&&&&&int = id54[id50.f1][id10[id0].f1], id52: &&&&int = ***id53, id57: &&bar, id56: &bar = *id57, id58: &&foo, id59: &&&&int, id60: &&&&int, id62: &&&bar = id47, id61: &&bar = *id62, id63: &bar, id66: &&&&foo, id65: &&&&foo = id66, id64: &foo = *id65[id27][5], id67: &&&int, id68: &&&&int, id69: &&&int, id71: &&&&int, id70: &&&&int = id71, id72: &&&foo = *id12[id15][id20[5]], id74: &&&&bar, id73: &bar = id74[id27][id24[10]][id41[3][id20[id4]]], id75: &&bar, id76: &&&&int, id77: &foo, id78: &bar, id79: &&bar = id79, id80: &foo = id58[*id41[7]], id81: &&&bar, id82: &&&&bar, id83: &foo, id84: &&bar, id85: &&bar, id86: &&foo = *id33, id87: &&foo, id89: &&&bar, id88: &bar = id89[id16[id30]][id83.f2[0 > 1]], id90: &&foo = nil, id92: &&&foo, id91: &&&foo = id92, id93: &&&foo, id94: &bar = nil, id95: &&&bar, id96: &&&&bar, id97: &&foo = *id92, id98: &&foo;
-  while id0 {
-    id2[id4] = new int;
-    if id8[id9.f1] {
-      id15 = id15;
-      id16 = new int 7;
-      id17 = new &int **id3[id1];
-      id7 = new int;
-      **id2 = *id18;
-      id20 = id21[id23[5] != id3];
-      id24 = new int ***id3;
+  let id0: int, id3: int = 0, id4: int, id2: int = id3 != id4, id1: int = 1 == f3(id1 + 8, -id2), id5: int, id6: &(int, int, int) -> int = id6, id8: int = 9 == f1(), id7: int = f5(f1(), id8, f3(id1, 6), f2(id8)), id9: &(int, int, int) -> int = id9, id10: &() -> int, id11: &(int, int, int) -> int, id12: &() -> int, id13: &() -> int = id12, id14: &(int, int, int, int) -> int, id16: &() -> int, id15: &() -> int = id16, id17: &() -> int = id17, id18: &(int, int, int, int) -> int, id19: &(int) -> int, id20: &(int) -> int, id21: &(int, int, int, int) -> int = id14, id22: &(int) -> int, id23: &(int) -> int = f2, id24: &(int, int) -> int, id25: &(int, int) -> int, id27: &(int, int) -> int, id26: &(int, int) -> int = id27, id29: &(int, int, int, int) -> int, id28: &(int, int, int, int) -> int = id29, id31: &(int, int, int, int) -> int = id28, id30: &(int, int, int, int) -> int = id31, id32: &() -> int, id33: &(int, int, int) -> int, id34: &(int) -> int = id22, id35: &(int, int) -> int, id37: &(int) -> int = id37, id36: &(int) -> int = id37, id38: &(int, int) -> int, id39: &(int, int) -> int, id40: &(int, int, int) -> int;
+  id0 = f2(id0);
+  id0 = -f3(1, f2(f1()));
+  id1 = f2(f5(f4(id4, id5, f1()), id6(id2, id7, 5), 10 - f1(), 0));
+  id0 = 4;
+  while -id9(-id0, id3, id10()) {
+    id2 = f2(f2(id0));
+    id6(id4, f4(-(f1() == 4), 10, id3), f2(id7));
+    id3 = -id7;
+    id1 = f4(f3(f1(), id0), id8, f1() >= f1()) > f1();
+    id5 = id5;
+    while 9 {
+      id7 = 2;
+      id3 = 8;
+      id1 = -8;
+      id5 = id7;
+      f3(-8, 6);
+      id4 = 3;
+      id1 = f2(-id11(8, f1(), f1()));
+      id7 = f3(id7, (id8 - f1()) < id0);
+      f5(2 / id10(), ((f1() / 7) != id7) + (7 + id10()), 1, (4 == id3) / id9(id12(), 7, id8));
+      id13();
+      id2 = id3;
     }
-    else {
-      id24 = id20;
-      id26 = new &&foo;
-      id22 = new &int;
-      id27 = id15;
-      id15 = id28[id29][id30] == id31[id29][8];
-      id32 = new &int id33[id29][id34 != id28].f1;
-      id16 = new int *id39[2 < id1];
-      id29 = id4;
-      id7 = new int;
-      id16 = new int;
+    while f2(f2(9) == id8) {
+      id1 = 5 > f2(f5(id7, id2, f1(), id0));
+      id7 = 2;
+      id8 = f3(id14(f4(f1(), id5, 2), f1(), id15(), id17()), 1);
+      id4 = -id18(id0 <= 4, 6, f4(5, f1(), id2), f3(9, id3));
+      f3(id3, f2(6));
+      id4 = id3;
+      f3(2, 5 - 8);
+      f4(id3, f2(id19(id1 * id7)), 2);
+      id8 = f4(id20(7), id0, f2(f1() < 0));
+      id3 = 2;
     }
-    id42 = new int 9;
-    id43 = new int;
-    if id17[*id24][(id15 <= 6) + id9.f1] {
-      id21[0] = new int;
-      id29 = id41[1][id25[id4][id4]];
-      id2[id19] = new int;
-      id44 = *id10;
-      id27 = id9.f1;
-      id15 = *id41[id16[9]];
-      **id3 = new int;
-      *id7 = id0;
+    id0 = 7;
+    id1 = 0;
+    while f2(10 >= id8) + id16() {
+      id21(f3(-f2(f1()), -id22(id7)), 8, 2, f1());
+      id0 = --f1();
+      id2 = id8;
+      f4(id23(id5), id8, id8);
+      id24(id8, f5(id2, f4(10, f1(), f1()) == f1(), id4, f1()));
+      id7 = f5(f3(id25(0, 7), -id5), id26(2, 0) >= id4, f4(id2 > f1(), id8 <= 9, 0), f5(-7, id2, id7, id5));
     }
-    else {
-      id16[id42[5] + (6 + 8)] = -id19;
-      id45[id8[6]][*id32[7]] = id46;
-      id32 = new &int id29;
-      id10[id7 == id2[7]] = nil;
-      id22 = new &int *id17[10];
-      id8 = new int id7[7];
-      id4 = id48.f1.f1;
-      *id41 = id25[id7[id20[id15]]];
-    }
-    while id49[id15][id50.f1][id27] {
-      id42[id15] = *id10[id19].f2;
-      id7 = new int id51[9][6 / 6] != *id32;
-      id40[*id43][id50.f1] = new &&int id21[id18[id4]][id22[id30][id28 != id49]];
-      id7 = ***id52;
-      *id25 = new int id29;
-      id56.f1 = id58[id16[*id20]];
-      id24[*id59 != *id60] = id42[3];
-      *id61 = id63;
-      id50.f1 = id58[id4].f2[id24[id20[6]]];
-    }
-    while id63.f1.f2 != id42 {
-      id42 = new int;
-      id17[id27] = new int;
-      id64.f2 = new int;
-      id29 = id32[id1][*id24] != id30;
-      id64.f1 = **id67[id0];
-      id68[5] = new &&int *id69[id27][id0 * 8];
-      id0 = -id15;
-      id16 = new int id1 > (id16[8] == (5 >= id4));
-      *id70[3 != id15] = new &int id51[id30][9][id22[1][-id0]];
-    }
-    id25 = new &int id69[9][-id27][**id41];
-    while id67[1][id27][id7[8]] {
-      id32 = ***id35;
-      id7[id32[id1][0]] = 1;
-      id42 = new int;
-      id72 = new &&foo;
-      id73 = *id75;
-      id15 = id43[*id17[id27]];
-      id28 = new &&int;
-      id43 = new int;
-      **id76 = new &int;
-      id7 = new int id50.f1;
-      id77.f2 = new int;
-      id42[id44.f1 == -5] = *id39[-id1];
-      id21[8 <= *id24] = new int;
-    }
-    return 6;
-  }
-  id78 = id45[id16[id29]][id21[7][id18[9]]];
-  id79 = new &bar 9;
-  id18 = new int;
-  while id28[0][id10 == id58][1] {
-    id21[0] = new int;
-    while *id43 {
-      *id77.f2 = id10[2].f1;
-      *id80.f2 = ***id31;
-      *id81 = *id82[id64.f1];
-      id2 = id40[0][*id7][id83.f1];
-    }
-    id84 = new &bar id85[0].f1.f1;
-    **id21 = id19;
-    while -2 {
-      id27 = id39[id50.f1] != *id25;
-      id0 = id0;
-      id32[id28[id1] != id34[id4]] = *id76[id4][*id43];
-      id86[1].f2 = new int;
-      *id44.f2 = id0;
-      id3[id27][-id1][*id32[5]] = *id50.f2;
-      id18 = new int id87[id25 != id22].f1;
-      id73.f1.f1 = *id49[id19] != id86[id0].f2;
-      id4 = -(id44.f1 * id18[id29]);
-      id4 = id36.f1;
-    }
-    id16 = id31[id18[id4]][id22[id30][id28 == id28]];
-    while ***id3 {
-      id19 = **id25;
-      id2 = new &int id30;
-      id80.f2 = new int **id49 == *id34[8];
-      id88.f1.f2 = new int id75[7].f1.f1;
-      id22[10 <= (3 - id19)] = *id41;
-      id22 = new &int id18[5];
-      id18[**id25] = 7;
-      id17[*id24 < id44.f1] = id18;
-      id15 = *id32[id7 == id24];
-    }
-    while **id22 {
-      id42 = new int 0;
-      id30 = -*id50.f2;
-      *id17 = new int;
-      id8 = new int -id44.f1;
-      id60[2][*id16][id3[9] != id17] = new int;
-      id7 = new int;
-      id25[7] = new int;
-      id18 = new int;
-      id24 = new int;
-      *id78.f1.f2 = id36.f1 - **id25;
+    while id3 {
+      id28(id30(0, (8 * 9) < f4(id8, id8, f1()), f2(id6(id7, id7, 5)), id2), f4(id5, 6, id2), id3, f5(f2(0), (f1() != 7) > id32(), id23(id1), id2));
+      id0 = f5(10 * f1(), f5(f1() >= 1, id24(id2, 3), id7, 0), id5, id33(10, id5, id27(id7, f1())));
+      f3(id21(id0, id12(), 4, f5(f1() > f1(), 3, -10, id1 + 10)), f4(id34(f4(f1(), id3, 9)), f1(), 4));
+      id7 = f1();
+      f3(f5(-f3(f1(), id1), f2(f1() / id2), (id4 < 8) - id2, f1()), -id35(f1(), id3) != 1);
+      id17();
+      id0 = f2(id8 * id36(id2));
+      id0 = f1();
+      id4 = f1() - (id27(id4, id3) <= f4(f1(), 5, 5));
     }
   }
-  id28 = new &&int 7;
-  while id80.f2 == id90[id1].f2 {
-    id24 = id51[*id18][id32[id29][id16 != id20]];
-    id83 = id64;
-    while 2 {
-      id2 = new &int;
-      id18 = id24;
-      *id18 = id39[*id18][id27];
-      id17 = new &int id1 + *id64.f2;
-      id36.f1 = id4;
-      id51 = new &&int id77.f1;
-      id27 = id69[id27][id42[8]][9];
-      id64 = id91[id0][id1];
-      id43 = new int id67[id19][id20[6]][10];
-      id7 = new int id83.f1;
-      id22 = id41;
-      id42[id83.f1 == id77.f1] = id39[-id1] == *id32;
+  while 9 {
+    id7 = id3 == id3;
+    while id2 {
+      id1 = id0;
+      id2 = id4;
+      f4(-(6 + f5(id2, id3, 8, id8)), f2(0), id3);
+      id21(3, 1, f4(f3(f1(), id0), id8, f1() >= f1()) > f1(), f4(4, -id5, id34(id3)));
+      id5 = f5(10, id3, f1(), f2(id36(f1())));
+      f1();
+      id2 = 1;
+      id33(8, id22(6), id7);
+      id19(6);
+      id4 = 3;
+      continue;
     }
-    id51[id7[id1]][6] = new int;
-    while -(-7 - 6) {
-      id27 = id9.f1;
-      id24[9] = -id30;
-      id16 = id7;
-      id15 = id15 > *id21[2];
-      id93[id2[7][id24[1]]] = id66[1][*id43];
-      id30 = 1;
+    while id8 >= 3 {
+      f5(f3(7, id0), f4(f1(), 2, id12()), id6(f3(id16(), id2), 0, f2(f1())), 1);
+      id7 = f1() > id3;
+      id8 = id7;
+      id0 = id1;
+      id2 = id1;
     }
-    id16 = new int;
-    id57 = new &bar id43 == id94.f1.f2;
-    if *id18 {
-      *id95 = *id96[id9.f1];
-      id7 = new int;
-      id16 = new int -id44.f2[*id8];
-      id58[10].f2[id17[0][id43[0]]] = id64.f1;
-      id24 = new int;
-      id43 = new int;
-      id83.f2 = new int;
-      id15 = 6;
+    id7 = -f2(id7 < 9);
+    id1 = id5;
+    if id0 >= id20(2) {
+      id4 = f5(id8 == id35(f1(), id7), 0 == -id0, id3 != id12(), id5 > (f1() + 9));
+      id0 = 1;
+      id4 = -id21(-f1(), id0, f2(id1), 5 - f1());
+      id4 = f1();
+      id11(f2(6) / f1(), id4, id3);
+      id27((5 - 8) == f4(id3, id22(id4), id37(id1)), 10);
     }
     else {
-      id0 = id0;
-      id32[id28[id1] != id34[id4]] = *id76[id4][*id43];
-      id97[1].f2 = new int;
-      *id44.f2 = id0;
-      id3[id27][-id1][*id32[5]] = *id50.f2;
-      id18 = new int id98[id25 != id22].f1;
-      id56.f1.f1 = **id39;
-      id2 = new &int id51[id15][id16[5]] == id43;
+      f2(id27(id3, 1 / id7) > f5(7, id3 <= id1, f4(0, f1(), id5), f4(f1(), id5, id5)));
+      id4 = f3(f2(7), id4);
+      id5 = id1 - id1;
+      id26(-f2(id0), id20(id1));
+      f4(0, -f1(), id31(id38(id33(f1(), f1(), id5), id22(f1())), 9, 0, -id8));
+      f3(-f4(id5, id26(2, id4), id2), id7);
+      id10();
+      id1 = id2;
+      id1 = id39(0, id16() + (id1 != id3));
+      f2(2);
     }
+    id2 = -(id40(id8, 9, f1()) - 0);
+    id0 = 3;
   }
-  id0 = id29;
-  id1 = *id64.f2;
-  id43 = new int;
-  id16 = new int;
-  return 1;
+  id1 = id2 / id7;
+  id2 = -(id7 * id21(id8, f1(), 7, 4));
+  return id7;
+}
+
+fn f1() -> int {
+  return 42;
+}
+
+fn f2(p: int) -> int {
+  return p;
+}
+
+fn f3(p: int, q: int) -> int {
+  return p + q;
+}
+
+fn f4(p: int, q: int, r: int) -> int {
+  return (p + q) + r;
+}
+
+fn f5(p: int, q: int, r: int, s: int) -> int {
+  return ((p + q) + r) + s;
 }
