@@ -8,43 +8,16 @@ int indent = 0;
 
 bool DEBUG = false;
 
-string get_struct_name(Exp* a){
-    if(a->type == Exp::ArrayAccess){
-        return get_struct_name(a->value.ArrayAccess.ptr);
-    }
-    else if(a->type == Exp::FieldAccess){
-        return get_struct_name(a->value.FieldAccess.ptr);
-    }
-    else if(a->type == Exp::Id){
-        return a->value.Id.name;
-    }
-    else if(a->type == Exp::UnOp){
-        return get_struct_name(a->value.UnOp.operand);
-    }
-    else if(a->type == Exp::Call){
-        return get_struct_name(a->value.Call.callee);
-    }
-    else{
-        return "";
-    }
-}
-
-string get_struct_name(Lval* a){
-    if(a->type == Lval::ArrayAccess){
-        return get_struct_name(a->value.ArrayAccess.ptr);
-    }
-    else if(a->type == Lval::FieldAccess){
-        return get_struct_name(a->value.FieldAccess.ptr);
-    }
-    else if(a->type == Lval::Deref){
-        return get_struct_name(a->value.Deref.lval);
-    }
-    else if(a->type == Lval::Id){
-        return a->value.Id.name;
-    }
-    else{
-        return "";
-    }
+string get_struct_name(Type* a){
+  if(a->type == Type::Struct){
+    return a->value.Struct.name;
+  }
+  else if(a->type == Type::Ptr){
+    return get_struct_name(a->value.Ptr.ref);
+  }
+  else{
+    return "ERROR";
+  }
 }
 
 string Type::type_string(){

@@ -60,6 +60,14 @@ void LIR_Program::codeGenString(){
         }
     }
 
+    // generate global variable offset into varStructType
+    for(auto it = globals.begin(); it != globals.end(); it++){
+        if(it->second && it->second->type == Type::Ptr && it->second->value.Ptr.ref->type == Type::Struct){
+            varStructType["global"][it->first] = it->second->value.Ptr.ref->value.Struct.name;
+        }
+    }
+        
+
     cout << "out_of_bounds_msg: .string \"out-of-bounds array access\"\ninvalid_alloc_msg: .string \"invalid allocation amount\"\n        \n.text\n\n";
 
         
@@ -255,13 +263,13 @@ void LirInst::codeGenString(string funcName){
         cout << "  addq %r9, %r8" << endl;
         cout << "  movq %r8, " << get_var_stack(value.Gep.lhs, funcName) << endl;
     } else if(type == LirInst::Gfp){
-        /*
-            movq -6952(%rbp), %r8
-            leaq 0(%r8), %r9
-            movq %r9, -456(%rbp)
-        */
         cout << "  movq " << get_var_stack(value.Gfp.src, funcName) << ", %r8" << endl;
-        cout << "  leaq " << structOffsets[varStructType[funcName][value.Gfp.src]][value.Gfp.field] << "(%r8), %r9" << endl;
+        if(varStructType[funcName].find(value.Gfp.src) != varStructType[funcName].end()){
+            cout << "  leaq " << structOffsets[varStructType[funcName][value.Gfp.src]][value.Gfp.field] << "(%r8), %r9" << endl;
+        }
+        else{
+            cout << "  leaq " << structOffsets[varStructType["global"][value.Gfp.src]][value.Gfp.field] << "(%r8), %r9" << endl;
+        }
         cout << "  movq %r9, " << get_var_stack(value.Gfp.lhs, funcName) << endl;
     } else if(type == LirInst::Load){
         cout << "  movq " << get_var_stack(value.Load.src, funcName) << ", %r8" << endl;
@@ -303,7 +311,7 @@ void Terminal::codeGenString(string funcName){
             stack_count+=8;
             Operand* op = *it;  
             if(op->type == Operand::Var){
-                cout << "  pushq " << varOffsets[funcName][op->value.Var.id] << "(%rbp)" << endl;
+                cout << "  pushq " << op->codeGenString(funcName) << endl;
             }
             else{
                 cout << "  pushq $" << op->value.Const.num << endl;
@@ -334,7 +342,7 @@ void Terminal::codeGenString(string funcName){
             stack_count+=8;
             Operand* op = *it;
             if(op->type == Operand::Var){
-                cout << "  pushq " << varOffsets[funcName][op->value.Var.id] << "(%rbp)" << endl;
+                cout << "  pushq " << op->codeGenString(funcName) << endl;
             }
             else{
                 cout << "  pushq $" << op->value.Const.num << endl;

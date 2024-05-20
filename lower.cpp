@@ -23,7 +23,7 @@ stack<string> while_end_labels;
 
 int num_ret = 0;
 
-bool DEBUG_LOWER = true;
+bool DEBUG_LOWER = false;
 
 /* 
  * 2.3 Lowering Expressions
@@ -401,7 +401,6 @@ void assign_new_lower(LIR_Function* lir_func, Stmt* stmt, vector<LIR*>& translat
 		Type* typ = new Type(Type::Ptr);
 		typ->value.Ptr.ref = stmt->value.Assign.rhs->value.New.type;
 		string w = create_fresh_var(lir_func, typ);
-		cout << "x: " << endl;
 		// let x = [lhs]^l
 		Operand* x = lval_lower(lir_func, stmt->value.Assign.lhs, translation_vector);
 		// emit Alloc(w, [e]^e)
@@ -501,27 +500,27 @@ void return_one_lower(LIR_Function* lir_func, Stmt* stmt, vector<LIR*>& translat
 Operand* exp_lower(LIR_Function* lir_func, Exp* exp, vector<LIR*>& translation_vector){
 	Operand* operand = NULL;
 	if(exp->type == Exp::Num){
-		if(DEBUG_LOWER) cout << "    Num<-" << endl;
+		if(DEBUG_LOWER) cout << "    ->Num" << endl;
 		operand = num_lower(lir_func, exp, translation_vector);
 		if(DEBUG_LOWER) cout << "    Num->" << endl;
 	}
 	else if(exp->type == Exp::Id){
-		if(DEBUG_LOWER) cout << "    Id<-" << endl;
+		if(DEBUG_LOWER) cout << "    ->Id" << endl;
 		operand = id_lower(lir_func, exp, translation_vector);
 		if(DEBUG_LOWER) cout << "    Id->" << endl;
 	}
 	else if(exp->type == Exp::Nil){
-		if(DEBUG_LOWER) cout << "    Nil<-" << endl;
+		if(DEBUG_LOWER) cout << "    ->Nil" << endl;
 		operand = nil_lower(lir_func, exp, translation_vector);
 		if(DEBUG_LOWER) cout << "    Nil->" << endl;
 	}
 	else if(exp->type == Exp::UnOp){
 		if (exp->value.UnOp.op->type == UnaryOp::Neg){
-			if(DEBUG_LOWER) cout << "    Neg<-" << endl;
+			if(DEBUG_LOWER) cout << "    ->Neg" << endl;
 			operand = unop_neg_lower(lir_func, exp, translation_vector);
 			if(DEBUG_LOWER) cout << "    Neg->" << endl;
 		} else {
-			if(DEBUG_LOWER) cout << "    Deref<-" << endl;
+			if(DEBUG_LOWER) cout << "    ->Deref" << endl;
 			operand = unop_deref_lower(lir_func, exp, translation_vector);
 			if(DEBUG_LOWER) cout << "    Deref->" << endl;
 		}
@@ -531,27 +530,27 @@ Operand* exp_lower(LIR_Function* lir_func, Exp* exp, vector<LIR*>& translation_v
 			exp->value.BinOp.op->type == BinaryOp::Sub ||
 			exp->value.BinOp.op->type == BinaryOp::Mul ||
 			exp->value.BinOp.op->type == BinaryOp::Div){
-			if (DEBUG_LOWER) cout << "    Arith<-" << endl;
+			if (DEBUG_LOWER) cout << "    ->Arith" << endl;
 			operand = binop_arith_lower(lir_func, exp, translation_vector);	
 			if (DEBUG_LOWER) cout << "    Arith->" << endl;
 		} else {
-			if (DEBUG_LOWER) cout << "    Compare<-" << endl;
+			if (DEBUG_LOWER) cout << "    ->Compare" << endl;
 			operand = binop_compare_lower(lir_func, exp, translation_vector);
 			if (DEBUG_LOWER) cout << "    Compare->" << endl;
 		}
 	}
 	else if(exp->type == Exp::ArrayAccess){
-		if(DEBUG_LOWER) cout << "    ArrayAccess<-" << endl;
+		if(DEBUG_LOWER) cout << "    ->ArrayAccess" << endl;
 		operand = arrayaccess_lower(lir_func, exp, translation_vector);
 		if(DEBUG_LOWER) cout << "    ArrayAccess->" << endl;
 	}
 	else if(exp->type == Exp::FieldAccess){
-		if(DEBUG_LOWER) cout << "    FieldAccess<-" << endl;
+		if(DEBUG_LOWER) cout << "    ->FieldAccess" << endl;
 		operand = fieldaccess_lower(lir_func, exp, translation_vector);
 		if(DEBUG_LOWER) cout << "    FieldAccess->" << endl;
 	}
 	else if(exp->type == Exp::Call){
-		if(DEBUG_LOWER) cout << "    Call<-" << endl;
+		if(DEBUG_LOWER) cout << "    ->Call" << endl;
 		operand = call_lower(lir_func, exp, translation_vector);
 		if(DEBUG_LOWER) cout << "    Call->" << endl;
 	}	
@@ -618,6 +617,9 @@ Operand* unop_deref_lower(LIR_Function* lir_func, Exp* exp, vector<LIR*>& transl
 	}
 	else if(lir->globals.find(src->value.Var.id) != lir->globals.end()){
 		lhs = create_fresh_var(lir_func, lir->globals[src->value.Var.id]->value.Ptr.ref);
+	}
+	else if(lir_func->params.find(src->value.Var.id) != lir_func->params.end()){
+		lhs = create_fresh_var(lir_func, lir_func->params[src->value.Var.id]->value.Ptr.ref);
 	}
 	else{
 		cout << "Bad Bad" << endl;
@@ -708,40 +710,37 @@ Operand* binop_compare_lower(LIR_Function* lir_func, Exp* exp, vector<LIR*>& tra
 }
 
 Operand* arrayaccess_lower(LIR_Function* lir_func, Exp* exp, vector<LIR*>& translation_vector){
-	cout << "Gen 1" << endl;
 	// let src = ptr
 	Operand* src = exp_lower(lir_func, exp->value.ArrayAccess.ptr, translation_vector);
 	// let idx = index
 	Operand* idx = exp_lower(lir_func, exp->value.ArrayAccess.index, translation_vector);
 	// let elem be a fresh var of type &t s . t . src :&t
-	cout << "Gen 2" << endl;
 	string elem;
 	if(lir_func->locals.find(src->value.Var.id) != lir_func->locals.end()){
-		cout << "Gen 3" << endl;
 		elem = create_fresh_var(lir_func, lir_func->locals[src->value.Var.id]);
 	}
 	else if(lir->globals.find(src->value.Var.id) != lir->globals.end()){
-		cout << "Gen 4" << endl;
 		elem = create_fresh_var(lir_func, lir->globals[src->value.Var.id]);
+	}
+	else if(lir_func->params.find(src->value.Var.id) != lir_func->params.end()){
+		elem = create_fresh_var(lir_func, lir_func->params[src->value.Var.id]->value.Ptr.ref);
 	}
 	else{
 		cout << "Bad Bad" << endl;
 	}
 	// let lhs be a fresh var of type t s . t . src :&t
-	cout << "Gen 5" << endl;
 	string lhs;
 	if(lir_func->locals.find(src->value.Var.id) != lir_func->locals.end()){
-		cout << "Gen 6: " << (lir_func->locals[src->value.Var.id] == NULL) << endl;
-		lir_func->locals[src->value.Var.id]->type_string();
 		lhs = create_fresh_var(lir_func, lir_func->locals[src->value.Var.id]->value.Ptr.ref);
 	}
 	else if(lir->globals.find(src->value.Var.id) != lir->globals.end()){
-		cout << "Gen 7" << endl;
 		lhs = create_fresh_var(lir_func, lir->globals[src->value.Var.id]->value.Ptr.ref);
+	}
+	else if(lir_func->params.find(src->value.Var.id) != lir_func->params.end()){
+		lhs = create_fresh_var(lir_func, lir_func->params[src->value.Var.id]->value.Ptr.ref);
 	}
 	else
 		cout << "Bad Bad" << endl;
-	cout << "Gen 8" << endl;
 		
 	// emit Gep(elem, src, idx)
 	LirInst* gep = new LirInst(LirInst::Gep);
@@ -764,12 +763,16 @@ Operand* fieldaccess_lower(LIR_Function* lir_func, Exp* exp, vector<LIR*>& trans
 	// let src = ptr
 	Operand* src = exp_lower(lir_func, exp->value.FieldAccess.ptr, translation_vector);
 	// let fldp be a fresh var of type &t s . t . src :& Structid , id [ fld ]:t
-	// cout << src->value.Var.id << ": " << lir_func->locals[src->value.Var.id]->type_string() << endl;
 	string struct_name;
-	if(lir_func->locals.find(src->value.Var.id) != lir_func->locals.end())
-		struct_name = lir_func->locals[src->value.Var.id]->value.Ptr.ref->value.Struct.name;
-	else if(lir->globals.find(src->value.Var.id) != lir->globals.end())
-		struct_name = lir->globals[src->value.Var.id]->value.Ptr.ref->value.Struct.name;
+	if(lir_func->locals.find(src->value.Var.id) != lir_func->locals.end()){
+		struct_name = get_struct_name(lir_func->locals[src->value.Var.id]);
+	}
+	else if(lir->globals.find(src->value.Var.id) != lir->globals.end()){
+		struct_name = get_struct_name(lir->globals[src->value.Var.id]);
+	}
+	else if(lir_func->params.find(src->value.Var.id) != lir_func->params.end()){
+		struct_name = get_struct_name(lir_func->params[src->value.Var.id]);
+	}
 	else
 		cout << "Bad Bad" << endl;
 	Type* fldp_type = new Type(Type::Ptr);
@@ -808,10 +811,15 @@ Operand* call_lower(LIR_Function* lir_func, Exp* exp, vector<LIR*>& translation_
 	Operand* fun = exp_lower(lir_func, exp->value.Call.callee, translation_vector);
 	// let lhs be a fresh var of type τ s . t . fun :&( _ )→ τ
 	string lhs;
-	if(lir->functions.find(fun->value.Var.id) != lir->functions.end())
+	if(lir->functions.find(fun->value.Var.id) != lir->functions.end()){
 		lhs = create_fresh_var(lir_func, lir->functions[fun->value.Var.id]->rettyp);
-	else
-		lhs = create_fresh_var(lir_func, lir->externs[fun->value.Var.id]);
+	}
+	else if(lir_func->locals.find(fun->value.Var.id) != lir_func->locals.end()){
+		lhs = create_fresh_var(lir_func, lir_func->locals[fun->value.Var.id]->value.Ptr.ref->value.Fn.ret);
+	}
+	else{
+		lhs = create_fresh_var(lir_func, lir->externs[fun->value.Var.id]->value.Fn.ret);
+	}
 	// if direct and name is an extern then emit CallExt(lhs, name, aops)
 	if(direct && lir->externs.find(exp->value.Call.callee->value.Id.name) != lir->externs.end()){
 		LirInst* call_ext = new LirInst(LirInst::CallExt);
@@ -861,13 +869,19 @@ Operand* call_lower(LIR_Function* lir_func, Exp* exp, vector<LIR*>& translation_
 Operand* lval_lower(LIR_Function* lir_func, Lval* lval, vector<LIR*>& translation_vector){
 	Operand* operand = NULL;
 	if (lval->type == Lval::Deref){
+		if(DEBUG_LOWER) cout << "    ->lval_deref" << endl;
 		operand = deref_lower(lir_func, lval, translation_vector);
+		if(DEBUG_LOWER) cout << "    lval_deref->" << endl;
 	} 
 	else if (lval->type == Lval::ArrayAccess){
+		if(DEBUG_LOWER) cout << "    ->lval_arrayAccess" << endl;
 		operand = arrayaccess_lower(lir_func, lval, translation_vector);
+		if(DEBUG_LOWER) cout << "    lval_arrayAccess->" << endl;
 	} 
 	else if (lval->type == Lval::FieldAccess){
+		if(DEBUG_LOWER) cout << "    ->lval_fieldAccess" << endl;
 		operand = fieldaccess_lower(lir_func, lval, translation_vector);
+		if(DEBUG_LOWER) cout << "    lval_fieldAccess->" << endl;
 	} 
 	else if (lval->type == Lval::Id){ 
 		cout << "ID WAS INPUTTED, not valid" << endl;
@@ -886,10 +900,15 @@ Operand* arrayaccess_lower(LIR_Function* lir_func, Lval* lval, vector<LIR*>& tra
 	Operand* idx = exp_lower(lir_func, lval->value.ArrayAccess.index, translation_vector);
 	// let lhs be a fresh var of type τ s . t . src :τ
 	string lhs;
-	if(lir_func->locals.find(src->value.Var.id) != lir_func->locals.end())
+	if(lir_func->locals.find(src->value.Var.id) != lir_func->locals.end()){
 		lhs = create_fresh_var(lir_func, lir_func->locals[src->value.Var.id]->value.Ptr.ref);
-	else if(lir->globals.find(src->value.Var.id) != lir->globals.end())
+	}
+	else if(lir->globals.find(src->value.Var.id) != lir->globals.end()){
 		lhs = create_fresh_var(lir_func, lir->globals[src->value.Var.id]->value.Ptr.ref);
+	}
+	else if(lir_func->params.find(src->value.Var.id) != lir_func->params.end()){
+		lhs = create_fresh_var(lir_func, lir_func->params[src->value.Var.id]->value.Ptr.ref);
+	}
 	else
 		cout << "Bad Bad" << endl;
 	// emit Gep(lhs, src, idx)
@@ -909,10 +928,15 @@ Operand* fieldaccess_lower(LIR_Function* lir_func, Lval* lval, vector<LIR*>& tra
 	Operand* src = lval_exp_lower(lir_func, lval->value.FieldAccess.ptr, translation_vector);
 	// let lhs be a fresh var of type &τ s . t . src :& Structid , id [ fld ]:τ
 	string struct_name;
-	if(lir_func->locals.find(src->value.Var.id) != lir_func->locals.end())
-		struct_name = lir_func->locals[src->value.Var.id]->value.Ptr.ref->value.Struct.name;
-	else if(lir->globals.find(src->value.Var.id) != lir->globals.end())
-		struct_name = lir->globals[src->value.Var.id]->value.Ptr.ref->value.Struct.name;
+	if(lir_func->locals.find(src->value.Var.id) != lir_func->locals.end()){
+		struct_name = get_struct_name(lir_func->locals[src->value.Var.id]);
+	}
+	else if(lir->globals.find(src->value.Var.id) != lir->globals.end()){
+		struct_name = get_struct_name(lir->globals[src->value.Var.id]);
+	}
+	else if(lir_func->params.find(src->value.Var.id) != lir_func->params.end()){
+		struct_name = get_struct_name(lir_func->params[src->value.Var.id]);
+	}
 	else
 		cout << "Bad Bad" << endl;
 	Type* lhs_type = new Type(Type::Ptr);
@@ -955,12 +979,18 @@ Operand* id_lower(LIR_Function* lir_func, Lval* lval, vector<LIR*>& translation_
 Operand* not_id_lower(LIR_Function* lir_func, Lval* lval, vector<LIR*>& translation_vector){
 	// let src = [[lv]]^l
 	Operand* src = lval_lower(lir_func, lval, translation_vector);
+
 	// let lhs be a fresh var of type T s . t . src :&T
 	string lhs;
-	if(lir_func->locals.find(src->value.Var.id) != lir_func->locals.end())
+	if(lir_func->locals.find(src->value.Var.id) != lir_func->locals.end()){
 		lhs = create_fresh_var(lir_func, lir_func->locals[src->value.Var.id]->value.Ptr.ref);
-	else if(lir->globals.find(src->value.Var.id) != lir->globals.end())
+	}
+	else if(lir->globals.find(src->value.Var.id) != lir->globals.end()){
 		lhs = create_fresh_var(lir_func, lir->globals[src->value.Var.id]->value.Ptr.ref);
+	}
+	else if(lir_func->params.find(src->value.Var.id) != lir_func->params.end()){
+		lhs = create_fresh_var(lir_func, lir_func->params[src->value.Var.id]->value.Ptr.ref);
+	}
 	else
 		cout << "Bad Bad" << endl;
 	// emit Load(lhs, src)

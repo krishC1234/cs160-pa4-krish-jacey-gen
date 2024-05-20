@@ -118,7 +118,7 @@ int main(int argc, char* argv[]) {
         // cout << endl;
         LIR_Program* lir = lower(prog);
         // validate(prog);
-        // lir->toString();
+        lir->toString();
         lir->codeGenString();
     }
     catch(const runtime_error& e){

@@ -339,7 +339,6 @@ void validate(Program* prog);
 
 bool compare_recurse(Type* a, Type* b);
 bool compare_recurse(Exp* a, Exp* b, unordered_map<string, Type*> gamma, string func_name);
-string get_struct_name(Exp* a);
-string get_struct_name(Lval* a);
+string get_struct_name(Type* a);
 
 #endif

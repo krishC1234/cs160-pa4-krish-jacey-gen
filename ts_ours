@@ -1,738 +1,4344 @@
-entered stmt_lower
-  stmt assign_exp_lower
-    FieldAccess<-
-    Call<-
-    Num<-
-    Num->
-    Compare<-
-    Id<-
-    Id->
-    Call<-
-    Id<-
-    Id->
-    Call->
-    Compare->
-    FieldAccess<-
-    Id<-
-    Id->
-    FieldAccess->
-    Deref<-
-    Id<-
-    Id->
-    Deref->
-    ArrayAccess<-
-Gen 1
-    Id<-
-    Id->
-    Id<-
-    Id->
-Gen 2
-Gen 3
-Gen 5
-Gen 6: 0
-Gen 8
-    ArrayAccess->
-    ArrayAccess<-
-Gen 1
-    Id<-
-    Id->
-    Id<-
-    Id->
-Gen 2
-Gen 3
-Gen 5
-Gen 6: 0
-Gen 8
-    ArrayAccess->
-    Id<-
-    Id->
-    Call->
-    FieldAccess->
-exited stmt_lower
-entered stmt_lower
-  stmt assign_exp_lower
-    ArrayAccess<-
-Gen 1
-    ArrayAccess<-
-Gen 1
-    ArrayAccess<-
-Gen 1
-    Id<-
-    Id->
-    Num<-
-    Num->
-Gen 2
-Gen 3
-Gen 5
-Gen 6: 0
-Gen 8
-    ArrayAccess->
-    Arith<-
-    Call<-
-    Id<-
-    Id->
-    Call->
-    Num<-
-    Num->
-    Arith->
-Gen 2
-Gen 3
-Gen 5
-Gen 6: 0
-Gen 8
-    ArrayAccess->
-    ArrayAccess<-
-Gen 1
-    ArrayAccess<-
-Gen 1
-    Id<-
-    Id->
-    Call<-
-    Id<-
-    Id->
-    Call->
-Gen 2
-Gen 3
-Gen 5
-Gen 6: 0
-Gen 8
-    ArrayAccess->
-    Call<-
-    Id<-
-    Id->
-    Id<-
-    Id->
-    Call->
-Gen 2
-Gen 3
-Gen 5
-Gen 6: 0
-Gen 8
-    ArrayAccess->
-Gen 2
-Gen 3
-Gen 5
-Gen 6: 0
-Gen 8
-    ArrayAccess->
-exited stmt_lower
-entered stmt_lower
-  stmt assign_exp_lower
-    Id<-
-    Id->
-exited stmt_lower
-entered stmt_lower
-  stmt assign_exp_lower
-    Num<-
-    Num->
-exited stmt_lower
-entered stmt_lower
-  stmt call_lower
-    Deref<-
-    ArrayAccess<-
-Gen 1
-    Id<-
-    Id->
-    Deref<-
-    Id<-
-    Id->
-    Deref->
-Gen 2
-Gen 3
-Gen 5
-Gen 6: 0
-Gen 8
-    ArrayAccess->
-    Deref->
-Call to function
-exited stmt_lower
-entered stmt_lower
-  stmt assign_new_lower
-x: 
-    Num<-
-    Num->
-exited stmt_lower
-entered stmt_lower
-  stmt call_lower
-    Compare<-
-    Deref<-
-    ArrayAccess<-
-Gen 1
-    Id<-
-    Id->
-    Id<-
-    Id->
-Gen 2
-Gen 3
-Gen 5
-Gen 6: 0
-Gen 8
-    ArrayAccess->
-    Deref->
-    ArrayAccess<-
-Gen 1
-    Id<-
-    Id->
-    Deref<-
-    Id<-
-    Id->
-    Deref->
-Gen 2
-Gen 3
-Gen 5
-Gen 6: 0
-Gen 8
-    ArrayAccess->
-    Compare->
-    Call<-
-    Deref<-
-    ArrayAccess<-
-Gen 1
-    Id<-
-    Id->
-    Id<-
-    Id->
-Gen 2
-Gen 3
-Gen 5
-Gen 6: 0
-Gen 8
-    ArrayAccess->
-    Deref->
-    ArrayAccess<-
-Gen 1
-    ArrayAccess<-
-Gen 1
-    Id<-
-    Id->
-    Id<-
-    Id->
-Gen 2
-Gen 3
-Gen 5
-Gen 6: 0
-Gen 8
-    ArrayAccess->
-    Compare<-
-    Num<-
-    Num->
-    Call<-
-    Id<-
-    Id->
-    Call->
-    Compare->
-Gen 2
-Gen 3
-Gen 5
-Gen 6: 0
-Gen 8
-    ArrayAccess->
-    Call->
-Call to function
-exited stmt_lower
-entered stmt_lower
-  stmt assign_new_lower
-x: 
-    FieldAccess<-
-    ArrayAccess<-
-Gen 1
-    Id<-
-    Id->
-    Num<-
-    Num->
-Gen 2
-Gen 3
-Gen 5
-Gen 6: 0
-Gen 8
-    ArrayAccess->
-    FieldAccess->
-    Deref<-
-    ArrayAccess<-
-Gen 1
-    ArrayAccess<-
-Gen 1
-    Id<-
-    Id->
-    Num<-
-    Num->
-Gen 2
-Gen 3
-Gen 5
-Gen 6: 0
-Gen 8
-    ArrayAccess->
-    Arith<-
-    Id<-
-    Id->
-    Call<-
-    Id<-
-    Id->
-    Call->
-    Arith->
-Gen 2
-Gen 3
-Gen 5
-Gen 6: 0
-Gen 8
-    ArrayAccess->
-    Deref->
-exited stmt_lower
-entered stmt_lower
-  stmt assign_new_lower
-    Num<-
-    Num->
-exited stmt_lower
-entered stmt_lower
-  stmt if_lower
-entered if_lower
-    Num<-
-    Num->
-entered stmt_lower
-  stmt assign_exp_lower
-    ArrayAccess<-
-Gen 1
-    FieldAccess<-
-    FieldAccess<-
-    Id<-
-    Id->
-    FieldAccess->
-    FieldAccess->
-    Call<-
-    Neg<-
-    Num<-
-    Num->
-    Neg->
-    ArrayAccess<-
-Gen 1
-    Id<-
-    Id->
-    Call<-
-    Id<-
-    Id->
-    Call->
-Gen 2
-Gen 3
-Gen 5
-Gen 6: 0
-Gen 8
-    ArrayAccess->
-    Num<-
-    Num->
-    Id<-
-    Id->
-    Call->
-Gen 2
-Gen 3
-Gen 5
-Gen 6: 0
-Gen 8
-    ArrayAccess->
-exited stmt_lower
-entered stmt_lower
-  stmt while_lower
-    Neg<-
-    ArrayAccess<-
-Gen 1
-    Call<-
-    Id<-
-    Id->
-    Id<-
-    Id->
-    Call->
-    Call<-
-    Call<-
-    Id<-
-    Id->
-    Call->
-    Id<-
-    Id->
-    Id<-
-    Id->
-    Call->
-Gen 2
-Gen 3
-Gen 5
-Gen 6: 0
-Gen 8
-    ArrayAccess->
-    Neg->
-entered stmt_lower
-  stmt call_lower
-    Call<-
-    ArrayAccess<-
-Gen 1
-    ArrayAccess<-
-Gen 1
-    Id<-
-    Id->
-    Id<-
-    Id->
-Gen 2
-Gen 3
-Gen 5
-Gen 6: 0
-Gen 8
-    ArrayAccess->
-    Call<-
-    Num<-
-    Num->
-    Id<-
-    Id->
-    Id<-
-    Id->
-    Call->
-Gen 2
-Gen 3
-Gen 5
-Gen 6: 0
-Gen 8
-    ArrayAccess->
-    Id<-
-    Id->
-    Id<-
-    Id->
-    Call->
-    Deref<-
-    Id<-
-    Id->
-    Deref->
-    Call<-
-    FieldAccess<-
-    FieldAccess<-
-    Id<-
-    Id->
-    FieldAccess->
-    FieldAccess->
-    FieldAccess<-
-    ArrayAccess<-
-Gen 1
-    Id<-
-    Id->
-    Id<-
-    Id->
-Gen 2
-Gen 3
-Gen 5
-Gen 6: 0
-Gen 8
-    ArrayAccess->
-    FieldAccess->
-    ArrayAccess<-
-Gen 1
-    ArrayAccess<-
-Gen 1
-    Id<-
-    Id->
-    Id<-
-    Id->
-Gen 2
-Gen 3
-Gen 5
-Gen 6: 0
-Gen 8
-    ArrayAccess->
-    FieldAccess<-
-    Id<-
-    Id->
-    FieldAccess->
-Gen 2
-Gen 3
-Gen 5
-Gen 6: 0
-Gen 8
-    ArrayAccess->
-    Call->
-Call to extern
-exited stmt_lower
-entered stmt_lower
-  stmt assign_new_lower
-    Id<-
-    Id->
-exited stmt_lower
-entered stmt_lower
-  stmt call_lower
-    Nil<-
-    Nil->
-Call to indirect
-exited stmt_lower
-entered stmt_lower
-  stmt call_lower
-Call to function
-exited stmt_lower
-entered stmt_lower
-  stmt call_lower
-    Neg<-
-    Id<-
-    Id->
-    Neg->
-    ArrayAccess<-
-Gen 1
-    ArrayAccess<-
-Gen 1
-    ArrayAccess<-
-Gen 1
-    Id<-
-    Id->
-    Num<-
-    Num->
-Gen 2
-Gen 3
-Gen 5
-Gen 6: 0
-Gen 8
-    ArrayAccess->
-    Num<-
-    Num->
-Gen 2
-Gen 3
-Gen 5
-Gen 6: 0
-Gen 8
-    ArrayAccess->
-    Num<-
-    Num->
-Gen 2
-Gen 3
-Gen 5
-Gen 6: 0
-Gen 8
-    ArrayAccess->
-Call to extern
-exited stmt_lower
-entered stmt_lower
-  stmt assign_new_lower
-    Call<-
-    Deref<-
-    ArrayAccess<-
-Gen 1
-    Id<-
-    Id->
-    Id<-
-    Id->
-Gen 2
-Gen 3
-Gen 5
-Gen 6: 0
-Gen 8
-    ArrayAccess->
-    Deref->
-    Id<-
-    Id->
-    Call->
-exited stmt_lower
-entered stmt_lower
-  stmt call_lower
-    ArrayAccess<-
-Gen 1
-    Id<-
-    Id->
-    Call<-
-    Compare<-
-    Id<-
-    Id->
-    Id<-
-    Id->
-    Compare->
-    Deref<-
-    Id<-
-    Id->
-    Deref->
-    Num<-
-    Num->
-    Id<-
-    Id->
-    Call->
-Gen 2
-Gen 3
-Gen 5
-Gen 6: 0
-Gen 8
-    ArrayAccess->
-Call to indirect
-exited stmt_lower
-exited stmt_lower
-entered stmt_lower
-  stmt while_lower
-    Arith<-
-    Num<-
-    Num->
-    Call<-
-    Id<-
-    Id->
-    Call->
-    Arith->
-entered stmt_lower
-  stmt assign_exp_lower
-    FieldAccess<-
-    Id<-
-    Id->
-    FieldAccess->
-exited stmt_lower
-entered stmt_lower
-  stmt call_lower
-    ArrayAccess<-
-Gen 1
-    Id<-
-    Id->
-    FieldAccess<-
-    ArrayAccess<-
-Gen 1
-    Id<-
-    Id->
-    Id<-
-    Id->
-Gen 2
-Gen 3
-Gen 5
-Gen 6: 0
-Gen 8
-    ArrayAccess->
-    FieldAccess->
-Gen 2
-Gen 3
-Gen 5
-Gen 6: 0
-Gen 8
-    ArrayAccess->
-Call to function
-exited stmt_lower
-entered stmt_lower
-  stmt call_lower
-    FieldAccess<-
-    FieldAccess<-
-    Id<-
-    Id->
-    FieldAccess->
-    FieldAccess->
-Call to function
-exited stmt_lower
-entered stmt_lower
-  stmt call_lower
-Call to function
-exited stmt_lower
-entered stmt_lower
-  stmt assign_new_lower
-x: 
-    Num<-
-    Num->
-exited stmt_lower
-entered stmt_lower
-  stmt assign_new_lower
-    Num<-
-    Num->
-exited stmt_lower
-entered stmt_lower
-  stmt assign_exp_lower
-    Deref<-
-    Id<-
-    Id->
-    Deref->
-exited stmt_lower
-entered stmt_lower
-  stmt call_lower
-Call to function
-exited stmt_lower
-entered stmt_lower
-  stmt call_lower
-    Deref<-
-    FieldAccess<-
-    FieldAccess<-
-    Id<-
-    Id->
-    FieldAccess->
-    FieldAccess->
-    Deref->
-    Call<-
-    FieldAccess<-
-    Id<-
-    Id->
-    FieldAccess->
-    Id<-
-    Id->
-    Call->
-Call to indirect
-exited stmt_lower
-exited stmt_lower
-entered stmt_lower
-  stmt while_lower
-    Num<-
-    Num->
-entered stmt_lower
-  stmt assign_exp_lower
-    FieldAccess<-
-    Id<-
-    Id->
-    FieldAccess->
-exited stmt_lower
-entered stmt_lower
-  stmt call_lower
-    Id<-
-    Id->
-    Deref<-
-    ArrayAccess<-
-Gen 1
-    Id<-
-    Id->
-    FieldAccess<-
-    Id<-
-    Id->
-    FieldAccess->
-Gen 2
-Gen 3
-Gen 5
-Gen 6: 0
-Gen 8
-    ArrayAccess->
-    Deref->
-Call to extern
-exited stmt_lower
-entered stmt_lower
-  stmt assign_new_lower
-    Num<-
-    Num->
-exited stmt_lower
-entered stmt_lower
-  stmt assign_new_lower
-    ArrayAccess<-
-Gen 1
-    ArrayAccess<-
-Gen 1
-    ArrayAccess<-
-Gen 1
-    Id<-
-    Id->
-    Id<-
-    Id->
-Gen 2
-Gen 3
-Gen 5
-Gen 6: 0
-Gen 8
-    ArrayAccess->
-    Call<-
-    Id<-
-    Id->
-    Call->
-Gen 2
-Gen 3
-Gen 5
-Gen 6: 0
-Gen 8
-    ArrayAccess->
-    ArrayAccess<-
-Gen 1
-    Call<-
-    Id<-
-    Id->
-    Id<-
-    Id->
-    Call->
-    Deref<-
-    Id<-
-    Id->
-    Deref->
-Gen 2
-Gen 3
-Gen 5
-Gen 6: 1
+Struct st1
+  f1 : Int
+  f2 : Ptr(Int)
+
+Struct st2
+  f1 : Ptr(Struct(st1))
+
+Externs
+  e1 : Fn([], Int)
+  e2 : Fn([Ptr(Int)], Int)
+  e3 : Fn([Int, Ptr(Struct(st))], Int)
+  e4 : Fn([Int, Ptr(Struct(st2)), Int], Int)
+  e5 : Fn([Int, Int, Int, Ptr(Int), Int, Ptr(Int)], Ptr(Struct(st2)))
+
+Globals
+  bar : Ptr(Int)
+  baz : Ptr(Struct(st1))
+  f1 : Ptr(Fn([], Int))
+  f2 : Ptr(Fn([Ptr(Int)], Ptr(Int)))
+  f3 : Ptr(Fn([Int, Ptr(Int)], Int))
+  fez : Ptr(Struct(st2))
+  foo : Int
+
+Function f1() -> Int {
+  Locals
+
+  entry:
+    Ret(42)
+}
+
+Function f2(p:Ptr(Int)) -> Ptr(Int) {
+  Locals
+
+  entry:
+    Ret(p)
+}
+
+Function f3(p:Int, q:Ptr(Int)) -> Int {
+  Locals
+    _t1 : Int
+    _t2 : Int
+
+  entry:
+    Load(_t1, q)
+    Arith(_t2, add, p, _t1)
+    Ret(_t2)
+}
+
+Function main() -> Int {
+  Locals
+    _t1 : Int
+    _t10 : Ptr(Struct(st2))
+    _t100 : Int
+    _t101 : Ptr(Ptr(Fn([Int, Ptr(Int)], Int)))
+    _t102 : Ptr(Fn([Int, Ptr(Int)], Int))
+    _t103 : Int
+    _t104 : Ptr(Ptr(Fn([Ptr(Int)], Ptr(Int))))
+    _t105 : Ptr(Fn([Ptr(Int)], Ptr(Int)))
+    _t106 : Int
+    _t107 : Ptr(Ptr(Ptr(Ptr(Struct(st)))))
+    _t108 : Ptr(Ptr(Ptr(Struct(st))))
+    _t109 : Ptr(Ptr(Ptr(Struct(st))))
+    _t11 : Ptr(Ptr(Struct(st1)))
+    _t110 : Ptr(Ptr(Struct(st)))
+    _t111 : Ptr(Ptr(Struct(st)))
+    _t112 : Ptr(Struct(st))
+    _t113 : Ptr(Ptr(Ptr(Int)))
+    _t114 : Ptr(Ptr(Int))
+    _t115 : Ptr(Int)
+    _t116 : Int
+    _t117 : Int
+    _t118 : Ptr(Struct(st2))
+    _t119 : Int
+    _t12 : Ptr(Struct(st1))
+    _t120 : Ptr(Ptr(Int))
+    _t121 : Ptr(Int)
+    _t122 : Int
+    _t123 : Int
+    _t124 : Ptr(Int)
+    _t125 : Int
+    _t126 : Ptr(Ptr(Struct(st1)))
+    _t127 : Ptr(Struct(st1))
+    _t128 : Ptr(Int)
+    _t129 : Int
+    _t13 : Ptr(Ptr(Ptr(Ptr(Ptr(Int)))))
+    _t130 : Ptr(Ptr(Int))
+    _t131 : Ptr(Int)
+    _t132 : Ptr(Ptr(Struct(st1)))
+    _t133 : Ptr(Struct(st1))
+    _t134 : Ptr(Ptr(Int))
+    _t135 : Ptr(Int)
+    _t136 : Ptr(Ptr(Int))
+    _t137 : Ptr(Struct(st2))
+    _t138 : Ptr(Ptr(Struct(st1)))
+    _t139 : Ptr(Struct(st1))
+    _t14 : Ptr(Ptr(Ptr(Ptr(Int))))
+    _t140 : Ptr(Ptr(Int))
+    _t141 : Ptr(Int)
+    _t142 : Int
+    _t143 : Ptr(Ptr(Int))
+    _t144 : Ptr(Int)
+    _t145 : Ptr(Int)
+    _t146 : Ptr(Int)
+    _t147 : Int
+    _t148 : Ptr(Int)
+    _t149 : Int
+    _t15 : Int
+    _t150 : Ptr(Ptr(Ptr(Struct(st))))
+    _t151 : Ptr(Ptr(Struct(st)))
+    _t152 : Ptr(Struct(st))
+    _t153 : Ptr(Ptr(Ptr(Int)))
+    _t154 : Ptr(Ptr(Int))
+    _t155 : Int
+    _t156 : Ptr(Ptr(Int))
+    _t157 : Ptr(Int)
+    _t158 : Ptr(Int)
+    _t159 : Int
+    _t16 : Int
+    _t160 : Ptr(Int)
+    _t161 : Int
+    _t162 : Ptr(Int)
+    _t163 : Int
+    _t164 : Ptr(Int)
+    _t165 : Int
+    _t166 : Ptr(Ptr(Ptr(Fn([Ptr(Int)], Ptr(Int)))))
+    _t167 : Ptr(Ptr(Fn([Ptr(Int)], Ptr(Int))))
+    _t168 : Ptr(Ptr(Fn([Ptr(Int)], Ptr(Int))))
+    _t169 : Ptr(Fn([Ptr(Int)], Ptr(Int)))
+    _t17 : Ptr(Ptr(Ptr(Ptr(Int))))
+    _t170 : Ptr(Int)
+    _t171 : Ptr(Ptr(Ptr(Fn([Ptr(Int)], Ptr(Int)))))
+    _t172 : Ptr(Ptr(Fn([Ptr(Int)], Ptr(Int))))
+    _t173 : Int
+    _t174 : Ptr(Fn([Ptr(Int)], Ptr(Int)))
+    _t175 : Fn([Ptr(Int)], Ptr(Int))
+    _t176 : Int
+    _t177 : Int
+    _t178 : Ptr(Ptr(Ptr(Ptr(Int))))
+    _t179 : Ptr(Ptr(Ptr(Int)))
+    _t18 : Ptr(Ptr(Ptr(Int)))
+    _t180 : Int
+    _t181 : Ptr(Ptr(Ptr(Int)))
+    _t182 : Ptr(Ptr(Int))
+    _t183 : Ptr(Int)
+    _t184 : Int
+    _t185 : Ptr(Ptr(Struct(st1)))
+    _t186 : Ptr(Struct(st1))
+    _t187 : Ptr(Ptr(Int))
+    _t188 : Ptr(Int)
+    _t189 : Int
+    _t19 : Int
+    _t190 : Ptr(Ptr(Struct(st1)))
+    _t191 : Ptr(Struct(st1))
+    _t192 : Ptr(Int)
+    _t193 : Int
+    _t194 : Int
+    _t195 : Ptr(Struct(st2))
+    _t196 : Ptr(Ptr(Int))
+    _t197 : Ptr(Int)
+    _t198 : Ptr(Ptr(Ptr(Int)))
+    _t199 : Ptr(Ptr(Int))
+    _t2 : Int
+    _t20 : Ptr(Ptr(Int))
+    _t200 : Int
+    _t201 : Ptr(Ptr(Int))
+    _t202 : Ptr(Int)
+    _t203 : Ptr(Ptr(Int))
+    _t204 : Ptr(Int)
+    _t205 : Int
+    _t206 : Ptr(Int)
+    _t207 : Int
+    _t208 : Ptr(Ptr(Int))
+    _t209 : Ptr(Int)
+    _t21 : Ptr(Int)
+    _t210 : Ptr(Int)
+    _t211 : Int
+    _t212 : Ptr(Int)
+    _t213 : Ptr(Int)
+    _t214 : Ptr(Int)
+    _t215 : Ptr(Ptr(Ptr(Ptr(Struct(st1)))))
+    _t216 : Ptr(Ptr(Ptr(Struct(st1))))
+    _t217 : Int
+    _t218 : Int
+    _t219 : Ptr(Ptr(Ptr(Struct(st1))))
+    _t22 : Int
+    _t220 : Ptr(Ptr(Struct(st1)))
+    _t221 : Ptr(Ptr(Struct(st1)))
+    _t222 : Ptr(Struct(st1))
+    _t223 : Int
+    _t224 : Ptr(Ptr(Ptr(Ptr(Int))))
+    _t225 : Ptr(Ptr(Ptr(Int)))
+    _t226 : Ptr(Ptr(Int))
+    _t227 : Ptr(Int)
+    _t228 : Ptr(Int)
+    _t229 : Ptr(Int)
+    _t23 : Ptr(Int)
+    _t230 : Int
+    _t231 : Int
+    _t232 : Ptr(Int)
+    _t233 : Ptr(Int)
+    _t234 : Int
+    _t235 : Ptr(Ptr(Struct(st1)))
+    _t236 : Ptr(Struct(st1))
+    _t237 : Ptr(Ptr(Int))
+    _t238 : Ptr(Int)
+    _t239 : Ptr(Int)
+    _t24 : Int
+    _t240 : Ptr(Ptr(Fn([Ptr(Int)], Ptr(Int))))
+    _t241 : Ptr(Fn([Ptr(Int)], Ptr(Int)))
+    _t242 : Ptr(Int)
+    _t243 : Int
+    _t244 : Ptr(Int)
+    _t245 : Int
+    _t246 : Ptr(Ptr(Ptr(Fn([], Int))))
+    _t247 : Ptr(Ptr(Fn([], Int)))
+    _t248 : Int
+    _t249 : Ptr(Ptr(Fn([], Int)))
+    _t25 : Ptr(Ptr(Ptr(Int)))
+    _t250 : Ptr(Fn([], Int))
+    _t251 : Int
+    _t252 : Int
+    _t253 : Ptr(Ptr(Int))
+    _t254 : Ptr(Int)
+    _t255 : Ptr(Int)
+    _t256 : Ptr(Ptr(Int))
+    _t257 : Ptr(Int)
+    _t258 : Ptr(Ptr(Fn([Ptr(Int)], Ptr(Int))))
+    _t259 : Ptr(Fn([Ptr(Int)], Ptr(Int)))
+    _t26 : Ptr(Ptr(Int))
+    _t260 : Ptr(Int)
+    _t261 : Int
+    _t262 : Ptr(Int)
+    _t263 : Ptr(Int)
+    _t264 : Int
+    _t265 : Ptr(Struct(st1))
+    _t266 : Struct(st1)
+    _t267 : Ptr(Ptr(Int))
+    _t268 : Ptr(Ptr(Fn([Ptr(Int)], Ptr(Int))))
+    _t269 : Ptr(Fn([Ptr(Int)], Ptr(Int)))
+    _t27 : Int
+    _t270 : Ptr(Ptr(Fn([], Int)))
+    _t271 : Ptr(Fn([], Int))
+    _t272 : Ptr(Ptr(Ptr(Ptr(Fn([], Int)))))
+    _t273 : Ptr(Ptr(Ptr(Fn([], Int))))
+    _t274 : Int
+    _t275 : Ptr(Ptr(Ptr(Fn([], Int))))
+    _t276 : Ptr(Ptr(Fn([], Int)))
+    _t277 : Int
+    _t278 : Ptr(Ptr(Int))
+    _t279 : Ptr(Int)
+    _t28 : Ptr(Ptr(Ptr(Int)))
+    _t280 : Int
+    _t281 : Ptr(Ptr(Fn([], Int)))
+    _t282 : Ptr(Fn([], Int))
+    _t283 : Int
+    _t284 : Ptr(Int)
+    _t285 : Int
+    _t286 : Ptr(Int)
+    _t287 : Int
+    _t288 : Ptr(Ptr(Int))
+    _t289 : Ptr(Int)
+    _t29 : Ptr(Ptr(Int))
+    _t290 : Ptr(Ptr(Ptr(Int)))
+    _t291 : Ptr(Ptr(Int))
+    _t292 : Ptr(Int)
+    _t293 : Ptr(Int)
+    _t294 : Ptr(Ptr(Int))
+    _t295 : Ptr(Int)
+    _t296 : Ptr(Ptr(Int))
+    _t297 : Ptr(Int)
+    _t298 : Int
+    _t299 : Int
+    _t3 : Ptr(Int)
+    _t30 : Ptr(Int)
+    _t300 : Ptr(Int)
+    _t301 : Int
+    _t302 : Ptr(Int)
+    _t303 : Int
+    _t304 : Ptr(Int)
+    _t305 : Int
+    _t306 : Ptr(Struct(st1))
+    _t307 : Struct(st1)
+    _t308 : Ptr(Ptr(Int))
+    _t309 : Ptr(Int)
+    _t31 : Ptr(Int)
+    _t310 : Ptr(Int)
+    _t311 : Ptr(Ptr(Struct(st1)))
+    _t312 : Ptr(Struct(st1))
+    _t313 : Ptr(Ptr(Int))
+    _t314 : Ptr(Int)
+    _t315 : Int
+    _t316 : Ptr(Ptr(Ptr(Int)))
+    _t317 : Ptr(Ptr(Int))
+    _t318 : Int
+    _t319 : Ptr(Ptr(Int))
+    _t32 : Ptr(Ptr(Struct(st1)))
+    _t320 : Ptr(Int)
+    _t321 : Ptr(Int)
+    _t322 : Ptr(Ptr(Int))
+    _t323 : Ptr(Ptr(Ptr(Int)))
+    _t324 : Ptr(Ptr(Int))
+    _t325 : Ptr(Int)
+    _t326 : Int
+    _t327 : Ptr(Int)
+    _t328 : Int
+    _t329 : Int
+    _t33 : Ptr(Struct(st1))
+    _t330 : Int
+    _t331 : Ptr(Int)
+    _t332 : Int
+    _t333 : Int
+    _t334 : Ptr(Int)
+    _t335 : Int
+    _t336 : Ptr(Ptr(Int))
+    _t337 : Ptr(Int)
+    _t338 : Int
+    _t339 : Int
+    _t34 : Ptr(Ptr(Int))
+    _t340 : Ptr(Int)
+    _t341 : Int
+    _t342 : Int
+    _t343 : Int
+    _t344 : Ptr(Ptr(Fn([Int, Ptr(Int)], Int)))
+    _t345 : Ptr(Fn([Int, Ptr(Int)], Int))
+    _t346 : Ptr(Int)
+    _t347 : Int
+    _t348 : Fn([Int, Ptr(Int)], Int)
+    _t349 : ERROR
+    _t35 : Ptr(Ptr(Ptr(Int)))
+    _t350 : Ptr(Ptr(Int))
+    _t351 : Ptr(Ptr(Ptr(Int)))
+    _t352 : Ptr(Ptr(Int))
+    _t353 : Ptr(Int)
+    _t354 : Ptr(Ptr(Ptr(Fn([Int, Ptr(Int)], Int))))
+    _t355 : Ptr(Ptr(Fn([Int, Ptr(Int)], Int)))
+    _t356 : Ptr(Int)
+    _t357 : Int
+    _t358 : Ptr(Ptr(Fn([Int, Ptr(Int)], Int)))
+    _t359 : Ptr(Fn([Int, Ptr(Int)], Int))
+    _t36 : Ptr(Ptr(Int))
+    _t360 : Int
+    _t361 : Int
+    _t362 : Ptr(Ptr(Int))
+    _t363 : Ptr(Int)
+    _t364 : Int
+    _t365 : Int
+    _t366 : Int
+    _t367 : Ptr(Ptr(Ptr(Ptr(Struct(st)))))
+    _t368 : Ptr(Ptr(Ptr(Struct(st))))
+    _t369 : Ptr(Ptr(Ptr(Struct(st))))
+    _t37 : Ptr(Int)
+    _t370 : Ptr(Ptr(Struct(st)))
+    _t371 : Ptr(Ptr(Struct(st)))
+    _t372 : Ptr(Struct(st))
+    _t373 : Ptr(Int)
+    _t374 : Ptr(Ptr(Ptr(Fn([], Int))))
+    _t375 : Ptr(Ptr(Fn([], Int)))
+    _t376 : Int
+    _t377 : Ptr(Ptr(Fn([], Int)))
+    _t378 : Ptr(Fn([], Int))
+    _t379 : Int
+    _t38 : Int
+    _t380 : Ptr(Int)
+    _t381 : Int
+    _t382 : Ptr(Ptr(Ptr(Int)))
+    _t383 : Ptr(Ptr(Int))
+    _t384 : Ptr(Int)
+    _t385 : Int
+    _t386 : Int
+    _t387 : Ptr(Ptr(Int))
+    _t388 : Ptr(Int)
+    _t389 : Ptr(Ptr(Int))
+    _t39 : Ptr(Ptr(Int))
+    _t390 : Ptr(Int)
+    _t391 : Int
+    _t392 : Ptr(Int)
+    _t393 : Int
+    _t394 : Int
+    _t4 : Int
+    _t40 : Ptr(Int)
+    _t41 : Int
+    _t42 : Ptr(Ptr(Ptr(Int)))
+    _t43 : Ptr(Ptr(Int))
+    _t44 : Ptr(Int)
+    _t45 : Ptr(Ptr(Ptr(Fn([Ptr(Int)], Ptr(Int)))))
+    _t46 : Ptr(Ptr(Fn([Ptr(Int)], Ptr(Int))))
+    _t47 : Int
+    _t48 : Int
+    _t49 : Ptr(Ptr(Fn([Ptr(Int)], Ptr(Int))))
+    _t5 : Ptr(Int)
+    _t50 : Ptr(Fn([Ptr(Int)], Ptr(Int)))
+    _t51 : Ptr(Int)
+    _t52 : Ptr(Int)
+    _t53 : Ptr(Ptr(Struct(st1)))
+    _t54 : Ptr(Struct(st1))
+    _t55 : Ptr(Int)
+    _t56 : Int
+    _t57 : Ptr(Int)
+    _t58 : Ptr(Ptr(Ptr(Int)))
+    _t59 : Ptr(Ptr(Int))
+    _t6 : Ptr(Int)
+    _t60 : Int
+    _t61 : Int
+    _t62 : Ptr(Ptr(Int))
+    _t63 : Ptr(Int)
+    _t64 : Int
+    _t65 : Ptr(Ptr(Struct(st1)))
+    _t66 : Ptr(Struct(st1))
+    _t67 : Ptr(Ptr(Int))
+    _t68 : Ptr(Int)
+    _t69 : Int
+    _t7 : Int
+    _t70 : Int
+    _t71 : Ptr(Ptr(Struct(st2)))
+    _t72 : Ptr(Struct(st2))
+    _t73 : Int
+    _t74 : Ptr(Int)
+    _t75 : Int
+    _t76 : Int
+    _t77 : Ptr(Int)
+    _t78 : Int
+    _t79 : Int
+    _t8 : Ptr(Ptr(Int))
+    _t80 : Ptr(Int)
+    _t81 : Int
+    _t82 : Ptr(Ptr(Int))
+    _t83 : Ptr(Int)
+    _t84 : Int
+    _t85 : Ptr(Int)
+    _t86 : Int
+    _t87 : Int
+    _t88 : Ptr(Struct(st2))
+    _t89 : Ptr(Ptr(Struct(st1)))
+    _t9 : Ptr(Int)
+    _t90 : Ptr(Struct(st1))
+    _t91 : Ptr(Int)
+    _t92 : Int
+    _t93 : Ptr(Ptr(Struct(st1)))
+    _t94 : Ptr(Struct(st1))
+    _t95 : Ptr(Ptr(Int))
+    _t96 : Ptr(Int)
+    _t97 : Ptr(Ptr(Ptr(Fn([Int, Ptr(Int)], Int))))
+    _t98 : Ptr(Ptr(Fn([Int, Ptr(Int)], Int)))
+    _t99 : Ptr(Int)
+    id0 : Int
+    id1 : Ptr(Ptr(Ptr(Int)))
+    id10 : Ptr(Ptr(Struct(st1)))
+    id11 : Ptr(Ptr(Ptr(Int)))
+    id12 : Ptr(Int)
+    id13 : Ptr(Ptr(Struct(st2)))
+    id14 : Ptr(Int)
+    id15 : Ptr(Ptr(Int))
+    id16 : Ptr(Struct(st))
+    id17 : Ptr(Ptr(Struct(st2)))
+    id18 : Ptr(Ptr(Ptr(Fn([Int, Ptr(Int)], Int))))
+    id19 : Ptr(Struct(st1))
+    id2 : Ptr(Ptr(Ptr(Int)))
+    id20 : Ptr(Struct(st2))
+    id21 : Ptr(Ptr(Ptr(Fn([Ptr(Int)], Ptr(Int)))))
+    id22 : Ptr(Ptr(Ptr(Ptr(Struct(st)))))
+    id23 : Ptr(Fn([Ptr(Int)], Ptr(Int)))
+    id24 : Ptr(Struct(st1))
+    id25 : Ptr(Ptr(Struct(st1)))
+    id26 : Ptr(Fn([Int, Ptr(Int)], Int))
+    id27 : Ptr(Struct(st2))
+    id28 : Ptr(Struct(st1))
+    id29 : Ptr(Ptr(Ptr(Struct(st))))
+    id3 : Int
+    id30 : Ptr(Ptr(Int))
+    id31 : Ptr(Ptr(Ptr(Ptr(Ptr(Int)))))
+    id32 : Ptr(Fn([Ptr(Int)], Ptr(Int)))
+    id33 : Ptr(Fn([], Int))
+    id34 : Ptr(Ptr(Ptr(Ptr(Fn([Ptr(Int)], Ptr(Int))))))
+    id35 : Ptr(Ptr(Ptr(Fn([Ptr(Int)], Ptr(Int)))))
+    id36 : Ptr(Ptr(Ptr(Ptr(Int))))
+    id37 : Ptr(Ptr(Struct(st2)))
+    id38 : Ptr(Fn([Int, Ptr(Int)], Int))
+    id39 : Ptr(Fn([Ptr(Int)], Ptr(Int)))
+    id4 : Ptr(Ptr(Int))
+    id40 : Ptr(Ptr(Struct(st1)))
+    id41 : Ptr(Ptr(Ptr(Ptr(Struct(st1)))))
+    id42 : Ptr(Fn([Int, Ptr(Int)], Int))
+    id43 : Ptr(Ptr(Fn([Ptr(Int)], Ptr(Int))))
+    id44 : Ptr(Ptr(Ptr(Fn([], Int))))
+    id45 : Ptr(Ptr(Fn([Ptr(Int)], Ptr(Int))))
+    id46 : Ptr(Ptr(Struct(st1)))
+    id47 : Ptr(Ptr(Fn([Ptr(Int)], Ptr(Int))))
+    id48 : Ptr(Ptr(Ptr(Ptr(Fn([], Int)))))
+    id49 : Ptr(Fn([], Int))
+    id5 : Ptr(Int)
+    id50 : Ptr(Fn([], Int))
+    id51 : Ptr(Ptr(Ptr(Ptr(Struct(st)))))
+    id52 : Ptr(Ptr(Ptr(Fn([], Int))))
+    id6 : Ptr(Ptr(Ptr(Fn([Ptr(Int)], Ptr(Int)))))
+    id7 : Int
+    id8 : Ptr(Ptr(Ptr(Int)))
+    id9 : Ptr(Ptr(Int))
+
+  entry:
+    CallExt(_t1, e1, [])
+    Cmp(_t2, neq, foo, _t1)
+    Gfp(_t3, id19, f1)
+    Load(_t4, _t3)
+    Load(_t5, id4)
+    Gep(_t6, id12, foo)
+    Load(_t7, _t6)
+    Gep(_t8, id9, id3)
+    Load(_t9, _t8)
+    CallExt(_t10, e5, [6, _t2, _t4, _t5, _t7, _t9])
+    Gfp(_t11, _t10, f1)
+    Load(_t12, _t11)
+    Copy(id24, _t12)
+    Gep(_t13, id31, 0)
+    Load(_t14, _t13)
+    CallDirect(_t15, f1, [], lbl1)
+
+  lbl1:
+    Arith(_t16, add, _t15, 6)
+    Gep(_t17, _t14, _t16)
+    Load(_t18, _t17)
+    CallExt(_t19, e1, [])
+    Gep(_t20, id4, _t19)
+    Load(_t21, _t20)
+    CallExt(_t22, e2, [id5])
+    Gep(_t23, _t21, _t22)
+    Load(_t24, _t23)
+    Gep(_t25, _t18, _t24)
+    Load(_t26, _t25)
+    Copy(id30, _t26)
+    Copy(id0, id0)
+    Store(bar, 9)
+    Load(_t27, bar)
+    Gep(_t28, id1, _t27)
+    Load(_t29, _t28)
+    Load(_t30, _t29)
+    CallDirect(f2, [_t30], lbl2)
+
+  lbl10:
+    Jump(lbl19)
+
+  lbl11:
+    CallDirect(_t78, f1, [], lbl12)
+
+  lbl12:
+    CallDirect(_t79, f3, [_t78, id14], lbl13)
+
+  lbl13:
+    Gep(_t80, _t77, _t79)
+    Load(_t81, _t80)
+    Arith(_t76, sub, 0, _t81)
+    Branch(_t76, lbl9, lbl10)
+
+  lbl14:
+    Gep(_t85, _t83, _t84)
+    Load(_t86, _t85)
+    CallExt(_t87, e3, [_t86, id16])
+    Load(_t88, id17)
+    Gfp(_t89, id20, f1)
+    Load(_t90, _t89)
+    Gfp(_t91, _t90, f1)
+    Load(_t92, _t91)
+    Gep(_t93, id10, id0)
+    Load(_t94, _t93)
+    Gfp(_t95, _t94, f2)
+    Load(_t96, _t95)
+    Gep(_t97, id18, id7)
+    Load(_t98, _t97)
+    Gfp(_t99, id19, f1)
+    Load(_t100, _t99)
+    Gep(_t101, _t98, _t100)
+    Load(_t102, _t101)
+    CallIndirect(_t103, _t102, [_t92, _t96], lbl15)
+
+  lbl15:
+    CallExt(e4, [_t87, _t88, _t103])
+    Alloc(id12, id3)
+    Load(_t104, id21)
+    Load(_t105, _t104)
+    CallIndirect(_t105, [0], lbl16)
+
+  lbl16:
+    CallDirect(f1, [], lbl17)
+
+  lbl17:
+    Arith(_t106, sub, 0, foo)
+    Gep(_t107, id22, 8)
+    Load(_t108, _t107)
+    Gep(_t109, _t108, 6)
+    Load(_t110, _t109)
+    Gep(_t111, _t110, 10)
+    Load(_t112, _t111)
+    CallExt(e3, [_t106, _t112])
+    Gep(_t113, id1, foo)
+    Load(_t114, _t113)
+    Load(_t115, _t114)
+    CallExt(_t116, e2, [_t115])
+    Alloc(bar, _t116)
+    Cmp(_t117, eq, id5, id5)
+    Load(_t118, id13)
+    CallExt(_t119, e4, [_t117, _t118, 3])
+    Gep(_t120, id4, _t119)
+    Load(_t121, _t120)
+    CallIndirect(id23, [_t121], lbl18)
+
+  lbl18:
+    Jump(lbl8)
+
+  lbl19:
+    CallDirect(_t122, f1, [], lbl22)
+
+  lbl2:
+    Gfp(_t32, fez, f1)
+    Load(_t33, _t32)
+    Gfp(_t34, _t33, f2)
+    Alloc(_t31, 1)
+    Store(_t34, _t31)
+    Gep(_t35, id2, id3)
+    Load(_t36, _t35)
+    Load(_t37, _t36)
+    Load(_t38, id5)
+    Gep(_t39, id4, _t38)
+    Load(_t40, _t39)
+    Cmp(_t41, eq, _t37, _t40)
+    Gep(_t42, id8, foo)
+    Load(_t43, _t42)
+    Load(_t44, _t43)
+    Gep(_t45, id6, id7)
+    Load(_t46, _t45)
+    CallExt(_t47, e1, [])
+    Cmp(_t48, eq, 3, _t47)
+    Gep(_t49, _t46, _t48)
+    Load(_t50, _t49)
+    CallIndirect(_t51, _t50, [_t44], lbl3)
+
+  lbl20:
+    Gfp(_t124, id24, f1)
+    Load(_t125, _t124)
+    Copy(id7, _t125)
+    Gep(_t126, id25, id7)
+    Load(_t127, _t126)
+    Gfp(_t128, _t127, f1)
+    Load(_t129, _t128)
+    Gep(_t130, id15, _t129)
+    Load(_t131, _t130)
+    CallDirect(f2, [_t131], lbl23)
+
+  lbl21:
+    Jump(lbl29)
+
+  lbl22:
+    Arith(_t123, mul, 5, _t122)
+    Branch(_t123, lbl20, lbl21)
+
+  lbl23:
+    Gfp(_t132, id20, f1)
+    Load(_t133, _t132)
+    Gfp(_t134, _t133, f2)
+    Load(_t135, _t134)
+    CallDirect(f2, [_t135], lbl24)
+
+  lbl24:
+    CallDirect(f1, [], lbl25)
+
+  lbl25:
+    Alloc(_t136, 1)
+    Store(id2, _t136)
+    Alloc(bar, 1)
+    Load(_t137, id17)
+    Copy(id20, _t137)
+    CallDirect(f1, [], lbl26)
+
+  lbl26:
+    Gfp(_t138, id27, f1)
+    Load(_t139, _t138)
+    Gfp(_t140, _t139, f2)
+    Load(_t141, _t140)
+    Load(_t142, _t141)
+    Gfp(_t143, id28, f2)
+    Load(_t144, _t143)
+    CallDirect(_t145, f2, [_t144], lbl27)
+
+  lbl27:
+    CallIndirect(id26, [_t142, _t145], lbl28)
+
+  lbl28:
+    Jump(lbl19)
+
+  lbl29:
+    Branch(7, lbl30, lbl31)
+
+  lbl3:
+    CallDirect(f3, [_t41, _t51], lbl4)
+
+  lbl30:
+    Gfp(_t146, id24, f1)
+    Load(_t147, _t146)
+    Store(bar, _t147)
+    Gfp(_t148, id28, f1)
+    Load(_t149, _t148)
+    Gep(_t150, id29, _t149)
+    Load(_t151, _t150)
+    Load(_t152, _t151)
+    CallExt(e3, [id3, _t152])
+    Alloc(bar, 1)
+    Gep(_t153, id11, foo)
+    Load(_t154, _t153)
+    CallDirect(_t155, f1, [], lbl32)
+
+  lbl31:
+    CallDirect(f1, [], lbl39)
+
+  lbl32:
+    Gep(_t156, _t154, _t155)
+    Load(_t157, _t156)
+    CallIndirect(_t158, id32, [id5], lbl33)
+
+  lbl33:
+    Load(_t159, id14)
+    Gep(_t160, _t158, _t159)
+    Load(_t161, _t160)
+    Gep(_t162, _t157, _t161)
+    Load(_t163, _t162)
+    Alloc(id30, _t163)
+    CallIndirect(id33, [], lbl34)
+
+  lbl34:
+    Load(_t164, id9)
+    CallExt(_t165, e1, [])
+    Gep(_t166, id35, _t165)
+    Load(_t167, _t166)
+    Gep(_t168, _t167, id0)
+    Load(_t169, _t168)
+    CallIndirect(_t170, _t169, [_t164], lbl35)
+
+  lbl35:
+    Gep(_t171, id34, id0)
+    Load(_t172, _t171)
+    Arith(_t173, add, 8, foo)
+    Gep(_t174, _t172, _t173)
+    Load(_t175, _t174)
+    Load(_t176, _t175)
+    CallIndirect(_t176, [_t170], lbl36)
+
+  lbl36:
+    CallDirect(f1, [], lbl37)
+
+  lbl37:
+    CallDirect(f1, [], lbl38)
+
+  lbl38:
+    Jump(lbl29)
+
+  lbl39:
+    CallDirect(_t177, f1, [], lbl40)
+
+  lbl4:
+    Gep(_t53, id10, 7)
+    Load(_t54, _t53)
+    Gfp(_t55, _t54, f1)
+    Load(_t56, _t55)
+    Gep(_t57, id9, _t56)
+    Gep(_t58, id11, 10)
+    Load(_t59, _t58)
+    CallExt(_t60, e1, [])
+    Arith(_t61, div, foo, _t60)
+    Gep(_t62, _t59, _t61)
+    Load(_t63, _t62)
+    Load(_t64, _t63)
+    Alloc(_t52, _t64)
+    Store(_t57, _t52)
+    Alloc(id12, 10)
+    Branch(5, lbl5, lbl6)
+
+  lbl40:
+    Gep(_t178, id36, _t177)
+    Load(_t179, _t178)
+    Load(_t180, id14)
+    Gep(_t181, _t179, _t180)
+    Load(_t182, _t181)
+    Load(_t183, _t182)
+    CallDirect(f2, [_t183], lbl41)
+
+  lbl41:
+    CallExt(_t184, e1, [])
+    Gep(_t185, id25, _t184)
+    Load(_t186, _t185)
+    Gfp(_t187, _t186, f2)
+    Load(_t188, _t187)
+    Load(_t189, _t188)
+    Store(bar, _t189)
+    Jump(lbl7)
+
+  lbl42:
+    CallExt(e1, [])
+    Gep(_t190, id10, id0)
+    Load(_t191, _t190)
+    Gfp(_t192, _t191, f1)
+    Load(_t193, _t192)
+    Arith(_t194, mul, _t193, 8)
+    Load(_t195, id37)
+    CallExt(e4, [_t194, _t195, id7])
+    Load(_t196, id1)
+    Load(_t197, _t196)
+    Gep(_t198, id1, 10)
+    Load(_t199, _t198)
+    CallDirect(_t200, f1, [], lbl45)
+
+  lbl43:
+    Gfp(_t228, id19, f1)
+    CallIndirect(_t229, id23, [id5], lbl53)
+
+  lbl44:
+    Jump(lbl66)
+
+  lbl45:
+    Gep(_t201, _t199, _t200)
+    Load(_t202, _t201)
+    Gfp(_t203, baz, f2)
+    Load(_t204, _t203)
+    CallIndirect(_t205, id38, [id3, _t204], lbl46)
+
+  lbl46:
+    Gep(_t206, _t202, _t205)
+    Load(_t207, _t206)
+    Store(_t197, _t207)
+    CallDirect(f1, [], lbl47)
+
+  lbl47:
+    Alloc(id14, foo)
+    Gep(_t208, id30, 2)
+    Load(_t209, _t208)
+    CallDirect(_t210, f2, [id5], lbl48)
+
+  lbl48:
+    Cmp(_t211, neq, _t209, _t210)
+    Gep(_t212, id15, _t211)
+    Load(_t213, id4)
+    CallIndirect(_t214, id39, [_t213], lbl49)
+
+  lbl49:
+    Store(_t212, _t214)
+    Gep(_t215, id41, 10)
+    Load(_t216, _t215)
+    CallDirect(_t217, f1, [], lbl50)
+
+  lbl5:
+    Gfp(_t65, fez, f1)
+    Load(_t66, _t65)
+    Gfp(_t67, _t66, f2)
+    Load(_t68, _t67)
+    Arith(_t69, sub, 0, 0)
+    CallExt(_t70, e1, [])
+    Gep(_t71, id13, _t70)
+    Load(_t72, _t71)
+    CallExt(_t73, e4, [_t69, _t72, 3])
+    Gep(_t74, _t68, _t73)
+    Load(_t75, _t74)
+    Copy(id7, _t75)
+    Jump(lbl8)
+
+  lbl50:
+    CallIndirect(_t218, id42, [_t217, id12], lbl51)
+
+  lbl51:
+    Gep(_t219, _t216, _t218)
+    Load(_t220, _t219)
+    Gep(_t221, _t220, 9)
+    Load(_t222, _t221)
+    Store(id40, _t222)
+    CallExt(_t223, e1, [])
+    Gep(_t224, id36, _t223)
+    Load(_t225, _t224)
+    Load(_t226, _t225)
+    Load(_t227, _t226)
+    CallIndirect(id23, [_t227], lbl52)
+
+  lbl52:
+    Jump(lbl44)
+
+  lbl53:
+    Cmp(_t230, eq, _t229, id12)
+    CallExt(_t231, e3, [_t230, id16])
+    Store(_t228, _t231)
+    CallDirect(f1, [], lbl54)
+
+  lbl54:
+    Alloc(id30, 1)
+    Gep(_t233, id9, id0)
+    CallDirect(_t234, f1, [], lbl55)
+
+  lbl55:
+    Alloc(_t232, _t234)
+    Store(_t233, _t232)
+    Gfp(_t235, fez, f1)
+    Load(_t236, _t235)
+    Gfp(_t237, _t236, f2)
+    Load(_t238, _t237)
+    CallDirect(_t239, f2, [id5], lbl56)
+
+  lbl56:
+    Gep(_t240, id43, 0)
+    Load(_t241, _t240)
+    CallIndirect(_t242, _t241, [_t239], lbl57)
+
+  lbl57:
+    CallIndirect(_t243, id38, [id3, _t242], lbl58)
+
+  lbl58:
+    Store(_t238, _t243)
+    Gfp(_t244, id19, f1)
+    CallDirect(_t245, f1, [], lbl59)
+
+  lbl59:
+    Gep(_t246, id44, _t245)
+    Load(_t247, _t246)
+    Arith(_t248, sub, 0, foo)
+    Gep(_t249, _t247, _t248)
+    Load(_t250, _t249)
+    CallIndirect(_t251, _t250, [], lbl60)
+
+  lbl6:
+    Branch(foo, lbl42, lbl43)
+
+  lbl60:
+    Store(_t244, _t251)
+    CallDirect(f2, [id5], lbl61)
+
+  lbl61:
+    Copy(id7, 8)
+    CallDirect(f2, [id14], lbl62)
+
+  lbl62:
+    CallDirect(_t252, f1, [], lbl63)
+
+  lbl63:
+    Gep(_t253, id15, _t252)
+    Load(_t254, _t253)
+    CallIndirect(_t255, id39, [_t254], lbl64)
+
+  lbl64:
+    Gep(_t256, id9, foo)
+    Load(_t257, _t256)
+    Gep(_t258, id45, id0)
+    Load(_t259, _t258)
+    CallIndirect(_t260, _t259, [_t257], lbl65)
+
+  lbl65:
+    Cmp(_t261, eq, _t255, _t260)
+    Copy(id3, _t261)
+    Gep(_t263, id12, 7)
+    Load(_t264, _t263)
+    Gep(_t265, id46, _t264)
+    Load(_t266, _t265)
+    Gfp(_t267, _t266, f2)
+    Alloc(_t262, 1)
+    Store(_t267, _t262)
+    Jump(lbl44)
+
+  lbl66:
+    Branch(id0, lbl67, lbl68)
+
+  lbl67:
+    Gep(_t268, id47, 4)
+    Load(_t269, _t268)
+    Copy(id32, _t269)
+    Gep(_t270, id44, foo)
+    Load(_t271, _t270)
+    Gep(_t272, id48, 1)
+    Load(_t273, _t272)
+    Load(_t274, id12)
+    Gep(_t275, _t273, _t274)
+    Load(_t276, _t275)
+    CallExt(_t277, e1, [])
+    Gep(_t278, id4, _t277)
+    Load(_t279, _t278)
+    Cmp(_t280, neq, id12, _t279)
+    Gep(_t281, _t276, _t280)
+    Load(_t282, _t281)
+    Store(_t271, _t282)
+    Alloc(id14, 1)
+    CallDirect(f1, [], lbl69)
+
+  lbl68:
+    CallExt(e4, [7, 0, id0])
+    Gep(_t294, id11, 9)
+    Load(_t295, _t294)
+    Gep(_t296, id9, foo)
+    Load(_t297, _t296)
+    Load(_t298, _t297)
+    Gep(_t299, _t295, _t298)
+    Alloc(_t293, 1)
+    Store(_t299, _t293)
+    Branch(9, lbl72, lbl73)
+
+  lbl69:
+    CallExt(_t283, e1, [])
+    Load(_t284, id4)
+    CallDirect(_t285, f3, [7, _t284], lbl70)
+
+  lbl7:
+    Gep(_t374, id52, id3)
+    Load(_t375, _t374)
+    Cmp(_t376, neq, 0, id7)
+    Gep(_t377, _t375, _t376)
+    Load(_t378, _t377)
+    CallIndirect(_t379, _t378, [], lbl91)
+
+  lbl70:
+    CallIndirect(_t286, id39, [id12], lbl71)
+
+  lbl71:
+    Load(_t287, _t286)
+    Gep(_t288, id9, _t287)
+    Load(_t289, _t288)
+    CallExt(e5, [7, _t283, _t285, _t289, 5, id14])
+    Gep(_t290, id2, 7)
+    Load(_t291, _t290)
+    Load(_t292, _t291)
+    CallExt(e2, [_t292])
+    Jump(lbl66)
+
+  lbl72:
+    Copy(id19, 0)
+    Load(_t300, id15)
+    Load(_t301, _t300)
+    Alloc(id9, _t301)
+    Gfp(_t302, baz, f1)
+    Load(_t303, _t302)
+    Copy(id3, _t303)
+    CallIndirect(_t305, id49, [], lbl75)
+
+  lbl73:
+    Alloc(_t350, 0)
+    Store(id11, _t350)
+    CallDirect(f1, [], lbl85)
+
+  lbl74:
+    CallDirect(f1, [], lbl90)
+
+  lbl75:
+    Gep(_t306, id46, _t305)
+    Load(_t307, _t306)
+    Gfp(_t308, _t307, f2)
+    Alloc(_t304, 1)
+    Store(_t308, _t304)
+    Load(_t309, id15)
+    CallDirect(_t310, f2, [_t309], lbl76)
+
+  lbl76:
+    Gfp(_t311, fez, f1)
+    Load(_t312, _t311)
+    Gfp(_t313, _t312, f2)
+    Load(_t314, _t313)
+    Cmp(_t315, eq, _t310, _t314)
+    Gep(_t316, id1, 6)
+    Load(_t317, _t316)
+    Cmp(_t318, eq, bar, id14)
+    Gep(_t319, _t317, _t318)
+    Load(_t320, _t319)
+    CallDirect(_t321, f2, [_t320], lbl77)
+
+  lbl77:
+    CallDirect(f3, [_t315, _t321], lbl78)
+
+  lbl78:
+    Alloc(id12, 10)
+    Load(_t323, id36)
+    Gfp(_t324, id24, f2)
+    Load(_t325, _t324)
+    Load(_t326, _t325)
+    CallIndirect(_t327, id32, [id5], lbl79)
+
+  lbl79:
+    CallExt(_t328, e1, [])
+    CallExt(_t329, e1, [])
+    Arith(_t330, mul, _t328, _t329)
+    Gep(_t331, _t327, _t330)
+    Load(_t332, _t331)
+    Arith(_t333, sub, _t326, _t332)
+    Alloc(_t322, _t333)
+    Store(_t323, _t322)
+    CallIndirect(_t334, id32, [bar], lbl80)
+
+  lbl8:
+    CallDirect(_t77, f2, [bar], lbl11)
+
+  lbl80:
+    Load(_t335, _t334)
+    Gep(_t336, id4, foo)
+    Load(_t337, _t336)
+    CallDirect(_t338, f1, [], lbl81)
+
+  lbl81:
+    CallDirect(_t339, f3, [_t338, id14], lbl82)
+
+  lbl82:
+    Gep(_t340, _t337, _t339)
+    Load(_t341, _t340)
+    Cmp(_t342, gt, _t335, _t341)
+    Load(_t343, id12)
+    Gep(_t344, id18, _t343)
+    Load(_t345, _t344)
+    Gfp(_t346, id24, f1)
+    Load(_t347, _t346)
+    Gep(_t348, _t345, _t347)
+    Load(_t349, _t348)
+    CallIndirect(_t349, [_t342, id12], lbl83)
+
+  lbl83:
+    CallIndirect(id50, [], lbl84)
+
+  lbl84:
+    Jump(lbl74)
+
+  lbl85:
+    Gep(_t351, id1, 3)
+    Load(_t352, _t351)
+    Load(_t353, _t352)
+    Gep(_t354, id18, id7)
+    Load(_t355, _t354)
+    Gfp(_t356, id19, f1)
+    Load(_t357, _t356)
+    Gep(_t358, _t355, _t357)
+    Load(_t359, _t358)
+    CallIndirect(_t360, _t359, [id7, _t353], lbl86)
+
+  lbl86:
+    Copy(foo, _t360)
+    CallDirect(_t361, f1, [], lbl87)
+
+  lbl87:
+    Alloc(id4, _t361)
+    Load(_t362, id1)
+    Load(_t363, _t362)
+    Load(_t364, _t363)
+    Alloc(id14, _t364)
+    CallIndirect(id49, [], lbl88)
+
+  lbl88:
+    Arith(_t365, sub, 0, foo)
+    CallDirect(_t366, f1, [], lbl89)
+
+  lbl89:
+    Gep(_t367, id51, _t366)
+    Load(_t368, _t367)
+    Gep(_t369, _t368, 6)
+    Load(_t370, _t369)
+    Gep(_t371, _t370, 10)
+    Load(_t372, _t371)
+    CallExt(e3, [_t365, _t372])
+    Jump(lbl74)
+
+  lbl9:
+    Gep(_t82, id15, id3)
+    Load(_t83, _t82)
+    CallDirect(_t84, f3, [2, id5], lbl14)
+
+  lbl90:
+    Copy(_t394, 8)
+    Jump(lbl94)
+
+  lbl91:
+    Alloc(_t373, _t379)
+    Store(id4, _t373)
+    Gfp(_t380, id28, f1)
+    CallDirect(_t381, f1, [], lbl92)
+
+  lbl92:
+    Gep(_t382, id8, _t381)
+    Load(_t383, _t382)
+    Load(_t384, _t383)
+    Cmp(_t385, neq, id5, _t384)
+    Store(_t380, _t385)
+    CallDirect(_t386, f1, [], lbl93)
+
+  lbl93:
+    Gep(_t387, id30, _t386)
+    Load(_t388, _t387)
+    Gfp(_t389, baz, f2)
+    Load(_t390, _t389)
+    Load(_t391, _t390)
+    Gep(_t392, _t388, _t391)
+    Load(_t393, _t392)
+    Copy(id7, _t393)
+    Copy(_t394, 8)
+    Jump(lbl94)
+
+  lbl94:
+    Ret(_t394)
+}
+
+.data
+
+.globl bar
+bar: .zero 8
+
+
+.globl baz
+baz: .zero 8
+
+
+.globl f1_
+f1_: .quad "f1"
+
+
+.globl f2_
+f2_: .quad "f2"
+
+
+.globl f3_
+f3_: .quad "f3"
+
+
+.globl fez
+fez: .zero 8
+
+
+.globl foo
+foo: .zero 8
+
+
+out_of_bounds_msg: .string "out-of-bounds array access"
+invalid_alloc_msg: .string "invalid allocation amount"
+        
+.text
+
+.globl f1
+f1:
+  pushq %rbp
+  movq %rsp, %rbp
+  subq $0, %rsp
+  jmp f1_entry
+
+f1_entry:
+  movq $42, %rax
+  jmp f1_epilogue
+
+f1_epilogue:
+  movq %rbp, %rsp
+  popq %rbp
+  ret
+
+.globl f2
+f2:
+  pushq %rbp
+  movq %rsp, %rbp
+  subq $0, %rsp
+  jmp f2_entry
+
+f2_entry:
+  movq 16(%rbp), %rax
+  jmp f2_epilogue
+
+f2_epilogue:
+  movq %rbp, %rsp
+  popq %rbp
+  ret
+
+.globl f3
+f3:
+  pushq %rbp
+  movq %rsp, %rbp
+  subq $16, %rsp
+  movq $0, -8(%rbp)
+  movq $0, -16(%rbp)
+  jmp f3_entry
+
+f3_entry:
+  movq 24(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -8(%rbp)
+  movq 16(%rbp), %r8
+  addq -8(%rbp), %r8
+  movq %r8, -16(%rbp)
+  movq -16(%rbp), %rax
+  jmp f3_epilogue
+
+f3_epilogue:
+  movq %rbp, %rsp
+  popq %rbp
+  ret
+
+.globl main
+main:
+  pushq %rbp
+  movq %rsp, %rbp
+  subq $3584, %rsp
+  movq $0, -8(%rbp)
+  movq $0, -16(%rbp)
+  movq $0, -24(%rbp)
+  movq $0, -32(%rbp)
+  movq $0, -40(%rbp)
+  movq $0, -48(%rbp)
+  movq $0, -56(%rbp)
+  movq $0, -64(%rbp)
+  movq $0, -72(%rbp)
+  movq $0, -80(%rbp)
+  movq $0, -88(%rbp)
+  movq $0, -96(%rbp)
+  movq $0, -104(%rbp)
+  movq $0, -112(%rbp)
+  movq $0, -120(%rbp)
+  movq $0, -128(%rbp)
+  movq $0, -136(%rbp)
+  movq $0, -144(%rbp)
+  movq $0, -152(%rbp)
+  movq $0, -160(%rbp)
+  movq $0, -168(%rbp)
+  movq $0, -176(%rbp)
+  movq $0, -184(%rbp)
+  movq $0, -192(%rbp)
+  movq $0, -200(%rbp)
+  movq $0, -208(%rbp)
+  movq $0, -216(%rbp)
+  movq $0, -224(%rbp)
+  movq $0, -232(%rbp)
+  movq $0, -240(%rbp)
+  movq $0, -248(%rbp)
+  movq $0, -256(%rbp)
+  movq $0, -264(%rbp)
+  movq $0, -272(%rbp)
+  movq $0, -280(%rbp)
+  movq $0, -288(%rbp)
+  movq $0, -296(%rbp)
+  movq $0, -304(%rbp)
+  movq $0, -312(%rbp)
+  movq $0, -320(%rbp)
+  movq $0, -328(%rbp)
+  movq $0, -336(%rbp)
+  movq $0, -344(%rbp)
+  movq $0, -352(%rbp)
+  movq $0, -360(%rbp)
+  movq $0, -368(%rbp)
+  movq $0, -376(%rbp)
+  movq $0, -384(%rbp)
+  movq $0, -392(%rbp)
+  movq $0, -400(%rbp)
+  movq $0, -408(%rbp)
+  movq $0, -416(%rbp)
+  movq $0, -424(%rbp)
+  movq $0, -432(%rbp)
+  movq $0, -440(%rbp)
+  movq $0, -448(%rbp)
+  movq $0, -456(%rbp)
+  movq $0, -464(%rbp)
+  movq $0, -472(%rbp)
+  movq $0, -480(%rbp)
+  movq $0, -488(%rbp)
+  movq $0, -496(%rbp)
+  movq $0, -504(%rbp)
+  movq $0, -512(%rbp)
+  movq $0, -520(%rbp)
+  movq $0, -528(%rbp)
+  movq $0, -536(%rbp)
+  movq $0, -544(%rbp)
+  movq $0, -552(%rbp)
+  movq $0, -560(%rbp)
+  movq $0, -568(%rbp)
+  movq $0, -576(%rbp)
+  movq $0, -584(%rbp)
+  movq $0, -592(%rbp)
+  movq $0, -600(%rbp)
+  movq $0, -608(%rbp)
+  movq $0, -616(%rbp)
+  movq $0, -624(%rbp)
+  movq $0, -632(%rbp)
+  movq $0, -640(%rbp)
+  movq $0, -648(%rbp)
+  movq $0, -656(%rbp)
+  movq $0, -664(%rbp)
+  movq $0, -672(%rbp)
+  movq $0, -680(%rbp)
+  movq $0, -688(%rbp)
+  movq $0, -696(%rbp)
+  movq $0, -704(%rbp)
+  movq $0, -712(%rbp)
+  movq $0, -720(%rbp)
+  movq $0, -728(%rbp)
+  movq $0, -736(%rbp)
+  movq $0, -744(%rbp)
+  movq $0, -752(%rbp)
+  movq $0, -760(%rbp)
+  movq $0, -768(%rbp)
+  movq $0, -776(%rbp)
+  movq $0, -784(%rbp)
+  movq $0, -792(%rbp)
+  movq $0, -800(%rbp)
+  movq $0, -808(%rbp)
+  movq $0, -816(%rbp)
+  movq $0, -824(%rbp)
+  movq $0, -832(%rbp)
+  movq $0, -840(%rbp)
+  movq $0, -848(%rbp)
+  movq $0, -856(%rbp)
+  movq $0, -864(%rbp)
+  movq $0, -872(%rbp)
+  movq $0, -880(%rbp)
+  movq $0, -888(%rbp)
+  movq $0, -896(%rbp)
+  movq $0, -904(%rbp)
+  movq $0, -912(%rbp)
+  movq $0, -920(%rbp)
+  movq $0, -928(%rbp)
+  movq $0, -936(%rbp)
+  movq $0, -944(%rbp)
+  movq $0, -952(%rbp)
+  movq $0, -960(%rbp)
+  movq $0, -968(%rbp)
+  movq $0, -976(%rbp)
+  movq $0, -984(%rbp)
+  movq $0, -992(%rbp)
+  movq $0, -1000(%rbp)
+  movq $0, -1008(%rbp)
+  movq $0, -1016(%rbp)
+  movq $0, -1024(%rbp)
+  movq $0, -1032(%rbp)
+  movq $0, -1040(%rbp)
+  movq $0, -1048(%rbp)
+  movq $0, -1056(%rbp)
+  movq $0, -1064(%rbp)
+  movq $0, -1072(%rbp)
+  movq $0, -1080(%rbp)
+  movq $0, -1088(%rbp)
+  movq $0, -1096(%rbp)
+  movq $0, -1104(%rbp)
+  movq $0, -1112(%rbp)
+  movq $0, -1120(%rbp)
+  movq $0, -1128(%rbp)
+  movq $0, -1136(%rbp)
+  movq $0, -1144(%rbp)
+  movq $0, -1152(%rbp)
+  movq $0, -1160(%rbp)
+  movq $0, -1168(%rbp)
+  movq $0, -1176(%rbp)
+  movq $0, -1184(%rbp)
+  movq $0, -1192(%rbp)
+  movq $0, -1200(%rbp)
+  movq $0, -1208(%rbp)
+  movq $0, -1216(%rbp)
+  movq $0, -1224(%rbp)
+  movq $0, -1232(%rbp)
+  movq $0, -1240(%rbp)
+  movq $0, -1248(%rbp)
+  movq $0, -1256(%rbp)
+  movq $0, -1264(%rbp)
+  movq $0, -1272(%rbp)
+  movq $0, -1280(%rbp)
+  movq $0, -1288(%rbp)
+  movq $0, -1296(%rbp)
+  movq $0, -1304(%rbp)
+  movq $0, -1312(%rbp)
+  movq $0, -1320(%rbp)
+  movq $0, -1328(%rbp)
+  movq $0, -1336(%rbp)
+  movq $0, -1344(%rbp)
+  movq $0, -1352(%rbp)
+  movq $0, -1360(%rbp)
+  movq $0, -1368(%rbp)
+  movq $0, -1376(%rbp)
+  movq $0, -1384(%rbp)
+  movq $0, -1392(%rbp)
+  movq $0, -1400(%rbp)
+  movq $0, -1408(%rbp)
+  movq $0, -1416(%rbp)
+  movq $0, -1424(%rbp)
+  movq $0, -1432(%rbp)
+  movq $0, -1440(%rbp)
+  movq $0, -1448(%rbp)
+  movq $0, -1456(%rbp)
+  movq $0, -1464(%rbp)
+  movq $0, -1472(%rbp)
+  movq $0, -1480(%rbp)
+  movq $0, -1488(%rbp)
+  movq $0, -1496(%rbp)
+  movq $0, -1504(%rbp)
+  movq $0, -1512(%rbp)
+  movq $0, -1520(%rbp)
+  movq $0, -1528(%rbp)
+  movq $0, -1536(%rbp)
+  movq $0, -1544(%rbp)
+  movq $0, -1552(%rbp)
+  movq $0, -1560(%rbp)
+  movq $0, -1568(%rbp)
+  movq $0, -1576(%rbp)
+  movq $0, -1584(%rbp)
+  movq $0, -1592(%rbp)
+  movq $0, -1600(%rbp)
+  movq $0, -1608(%rbp)
+  movq $0, -1616(%rbp)
+  movq $0, -1624(%rbp)
+  movq $0, -1632(%rbp)
+  movq $0, -1640(%rbp)
+  movq $0, -1648(%rbp)
+  movq $0, -1656(%rbp)
+  movq $0, -1664(%rbp)
+  movq $0, -1672(%rbp)
+  movq $0, -1680(%rbp)
+  movq $0, -1688(%rbp)
+  movq $0, -1696(%rbp)
+  movq $0, -1704(%rbp)
+  movq $0, -1712(%rbp)
+  movq $0, -1720(%rbp)
+  movq $0, -1728(%rbp)
+  movq $0, -1736(%rbp)
+  movq $0, -1744(%rbp)
+  movq $0, -1752(%rbp)
+  movq $0, -1760(%rbp)
+  movq $0, -1768(%rbp)
+  movq $0, -1776(%rbp)
+  movq $0, -1784(%rbp)
+  movq $0, -1792(%rbp)
+  movq $0, -1800(%rbp)
+  movq $0, -1808(%rbp)
+  movq $0, -1816(%rbp)
+  movq $0, -1824(%rbp)
+  movq $0, -1832(%rbp)
+  movq $0, -1840(%rbp)
+  movq $0, -1848(%rbp)
+  movq $0, -1856(%rbp)
+  movq $0, -1864(%rbp)
+  movq $0, -1872(%rbp)
+  movq $0, -1880(%rbp)
+  movq $0, -1888(%rbp)
+  movq $0, -1896(%rbp)
+  movq $0, -1904(%rbp)
+  movq $0, -1912(%rbp)
+  movq $0, -1920(%rbp)
+  movq $0, -1928(%rbp)
+  movq $0, -1936(%rbp)
+  movq $0, -1944(%rbp)
+  movq $0, -1952(%rbp)
+  movq $0, -1960(%rbp)
+  movq $0, -1968(%rbp)
+  movq $0, -1976(%rbp)
+  movq $0, -1984(%rbp)
+  movq $0, -1992(%rbp)
+  movq $0, -2000(%rbp)
+  movq $0, -2008(%rbp)
+  movq $0, -2016(%rbp)
+  movq $0, -2024(%rbp)
+  movq $0, -2032(%rbp)
+  movq $0, -2040(%rbp)
+  movq $0, -2048(%rbp)
+  movq $0, -2056(%rbp)
+  movq $0, -2064(%rbp)
+  movq $0, -2072(%rbp)
+  movq $0, -2080(%rbp)
+  movq $0, -2088(%rbp)
+  movq $0, -2096(%rbp)
+  movq $0, -2104(%rbp)
+  movq $0, -2112(%rbp)
+  movq $0, -2120(%rbp)
+  movq $0, -2128(%rbp)
+  movq $0, -2136(%rbp)
+  movq $0, -2144(%rbp)
+  movq $0, -2152(%rbp)
+  movq $0, -2160(%rbp)
+  movq $0, -2168(%rbp)
+  movq $0, -2176(%rbp)
+  movq $0, -2184(%rbp)
+  movq $0, -2192(%rbp)
+  movq $0, -2200(%rbp)
+  movq $0, -2208(%rbp)
+  movq $0, -2216(%rbp)
+  movq $0, -2224(%rbp)
+  movq $0, -2232(%rbp)
+  movq $0, -2240(%rbp)
+  movq $0, -2248(%rbp)
+  movq $0, -2256(%rbp)
+  movq $0, -2264(%rbp)
+  movq $0, -2272(%rbp)
+  movq $0, -2280(%rbp)
+  movq $0, -2288(%rbp)
+  movq $0, -2296(%rbp)
+  movq $0, -2304(%rbp)
+  movq $0, -2312(%rbp)
+  movq $0, -2320(%rbp)
+  movq $0, -2328(%rbp)
+  movq $0, -2336(%rbp)
+  movq $0, -2344(%rbp)
+  movq $0, -2352(%rbp)
+  movq $0, -2360(%rbp)
+  movq $0, -2368(%rbp)
+  movq $0, -2376(%rbp)
+  movq $0, -2384(%rbp)
+  movq $0, -2392(%rbp)
+  movq $0, -2400(%rbp)
+  movq $0, -2408(%rbp)
+  movq $0, -2416(%rbp)
+  movq $0, -2424(%rbp)
+  movq $0, -2432(%rbp)
+  movq $0, -2440(%rbp)
+  movq $0, -2448(%rbp)
+  movq $0, -2456(%rbp)
+  movq $0, -2464(%rbp)
+  movq $0, -2472(%rbp)
+  movq $0, -2480(%rbp)
+  movq $0, -2488(%rbp)
+  movq $0, -2496(%rbp)
+  movq $0, -2504(%rbp)
+  movq $0, -2512(%rbp)
+  movq $0, -2520(%rbp)
+  movq $0, -2528(%rbp)
+  movq $0, -2536(%rbp)
+  movq $0, -2544(%rbp)
+  movq $0, -2552(%rbp)
+  movq $0, -2560(%rbp)
+  movq $0, -2568(%rbp)
+  movq $0, -2576(%rbp)
+  movq $0, -2584(%rbp)
+  movq $0, -2592(%rbp)
+  movq $0, -2600(%rbp)
+  movq $0, -2608(%rbp)
+  movq $0, -2616(%rbp)
+  movq $0, -2624(%rbp)
+  movq $0, -2632(%rbp)
+  movq $0, -2640(%rbp)
+  movq $0, -2648(%rbp)
+  movq $0, -2656(%rbp)
+  movq $0, -2664(%rbp)
+  movq $0, -2672(%rbp)
+  movq $0, -2680(%rbp)
+  movq $0, -2688(%rbp)
+  movq $0, -2696(%rbp)
+  movq $0, -2704(%rbp)
+  movq $0, -2712(%rbp)
+  movq $0, -2720(%rbp)
+  movq $0, -2728(%rbp)
+  movq $0, -2736(%rbp)
+  movq $0, -2744(%rbp)
+  movq $0, -2752(%rbp)
+  movq $0, -2760(%rbp)
+  movq $0, -2768(%rbp)
+  movq $0, -2776(%rbp)
+  movq $0, -2784(%rbp)
+  movq $0, -2792(%rbp)
+  movq $0, -2800(%rbp)
+  movq $0, -2808(%rbp)
+  movq $0, -2816(%rbp)
+  movq $0, -2824(%rbp)
+  movq $0, -2832(%rbp)
+  movq $0, -2840(%rbp)
+  movq $0, -2848(%rbp)
+  movq $0, -2856(%rbp)
+  movq $0, -2864(%rbp)
+  movq $0, -2872(%rbp)
+  movq $0, -2880(%rbp)
+  movq $0, -2888(%rbp)
+  movq $0, -2896(%rbp)
+  movq $0, -2904(%rbp)
+  movq $0, -2912(%rbp)
+  movq $0, -2920(%rbp)
+  movq $0, -2928(%rbp)
+  movq $0, -2936(%rbp)
+  movq $0, -2944(%rbp)
+  movq $0, -2952(%rbp)
+  movq $0, -2960(%rbp)
+  movq $0, -2968(%rbp)
+  movq $0, -2976(%rbp)
+  movq $0, -2984(%rbp)
+  movq $0, -2992(%rbp)
+  movq $0, -3000(%rbp)
+  movq $0, -3008(%rbp)
+  movq $0, -3016(%rbp)
+  movq $0, -3024(%rbp)
+  movq $0, -3032(%rbp)
+  movq $0, -3040(%rbp)
+  movq $0, -3048(%rbp)
+  movq $0, -3056(%rbp)
+  movq $0, -3064(%rbp)
+  movq $0, -3072(%rbp)
+  movq $0, -3080(%rbp)
+  movq $0, -3088(%rbp)
+  movq $0, -3096(%rbp)
+  movq $0, -3104(%rbp)
+  movq $0, -3112(%rbp)
+  movq $0, -3120(%rbp)
+  movq $0, -3128(%rbp)
+  movq $0, -3136(%rbp)
+  movq $0, -3144(%rbp)
+  movq $0, -3152(%rbp)
+  movq $0, -3160(%rbp)
+  movq $0, -3168(%rbp)
+  movq $0, -3176(%rbp)
+  movq $0, -3184(%rbp)
+  movq $0, -3192(%rbp)
+  movq $0, -3200(%rbp)
+  movq $0, -3208(%rbp)
+  movq $0, -3216(%rbp)
+  movq $0, -3224(%rbp)
+  movq $0, -3232(%rbp)
+  movq $0, -3240(%rbp)
+  movq $0, -3248(%rbp)
+  movq $0, -3256(%rbp)
+  movq $0, -3264(%rbp)
+  movq $0, -3272(%rbp)
+  movq $0, -3280(%rbp)
+  movq $0, -3288(%rbp)
+  movq $0, -3296(%rbp)
+  movq $0, -3304(%rbp)
+  movq $0, -3312(%rbp)
+  movq $0, -3320(%rbp)
+  movq $0, -3328(%rbp)
+  movq $0, -3336(%rbp)
+  movq $0, -3344(%rbp)
+  movq $0, -3352(%rbp)
+  movq $0, -3360(%rbp)
+  movq $0, -3368(%rbp)
+  movq $0, -3376(%rbp)
+  movq $0, -3384(%rbp)
+  movq $0, -3392(%rbp)
+  movq $0, -3400(%rbp)
+  movq $0, -3408(%rbp)
+  movq $0, -3416(%rbp)
+  movq $0, -3424(%rbp)
+  movq $0, -3432(%rbp)
+  movq $0, -3440(%rbp)
+  movq $0, -3448(%rbp)
+  movq $0, -3456(%rbp)
+  movq $0, -3464(%rbp)
+  movq $0, -3472(%rbp)
+  movq $0, -3480(%rbp)
+  movq $0, -3488(%rbp)
+  movq $0, -3496(%rbp)
+  movq $0, -3504(%rbp)
+  movq $0, -3512(%rbp)
+  movq $0, -3520(%rbp)
+  movq $0, -3528(%rbp)
+  movq $0, -3536(%rbp)
+  movq $0, -3544(%rbp)
+  movq $0, -3552(%rbp)
+  movq $0, -3560(%rbp)
+  movq $0, -3568(%rbp)
+  movq $0, -3576(%rbp)
+  jmp main_entry
+
+main_entry:
+  call e1
+  movq %rax, -8(%rbp)
+  movq foo(%rip), %r8
+  cmpq -8(%rbp), %r8
+  movq $0, %r8
+  setne %r8b
+  movq %r8, -896(%rbp)
+  movq -3248(%rbp), %r8
+  leaq 0(%r8), %r9
+  movq %r9, -1784(%rbp)
+  movq -1784(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2632(%rbp)
+  movq -3432(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2720(%rbp)
+  movq foo(%rip), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3192(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -2808(%rbp)
+  movq -2808(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2896(%rbp)
+  movq -3344(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3576(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -2984(%rbp)
+  movq -2984(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -3072(%rbp)
+  movq $6, %rdi
+  movq -896(%rbp), %rsi
+  movq -2632(%rbp), %rdx
+  movq -2720(%rbp), %rcx
+  movq -2896(%rbp), %r8
+  movq -3072(%rbp), %r9
+  call e5
+  movq %rax, -16(%rbp)
+  movq -16(%rbp), %r8
+  leaq 0(%r8), %r9
+  movq %r9, -104(%rbp)
+  movq -104(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -192(%rbp)
+  movq -192(%rbp), %r8
+  movq %r8, -3296(%rbp)
+  movq $0, %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3360(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -280(%rbp)
+  movq -280(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -368(%rbp)
+  call f1
+  movq %rax, -456(%rbp)
+  jmp main_lbl1
+
+main_lbl1:
+  movq -456(%rbp), %r8
+  addq $6, %r8
+  movq %r8, -544(%rbp)
+  movq -544(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -368(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -632(%rbp)
+  movq -632(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -720(%rbp)
+  call e1
+  movq %rax, -808(%rbp)
+  movq -808(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3432(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -904(%rbp)
+  movq -904(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -992(%rbp)
+  movq -3520(%rbp), %rdi
+  call e2
+  movq %rax, -1080(%rbp)
+  movq -1080(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -992(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -1168(%rbp)
+  movq -1168(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1256(%rbp)
+  movq -1256(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -720(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -1344(%rbp)
+  movq -1344(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1432(%rbp)
+  movq -1432(%rbp), %r8
+  movq %r8, -3352(%rbp)
+  movq -3160(%rbp), %r8
+  movq %r8, -3160(%rbp)
+  movq $9, %r8
+  movq bar(%rip), %r9
+  movq %r8, 0(%r9)
+  movq bar(%rip), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1520(%rbp)
+  movq -1520(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3168(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -1608(%rbp)
+  movq -1608(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1696(%rbp)
+  movq -1696(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1792(%rbp)
+  subq $8, %rsp
+  pushq -1792(%rbp)
+  call f2
+  addq $16, %rsp
+  jmp main_lbl2
+
+main_lbl10:
+  jmp main_lbl19
+
+main_lbl11:
+  call f1
+  movq %rax, -2968(%rbp)
+  jmp main_lbl12
+
+main_lbl12:
+  pushq -3208(%rbp)
+  pushq -2968(%rbp)
+  call f3
+  movq %rax, -2976(%rbp)
+  addq $16, %rsp
+  jmp main_lbl13
+
+main_lbl13:
+  movq -2976(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -2960(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -2992(%rbp)
+  movq -2992(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -3000(%rbp)
+  movq $0, %r8
+  subq -3000(%rbp), %r8
+  movq %r8, -2952(%rbp)
+  cmpq $0, -2952(%rbp)
+  jne main_lbl9
+  jmp main_lbl10
+
+main_lbl14:
+  movq -3024(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3016(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -3032(%rbp)
+  movq -3032(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -3040(%rbp)
+  movq -3040(%rbp), %rdi
+  movq -3224(%rbp), %rsi
+  call e3
+  movq %rax, -3048(%rbp)
+  movq -3232(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -3056(%rbp)
+  movq -3264(%rbp), %r8
+  leaq 0(%r8), %r9
+  movq %r9, -3064(%rbp)
+  movq -3064(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -3080(%rbp)
+  movq -3080(%rbp), %r8
+  leaq 0(%r8), %r9
+  movq %r9, -3088(%rbp)
+  movq -3088(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -3096(%rbp)
+  movq -3160(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3176(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -3104(%rbp)
+  movq -3104(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -3112(%rbp)
+  movq -3112(%rbp), %r8
+  leaq 8(%r8), %r9
+  movq %r9, -3120(%rbp)
+  movq -3120(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -3128(%rbp)
+  movq -3560(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3240(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -3136(%rbp)
+  movq -3136(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -3144(%rbp)
+  movq -3248(%rbp), %r8
+  leaq 0(%r8), %r9
+  movq %r9, -3152(%rbp)
+  movq -3152(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -24(%rbp)
+  movq -24(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3144(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -32(%rbp)
+  movq -32(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -40(%rbp)
+  pushq -3128(%rbp)
+  pushq -3096(%rbp)
+  call *-40(%rbp)
+  movq %rax, -48(%rbp)
+  addq $16, %rsp
+  jmp main_lbl15
+
+main_lbl15:
+  movq -3048(%rbp), %rdi
+  movq -3056(%rbp), %rsi
+  movq -48(%rbp), %rdx
+  call e4
+  cmpq $0, -3344(%rbp)
+  jle .invalid_alloc_length
+  movq $1, %rdi
+  imulq -3344(%rbp), %rdi
+  incq %rdi
+  call _cflat_alloc
+  movq -3344(%rbp), %r8
+  movq %r8, 0(%rax)
+  addq $8, %rax
+  movq %rax, -3192(%rbp)
+  movq -3272(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -56(%rbp)
+  movq -56(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -64(%rbp)
+  subq $8, %rsp
+  pushq $0
+  call *-64(%rbp)
+  addq $16, %rsp
+  jmp main_lbl16
+
+main_lbl16:
+  call f1
+  jmp main_lbl17
+
+main_lbl17:
+  movq $0, %r8
+  subq foo(%rip), %r8
+  movq %r8, -72(%rbp)
+  movq $8, %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3280(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -80(%rbp)
+  movq -80(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -88(%rbp)
+  movq $6, %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -88(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -96(%rbp)
+  movq -96(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -112(%rbp)
+  movq $10, %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -112(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -120(%rbp)
+  movq -120(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -128(%rbp)
+  movq -72(%rbp), %rdi
+  movq -128(%rbp), %rsi
+  call e3
+  movq foo(%rip), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3168(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -136(%rbp)
+  movq -136(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -144(%rbp)
+  movq -144(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -152(%rbp)
+  movq -152(%rbp), %rdi
+  call e2
+  movq %rax, -160(%rbp)
+  cmpq $0, -160(%rbp)
+  jle .invalid_alloc_length
+  movq $1, %rdi
+  imulq -160(%rbp), %rdi
+  incq %rdi
+  call _cflat_alloc
+  movq -160(%rbp), %r8
+  movq %r8, 0(%rax)
+  addq $8, %rax
+  movq %rax, bar(%rip)
+  movq -3520(%rbp), %r8
+  cmpq -3520(%rbp), %r8
+  movq $0, %r8
+  sete %r8b
+  movq %r8, -168(%rbp)
+  movq -3200(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -176(%rbp)
+  movq -168(%rbp), %rdi
+  movq -176(%rbp), %rsi
+  movq $3, %rdx
+  call e4
+  movq %rax, -184(%rbp)
+  movq -184(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3432(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -200(%rbp)
+  movq -200(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -208(%rbp)
+  subq $8, %rsp
+  pushq -208(%rbp)
+  call *-3288(%rbp)
+  addq $16, %rsp
+  jmp main_lbl18
+
+main_lbl18:
+  jmp main_lbl8
+
+main_lbl19:
+  call f1
+  movq %rax, -216(%rbp)
+  jmp main_lbl22
+
+main_lbl2:
+  movq fez(%rip), %r8
+  leaq 0(%r8), %r9
+  movq %r9, -1968(%rbp)
+  movq -1968(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2056(%rbp)
+  movq -2056(%rbp), %r8
+  leaq 8(%r8), %r9
+  movq %r9, -2144(%rbp)
+  movq $1, %r8
+  cmpq $0, %r8
+  jle .invalid_alloc_length
+  movq $1, %rdi
+  imulq %r8, %rdi
+  incq %rdi
+  call _cflat_alloc
+  movq $1, %r8
+  movq %r8, 0(%rax)
+  addq $8, %rax
+  movq %rax, -1880(%rbp)
+  movq -1880(%rbp), %r8
+  movq -2144(%rbp), %r9
+  movq %r8, 0(%r9)
+  movq -3344(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3256(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -2232(%rbp)
+  movq -2232(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2320(%rbp)
+  movq -2320(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2408(%rbp)
+  movq -3520(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2496(%rbp)
+  movq -2496(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3432(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -2584(%rbp)
+  movq -2584(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2640(%rbp)
+  movq -2408(%rbp), %r8
+  cmpq -2640(%rbp), %r8
+  movq $0, %r8
+  sete %r8b
+  movq %r8, -2648(%rbp)
+  movq foo(%rip), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3568(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -2656(%rbp)
+  movq -2656(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2664(%rbp)
+  movq -2664(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2672(%rbp)
+  movq -3560(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3552(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -2680(%rbp)
+  movq -2680(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2688(%rbp)
+  call e1
+  movq %rax, -2696(%rbp)
+  movq $3, %r8
+  cmpq -2696(%rbp), %r8
+  movq $0, %r8
+  sete %r8b
+  movq %r8, -2704(%rbp)
+  movq -2704(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -2688(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -2712(%rbp)
+  movq -2712(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2728(%rbp)
+  subq $8, %rsp
+  pushq -2672(%rbp)
+  call *-2728(%rbp)
+  movq %rax, -2736(%rbp)
+  addq $16, %rsp
+  jmp main_lbl3
+
+main_lbl20:
+  movq -3296(%rbp), %r8
+  leaq 0(%r8), %r9
+  movq %r9, -232(%rbp)
+  movq -232(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -240(%rbp)
+  movq -240(%rbp), %r8
+  movq %r8, -3560(%rbp)
+  movq -3560(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3304(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -248(%rbp)
+  movq -248(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -256(%rbp)
+  movq -256(%rbp), %r8
+  leaq 0(%r8), %r9
+  movq %r9, -264(%rbp)
+  movq -264(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -272(%rbp)
+  movq -272(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3216(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -288(%rbp)
+  movq -288(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -296(%rbp)
+  subq $8, %rsp
+  pushq -296(%rbp)
+  call f2
+  addq $16, %rsp
+  jmp main_lbl23
+
+main_lbl21:
+  jmp main_lbl29
+
+main_lbl22:
+  movq $5, %r8
+  imulq -216(%rbp), %r8
+  movq %r8, -224(%rbp)
+  cmpq $0, -224(%rbp)
+  jne main_lbl20
+  jmp main_lbl21
+
+main_lbl23:
+  movq -3264(%rbp), %r8
+  leaq 0(%r8), %r9
+  movq %r9, -304(%rbp)
+  movq -304(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -312(%rbp)
+  movq -312(%rbp), %r8
+  leaq 8(%r8), %r9
+  movq %r9, -320(%rbp)
+  movq -320(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -328(%rbp)
+  subq $8, %rsp
+  pushq -328(%rbp)
+  call f2
+  addq $16, %rsp
+  jmp main_lbl24
+
+main_lbl24:
+  call f1
+  jmp main_lbl25
+
+main_lbl25:
+  movq $1, %r8
+  cmpq $0, %r8
+  jle .invalid_alloc_length
+  movq $1, %rdi
+  imulq %r8, %rdi
+  incq %rdi
+  call _cflat_alloc
+  movq $1, %r8
+  movq %r8, 0(%rax)
+  addq $8, %rax
+  movq %rax, -336(%rbp)
+  movq -336(%rbp), %r8
+  movq -3256(%rbp), %r9
+  movq %r8, 0(%r9)
+  movq $1, %r8
+  cmpq $0, %r8
+  jle .invalid_alloc_length
+  movq $1, %rdi
+  imulq %r8, %rdi
+  incq %rdi
+  call _cflat_alloc
+  movq $1, %r8
+  movq %r8, 0(%rax)
+  addq $8, %rax
+  movq %rax, bar(%rip)
+  movq -3232(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -344(%rbp)
+  movq -344(%rbp), %r8
+  movq %r8, -3264(%rbp)
+  call f1
+  jmp main_lbl26
+
+main_lbl26:
+  movq -3320(%rbp), %r8
+  leaq 0(%r8), %r9
+  movq %r9, -352(%rbp)
+  movq -352(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -360(%rbp)
+  movq -360(%rbp), %r8
+  leaq 8(%r8), %r9
+  movq %r9, -376(%rbp)
+  movq -376(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -384(%rbp)
+  movq -384(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -392(%rbp)
+  movq -3328(%rbp), %r8
+  leaq 8(%r8), %r9
+  movq %r9, -400(%rbp)
+  movq -400(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -408(%rbp)
+  subq $8, %rsp
+  pushq -408(%rbp)
+  call f2
+  movq %rax, -416(%rbp)
+  addq $16, %rsp
+  jmp main_lbl27
+
+main_lbl27:
+  pushq -416(%rbp)
+  pushq -392(%rbp)
+  call *-3312(%rbp)
+  addq $16, %rsp
+  jmp main_lbl28
+
+main_lbl28:
+  jmp main_lbl19
+
+main_lbl29:
+  movq $7, %r8
+  cmpq $0, %r8
+  jne main_lbl30
+  jmp main_lbl31
+
+main_lbl3:
+  pushq -2736(%rbp)
+  pushq -2648(%rbp)
+  call f3
+  addq $16, %rsp
+  jmp main_lbl4
+
+main_lbl30:
+  movq -3296(%rbp), %r8
+  leaq 0(%r8), %r9
+  movq %r9, -424(%rbp)
+  movq -424(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -432(%rbp)
+  movq -432(%rbp), %r8
+  movq bar(%rip), %r9
+  movq %r8, 0(%r9)
+  movq -3328(%rbp), %r8
+  leaq 0(%r8), %r9
+  movq %r9, -440(%rbp)
+  movq -440(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -448(%rbp)
+  movq -448(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3336(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -464(%rbp)
+  movq -464(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -472(%rbp)
+  movq -472(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -480(%rbp)
+  movq -3344(%rbp), %rdi
+  movq -480(%rbp), %rsi
+  call e3
+  movq $1, %r8
+  cmpq $0, %r8
+  jle .invalid_alloc_length
+  movq $1, %rdi
+  imulq %r8, %rdi
+  incq %rdi
+  call _cflat_alloc
+  movq $1, %r8
+  movq %r8, 0(%rax)
+  addq $8, %rax
+  movq %rax, bar(%rip)
+  movq foo(%rip), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3184(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -488(%rbp)
+  movq -488(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -496(%rbp)
+  call f1
+  movq %rax, -504(%rbp)
+  jmp main_lbl32
+
+main_lbl31:
+  call f1
+  jmp main_lbl39
+
+main_lbl32:
+  movq -504(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -496(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -512(%rbp)
+  movq -512(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -520(%rbp)
+  subq $8, %rsp
+  pushq -3520(%rbp)
+  call *-3368(%rbp)
+  movq %rax, -528(%rbp)
+  addq $16, %rsp
+  jmp main_lbl33
+
+main_lbl33:
+  movq -3208(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -536(%rbp)
+  movq -536(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -528(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -552(%rbp)
+  movq -552(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -560(%rbp)
+  movq -560(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -520(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -568(%rbp)
+  movq -568(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -576(%rbp)
+  cmpq $0, -576(%rbp)
+  jle .invalid_alloc_length
+  movq $1, %rdi
+  imulq -576(%rbp), %rdi
+  incq %rdi
+  call _cflat_alloc
+  movq -576(%rbp), %r8
+  movq %r8, 0(%rax)
+  addq $8, %rax
+  movq %rax, -3352(%rbp)
+  call *-3376(%rbp)
+  jmp main_lbl34
+
+main_lbl34:
+  movq -3576(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -584(%rbp)
+  call e1
+  movq %rax, -592(%rbp)
+  movq -592(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3392(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -600(%rbp)
+  movq -600(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -608(%rbp)
+  movq -3160(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -608(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -616(%rbp)
+  movq -616(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -624(%rbp)
+  subq $8, %rsp
+  pushq -584(%rbp)
+  call *-624(%rbp)
+  movq %rax, -640(%rbp)
+  addq $16, %rsp
+  jmp main_lbl35
+
+main_lbl35:
+  movq -3160(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3384(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -648(%rbp)
+  movq -648(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -656(%rbp)
+  movq $8, %r8
+  addq foo(%rip), %r8
+  movq %r8, -664(%rbp)
+  movq -664(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -656(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -672(%rbp)
+  movq -672(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -680(%rbp)
+  movq -680(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -688(%rbp)
+  subq $8, %rsp
+  pushq -640(%rbp)
+  call *-688(%rbp)
+  addq $16, %rsp
+  jmp main_lbl36
+
+main_lbl36:
+  call f1
+  jmp main_lbl37
+
+main_lbl37:
+  call f1
+  jmp main_lbl38
+
+main_lbl38:
+  jmp main_lbl29
+
+main_lbl39:
+  call f1
+  movq %rax, -696(%rbp)
+  jmp main_lbl40
+
+main_lbl4:
+  movq $7, %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3176(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -2752(%rbp)
+  movq -2752(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2760(%rbp)
+  movq -2760(%rbp), %r8
+  leaq 0(%r8), %r9
+  movq %r9, -2768(%rbp)
+  movq -2768(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2776(%rbp)
+  movq -2776(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3576(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -2784(%rbp)
+  movq $10, %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3184(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -2792(%rbp)
+  movq -2792(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2800(%rbp)
+  call e1
+  movq %rax, -2816(%rbp)
+  movq foo(%rip), %rax
+  cqo
+  idivq -2816(%rbp)
+  movq %rax, -2824(%rbp)
+  movq -2824(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -2800(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -2832(%rbp)
+  movq -2832(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2840(%rbp)
+  movq -2840(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2848(%rbp)
+  cmpq $0, -2848(%rbp)
+  jle .invalid_alloc_length
+  movq $1, %rdi
+  imulq -2848(%rbp), %rdi
+  incq %rdi
+  call _cflat_alloc
+  movq -2848(%rbp), %r8
+  movq %r8, 0(%rax)
+  addq $8, %rax
+  movq %rax, -2744(%rbp)
+  movq -2744(%rbp), %r8
+  movq -2784(%rbp), %r9
+  movq %r8, 0(%r9)
+  movq $10, %r8
+  cmpq $0, %r8
+  jle .invalid_alloc_length
+  movq $1, %rdi
+  imulq %r8, %rdi
+  incq %rdi
+  call _cflat_alloc
+  movq $10, %r8
+  movq %r8, 0(%rax)
+  addq $8, %rax
+  movq %rax, -3192(%rbp)
+  movq $5, %r8
+  cmpq $0, %r8
+  jne main_lbl5
+  jmp main_lbl6
+
+main_lbl40:
+  movq -696(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3400(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -704(%rbp)
+  movq -704(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -712(%rbp)
+  movq -3208(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -728(%rbp)
+  movq -728(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -712(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -736(%rbp)
+  movq -736(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -744(%rbp)
+  movq -744(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -752(%rbp)
+  subq $8, %rsp
+  pushq -752(%rbp)
+  call f2
+  addq $16, %rsp
+  jmp main_lbl41
+
+main_lbl41:
+  call e1
+  movq %rax, -760(%rbp)
+  movq -760(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3304(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -768(%rbp)
+  movq -768(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -776(%rbp)
+  movq -776(%rbp), %r8
+  leaq 8(%r8), %r9
+  movq %r9, -784(%rbp)
+  movq -784(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -792(%rbp)
+  movq -792(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -800(%rbp)
+  movq -800(%rbp), %r8
+  movq bar(%rip), %r9
+  movq %r8, 0(%r9)
+  jmp main_lbl7
+
+main_lbl42:
+  call e1
+  movq -3160(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3176(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -816(%rbp)
+  movq -816(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -824(%rbp)
+  movq -824(%rbp), %r8
+  leaq 0(%r8), %r9
+  movq %r9, -832(%rbp)
+  movq -832(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -840(%rbp)
+  movq -840(%rbp), %r8
+  imulq $8, %r8
+  movq %r8, -848(%rbp)
+  movq -3408(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -856(%rbp)
+  movq -848(%rbp), %rdi
+  movq -856(%rbp), %rsi
+  movq -3560(%rbp), %rdx
+  call e4
+  movq -3168(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -864(%rbp)
+  movq -864(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -872(%rbp)
+  movq $10, %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3168(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -880(%rbp)
+  movq -880(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -888(%rbp)
+  call f1
+  movq %rax, -912(%rbp)
+  jmp main_lbl45
+
+main_lbl43:
+  movq -3248(%rbp), %r8
+  leaq 0(%r8), %r9
+  movq %r9, -1152(%rbp)
+  subq $8, %rsp
+  pushq -3520(%rbp)
+  call *-3288(%rbp)
+  movq %rax, -1160(%rbp)
+  addq $16, %rsp
+  jmp main_lbl53
+
+main_lbl44:
+  jmp main_lbl66
+
+main_lbl45:
+  movq -912(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -888(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -920(%rbp)
+  movq -920(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -928(%rbp)
+  movq baz(%rip), %r8
+  leaq 8(%r8), %r9
+  movq %r9, -936(%rbp)
+  movq -936(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -944(%rbp)
+  pushq -944(%rbp)
+  pushq -3344(%rbp)
+  call *-3416(%rbp)
+  movq %rax, -952(%rbp)
+  addq $16, %rsp
+  jmp main_lbl46
+
+main_lbl46:
+  movq -952(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -928(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -960(%rbp)
+  movq -960(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -968(%rbp)
+  movq -968(%rbp), %r8
+  movq -872(%rbp), %r9
+  movq %r8, 0(%r9)
+  call f1
+  jmp main_lbl47
+
+main_lbl47:
+  cmpq $0, foo(%rip)
+  jle .invalid_alloc_length
+  movq $1, %rdi
+  imulq foo(%rip), %rdi
+  incq %rdi
+  call _cflat_alloc
+  movq foo(%rip), %r8
+  movq %r8, 0(%rax)
+  addq $8, %rax
+  movq %rax, -3208(%rbp)
+  movq $2, %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3352(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -976(%rbp)
+  movq -976(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -984(%rbp)
+  subq $8, %rsp
+  pushq -3520(%rbp)
+  call f2
+  movq %rax, -1000(%rbp)
+  addq $16, %rsp
+  jmp main_lbl48
+
+main_lbl48:
+  movq -984(%rbp), %r8
+  cmpq -1000(%rbp), %r8
+  movq $0, %r8
+  setne %r8b
+  movq %r8, -1008(%rbp)
+  movq -1008(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3216(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -1016(%rbp)
+  movq -3432(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1024(%rbp)
+  subq $8, %rsp
+  pushq -1024(%rbp)
+  call *-3424(%rbp)
+  movq %rax, -1032(%rbp)
+  addq $16, %rsp
+  jmp main_lbl49
+
+main_lbl49:
+  movq -1032(%rbp), %r8
+  movq -1016(%rbp), %r9
+  movq %r8, 0(%r9)
+  movq $10, %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3448(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -1040(%rbp)
+  movq -1040(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1048(%rbp)
+  call f1
+  movq %rax, -1056(%rbp)
+  jmp main_lbl50
+
+main_lbl5:
+  movq fez(%rip), %r8
+  leaq 0(%r8), %r9
+  movq %r9, -2856(%rbp)
+  movq -2856(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2864(%rbp)
+  movq -2864(%rbp), %r8
+  leaq 8(%r8), %r9
+  movq %r9, -2872(%rbp)
+  movq -2872(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2880(%rbp)
+  movq $0, %r8
+  subq $0, %r8
+  movq %r8, -2888(%rbp)
+  call e1
+  movq %rax, -2904(%rbp)
+  movq -2904(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3200(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -2912(%rbp)
+  movq -2912(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2920(%rbp)
+  movq -2888(%rbp), %rdi
+  movq -2920(%rbp), %rsi
+  movq $3, %rdx
+  call e4
+  movq %rax, -2928(%rbp)
+  movq -2928(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -2880(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -2936(%rbp)
+  movq -2936(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2944(%rbp)
+  movq -2944(%rbp), %r8
+  movq %r8, -3560(%rbp)
+  jmp main_lbl8
+
+main_lbl50:
+  pushq -3192(%rbp)
+  pushq -1056(%rbp)
+  call *-3456(%rbp)
+  movq %rax, -1064(%rbp)
+  addq $16, %rsp
+  jmp main_lbl51
+
+main_lbl51:
+  movq -1064(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -1048(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -1072(%rbp)
+  movq -1072(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1088(%rbp)
+  movq $9, %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -1088(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -1096(%rbp)
+  movq -1096(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1104(%rbp)
+  movq -1104(%rbp), %r8
+  movq -3440(%rbp), %r9
+  movq %r8, 0(%r9)
+  call e1
+  movq %rax, -1112(%rbp)
+  movq -1112(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3400(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -1120(%rbp)
+  movq -1120(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1128(%rbp)
+  movq -1128(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1136(%rbp)
+  movq -1136(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1144(%rbp)
+  subq $8, %rsp
+  pushq -1144(%rbp)
+  call *-3288(%rbp)
+  addq $16, %rsp
+  jmp main_lbl52
+
+main_lbl52:
+  jmp main_lbl44
+
+main_lbl53:
+  movq -1160(%rbp), %r8
+  cmpq -3192(%rbp), %r8
+  movq $0, %r8
+  sete %r8b
+  movq %r8, -1176(%rbp)
+  movq -1176(%rbp), %rdi
+  movq -3224(%rbp), %rsi
+  call e3
+  movq %rax, -1184(%rbp)
+  movq -1184(%rbp), %r8
+  movq -1152(%rbp), %r9
+  movq %r8, 0(%r9)
+  call f1
+  jmp main_lbl54
+
+main_lbl54:
+  movq $1, %r8
+  cmpq $0, %r8
+  jle .invalid_alloc_length
+  movq $1, %rdi
+  imulq %r8, %rdi
+  incq %rdi
+  call _cflat_alloc
+  movq $1, %r8
+  movq %r8, 0(%rax)
+  addq $8, %rax
+  movq %rax, -3352(%rbp)
+  movq -3160(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3576(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -1200(%rbp)
+  call f1
+  movq %rax, -1208(%rbp)
+  jmp main_lbl55
+
+main_lbl55:
+  cmpq $0, -1208(%rbp)
+  jle .invalid_alloc_length
+  movq $1, %rdi
+  imulq -1208(%rbp), %rdi
+  incq %rdi
+  call _cflat_alloc
+  movq -1208(%rbp), %r8
+  movq %r8, 0(%rax)
+  addq $8, %rax
+  movq %rax, -1192(%rbp)
+  movq -1192(%rbp), %r8
+  movq -1200(%rbp), %r9
+  movq %r8, 0(%r9)
+  movq fez(%rip), %r8
+  leaq 0(%r8), %r9
+  movq %r9, -1216(%rbp)
+  movq -1216(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1224(%rbp)
+  movq -1224(%rbp), %r8
+  leaq 8(%r8), %r9
+  movq %r9, -1232(%rbp)
+  movq -1232(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1240(%rbp)
+  subq $8, %rsp
+  pushq -3520(%rbp)
+  call f2
+  movq %rax, -1248(%rbp)
+  addq $16, %rsp
+  jmp main_lbl56
+
+main_lbl56:
+  movq $0, %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3464(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -1264(%rbp)
+  movq -1264(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1272(%rbp)
+  subq $8, %rsp
+  pushq -1248(%rbp)
+  call *-1272(%rbp)
+  movq %rax, -1280(%rbp)
+  addq $16, %rsp
+  jmp main_lbl57
+
+main_lbl57:
+  pushq -1280(%rbp)
+  pushq -3344(%rbp)
+  call *-3416(%rbp)
+  movq %rax, -1288(%rbp)
+  addq $16, %rsp
+  jmp main_lbl58
+
+main_lbl58:
+  movq -1288(%rbp), %r8
+  movq -1240(%rbp), %r9
+  movq %r8, 0(%r9)
+  movq -3248(%rbp), %r8
+  leaq 0(%r8), %r9
+  movq %r9, -1296(%rbp)
+  call f1
+  movq %rax, -1304(%rbp)
+  jmp main_lbl59
+
+main_lbl59:
+  movq -1304(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3472(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -1312(%rbp)
+  movq -1312(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1320(%rbp)
+  movq $0, %r8
+  subq foo(%rip), %r8
+  movq %r8, -1328(%rbp)
+  movq -1328(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -1320(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -1336(%rbp)
+  movq -1336(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1352(%rbp)
+  call *-1352(%rbp)
+  movq %rax, -1360(%rbp)
+  jmp main_lbl60
+
+main_lbl6:
+  cmpq $0, foo(%rip)
+  jne main_lbl42
+  jmp main_lbl43
+
+main_lbl60:
+  movq -1360(%rbp), %r8
+  movq -1296(%rbp), %r9
+  movq %r8, 0(%r9)
+  subq $8, %rsp
+  pushq -3520(%rbp)
+  call f2
+  addq $16, %rsp
+  jmp main_lbl61
+
+main_lbl61:
+  movq $8, -3560(%rbp)
+  subq $8, %rsp
+  pushq -3208(%rbp)
+  call f2
+  addq $16, %rsp
+  jmp main_lbl62
+
+main_lbl62:
+  call f1
+  movq %rax, -1368(%rbp)
+  jmp main_lbl63
+
+main_lbl63:
+  movq -1368(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3216(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -1376(%rbp)
+  movq -1376(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1384(%rbp)
+  subq $8, %rsp
+  pushq -1384(%rbp)
+  call *-3424(%rbp)
+  movq %rax, -1392(%rbp)
+  addq $16, %rsp
+  jmp main_lbl64
+
+main_lbl64:
+  movq foo(%rip), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3576(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -1400(%rbp)
+  movq -1400(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1408(%rbp)
+  movq -3160(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3480(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -1416(%rbp)
+  movq -1416(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1424(%rbp)
+  subq $8, %rsp
+  pushq -1408(%rbp)
+  call *-1424(%rbp)
+  movq %rax, -1440(%rbp)
+  addq $16, %rsp
+  jmp main_lbl65
+
+main_lbl65:
+  movq -1392(%rbp), %r8
+  cmpq -1440(%rbp), %r8
+  movq $0, %r8
+  sete %r8b
+  movq %r8, -1448(%rbp)
+  movq -1448(%rbp), %r8
+  movq %r8, -3344(%rbp)
+  movq $7, %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3192(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -1464(%rbp)
+  movq -1464(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1472(%rbp)
+  movq -1472(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3488(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -1480(%rbp)
+  movq -1480(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1488(%rbp)
+  movq -1488(%rbp), %r8
+  leaq 0(%r8), %r9
+  movq %r9, -1496(%rbp)
+  movq $1, %r8
+  cmpq $0, %r8
+  jle .invalid_alloc_length
+  movq $1, %rdi
+  imulq %r8, %rdi
+  incq %rdi
+  call _cflat_alloc
+  movq $1, %r8
+  movq %r8, 0(%rax)
+  addq $8, %rax
+  movq %rax, -1456(%rbp)
+  movq -1456(%rbp), %r8
+  movq -1496(%rbp), %r9
+  movq %r8, 0(%r9)
+  jmp main_lbl44
+
+main_lbl66:
+  cmpq $0, -3160(%rbp)
+  jne main_lbl67
+  jmp main_lbl68
+
+main_lbl67:
+  movq $4, %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3496(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -1504(%rbp)
+  movq -1504(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1512(%rbp)
+  movq -1512(%rbp), %r8
+  movq %r8, -3368(%rbp)
+  movq foo(%rip), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3472(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -1528(%rbp)
+  movq -1528(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1536(%rbp)
+  movq $1, %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3504(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -1544(%rbp)
+  movq -1544(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1552(%rbp)
+  movq -3192(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1560(%rbp)
+  movq -1560(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -1552(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -1568(%rbp)
+  movq -1568(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1576(%rbp)
+  call e1
+  movq %rax, -1584(%rbp)
+  movq -1584(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3432(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -1592(%rbp)
+  movq -1592(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1600(%rbp)
+  movq -3192(%rbp), %r8
+  cmpq -1600(%rbp), %r8
+  movq $0, %r8
+  setne %r8b
+  movq %r8, -1616(%rbp)
+  movq -1616(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -1576(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -1624(%rbp)
+  movq -1624(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1632(%rbp)
+  movq -1632(%rbp), %r8
+  movq -1536(%rbp), %r9
+  movq %r8, 0(%r9)
+  movq $1, %r8
+  cmpq $0, %r8
+  jle .invalid_alloc_length
+  movq $1, %rdi
+  imulq %r8, %rdi
+  incq %rdi
+  call _cflat_alloc
+  movq $1, %r8
+  movq %r8, 0(%rax)
+  addq $8, %rax
+  movq %rax, -3208(%rbp)
+  call f1
+  jmp main_lbl69
+
+main_lbl68:
+  movq $7, %rdi
+  movq $0, %rsi
+  movq -3160(%rbp), %rdx
+  call e4
+  movq $9, %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3184(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -1736(%rbp)
+  movq -1736(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1744(%rbp)
+  movq foo(%rip), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3576(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -1752(%rbp)
+  movq -1752(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1760(%rbp)
+  movq -1760(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1768(%rbp)
+  movq -1768(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -1744(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -1776(%rbp)
+  movq $1, %r8
+  cmpq $0, %r8
+  jle .invalid_alloc_length
+  movq $1, %rdi
+  imulq %r8, %rdi
+  incq %rdi
+  call _cflat_alloc
+  movq $1, %r8
+  movq %r8, 0(%rax)
+  addq $8, %rax
+  movq %rax, -1728(%rbp)
+  movq -1728(%rbp), %r8
+  movq -1776(%rbp), %r9
+  movq %r8, 0(%r9)
+  movq $9, %r8
+  cmpq $0, %r8
+  jne main_lbl72
+  jmp main_lbl73
+
+main_lbl69:
+  call e1
+  movq %rax, -1640(%rbp)
+  movq -3432(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1648(%rbp)
+  pushq -1648(%rbp)
+  pushq $7
+  call f3
+  movq %rax, -1656(%rbp)
+  addq $16, %rsp
+  jmp main_lbl70
+
+main_lbl7:
+  movq -3344(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3544(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -2448(%rbp)
+  movq -2448(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2456(%rbp)
+  movq $0, %r8
+  cmpq -3560(%rbp), %r8
+  movq $0, %r8
+  setne %r8b
+  movq %r8, -2464(%rbp)
+  movq -2464(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -2456(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -2472(%rbp)
+  movq -2472(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2480(%rbp)
+  call *-2480(%rbp)
+  movq %rax, -2488(%rbp)
+  jmp main_lbl91
+
+main_lbl70:
+  subq $8, %rsp
+  pushq -3192(%rbp)
+  call *-3424(%rbp)
+  movq %rax, -1664(%rbp)
+  addq $16, %rsp
+  jmp main_lbl71
+
+main_lbl71:
+  movq -1664(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1672(%rbp)
+  movq -1672(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3576(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -1680(%rbp)
+  movq -1680(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1688(%rbp)
+  movq $7, %rdi
+  movq -1640(%rbp), %rsi
+  movq -1656(%rbp), %rdx
+  movq -1688(%rbp), %rcx
+  movq $5, %r8
+  movq -3208(%rbp), %r9
+  call e5
+  movq $7, %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3256(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -1704(%rbp)
+  movq -1704(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1712(%rbp)
+  movq -1712(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1720(%rbp)
+  movq -1720(%rbp), %rdi
+  call e2
+  jmp main_lbl66
+
+main_lbl72:
+  movq $0, -3248(%rbp)
+  movq -3216(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1800(%rbp)
+  movq -1800(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1808(%rbp)
+  cmpq $0, -1808(%rbp)
+  jle .invalid_alloc_length
+  movq $1, %rdi
+  imulq -1808(%rbp), %rdi
+  incq %rdi
+  call _cflat_alloc
+  movq -1808(%rbp), %r8
+  movq %r8, 0(%rax)
+  addq $8, %rax
+  movq %rax, -3576(%rbp)
+  movq baz(%rip), %r8
+  leaq 0(%r8), %r9
+  movq %r9, -1816(%rbp)
+  movq -1816(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1824(%rbp)
+  movq -1824(%rbp), %r8
+  movq %r8, -3344(%rbp)
+  call *-3512(%rbp)
+  movq %rax, -1840(%rbp)
+  jmp main_lbl75
+
+main_lbl73:
+  movq $0, %r8
+  cmpq $0, %r8
+  jle .invalid_alloc_length
+  movq $1, %rdi
+  imulq %r8, %rdi
+  incq %rdi
+  call _cflat_alloc
+  movq $0, %r8
+  movq %r8, 0(%rax)
+  addq $8, %rax
+  movq %rax, -2240(%rbp)
+  movq -2240(%rbp), %r8
+  movq -3184(%rbp), %r9
+  movq %r8, 0(%r9)
+  call f1
+  jmp main_lbl85
+
+main_lbl74:
+  call f1
+  jmp main_lbl90
+
+main_lbl75:
+  movq -1840(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3488(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -1848(%rbp)
+  movq -1848(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1856(%rbp)
+  movq -1856(%rbp), %r8
+  leaq 0(%r8), %r9
+  movq %r9, -1864(%rbp)
+  movq $1, %r8
+  cmpq $0, %r8
+  jle .invalid_alloc_length
+  movq $1, %rdi
+  imulq %r8, %rdi
+  incq %rdi
+  call _cflat_alloc
+  movq $1, %r8
+  movq %r8, 0(%rax)
+  addq $8, %rax
+  movq %rax, -1832(%rbp)
+  movq -1832(%rbp), %r8
+  movq -1864(%rbp), %r9
+  movq %r8, 0(%r9)
+  movq -3216(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1872(%rbp)
+  subq $8, %rsp
+  pushq -1872(%rbp)
+  call f2
+  movq %rax, -1888(%rbp)
+  addq $16, %rsp
+  jmp main_lbl76
+
+main_lbl76:
+  movq fez(%rip), %r8
+  leaq 0(%r8), %r9
+  movq %r9, -1896(%rbp)
+  movq -1896(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1904(%rbp)
+  movq -1904(%rbp), %r8
+  leaq 8(%r8), %r9
+  movq %r9, -1912(%rbp)
+  movq -1912(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1920(%rbp)
+  movq -1888(%rbp), %r8
+  cmpq -1920(%rbp), %r8
+  movq $0, %r8
+  sete %r8b
+  movq %r8, -1928(%rbp)
+  movq $6, %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3168(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -1936(%rbp)
+  movq -1936(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1944(%rbp)
+  movq bar(%rip), %r8
+  cmpq -3208(%rbp), %r8
+  movq $0, %r8
+  sete %r8b
+  movq %r8, -1952(%rbp)
+  movq -1952(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -1944(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -1960(%rbp)
+  movq -1960(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -1976(%rbp)
+  subq $8, %rsp
+  pushq -1976(%rbp)
+  call f2
+  movq %rax, -1984(%rbp)
+  addq $16, %rsp
+  jmp main_lbl77
+
+main_lbl77:
+  pushq -1984(%rbp)
+  pushq -1928(%rbp)
+  call f3
+  addq $16, %rsp
+  jmp main_lbl78
+
+main_lbl78:
+  movq $10, %r8
+  cmpq $0, %r8
+  jle .invalid_alloc_length
+  movq $1, %rdi
+  imulq %r8, %rdi
+  incq %rdi
+  call _cflat_alloc
+  movq $10, %r8
+  movq %r8, 0(%rax)
+  addq $8, %rax
+  movq %rax, -3192(%rbp)
+  movq -3400(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2000(%rbp)
+  movq -3296(%rbp), %r8
+  leaq 8(%r8), %r9
+  movq %r9, -2008(%rbp)
+  movq -2008(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2016(%rbp)
+  movq -2016(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2024(%rbp)
+  subq $8, %rsp
+  pushq -3520(%rbp)
+  call *-3368(%rbp)
+  movq %rax, -2032(%rbp)
+  addq $16, %rsp
+  jmp main_lbl79
+
+main_lbl79:
+  call e1
+  movq %rax, -2040(%rbp)
+  call e1
+  movq %rax, -2048(%rbp)
+  movq -2040(%rbp), %r8
+  imulq -2048(%rbp), %r8
+  movq %r8, -2064(%rbp)
+  movq -2064(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -2032(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -2072(%rbp)
+  movq -2072(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2080(%rbp)
+  movq -2024(%rbp), %r8
+  subq -2080(%rbp), %r8
+  movq %r8, -2088(%rbp)
+  cmpq $0, -2088(%rbp)
+  jle .invalid_alloc_length
+  movq $1, %rdi
+  imulq -2088(%rbp), %rdi
+  incq %rdi
+  call _cflat_alloc
+  movq -2088(%rbp), %r8
+  movq %r8, 0(%rax)
+  addq $8, %rax
+  movq %rax, -1992(%rbp)
+  movq -1992(%rbp), %r8
+  movq -2000(%rbp), %r9
+  movq %r8, 0(%r9)
+  subq $8, %rsp
+  pushq bar(%rip)
+  call *-3368(%rbp)
+  movq %rax, -2096(%rbp)
+  addq $16, %rsp
+  jmp main_lbl80
+
+main_lbl8:
+  subq $8, %rsp
+  pushq bar(%rip)
+  call f2
+  movq %rax, -2960(%rbp)
+  addq $16, %rsp
+  jmp main_lbl11
+
+main_lbl80:
+  movq -2096(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2104(%rbp)
+  movq foo(%rip), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3432(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -2112(%rbp)
+  movq -2112(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2120(%rbp)
+  call f1
+  movq %rax, -2128(%rbp)
+  jmp main_lbl81
+
+main_lbl81:
+  pushq -3208(%rbp)
+  pushq -2128(%rbp)
+  call f3
+  movq %rax, -2136(%rbp)
+  addq $16, %rsp
+  jmp main_lbl82
+
+main_lbl82:
+  movq -2136(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -2120(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -2152(%rbp)
+  movq -2152(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2160(%rbp)
+  movq -2104(%rbp), %r8
+  cmpq -2160(%rbp), %r8
+  movq $0, %r8
+  setg %r8b
+  movq %r8, -2168(%rbp)
+  movq -3192(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2176(%rbp)
+  movq -2176(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3240(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -2184(%rbp)
+  movq -2184(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2192(%rbp)
+  movq -3296(%rbp), %r8
+  leaq 0(%r8), %r9
+  movq %r9, -2200(%rbp)
+  movq -2200(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2208(%rbp)
+  movq -2208(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -2192(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -2216(%rbp)
+  movq -2216(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2224(%rbp)
+  pushq -3192(%rbp)
+  pushq -2168(%rbp)
+  call *-2224(%rbp)
+  addq $16, %rsp
+  jmp main_lbl83
+
+main_lbl83:
+  call *-3528(%rbp)
+  jmp main_lbl84
+
+main_lbl84:
+  jmp main_lbl74
+
+main_lbl85:
+  movq $3, %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3168(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -2248(%rbp)
+  movq -2248(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2256(%rbp)
+  movq -2256(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2264(%rbp)
+  movq -3560(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3240(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -2272(%rbp)
+  movq -2272(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2280(%rbp)
+  movq -3248(%rbp), %r8
+  leaq 0(%r8), %r9
+  movq %r9, -2288(%rbp)
+  movq -2288(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2296(%rbp)
+  movq -2296(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -2280(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -2304(%rbp)
+  movq -2304(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2312(%rbp)
+  pushq -2264(%rbp)
+  pushq -3560(%rbp)
+  call *-2312(%rbp)
+  movq %rax, -2328(%rbp)
+  addq $16, %rsp
+  jmp main_lbl86
+
+main_lbl86:
+  movq -2328(%rbp), %r8
+  movq %r8, foo(%rip)
+  call f1
+  movq %rax, -2336(%rbp)
+  jmp main_lbl87
+
+main_lbl87:
+  cmpq $0, -2336(%rbp)
+  jle .invalid_alloc_length
+  movq $1, %rdi
+  imulq -2336(%rbp), %rdi
+  incq %rdi
+  call _cflat_alloc
+  movq -2336(%rbp), %r8
+  movq %r8, 0(%rax)
+  addq $8, %rax
+  movq %rax, -3432(%rbp)
+  movq -3168(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2344(%rbp)
+  movq -2344(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2352(%rbp)
+  movq -2352(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2360(%rbp)
+  cmpq $0, -2360(%rbp)
+  jle .invalid_alloc_length
+  movq $1, %rdi
+  imulq -2360(%rbp), %rdi
+  incq %rdi
+  call _cflat_alloc
+  movq -2360(%rbp), %r8
+  movq %r8, 0(%rax)
+  addq $8, %rax
+  movq %rax, -3208(%rbp)
+  call *-3512(%rbp)
+  jmp main_lbl88
+
+main_lbl88:
+  movq $0, %r8
+  subq foo(%rip), %r8
+  movq %r8, -2368(%rbp)
+  call f1
+  movq %rax, -2376(%rbp)
+  jmp main_lbl89
+
+main_lbl89:
+  movq -2376(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3536(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -2384(%rbp)
+  movq -2384(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2392(%rbp)
+  movq $6, %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -2392(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -2400(%rbp)
+  movq -2400(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2416(%rbp)
+  movq $10, %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -2416(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -2424(%rbp)
+  movq -2424(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2432(%rbp)
+  movq -2368(%rbp), %rdi
+  movq -2432(%rbp), %rsi
+  call e3
+  jmp main_lbl74
+
+main_lbl9:
+  movq -3344(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3216(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -3008(%rbp)
+  movq -3008(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -3016(%rbp)
+  pushq -3520(%rbp)
+  pushq $2
+  call f3
+  movq %rax, -3024(%rbp)
+  addq $16, %rsp
+  jmp main_lbl14
+
+main_lbl90:
+  movq $8, -2624(%rbp)
+  jmp main_lbl94
+
+main_lbl91:
+  cmpq $0, -2488(%rbp)
+  jle .invalid_alloc_length
+  movq $1, %rdi
+  imulq -2488(%rbp), %rdi
+  incq %rdi
+  call _cflat_alloc
+  movq -2488(%rbp), %r8
+  movq %r8, 0(%rax)
+  addq $8, %rax
+  movq %rax, -2440(%rbp)
+  movq -2440(%rbp), %r8
+  movq -3432(%rbp), %r9
+  movq %r8, 0(%r9)
+  movq -3328(%rbp), %r8
+  leaq 0(%r8), %r9
+  movq %r9, -2504(%rbp)
+  call f1
+  movq %rax, -2512(%rbp)
+  jmp main_lbl92
+
+main_lbl92:
+  movq -2512(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3568(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -2520(%rbp)
+  movq -2520(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2528(%rbp)
+  movq -2528(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2536(%rbp)
+  movq -3520(%rbp), %r8
+  cmpq -2536(%rbp), %r8
+  movq $0, %r8
+  setne %r8b
+  movq %r8, -2544(%rbp)
+  movq -2544(%rbp), %r8
+  movq -2504(%rbp), %r9
+  movq %r8, 0(%r9)
+  call f1
+  movq %rax, -2552(%rbp)
+  jmp main_lbl93
+
+main_lbl93:
+  movq -2552(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -3352(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -2560(%rbp)
+  movq -2560(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2568(%rbp)
+  movq baz(%rip), %r8
+  leaq 8(%r8), %r9
+  movq %r9, -2576(%rbp)
+  movq -2576(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2592(%rbp)
+  movq -2592(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2600(%rbp)
+  movq -2600(%rbp), %r8
+  cmpq $0, %r8
+  jl .out_of_bounds
+  movq -2568(%rbp), %r9
+  movq -8(%r9), %r10
+  cmpq %r10, %r8
+  jge .out_of_bounds
+  imulq $8, %r8
+  addq %r9, %r8
+  movq %r8, -2608(%rbp)
+  movq -2608(%rbp), %r8
+  movq 0(%r8), %r9
+  movq %r9, -2616(%rbp)
+  movq -2616(%rbp), %r8
+  movq %r8, -3560(%rbp)
+  movq $8, -2624(%rbp)
+  jmp main_lbl94
+
+main_lbl94:
+  movq -2624(%rbp), %rax
+  jmp main_epilogue
+
+main_epilogue:
+  movq %rbp, %rsp
+  popq %rbp
+  ret
+
+.out_of_bounds:
+  lea out_of_bounds_msg(%rip), %rdi
+  call _cflat_panic
+
+.invalid_alloc_length:
+  lea invalid_alloc_msg(%rip), %rdi
+  call _cflat_panic
+        
