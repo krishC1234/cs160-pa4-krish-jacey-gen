@@ -16,6 +16,10 @@ unordered_set<string> global_var;
 
 unordered_set<string> global_fn;
 
+unordered_map<string, unordered_map<string, int>> structOffsets;
+
+unordered_map<string, unordered_map<string, string>> varStructType;
+
 // get the correct variable stack offset, or return the variable name if it is a global variable
 string get_var_stack(string var, string funcName){
     if(varOffsets[funcName].find(var) != varOffsets[funcName].end()){
@@ -44,6 +48,15 @@ void LIR_Program::codeGenString(){
             cout << ".globl " << it->first << endl;
             cout << it->first << ": .zero 8" << endl << endl << endl;
             global_var.insert(it->first);
+        }
+    }
+
+    // generate struct offsets
+    for(auto it = structs.begin(); it != structs.end(); it++){
+        int offset = 0;
+        for(auto it2 = it->second.begin(); it2 != it->second.end(); it2++){
+            structOffsets[it->first][it2->first] = offset;
+            offset += 8;
         }
     }
 
@@ -83,6 +96,9 @@ void LIR_Function::codeGenString(){
 
     auto it = params.begin();
     for(int i = 16; i <= params.size() * 8 + 8; i += 8){
+        if(it->second->type == Type::Ptr && it->second->value.Ptr.ref->type == Type::Struct){
+            varStructType[name][it->first] = it->second->value.Ptr.ref->value.Struct.name;
+        }
         varOffsets[name][it->first] = i;
         it++;
     }
@@ -90,6 +106,9 @@ void LIR_Function::codeGenString(){
         // zero out all local variables
         auto it = locals.begin();
         for(int i = -8; i >= -locals.size() * 8; i -= 8){
+            if(it->second->type == Type::Ptr && it->second->value.Ptr.ref->type == Type::Struct){
+                varStructType[name][it->first] = it->second->value.Ptr.ref->value.Struct.name;
+            }
             cout << "  movq $0, " << i << "(%rbp)" << endl;
             varOffsets[name][it->first] = i;
             it++;
@@ -236,17 +255,19 @@ void LirInst::codeGenString(string funcName){
         cout << "  addq %r9, %r8" << endl;
         cout << "  movq %r8, " << get_var_stack(value.Gep.lhs, funcName) << endl;
     } else if(type == LirInst::Gfp){
-        cout << "  gfp" << endl;
+        /*
+            movq -6952(%rbp), %r8
+            leaq 0(%r8), %r9
+            movq %r9, -456(%rbp)
+        */
+        cout << "  movq " << get_var_stack(value.Gfp.src, funcName) << ", %r8" << endl;
+        cout << "  leaq " << structOffsets[varStructType[funcName][value.Gfp.src]][value.Gfp.field] << "(%r8), %r9" << endl;
+        cout << "  movq %r9, " << get_var_stack(value.Gfp.lhs, funcName) << endl;
     } else if(type == LirInst::Load){
         cout << "  movq " << get_var_stack(value.Load.src, funcName) << ", %r8" << endl;
         cout << "  movq 0(%r8), %r9" << endl;
         cout << "  movq %r9, " << get_var_stack(value.Load.lhs, funcName) << endl;
     } else if(type == LirInst::Store){
-        /*
-            movq -8208(%rbp), %r8
-            movq -8304(%rbp), %r9
-            movq %r8, 0(%r9)
-        */
         cout << "  movq " << value.Store.op->codeGenString(funcName) << ", %r8" << endl;
         cout << "  movq " << get_var_stack(value.Store.dst, funcName) << ", %r9" << endl;
         cout << "  movq %r8, 0(%r9)" << endl;
