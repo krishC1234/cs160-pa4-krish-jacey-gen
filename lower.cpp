@@ -901,13 +901,13 @@ Operand* arrayaccess_lower(LIR_Function* lir_func, Lval* lval, vector<LIR*>& tra
 	// let lhs be a fresh var of type τ s . t . src :τ
 	string lhs;
 	if(lir_func->locals.find(src->value.Var.id) != lir_func->locals.end()){
-		lhs = create_fresh_var(lir_func, lir_func->locals[src->value.Var.id]->value.Ptr.ref);
+		lhs = create_fresh_var(lir_func, lir_func->locals[src->value.Var.id]);
 	}
 	else if(lir->globals.find(src->value.Var.id) != lir->globals.end()){
-		lhs = create_fresh_var(lir_func, lir->globals[src->value.Var.id]->value.Ptr.ref);
+		lhs = create_fresh_var(lir_func, lir->globals[src->value.Var.id]);
 	}
 	else if(lir_func->params.find(src->value.Var.id) != lir_func->params.end()){
-		lhs = create_fresh_var(lir_func, lir_func->params[src->value.Var.id]->value.Ptr.ref);
+		lhs = create_fresh_var(lir_func, lir_func->params[src->value.Var.id]);
 	}
 	else
 		cout << "Bad Bad" << endl;
@@ -1175,6 +1175,9 @@ void LirInst::toString(){
 		if(value.CallExt.lhs != ""){
 			cout << value.CallExt.lhs << ", ";
 		}
+		else{
+			cout << "_, ";
+		}
 		cout << value.CallExt.callee << ", [";
 		if(value.CallExt.args.size() != 0){
 			for(long unsigned int i = 0; i < value.CallExt.args.size() - 1; i++){
@@ -1232,6 +1235,9 @@ void Terminal::toString(){
 		if(value.CallDirect.lhs != ""){
 			cout << value.CallDirect.lhs << ", ";
 		}
+		else{
+			cout << "_, ";
+		}
 		cout << value.CallDirect.callee << ", [";
 		if(value.CallDirect.args.size() != 0){
 			for(long unsigned int i = 0; i < value.CallDirect.args.size() - 1; i++){
@@ -1246,6 +1252,9 @@ void Terminal::toString(){
 		cout << "CallIndirect(";
 		if(value.CallIndirect.lhs != ""){
 			cout << value.CallIndirect.lhs << ", ";
+		}
+		else{
+			cout << "_, ";
 		}
 		cout << value.CallIndirect.callee << ", [";
 		if(value.CallIndirect.args.size() != 0){
